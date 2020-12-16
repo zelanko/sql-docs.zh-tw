@@ -16,13 +16,13 @@ ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47299e7177a3be131c4ab22f47acebb13927dada
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 522017d6ced6039cd7e5b9a30cf60404eee9249a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465499"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>尋找持有最多鎖定的物件
 
@@ -104,7 +104,7 @@ ms.locfileid: "85727329"
     ```
 
 > [!NOTE]
-> 上述的 Transact-SQL 程式碼範例會在 SQL Server 內部部署上執行，但極可能_無法在 Azure SQL Database 上執行。_ 直接涉及事件的範例核心部分，例如 `ADD EVENT sqlserver.lock_acquired` 也會在 Azure SQL Database 上工作。 但是初步項目 (例如 `sys.server_event_sessions`) 必須編輯至其 Azure SQL Database 對應項 (例如 `sys.database_event_sessions`)，才能執行範例。
+> 上述的 Transact-SQL 程式碼範例會在 SQL Server 內部部署上執行，但極可能 _無法在 Azure SQL Database 上執行。_ 直接涉及事件的範例核心部分，例如 `ADD EVENT sqlserver.lock_acquired` 也會在 Azure SQL Database 上工作。 但是初步項目 (例如 `sys.server_event_sessions`) 必須編輯至其 Azure SQL Database 對應項 (例如 `sys.database_event_sessions`)，才能執行範例。
 > 如需 SQL Server 內部部署與 Azure SQL Database 之間次要差異的詳細資訊，請參閱下列文章：
 > - [Azure SQL Database 中的擴充事件](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
 > - [支援擴充事件的系統物件](xevents-references-system-objects.md)

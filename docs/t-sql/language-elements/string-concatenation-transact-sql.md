@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889d6d6c8b76c57b906cd0a6a87e250619084322
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1e8263bb5fdf0862019456f20e7a52a342834a78
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464279"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ expression + expression
 
 ## <a name="arguments"></a>引數
  *expression*  
- 這是字元和二進位資料類型類別目錄之任何資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **image**、**ntext** 或 **text** 資料類型除外。 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。  
+ 這是字元和二進位資料類型類別目錄之任何資料類型的任何有效 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **image**、**ntext** 或 **text** 資料類型除外。 兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。  
   
  當串連二進位字串和二進位字串之間的任何字元時，必須使用指向字元資料的明確轉換。 下列範例會顯示 `CONVERT` 或 `CAST` 何時必須搭配二進位串連來使用，何時不需要使用 `CONVERT` 或 `CAST`。  
   

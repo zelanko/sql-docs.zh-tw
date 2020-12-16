@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 216e497c9d0e7a9e2090ad734bdb945c42bb792e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: eb8096edc6b4b567272bf3808e5ecaad3eca403c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869115"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464709"
 ---
 # <a name="create-a-publication"></a>建立發行集
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "91869115"
   
     -   如果您不確定發行的資料庫是否有記錄讀取器代理程式作業存在，請在發行集資料庫的發行者端執行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。  
   
-    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password**指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 請繼續進行步驟 3。  
+    -   如果結果集是空的，請建立記錄讀取器代理程式作業。 在發行者端，執行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 為 **\@job_name** 和 **\@password** 指定執行代理程式所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 認證。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，您也必須為 **\@publisher_security_mode** 指定 **0** 值，並為 **\@publisher_login** 和 **\@publisher_password** 指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入資訊。 請繼續進行步驟 3。  
   
 3.  在發行者端，執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 為 **\@publication** 指定發行集名稱，並為 **\@repl_freq** 參數指定 **snapshot** 值 (適用於快照式發行集) 或 **continuous** (適用於交易式發行集) 值。 指定任何其他發行集選項。 這樣會定義此發行集。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "91869115"
   
 2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 **false**，請確認此資料庫確實存在。  
   
-3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**，請將它設定為 **true**然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>＞。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> Property is **false**，請將它設定為 **true** 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>＞。  
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，並為此物件設定下列屬性：  
   

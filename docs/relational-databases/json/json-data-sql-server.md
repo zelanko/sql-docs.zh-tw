@@ -13,13 +13,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ca366f274f4880fdb629eab4b77fa180bacb60b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006588"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463509"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 
@@ -269,7 +269,7 @@ JSON 文字儲存在 `VARCHAR` 或 `NVARCHAR` 資料行中，並以純文字建�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中儲存 JSON 資料並編製索引
 
-JSON 是文字格式，因此 JSON 文件都可以儲存在 SQL Database 的 `NVARCHAR` 資料行中。 因為所有 SQL Server 子系統都支援 `NVARCHAR` 類型，所以您可將 JSON 文件放在具有 **CLUSTERED COLUMNSTORE** 索引的資料表、**經記憶體最佳化的**資料表，或是可以使用 OPENROWSET 或 PolyBase 讀取的外部檔案中。
+JSON 是文字格式，因此 JSON 文件都可以儲存在 SQL Database 的 `NVARCHAR` 資料行中。 因為所有 SQL Server 子系統都支援 `NVARCHAR` 類型，所以您可將 JSON 文件放在具有 **CLUSTERED COLUMNSTORE** 索引的資料表、**經記憶體最佳化的** 資料表，或是可以使用 OPENROWSET 或 PolyBase 讀取的外部檔案中。
 
 若要深入了解在 SQL Server 中將 JSON 儲存、編製索引和最佳化的選項，請參閱下列文章：
 

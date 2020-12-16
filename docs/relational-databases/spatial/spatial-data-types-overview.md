@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006221"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462959"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 
@@ -74,11 +74,11 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 
 在平面 (平面地球) 系統中，系統會使用與座標相同的度量單位來測量距離和區域。 使用 **geometry** 資料類型時，(2, 2) 與 (5, 6) 之間距離就是 5 個單位 (不論所用的單位為何)。  
 
-在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會使用公尺和平方公尺來測量，但此測量可能取決於 **geography** 執行個體的[空間參考識別碼](./spatial-reference-identifiers-srids.md)。 **geography** 資料類型最常見的度量單位是公尺。  
+在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會使用公尺和平方公尺來測量，但此測量可能取決於 **geography** 執行個體的 [空間參考識別碼](./spatial-reference-identifiers-srids.md)。 **geography** 資料類型最常見的度量單位是公尺。  
 
 ### <a name="orientation-of-spatial-data"></a>空間資料的方向
 
-在平面系統中，多邊形的環形方向不是重要因素。 *OGC 的 SQL 簡單特徵規格*並未指示環形順序，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未強制使用環形順序。  
+在平面系統中，多邊形的環形方向不是重要因素。 *OGC 的 SQL 簡單特徵規格* 並未指示環形順序，且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未強制使用環形順序。  
 
 在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用 **geography** 資料類型來儲存空間執行個體，就必須指定此環形的方向，並正確描述此執行個體的位置。
 
@@ -96,7 +96,7 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>`geography` 類型中的外部和內部環形
 
-*OGC 的 SQL 簡單特徵規格*會討論外部環形和內部環形，但是這樣的區別對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型不具太大意義；多邊形的任何環形都可以當作外部環形。  
+*OGC 的 SQL 簡單特徵規格* 會討論外部環形和內部環形，但是這樣的區別對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型不具太大意義；多邊形的任何環形都可以當作外部環形。  
 
 如需 OGC 規格的詳細資訊，請參閱下列文件：
 

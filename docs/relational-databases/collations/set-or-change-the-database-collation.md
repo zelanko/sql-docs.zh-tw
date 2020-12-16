@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907371"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460571"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907371"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
   
--   僅限 Windows Unicode 定序只能搭配 COLLATE 子句使用，以便將定序套用至資料行層級和運算式層級資料的 **nchar** 、 **nvarchar** 和 **ntext** 資料類型。 這些定序無法搭配 COLLATE 子句使用，以變更資料庫或伺服器執行個體的定序。  
+-   僅限 Windows Unicode 定序只能搭配 COLLATE 子句使用，以便將定序套用至資料行層級和運算式層級資料的 **nchar**、 **nvarchar** 和 **ntext** 資料類型。 這些定序無法搭配 COLLATE 子句使用，以變更資料庫或伺服器執行個體的定序。  
   
 -   如果指定的定序或所參考物件所用的定序使用 Windows 不支援的字碼頁， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會顯示錯誤。  
 
--   在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 變更定序。 只能透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變更定序。
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
   
 您可以在 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)中找到支援的定序名稱；您也可以使用 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 系統函數。  
   
 當您變更資料庫定序時，會變更下列各項：  
   
--   系統資料表中的任何 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** ，或 **ntext** 資料行都會變更為新定序。  
+-   系統資料表中的任何 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**，或 **ntext** 資料行都會變更為新定序。  
   
--   預存程序與使用者定義函數的所有現有 **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 參數和純量傳回值，都會變更為新定序。  
+-   預存程序與使用者定義函數的所有現有 **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 或 **ntext** 參數和純量傳回值，都會變更為新定序。  
   
--   **char** 、 **varchar** 、 **text** 、 **nchar** 、 **nvarchar** 或 **ntext** 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
+-   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar** 或 **ntext** 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
   
 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 `COLLATE` 子句，變更在使用者資料庫中建立之任何新物件的定序。 此陳述式 **不會變更** 現有使用者定義資料表中的資料行定序。 您可以使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 的 `COLLATE` 子句進行變更。  
 

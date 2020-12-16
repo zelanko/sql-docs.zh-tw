@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4f6dc92d2d77f453f6838ebe990ed5426c665689
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460471"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>為記憶體最佳化資料表的雜湊索引進行疑難排解
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ go
   
 ### <a name="monitor-statistics-for-chains-and-empty-buckets"></a>監視鏈結和空值區的統計資料  
   
-您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats**的資料管理檢視 (DMV)。  
+您可以執行下列 T-SQL SELECT，來監視雜湊索引的統計健康狀況。 SELECT 會使用名為 **sys.dm_db_xtp_hash_index_stats** 的資料管理檢視 (DMV)。  
   
 ```sql
 SELECT  
@@ -116,7 +116,7 @@ ORDER BY [table], [index];
 2. 在資料表中填入數千個資料列。  
     a. 模數運算子可用來設定 StatusCode 資料行中重複值的比率。  
     b. 迴圈大約會在 1 分鐘內插入 262,144 個資料列。  
-3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats**的 SELECT。  
+3. 列印 (PRINT) 訊息會要求您執行先前來自 **sys.dm_db_xtp_hash_index_stats** 的 SELECT。  
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
@@ -174,7 +174,7 @@ go
 - 針對主索引鍵索引和 *ix_OrderSequence* 插入唯一值。  
 - 插入數十萬個資料列，其中只針對 `StatusCode` 顯示 8 個相異值。 因此，*ix_StatusCode* 索引中值重複的比例較高。  
   
-若要在值區計數不是最佳選項時進行疑難排解，可檢查下列來自 **sys.dm_db_xtp_hash_index_stats**之 SELECT 的輸出。 我們對於這些結果將 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 新增到從 D.1 節複製的 SELECT。  
+若要在值區計數不是最佳選項時進行疑難排解，可檢查下列來自 **sys.dm_db_xtp_hash_index_stats** 之 SELECT 的輸出。 我們對於這些結果將 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 新增到從 D.1 節複製的 SELECT。  
   
 我們的 `SELECT` 結果顯示在程式碼之後，以手動方式分割成兩個較窄的結果資料表，以獲得較佳的顯示效果。  
   
@@ -218,7 +218,7 @@ go
   
 ### <a name="balancing-the-trade-off"></a>平衡取捨  
   
-OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常不會在 OLTP 工作負載的關鍵效能路徑中。 因此，您必須在**記憶體使用量**與**等號比較測試和插入作業的效能**之間平衡取捨。  
+OLTP 工作負載專注於個別的資料列。 完整的資料表掃描通常不會在 OLTP 工作負載的關鍵效能路徑中。 因此，您必須在 **記憶體使用量** 與 **等號比較測試和插入作業的效能** 之間平衡取捨。  
   
 **如果比較顧慮記憶體使用量：**  
   

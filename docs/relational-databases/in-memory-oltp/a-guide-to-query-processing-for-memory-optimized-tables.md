@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eed83fcd8a8b861f102c90fbc73d28d51bd5fa56
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465479"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   來自 Order 資料表的資料，使用 CustomerID 資料行上的非叢集索引擷取得來。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
--   邏輯運算子 **Inner Join** 是由實體運算子 **Merge Join**所實作。 其他實體聯結類型包括 **Nested Loops** 和 **Hash Join**。 **Merge Join** 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
+-   邏輯運算子 **Inner Join** 是由實體運算子 **Merge Join** 所實作。 其他實體聯結類型包括 **Nested Loops** 和 **Hash Join**。 **Merge Join** 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
   
  請考慮與這個查詢稍微不同的做法，傳回 Order 資料表的所有資料列，而不只是 OrderID：  
   

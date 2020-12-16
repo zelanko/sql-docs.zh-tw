@@ -38,13 +38,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 00ff65b2c1007f8c205bc30e27c48b5282b882b9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464209"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -261,7 +261,7 @@ GLOBAL
  這是應該從中提取的開啟資料指標名稱。 如果名稱為 *cursor_name* 的全域和本機資料指標同時存在，當指定 GLOBAL 時，這個引數會參考全域資料指標；否則，它會參考區域資料指標。 這個資料指標必須允許更新。  
   
 *cursor_variable_name*  
- 這是資料指標變數的名稱。 *cursor_variable_name*必須參考允許更新的資料指標。  
+ 這是資料指標變數的名稱。 *cursor_variable_name* 必須參考允許更新的資料指標。  
   
 OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  指定利用最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2686ba2c5ac8e4db03f49a1d090ed8de1066b2c7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c486e78d8cd05d4af130626586e8a9817ab779a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550942"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464489"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統建立版本時態表上的系統版本設定功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "89550942"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-您可能想要暫時或永久停止在時態表上的版本設定。 您可以藉由將 **SYSTEM_VERSIONING** 子句設定為 **OFF**來完成。
+您可能想要暫時或永久停止在時態表上的版本設定。 您可以藉由將 **SYSTEM_VERSIONING** 子句設定為 **OFF** 來完成。
 
 ## <a name="setting-system_versioning--off"></a>設定 SYSTEM_VERSIONING = OFF
 
@@ -37,11 +37,11 @@ ms.locfileid: "89550942"
 
 ### <a name="important-remarks"></a>重要備註
 
-- 記錄資料表會在 **SYSTEM_VERSIONING = OFF** 的期間**停止**擷取更新。
-- 當您設定 **SYSTEM_VERSIONING = OFF** 或卸除 **SYSTEM_TIME** 期間時，**時態表**上不會遺失任何資料。
+- 記錄資料表會在 **SYSTEM_VERSIONING = OFF** 的期間 **停止** 擷取更新。
+- 當您設定 **SYSTEM_VERSIONING = OFF** 或卸除 **SYSTEM_TIME** 期間時，**時態表** 上不會遺失任何資料。
 - 若您設定 **SYSTEM_VERSIONING = OFF** 但沒有捨棄 **SYSTEM_TIME** 週期，系統將就會繼續為每個插入和更新作業更新週期資料行。 目前資料表上的刪除作業都是永久性的。
 - 捨棄 **SYSTEM_TIME** 週期即會完全移除週期資料行。
-- 在設定 **SYSTEM_VERSIONING = OFF**時，所有具足夠權限的使用者都可以修改結構描述和歷程記錄資料表的內容，甚至可以永久刪除歷程記錄資料表。
+- 在設定 **SYSTEM_VERSIONING = OFF** 時，所有具足夠權限的使用者都可以修改結構描述和歷程記錄資料表的內容，甚至可以永久刪除歷程記錄資料表。
 - 如果有其他利用 SCHEMABINDING (其使用時態查詢延伸模組，例如參考 **SYSTEM_TIME**) 建立的物件，則無法設定 **SYSTEM_VERSIONING = OFF**。 如果設定 **SYSTEM_VERSIONING = OFF**，則這項限制可防止這些物件失敗。
 
 ### <a name="permanently-remove-system_versioning"></a>永久移除 SYSTEM_VERSIONING
@@ -57,7 +57,7 @@ DROP PERIOD FOR SYSTEM_TIME;
 
 ### <a name="temporarily-remove-system_versioning"></a>暫時移除 SYSTEM_VERSIONING
 
-下列為需要將系統版本設定設為 **OFF**的作業清單：
+下列為需要將系統版本設定設為 **OFF** 的作業清單：
 
 - 從歷程記錄 (**DELETE** 或 **TRUNCATE**) 移除不必要的資料
 - 從目前資料表 (**DELETE**、 **TRUNCATE**) 移除資料，而不進行版本設定

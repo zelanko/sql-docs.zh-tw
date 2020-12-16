@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465519"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫 *「XML 格式檔案」* (XML format file) 用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  
   
- 您可以搭配使用 XML 格式檔案與 **bcp**命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
+ 您可以搭配使用 XML 格式檔案與 **bcp** 命令、BULK INSERT 陳述式或 INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式。 **bcp** 命令可讓您自動產生資料表的 XML 格式檔案；如需詳細資訊，請參閱＜ [bcp Utility](../../tools/bcp-utility.md)＞。  
   
 > [!NOTE]  
 >  有兩種類型的格式檔案支援大量匯出和匯入：「非 XML 格式檔案」和「XML 格式檔案」。 相較於非 XML 格式檔案而言，XML 格式檔案是較彈性且功能強大的替代方案。 如需非 XML 格式檔案的相關資訊，請參閱 [非 XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)＞。  
@@ -270,12 +270,12 @@ ms.locfileid: "85998994"
   
 |類型類別目錄|\<COLUMN> 資料類型|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|已修正|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT**和 **SQLUNIQUEID**|無。|NULLABLE|  
+|已修正|**SQLBIT**、 **SQLTINYINT**、 **SQLSMALLINT**、 **SQLINT**、 **SQLBIGINT**、 **SQLFLT4**、 **SQLFLT8**、 **SQLDATETIME**、 **SQLDATETIM4**、 **SQLDATETIM8**、 **SQLMONEY**、 **SQLMONEY4**、 **SQLVARIANT** 和 **SQLUNIQUEID**|無。|NULLABLE|  
 |變數數字|**SQLDECIMAL** 和 **SQLNUMERIC**|無。|NULLABLE、PRECISION、SCALE|  
-|LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT**和 **SQLUDT**|無。|NULLABLE|  
+|LOB|**SQLIMAGE**、 **CharLOB**、 **SQLTEXT** 和 **SQLUDT**|無。|NULLABLE|  
 |字元 LOB|**SQLNTEXT**|無。|NULLABLE|  
 |二進位字串|**SQLBINARY** 和 **SQLVARYBIN**|無。|NULLABLE、LENGTH|  
-|字元字串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR**和 **SQLNVARCHAR**|無。|NULLABLE、LENGTH|  
+|字元字串|**SQLCHAR**、 **SQLVARYCHAR**、 **SQLNCHAR** 和 **SQLNVARCHAR**|無。|NULLABLE、LENGTH|  
   
 > [!IMPORTANT]  
 >  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR 或 SQLNVARCHAR (資料會以 Unicode 傳送)，或是 SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
@@ -291,7 +291,7 @@ ms.locfileid: "85998994"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (BULK INSERT 和 OPENROWSET 的 Bulk 資料列集提供者)  
   
-     大量匯入資料到資料表時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會使用 \<ROW> 元件來產生輸入資料列集。 此外，[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會根據在目標資料表中 \<ROW> 與對應資料行中指定的資料行類型來執行適當的類型轉換。 若格式檔案中指定的資料行類型與目標資料表不同，會發生額外的類型轉換。 此額外類型轉換可能會導致 BULK INSERT 或 OPENROWSET 的 Bulk 資料列集提供者發生某些不一致 (亦即，遺失精確度) 的行為 (與 **bcp**相較)。  
+     大量匯入資料到資料表時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會使用 \<ROW> 元件來產生輸入資料列集。 此外，[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會根據在目標資料表中 \<ROW> 與對應資料行中指定的資料行類型來執行適當的類型轉換。 若格式檔案中指定的資料行類型與目標資料表不同，會發生額外的類型轉換。 此額外類型轉換可能會導致 BULK INSERT 或 OPENROWSET 的 Bulk 資料列集提供者發生某些不一致 (亦即，遺失精確度) 的行為 (與 **bcp** 相較)。  
   
      無需任何額外資訊，\<ROW> 元素中的資訊就可供建構資料列。 因此，您可以使用 SELECT 陳述式 (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*) 來產生資料列集。  
   

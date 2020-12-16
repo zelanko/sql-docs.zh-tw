@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea0d7aca2659d16bc761cfd4dc2146a96f977622
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6627a09a602f9d75cd742f967ba9e8cb6f05ca7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464819"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>需要更新之備份的常見動作
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您未執行記錄備份，請在修改複寫結構描述或拓撲之後執行發行、散發、訂閱、 **msdb**和 **master** 資料庫的備份。  
+  如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您未執行記錄備份，請在修改複寫結構描述或拓撲之後執行發行、散發、訂閱、 **msdb** 和 **master** 資料庫的備份。  
   
 ## <a name="publication-database"></a>發行集資料庫  
  在下述動作之後備份發行集資料庫：  

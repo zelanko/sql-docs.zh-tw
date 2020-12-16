@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439392"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461939"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -182,7 +182,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 只在它無法在現有的範圍中找到一個擁有足夠空間來保存插入之資料列的頁面時，才會配置新的範圍給配置單位。 
 
-<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用 **比例式填滿配置演算法** ，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用 **比例式填滿配置演算法**，從檔案群組中的可用範圍來配置範圍。 若在相同的檔案群組有兩個檔案，其中一個檔案的可用空間是另一個檔案的兩倍，系統將從擁有可用空間的檔案中配置兩個頁面，而從另一個檔案中配置一個頁面。 這代表檔案群組中的每個檔案都擁有類似的空間使用百分比。 
 
 ## <a name="tracking-modified-extents"></a>追蹤修改的範圍 
 

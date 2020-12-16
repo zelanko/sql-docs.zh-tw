@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3a306c9ceba9078852f7f2edcce7978518c251dd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: f08dc302f25510fb9123520af7c1cfe2c36bce12
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463948"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -124,7 +124,7 @@ FROM <backup_device>
 |**MachineName**|**nvarchar(128)**|執行備份作業的電腦名稱。|  
 |**旗標**|**int**|若設為 **1**，個別旗標位元意義如下：<br /><br /> **1** = 記錄備份包含大量記錄作業。<br /><br /> **2** = 快照集備份。<br /><br /> **4** = 備份時，資料庫是唯讀的。<br /><br /> **8** = 備份時，資料庫處於單一使用者模式。<br /><br /> **16** = 備份包含備份總和檢查碼。<br /><br /> **32** = 備份時，資料庫損毀，但要求備份作業忽略錯誤並繼續執行。<br /><br /> **64** = 結尾記錄備份。<br /><br /> **128** = 含不完整中繼資料的結尾記錄備份。<br /><br /> **256** = 使用 NORECOVERY 來進行的結尾記錄備份。<br /><br /> **重要：** 建議您不要使用 **Flags**，請改用個別的布林資料行 (下列從 **HasBulkLoggedData** 到 **IsCopyOnly** 的布林資料行)。|  
 |**BindingID**|**uniqueidentifier**|資料庫的繫結識別碼。 這會對應到 **sys.database_recovery_status database_guid**。 當還原資料庫時，會指派一個新值。 另請參閱 **FamilyGUID** (下方)。|  
-|**RecoveryForkID**|**uniqueidentifier**|結尾復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **last_recovery_fork_guid**對應。<br /><br /> 就資料備份而言，**RecoveryForkID** 等於 **FirstRecoveryForkID**。|  
+|**RecoveryForkID**|**uniqueidentifier**|結尾復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **last_recovery_fork_guid** 對應。<br /><br /> 就資料備份而言，**RecoveryForkID** 等於 **FirstRecoveryForkID**。|  
 |**定序**|**nvarchar(128)**|資料庫所用的定序。|  
 |**FamilyGUID**|**uniqueidentifier**|在建立之時，原始資料庫的識別碼。 當還原資料庫時，這個值會維持不變。|  
 |**HasBulkLoggedData**|**bit**|**1** = 包含大量記錄作業的記錄備份。|  
@@ -137,7 +137,7 @@ FROM <backup_device>
 |**HasIncompleteMetaData**|**bit**|**1** = 含不完整中繼資料的結尾記錄備份。<br /><br /> 如需有關含不完整備份中繼資料之結尾記錄備份的資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。|  
 |**IsForceOffline**|**bit**|**1** = 使用 NORECOVERY 來進行的備份；資料庫因備份而離線。|  
 |**IsCopyOnly**|**bit**|**1** = 僅限複製的備份。<br /><br /> 僅限複製備份並不會影響資料庫的整體備份和還原程序。 如需詳細資訊，請參閱[只複製備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。|  
-|**FirstRecoveryForkID**|**uniqueidentifier**|起始復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **first_recovery_fork_guid**對應。<br /><br /> 就資料備份而言，**FirstRecoveryForkID** 等於 **RecoveryForkID**。|  
+|**FirstRecoveryForkID**|**uniqueidentifier**|起始復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **first_recovery_fork_guid** 對應。<br /><br /> 就資料備份而言，**FirstRecoveryForkID** 等於 **RecoveryForkID**。|  
 |**ForkPointLSN**|**numeric(25,0)** NULL|如果 **FirstRecoveryForkID** 不等於 **RecoveryForkID**，這就是分岔點的記錄序號。 否則，這個值是 NULL。|  
 |**RecoveryModel**|**nvarchar(60)**|這是資料庫的復原模式，它有下列幾種：<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> 簡單|  
 |**DifferentialBaseLSN**|**numeric(25,0)** NULL|如果是單一基底差異備份，這個值就等於差異基底的 **FirstLSN**；LSN 大於或等於 **DifferentialBaseLSN** 的變更會納入差異備份中。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，基底 LSN 必須取決於檔案層級。 如需詳細資訊，請參閱 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。<br /><br /> 如果是非差異備份類型，這個值一律是 NULL。<br /><br /> 如需詳細資訊，請參閱 [差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。|  

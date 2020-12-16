@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: edf0b261b6046d63e037e601ab9e92dd13d8728e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891328"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464779"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -43,7 +43,7 @@ ms.locfileid: "91891328"
 1. 受保護的資源 (HDFS、MR2、YARN 以及作業記錄等等)
 1. 金鑰發佈中心 (在 Active Directory 中稱為網域控制站)
 
-當 Hadoop 叢集上已設定 Kerberos 時，Hadoop 的每個受保護資源都會以唯一的**服務主體名稱 (SPN)** 向**金鑰發佈中心 (KDC)** 註冊。 目標是要讓用戶端從 KDC 中，針對想要存取的特定 SPN 取得臨時使用者票證 (稱為**票證授權票證 (TGT))** ，以要求另一個臨時票證 (稱為**服務票證 (ST))** 。  
+當 Hadoop 叢集上已設定 Kerberos 時，Hadoop 的每個受保護資源都會以唯一的 **服務主體名稱 (SPN)** 向 **金鑰發佈中心 (KDC)** 註冊。 目標是要讓用戶端從 KDC 中，針對想要存取的特定 SPN 取得臨時使用者票證 (稱為 **票證授權票證 (TGT))** ，以要求另一個臨時票證 (稱為 **服務票證 (ST))** 。  
 
 在 PolyBase 中，針對任何受 Kerberos 保護的資源要求驗證時，會發生下列四趟來回行程交握：
 
@@ -124,7 +124,7 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 ## <a name="checkpoint-1"></a>檢查點 1
 應該要有 `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` 的票證十六進位傾印。 這表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功對 KDC 進行驗證，並已收到 TGT。 如果沒有，表示問題僅發生在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 KDC 之間，而非 Hadoop。
 
-PolyBase **不**支援 AD 與 MIT 之間的信任關係，而且必須針對 Hadoop 叢集中設定的相同 KDC 進行設定。 在這類環境中，在該 KDC 上手動建立服務帳戶，並加以執行驗證是可行的。
+PolyBase **不** 支援 AD 與 MIT 之間的信任關係，而且必須針對 Hadoop 叢集中設定的相同 KDC 進行設定。 在這類環境中，在該 KDC 上手動建立服務帳戶，並加以執行驗證是可行的。
 
 ```cmd
 |>>> KrbAsReq creating message 

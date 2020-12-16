@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56065a74319773012d88ddd9bb09987187e6f4c7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0a2ad9953050271d42aa2770c6bd3a02d787f9d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646648"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462609"
 ---
 # <a name="delete-unique-constraints"></a>刪除唯一的條件約束
 
@@ -56,17 +56,17 @@ ms.locfileid: "88646648"
   
 1.  在 [物件總管] 中，展開包含唯一條件約束的資料表，然後展開 **[條件約束]**。  
   
-2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]****。  
+2.  以滑鼠右鍵按一下索引鍵，然後選取 [刪除]。  
   
 3.  在 **[刪除物件]** 對話方塊中，確認指定了正確的索引鍵，然後按一下 **[確定]**。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>若要使用資料表設計工具來刪除唯一條件約束  
   
-1.  在物件總管**** 中，以滑鼠右鍵按一下含有唯一條件約束的資料表，然後按一下 [設計]****。  
+1.  在物件總管中，以滑鼠右鍵按一下含有唯一條件約束的資料表，然後按一下 [設計]。  
   
 2.  在 [資料表設計工具] 功能表上，按一下 [索引/索引鍵]。  
   
-3.  在 [索引/索引鍵]**** 對話方塊中，從 [選取的主/唯一索引鍵和索引]**** 清單中選取唯一索引鍵。  
+3.  在 [索引/索引鍵] 對話方塊中，從 [選取的主/唯一索引鍵和索引] 清單中選取唯一索引鍵。  
   
 4.  按一下 **[刪除]** 。  
   

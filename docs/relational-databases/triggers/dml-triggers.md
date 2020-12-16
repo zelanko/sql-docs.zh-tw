@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4105a3c3b0ba43d3ed142cba31b2f991f6dc5287
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418932"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461559"
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "88418932"
 |串聯參考|沒有限制|INSTEAD OF UPDATE 及 DELETE 觸發程序不允許用於串聯參考完整性條件約束的目標資料表。|  
 |執行|之後：<br /><br /> 條件約束處理<br /><br /> 宣告性參考動作<br /><br /> **inserted** 與 **deleted** 資料表建立<br /><br /> 觸發動作|之前：條件約束處理<br /><br /> 取代：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
 |執行順序|可指定第一和最後一個執行|不適用|  
-|**已插入**和 **已刪除**資料表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料行參考|允許|允許|  
-|**已插入**和 **已刪除**資料表中的 **text** 、 **ntext** 和 **image** 資料行參考|不允許|允許|  
+|**已插入** 和 **已刪除** 資料表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 資料行參考|允許|允許|  
+|**已插入** 和 **已刪除** 資料表中的 **text** 、 **ntext** 和 **image** 資料行參考|不允許|允許|  
   
  CLR 觸發程序  
  CLR 觸發程序可以是 AFTER 或 INSTEAD OF 觸發程序。 CLR 觸發程序也可以是 DDL 觸發程序。 CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  

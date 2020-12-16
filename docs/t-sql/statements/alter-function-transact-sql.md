@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8b8fc08aaf5f083d22938adf37c356c445d4b6f
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5cb49c33eac8f8f4112cd4d73cef4bb7eb142e9c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300601"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464109"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -223,9 +223,9 @@ RETURNS return_data_type
 >  當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)** ，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
  [ *type_schema_name.* ] *parameter_data_type*  
- 這是參數資料類型，對於其所屬的結構描述而言為選擇性。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **text** 、 **ntext** 、 **image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的參數資料類型。  
+ 這是參數資料類型，對於其所屬的結構描述而言為選擇性。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **text**、**ntext**、**image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的參數資料類型。  
   
- 如果未指定 *type_schema_name* ，[!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 就會依照下列順序尋找 *scalar_parameter_data_type* ：  
+ 如果未指定 *type_schema_name*，[!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 就會依照下列順序尋找 *scalar_parameter_data_type*：  
   
 -   內含 SQL Server 系統資料類型的結構描述。  
   
@@ -242,14 +242,14 @@ RETURNS return_data_type
  如果函數的參數有預設值，則必須在呼叫函數來擷取該預設值時指定關鍵字 DEFAULT。 這個行為與使用預存程序中具有預設值的參數不一樣，因為在預存程序中，省略參數也意味著使用預設值。  
   
  *return_data_type*  
- 這是純量使用者定義函數的傳回值。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **text** 、 **ntext** 、 **image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的傳回資料類型。  
+ 這是純量使用者定義函數的傳回值。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **text**、**ntext**、**image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的傳回資料類型。  
   
  *function_body*  
  指定一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (並用這些陳述式並不會造成任何副作用，例如修改資料表等) 定義函數的值。 *function_body* 僅用於純量函式和多重陳述式資料表值函式中。  
   
- 在純量函式中， *function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
+ 在純量函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
   
- 在多重陳述式資料表值函式中， *function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會填入 TABLE 傳回變數。  
+ 在多重陳述式資料表值函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會填入 TABLE 傳回變數。  
   
  *scalar_expression*  
  指定純量函數傳回純量值。  
@@ -264,8 +264,8 @@ RETURNS return_data_type
  *select-stmt*  
  這是單一 SELECT 陳述式，可定義嵌入資料表值函式的傳回值。  
   
- EXTERNAL NAME \<method_specifier>*assembly_name.class_name* . *method_name*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指定繫結函數之組件的方法。 *assembly_name* 必須符合目前所顯示之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有組件。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 ( **.** ) 來分隔命名空間的各個部分，您就必須使用方括弧 ( **[]** ) 或引號 ( **""** ) 來分隔類別名稱。 *method_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是指定類別中的靜態方法。  
   
@@ -275,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ... *n* ] **)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ... *n* ] **)** **適用於** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ( [在某些區域中為預覽版本](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))。  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些區域中為預覽版本](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))。  
   
  定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。  
   
@@ -301,7 +301,7 @@ RETURNS return_data_type
  指定函數必須有下列其中一個或多個選項。  
   
  ENCRYPTION  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會對包含 ALTER FUNCTION 陳述式文字的目錄檢視表資料行進行加密。 使用 ENCRYPTION 可防止在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中發行這個函數。 無法為 CLR 函數指定 ENCRYPTION。  
   
@@ -331,13 +331,13 @@ RETURNS return_data_type
   
 **\< column_definition >::=**
   
- 定義資料表資料類型。 資料表宣告包括資料行定義和條件約束。 針對 CLR 函式，只能指定 *column_name* 和 *data_type* 。  
+ 定義資料表資料類型。 資料表宣告包括資料行定義和條件約束。 針對 CLR 函式，只能指定 *column_name* 和 *data_type*。  
   
  *column_name*  
  這是資料表中的資料行名稱。 資料行名稱必須符合識別碼規則，在資料表中也必須是唯一的。 *column_name* 可由 1 到 128 個字元組成。  
   
  *data_type*  
- 指定資料行資料類型。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，允許所有資料類型 (包括 CLR 使用者定義型別)，但 **timestamp** 除外。 就 CLR 函式而言，允許所有資料類型 (包括 CLR 使用者定義型別)，但 **text** 、 **ntext** 、 **image** 、 **char** 、 **varchar** 、 **varchar(max)** 及 **timestamp** 除外。無法指定非純量類型 **cursor** 作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的資料行資料類型。  
+ 指定資料行資料類型。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，允許所有資料類型 (包括 CLR 使用者定義型別)，但 **timestamp** 除外。 就 CLR 函式而言，允許所有資料類型 (包括 CLR 使用者定義型別)，但 **text**、**ntext**、**image**、**char**、**varchar**、**varchar(max)** 及 **timestamp** 除外。無法指定非純量類型 **cursor** 作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的資料行資料類型。  
   
  DEFAULT *constant_expression*  
  指定在插入期間未明確提供值時，提供給資料行的值。 *constant_expression* 是常數、NULL 或系統函式值。 除了含有 IDENTITY 屬性的資料行之外，任何資料行都可以套用 DEFAULT 定義。 無法為 CLR 資料表值函式指定 DEFAULT。  
@@ -345,7 +345,7 @@ RETURNS return_data_type
  COLLATE *collation_name*  
  指定資料行的定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。  
   
- COLLATE 子句只能用來變更 **char** 、 **varchar** 、 **nchar** 與 **nvarchar** 資料類型之資料行的定序。  
+ COLLATE 子句只能用來變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。  
   
  無法為 CLR 資料表值函式指定 COLLATE。  
   
@@ -355,7 +355,7 @@ RETURNS return_data_type
  ROWGUIDCOL 屬性不會強制執行資料行中所儲存之值的唯一性。 它也不會自動為插入資料表中的新資料列產生值。 若要為每個資料行產生唯一值，請在 INSERT 陳述式上使用 NEWID 函數。 可以指定預設值；不過，NEWID 不能指定為預設值。  
   
  IDENTITY  
- 指出新資料行是識別欄位。 新資料列加入至資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint** 、 **smallint** 、 **int** 、 **bigint** 、 **decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定 *seed* 和 *increment* ，或兩者都不指定。 如果同時不指定這兩者，預設值便是 (1,1)。  
+ 指出新資料行是識別欄位。 新資料列加入至資料表時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，當做資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定 *seed* 和 *increment*，或兩者都不指定。 如果同時不指定這兩者，預設值便是 (1,1)。  
   
  無法為 CLR 資料表值函式指定 IDENTITY。  
   

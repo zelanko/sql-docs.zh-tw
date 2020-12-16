@@ -17,20 +17,20 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 15cae5bf8c97de6170c11cfc991afdb31033963d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464159"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 修改現有外部套件程式庫的內容。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 > [!NOTE]
 > 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 和更新版本支援 Windows 和 Linux 平台上的 R、Python 和外部語言。
 ::: moniker-end
@@ -40,7 +40,7 @@ ms.locfileid: "92300451"
 > 在 Azure SQL 受控執行個體中，您可更改程式庫，做法為移除程式庫，然後使用 **sqlmlutils** 來安裝變更的版本。 如需 **sqlmlutils** 的詳細資訊，請參閱 [使用 sqlmlutils 安裝 Python 套件](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)和 [使用 sqlmlutils 安裝新的 R 套件](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
 
 ```syntaxsql
@@ -83,7 +83,7 @@ WITH ( LANGUAGE = <language> )
 }
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
 
 ```syntaxsql
@@ -114,7 +114,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 ## <a name="syntax-for-azure-sql-managed-instance"></a>Azure SQL 受控執行個體的語法
 
 ```syntaxsql
@@ -155,7 +155,7 @@ WITH ( LANGUAGE = <language> )
 
 指定擁有外部程式庫的使用者或角色名稱。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 **file_spec**
 
 指定適用於特定平台的套件內容。 只支援每個平台一個檔案成品。
@@ -173,47 +173,47 @@ WITH ( LANGUAGE = <language> )
 
 您可以改為以二進位格式的變數來傳遞套件內容。
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **platform = WINDOWS**
 
 指定程式庫內容的平台。 修改現有程式庫以加入不同平台時，需要此值。
 在 SQL Server 2017 中，Windows 是唯一支援的平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **平台**
 
 指定程式庫內容的平台。 修改現有程式庫以加入不同平台時，需要此值。 
 在 SQL Server 2019 中，支援 Windows 和 Linux 平台。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 **LANGUAGE = 'R'**
 
 指定套件的語言。 SQL Server 2017 支援 R。
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 **language**
 
-指定套件的語言。 在 Azure SQL 受控執行個體中，此值可以是 **R** 或 **Python** 。
+指定套件的語言。 在 Azure SQL 受控執行個體中，此值可以是 **R** 或 **Python**。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **language**
 
-指定套件的語言。 此值可以是 **R** 、 **Python** 或外部語言的名稱 (請參閱 [建立外部語言](create-external-language-transact-sql.md))。
+指定套件的語言。 此值可以是 **R**、**Python** 或外部語言的名稱 (請參閱 [建立外部語言](create-external-language-transact-sql.md))。
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>備註
 
-::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 對於 R 語言，必須先針對 Windows，以具備 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 在 SQL Server 2017 中僅支援 Windows 平台。  
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 R 語言，在使用檔案時，必須以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 
 
 針對 Python 語言，.whl 或 .zip 檔案套件必須以壓縮封存檔案的型式準備。 若套件已經是 .zip 檔案，它必須包含在新的 .zip 檔案中。 目前不支援直接上傳 .whl 或 .zip 檔案的套件。
@@ -225,13 +225,13 @@ SQL 執行個體中已預先安裝一些套件 (稱為「系統套件」)。 使
 
 ## <a name="permissions"></a>權限
 
-根據預設， **dbo** 使用者或 **db_owner** 角色的任何成員都有執行 ALTER EXTERNAL LIBRARY 的權限。 此外，建立外部程式庫的使用者可以改變該外部程式庫。
+根據預設，**dbo** 使用者或 **db_owner** 角色的任何成員都有執行 ALTER EXTERNAL LIBRARY 的權限。 此外，建立外部程式庫的使用者可以改變該外部程式庫。
 
 ## <a name="examples"></a>範例
 
 下列範例會變更名為 `customPackage` 的外部程式庫。
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 ### <a name="replace-the-contents-of-a-library-using-a-file"></a>使用檔案取代程式庫的內容
 
 下列範例會使用包含更新位元的 ZIP 壓縮檔案，來修改名為 `customPackage` 的外部程式庫。
@@ -253,7 +253,7 @@ EXEC sp_execute_external_script
 ```
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 針對 Python 語言，只需要將範例中的 `'R'` 取代為 `'Python'` 即可正常運作。
 ::: moniker-end
 
@@ -266,7 +266,7 @@ ALTER EXTERNAL LIBRARY customLibrary
 SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 針對 Python 語言，只需要將範例中的 `'R'` 取代為 `'Python'` 即可正常運作。
 ::: moniker-end
 

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e77393d7c16034d90dc443a6c8750e798e22909
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a7b0fcba94245ec72ac8f739ef184f5d11960e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462419"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,11 +54,11 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |值|描述|傳回的 sql_variant 的基底類型|  
 |-----------|-----------------|----------------------------------------|  
 |**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，例如：<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **bit**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = 輸入無效。|  
-|**有效位數**|數值基底資料型別的位數：<br /><br /> **date** = 10<br /><br /> **datetime** = 23<br /><br /> **datetime2** = 27<br /><br /> 當 s = 0 時， **datetime2** (s) = 19，否則 s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> 當 s = 0 時， **datetimeoffset** (s) = 26，否則 s + 27<br /><br /> **smalldatetime** = 16<br /><br /> **time** = 16<br /><br /> 當 s = 0 時， **time** (s) = 8，否則 s + 9<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** 和 **numeric** = 18<br /><br /> **decimal** (p,s) 和 **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> 其他所有類型 = 0|**int**<br /><br /> NULL = 輸入無效。|  
+|**有效位數**|數值基底資料型別的位數：<br /><br /> **date** = 10<br /><br /> **datetime** = 23<br /><br /> **datetime2** = 27<br /><br /> 當 s = 0 時，**datetime2** (s) = 19，否則 s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> 當 s = 0 時，**datetimeoffset** (s) = 26，否則 s + 27<br /><br /> **smalldatetime** = 16<br /><br /> **time** = 16<br /><br /> 當 s = 0 時，**time** (s) = 8，否則 s + 9<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** 和 **numeric** = 18<br /><br /> **decimal** (p,s) 和 **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> 其他所有類型 = 0|**int**<br /><br /> NULL = 輸入無效。|  
 |**調整**|數值基底資料型別小數點右側的位數：<br /><br /> **decimal** 和 **numeric** = 0<br /><br /> **decimal** (p,s) 和 **numeric** (p,s) = s<br /><br /> **money** 和 **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> **datetime2** = 7<br /><br /> **datetime2** (s) = s (0 - 7)<br /><br /> **datetimeoffset** = 7<br /><br /> **datetimeoffset** (s) = s (0 - 7)<br /><br /> **time** = 7<br /><br /> **time** (s) = s (0 - 7)<br /><br /> 其他所有類型 = 0|**int**<br /><br /> NULL = 輸入無效。|  
 |**TotalBytes**|存放值的中繼資料和資料所需要的位元組數。 在檢查 **sql_variant** 資料行中資料的最大值一端時，這項資訊非常有用。 如果值大於 900，建立索引會失敗。|**int**<br /><br /> NULL = 輸入無效。|  
 |**定序**|代表特定 **sql_variant** 值的定序。|**sysname**<br /><br /> NULL = 輸入無效。|  
-|**MaxLength**|最大資料類型長度 (以位元組為單位)。 例如， **nvarchar(** 50 **)** 的 **MaxLength** 為 100， **int** 的 **MaxLength** 為 4。|**int**<br /><br /> NULL = 輸入無效。|  
+|**MaxLength**|最大資料類型長度 (以位元組為單位)。 例如，**nvarchar(** 50 **)** 的 **MaxLength** 為 100，**int** 的 **MaxLength** 為 4。|**int**<br /><br /> NULL = 輸入無效。|  
   
 ## <a name="return-types"></a>傳回型別  
  **sql_variant**  
@@ -77,7 +77,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 請注意，這三個值的每一個都是 **sql_variant** 。  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] 請注意，這三個值的每一個都是 **sql_variant**。  
   
 ```  
 Base Type    Precision    Scale  

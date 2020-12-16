@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fffbaee8df76859f5c09d08e7bb0d23e466c4e00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 17f96bc2ee6c1e8c4d55491424b0099c467ed8de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461879"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "86918301"
   
 -   訂閱資料庫  
   
--   「發行者」、「散發者」及所有「訂閱者」端的**msdb** 資料庫和 **master** 資料庫  
+-   「發行者」、「散發者」及所有「訂閱者」端的 **msdb** 資料庫和 **master** 資料庫  
   
  針對複寫的資料庫進行資料的備份與還原時，需要特別地注意。 如需詳細資訊，請參閱 [備份及還原複寫的資料庫](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。  
   

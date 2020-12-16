@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac59dabc8cba303ab0b4e8e8c63811772461d216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be2a84e21cc55340d675041cdd353dab887531c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490955"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465289"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆積 (無叢集索引的資料表)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490955"
   
  如果沒有非叢集索引且資料表很大，則請勿使用堆積，除非想要傳回不含任何指定順序的整個資料表內容。 在堆積中若要尋找某一資料列，就必須讀取堆積中的所有資料列。  
  
- 如果經常更新資料，則請勿使用堆積。 如果您更新記錄，而該更新在資料頁中所使用空間比目前使用的還要更多，則必須將記錄移至具有足夠可用空間的資料頁。 此動作會建立一筆指向資料新位置的**轉送記錄**，且**轉送指標**必須寫入先前保留該資料的頁面中，以此指示新的實體位置。 這會採用堆積中的片段。 掃描堆積時，必須遵循這些指標來限制預先讀取的效能，且可能會產生降低掃描效能的額外 I/O。 
+ 如果經常更新資料，則請勿使用堆積。 如果您更新記錄，而該更新在資料頁中所使用空間比目前使用的還要更多，則必須將記錄移至具有足夠可用空間的資料頁。 此動作會建立一筆指向資料新位置的 **轉送記錄**，且 **轉送指標** 必須寫入先前保留該資料的頁面中，以此指示新的實體位置。 這會採用堆積中的片段。 掃描堆積時，必須遵循這些指標來限制預先讀取的效能，且可能會產生降低掃描效能的額外 I/O。 
   
 ## <a name="managing-heaps"></a>管理堆積  
  若要建立堆積，請建立不含叢集索引的資料表。 如果資料表中已有叢集索引，則請卸除叢集索引，將資料表還原為堆積。  

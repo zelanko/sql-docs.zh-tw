@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2dcdf0ed9fa0e62be66cde8773a741b37ffa3306
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461199"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ SUBSTRING ( expression ,start , length )
  這是一個正整數，或是指定將傳回之 *expression* 字元數的 **bigint** 運算式。 如果 *length* 是負數，則會產生錯誤並結束此陳述式。 如果 *start* 和 *length* 的總和大於 *expression* 中的字元數，則會傳回從 *start* 開始的整個值運算式。  
   
 ## <a name="return-types"></a>傳回型別  
- 如果 *expression* 是其中一個支援的字元資料類型，就會傳回字元資料。 如果 *expression* 是支援的 **binary**資料類型之一，就會傳回二進位資料。 傳回的字串與指定運算式的類型相同，但下表所顯示者例外。  
+ 如果 *expression* 是其中一個支援的字元資料類型，就會傳回字元資料。 如果 *expression* 是支援的 **binary** 資料類型之一，就會傳回二進位資料。 傳回的字串與指定運算式的類型相同，但下表所顯示者例外。  
   
 |指定的運算式|傳回類型|  
 |--------------------------|-----------------|  
@@ -66,7 +66,7 @@ SUBSTRING ( expression ,start , length )
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>備註  
- *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
+ *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char** 或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary** 或 **varbinary** 資料類型)。  
   
  當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)** 。  
   
@@ -117,7 +117,7 @@ bcd
 > [!NOTE]  
 >  若要執行下列範例，您必須安裝 **pubs** 資料庫。  
   
- 下列範例示範如何從 `pubs` 資料庫之 `pub_info`資料表的各個 **text** 和 **image**資料行傳回前 10 個字元。 **text** 資料會當成 **varchar** 傳回，且 **image** 資料會當成 **varbinary** 傳回。  
+ 下列範例示範如何從 `pubs` 資料庫之 `pub_info`資料表的各個 **text** 和 **image** 資料行傳回前 10 個字元。 **text** 資料會當成 **varchar** 傳回，且 **image** 資料會當成 **varbinary** 傳回。  
   
 ```sql
 USE pubs;  

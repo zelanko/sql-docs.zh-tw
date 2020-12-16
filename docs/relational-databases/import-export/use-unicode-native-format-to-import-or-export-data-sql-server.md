@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 49e3681e448e0fb262e3ea1c52650106f15687e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010125"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465489"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86010125"
   
 |Command|選項|描述|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|導致 **bcp** 公用程式使用 Unicode 原生格式，這個格式會對所有非字元資料使用原生 (資料庫) 資料類型，對所有字元 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**及 **ntext**) 資料使用 Unicode 字元資料格式。|  
+|bcp|**-N**|導致 **bcp** 公用程式使用 Unicode 原生格式，這個格式會對所有非字元資料使用原生 (資料庫) 資料類型，對所有字元 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text** 及 **ntext**) 資料使用 Unicode 字元資料格式。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|使用 Unicode 原生格式大量匯入資料。|  
 |OPENROWSET|N/A|必須使用格式檔案|
     

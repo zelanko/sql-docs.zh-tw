@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463099"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 輪替 Always Encrypted 金鑰
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85767550"
 資料行主要金鑰通常會保護一或多個資料行加密金鑰。 每個資料行加密金鑰在資料庫中皆存有加密值，其為使用資料行主要金鑰將資料行加密金鑰加密的產物。
 在此步驟中，使用新資料行主要金鑰，將輪替中資料行主要金鑰所保護的每個資料行加密金鑰加密，並將新加密值儲存在資料庫中。 因此，每個受到輪替影響的資料行加密金鑰皆會有兩個加密值︰其中一個值是由現有資料行主要金鑰加密，而另一個新值是由新資料行主要金鑰加密。
 
-1.  使用**物件總管**巡覽至 [安全性] > [Always Encrypted 金鑰] > [資料行主要金鑰] 資料夾，找出您要輪替的資料行主要金鑰。
+1.  使用 **物件總管** 巡覽至 [安全性] > [Always Encrypted 金鑰] > [資料行主要金鑰] 資料夾，找出您要輪替的資料行主要金鑰。
 2.  以滑鼠右鍵按一下資料行主要金鑰，然後選取 [輪替] 。
 3.  在 [資料行主要金鑰輪替]  對話方塊的 [目標]  欄位中，選取您在步驟 1 中建立之新資料行主要金鑰的名稱。
 4.  檢閱現有資料行主要金鑰所保護的資料行加密金鑰清單。 這些金鑰將會受到輪替影響。
@@ -123,7 +123,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 [工作] ，然後按一下 [加密資料行] 。
 2.  檢閱[簡介]  頁面，然後按一下 [下一步] 。
 3.  在 [資料行選取]  頁面上，展開資料表，然後找出舊資料行加密金鑰目前所加密且您想要取代的所有資料行。
-4.  針對舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰] 設定為自動產生的新金鑰。 **注意：** 您也可以先建立新的資料行加密金鑰，然後執行精靈，請參閱[使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。
+4.  針對舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰] 設定為自動產生的新金鑰。 **注意：** 您也可以先建立新的資料行加密金鑰，然後執行精靈，請參閱 [使用 [新增資料行加密金鑰] 對話方塊佈建資料行加密金鑰](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)。
 5.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
 6.  在 [驗證] 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
 7.  在 [摘要] 頁面上，檢閱您已選取的選項，並按一下 [完成]，然後在完成時關閉精靈。

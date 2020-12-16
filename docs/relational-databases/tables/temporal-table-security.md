@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 244a625cb41d05f0d2f7cf61e8d6631a85dc8a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462559"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 
@@ -25,7 +25,7 @@ ms.locfileid: "89521533"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-若要了解適用於時態表的安全性，請務必了解適用於時態表的安全性原則。 了解這些安全性原則之後，您就已經準備好深入了解關於 **CREATE TABLE**、 **ALTER TABLE**及 **SELECT** 陳述式的安全性。
+若要了解適用於時態表的安全性，請務必了解適用於時態表的安全性原則。 了解這些安全性原則之後，您就已經準備好深入了解關於 **CREATE TABLE**、 **ALTER TABLE** 及 **SELECT** 陳述式的安全性。
 
 ## <a name="security-principles"></a>安全性原則
 
@@ -63,19 +63,19 @@ ms.locfileid: "89521533"
 
 | 功能 | 建立新的記錄資料表 | 重複使用現有的記錄資料表 |
 | ------- | ------------------------ | ---------------------------- |
-|必要的權限|資料庫的**CREATE TABLE** 權限<br /><br /> 在建立目前和記錄資料表之結構描述上的**ALTER** 權限|資料庫的**CREATE TABLE** 權限<br /><br /> 在將建立目前資料表之結構描述上的**ALTER** 權限。<br /><br /> 記錄資料表上的**CONTROL** 權限會指定為建立時態表之 **CREATE TABLE** 陳述式的一部分|
+|必要的權限|資料庫的 **CREATE TABLE** 權限<br /><br /> 在建立目前和記錄資料表之結構描述上的 **ALTER** 權限|資料庫的 **CREATE TABLE** 權限<br /><br /> 在將建立目前資料表之結構描述上的 **ALTER** 權限。<br /><br /> 記錄資料表上的 **CONTROL** 權限會指定為建立時態表之 **CREATE TABLE** 陳述式的一部分|
 |稽核|稽核顯示使用者已嘗試建立兩個物件。 作業可能失敗的原因是在資料庫中建立資料表的權限不足，或者變更任一個資料表的結構描述的權限不足。|稽核顯示時態表已建立。 作業可能失敗的原因是在資料庫中建立資料表的權限不足、變更時態表的結構描述的權限不足，或者在記錄資料表上的權限不足。|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>變更時態表 (SYSTEM_VERSIONING 為 ON/OFF) 陳述式的安全性
 
 | 功能 | 建立新的記錄資料表 | 重複使用現有的記錄資料表 |
 | ------- | ------------------------ | ---------------------------- |
-|必要的權限|資料庫的**CONTROL** 權限<br /><br /> 資料庫的**CREATE TABLE** 權限<br /><br /> 在建立記錄資料表之結構描述上的**ALTER** 權限|已變更之原始資料表上的**CONTROL** 權限<br /><br /> 記錄資料表上的**CONTROL** 權限會指定為 **ALTER TABLE** 陳述式的一部分|
+|必要的權限|資料庫的 **CONTROL** 權限<br /><br /> 資料庫的 **CREATE TABLE** 權限<br /><br /> 在建立記錄資料表之結構描述上的 **ALTER** 權限|已變更之原始資料表上的 **CONTROL** 權限<br /><br /> 記錄資料表上的 **CONTROL** 權限會指定為 **ALTER TABLE** 陳述式的一部分|
 |稽核|稽核顯示時態表已變更，同時已建立記錄資料表。 作業可能失敗的原因是在資料庫中建立資料表的權限不足、變更記錄資料表的結構描述的權限不足，或者修改時態表的權限不足。|稽核顯示時態表已變更，但作業需要記錄資料表的存取權。 作業可能失敗的原因是記錄資料表上的權限不足，或者目前資料表上的權限不足。|
 
 ## <a name="security-of-select-statement"></a>SELECT 陳述式的安全性
 
-對於不會影響記錄資料表的**SELECT** 陳述式， **SELECT** 權限會維持不變。 對於會影響記錄資料表的 **SELECT** 陳述式，在目前資料表和記錄資料表上都需要 **SELECT** 權限。
+對於不會影響記錄資料表的 **SELECT** 陳述式， **SELECT** 權限會維持不變。 對於會影響記錄資料表的 **SELECT** 陳述式，在目前資料表和記錄資料表上都需要 **SELECT** 權限。
 
 ## <a name="see-also"></a>另請參閱
 

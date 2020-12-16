@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 4ae266962891a52ae9e2b201f7817365e71f8a74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460791"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -170,7 +170,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>範例 A：從 dll 建立組件  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  下列範例假設 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 範例是安裝在機電腦的預設位置，而且 HelloWorld.csproj 範例應用程式已經編譯。 如需詳細資訊，請參閱 [Hello World 範例](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))。  
   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>範例 B：從組件位元建立組件  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  使用您的組件位元取代範例位元 (不完整或無效)。  
   

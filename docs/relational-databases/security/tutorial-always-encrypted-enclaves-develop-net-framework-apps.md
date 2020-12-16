@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd75e0a63ebbfbf6a5749939442b8b8a2e964d92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 84ab8334a2a34552d0aa301d7fd92d04dd9ce214
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403794"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463079"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>教學課程：使用具有安全記憶體保護區的 Always Encrypted 開發 .NET Framework 應用程式
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88403794"
 
 8. 找到 \<configuration\> 區段，然後新增或更新這些 \<configSections\> 區段。
 
-   a. 若 \<configuration\> 區段**不**包含 \<configSections\> 區段，請緊接在 \<configuration\> 的下方新增下列內容。
+   a. 若 \<configuration\> 區段 **不** 包含 \<configSections\> 區段，請緊接在 \<configuration\> 的下方新增下列內容。
    
       ```xml
       <configSections>
@@ -98,7 +98,7 @@ ms.locfileid: "88403794"
 </configuration>
 ```
 ## <a name="step-2-implement-your-application-logic"></a>步驟 2:實作您的應用程式邏輯
-您的應用程式將會連線到 **ContosoHR** 資料庫 (來自[教學課程：使用 SSMS 開始使用具有安全記憶體保護區的 Always Encrypted](tutorial-getting-started-with-always-encrypted-enclaves.md))，並會執行查詢，其中包含在 **SSN** 資料行上的 `LIKE` 述詞和 **Salary** 資料行上的範圍比較。
+您的應用程式將會連線到 **ContosoHR** 資料庫 (來自 [教學課程：使用 SSMS 開始使用具有安全記憶體保護區的 Always Encrypted](tutorial-getting-started-with-always-encrypted-enclaves.md))，並會執行查詢，其中包含在 **SSN** 資料行上的 `LIKE` 述詞和 **Salary** 資料行上的範圍比較。
 
 1. 將 Program.cs 檔案 (由 Visual Studio 產生) 的內容替換成以下程式碼。 使用您伺服器名稱和環境的記憶體保護區證明 URL 來更新資料庫連接字串。 您也可以更新資料庫驗證設定。
 

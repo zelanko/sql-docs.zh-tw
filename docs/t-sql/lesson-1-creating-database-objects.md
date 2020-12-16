@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8d5649928b9e937fef37c7c67bc85c5f560dac20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460871"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>課程 1：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92035879"
     GO  
     ```  
   
-2.  使用指標選取 `CREATE DATABASE`這兩個字，然後按 **F1**鍵。 這時應該會開啟《SQL Server 線上叢書》中的 `CREATE DATABASE` 主題。 您可使用此技術來找到 `CREATE DATABASE`，以及在這個教學課程中所使用的其他陳述式完整語法。  
+2.  使用指標選取 `CREATE DATABASE`這兩個字，然後按 **F1** 鍵。 這時應該會開啟《SQL Server 線上叢書》中的 `CREATE DATABASE` 主題。 您可使用此技術來找到 `CREATE DATABASE`，以及在這個教學課程中所使用的其他陳述式完整語法。  
   
 3.  在 [查詢編輯器] 中按 **F5** ，執行陳述式並建立名為 `TestData`的資料庫。  
   

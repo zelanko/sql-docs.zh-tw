@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ec7815d623208c5e2860fd233ba5a290e2e8762b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195420"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460901"
 ---
 # <a name="unary-operators---positive"></a>一元加法 - 正數
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "92195420"
 
 ## <a name="arguments"></a>引數
  *numeric_expression*  
- 這是數值資料類型類別目錄中任何一個資料類型的任何有效[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
+ 這是數值資料類型類別目錄中任何一個資料類型的任何有效 [運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但是 **datetime** 和 **smalldatetime** 資料類型除外。  
   
 ## <a name="result-types"></a>結果類型  
- 傳回 *numeric_expression*的資料類型。  
+ 傳回 *numeric_expression* 的資料類型。  
   
 ## <a name="remarks"></a>備註  
  雖然一元加號可以出現在任何數值運算式之前，但從運算式傳回的值，它並不會做任何處理。 明確地說，如果運算式是負的，它便不會傳回正值。 如果負運算式要傳回正值，請使用 [ABS](../../t-sql/functions/abs-transact-sql.md) 函數。  

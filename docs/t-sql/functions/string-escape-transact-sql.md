@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 6de463b09ed654c8469f650ea83e3ebb2ebb653e
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: de472b06f2d6747ced93a36f3563188e3d537d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461219"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 

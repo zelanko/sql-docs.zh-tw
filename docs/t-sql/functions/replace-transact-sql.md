@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86cb0ce71ee04689a9705e6e07b7679b484c37a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2c6dcf30574b356cc591752469b036c4bc40f68d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110347"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462459"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  這是要搜尋的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *string_expression* 可以是字元或二進位資料類型。  
   
  *string\_pattern*  
- 這是要尋找的子字串。 *string_pattern* 可以是字元或二進位資料類型。 *string_pattern*不可以是空字串 ('')，並且不得超過分頁所能容納的最大位元組數目。  
+ 這是要尋找的子字串。 *string_pattern* 可以是字元或二進位資料類型。 *string_pattern* 不可以是空字串 ('')，並且不得超過分頁所能容納的最大位元組數目。  
   
  *string\_replacement*  
  這是取代字串。 *string_replacement* 可以是字元或二進位資料類型。  

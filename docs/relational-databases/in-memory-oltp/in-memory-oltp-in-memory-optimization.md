@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f9feb302418cd42cd49cd53dc866dbdccc2301
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465379"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>記憶體內部 OLTP 與記憶體最佳化
 
@@ -71,7 +71,7 @@ ms.locfileid: "91867686"
 
 本節提供其他包含 SQL Server 上記憶體內部 OLTP 相關資訊的網站連結。
 
-- [說明記憶體內部 OLTP 並示範其效能優勢的**影片**](#anchorname-17minute-video)
+- [說明記憶體內部 OLTP 並示範其效能優勢的 **影片**](#anchorname-17minute-video)
 
 - [記憶體內部 OLTP 效能示範 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -89,7 +89,7 @@ ms.locfileid: "91867686"
 
 - _影片標題：_ &nbsp; **SQL Server 2016 中的記憶體內部 OLTP**
 - _發佈日期：_ &nbsp; 2019-03-10，`YouTube.com` 上。
-- _影片長度：_ &nbsp; 17:32 &nbsp; &nbsp; (請參閱下列[**索引**](#anchorname-index-17minute-video)以取得影片的連結)。
+- _影片長度：_ &nbsp; 17:32 &nbsp; &nbsp; (請參閱下列 [**索引**](#anchorname-index-17minute-video)以取得影片的連結)。
 - _主持人：_ &nbsp; SQL Server 資深方案經理 Jos de Bruijn
 
 ### <a name="demo-can-be-downloaded"></a>您可以下載示範內容

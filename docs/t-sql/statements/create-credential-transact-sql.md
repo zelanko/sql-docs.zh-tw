@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 472a4f7a509249d195c39cf90181799672ff0b21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 88307a27daf1bd601c24e318817f41426c9035f3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464129"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -68,9 +68,9 @@ IDENTITY **='** _identity\_name_ **'** 指定連接到伺服器外部時要使�
 
 SECRET **='** _secret_ **'** 指定外寄驗證所需的祕密。
 
-當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 其 **SECRET** 引數要求 Azure Active Directory 中**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，且兩者之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。 如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)。
+當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 其 **SECRET** 引數要求 Azure Active Directory 中 **服務主體** 的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，且兩者之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。 如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage)。
 
-FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* 指定*企業金鑰管理 (EKM) 提供者*的名稱。 如需金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
+FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* 指定 *企業金鑰管理 (EKM) 提供者* 的名稱。 如需金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -102,7 +102,7 @@ GO
 
 ### <a name="b-creating-a-credential-for-ekm"></a>B. 建立 EKM 的認證
 
-下列範例會透過 EKM 的管理工具 (包含基本帳戶類型和密碼)，在 EKM 模組上使用之前建立的帳戶 `User1OnEKM`。 伺服器上**系統管理員**帳戶會建立用來連線到 EKM 帳戶的認證，並將其指派給 `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶：
+下列範例會透過 EKM 的管理工具 (包含基本帳戶類型和密碼)，在 EKM 模組上使用之前建立的帳戶 `User1OnEKM`。 伺服器上 **系統管理員** 帳戶會建立用來連線到 EKM 帳戶的認證，並將其指派給 `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶：
 
 ```sql
 CREATE CREDENTIAL CredentialForEKM
@@ -117,12 +117,12 @@ ADD CREDENTIAL CredentialForEKM;
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. 使用 Azure 金鑰保存庫建立 EKM 的認證
 
-下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在使用**適用於 Microsoft Azure Key Vault 的 SQL Server 連接器**時用於存取 Azure Key Vault。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接器的完整範例，請參閱[使用 Azure Key Vault 進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。
+下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在使用 **適用於 Microsoft Azure Key Vault 的 SQL Server 連接器** 時用於存取 Azure Key Vault。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接器的完整範例，請參閱[使用 Azure Key Vault 進行可延伸金鑰管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。
 
 > [!IMPORTANT]
 > **CREATE CREDENTIAL** 的 **IDENTITY** 引數需要金鑰保存庫名稱。 **CREATE CREDENTIAL** 的 **SECRET** 引數要求 *\<Client ID>* (不含連字號) 和 *\<Secret>* 一併傳遞，且兩者之間不含空格。
 
- 在下列範例中， **用戶端識別碼** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 已移除連字號並以字串 `EF5C8E094D2A4A769998D93440D8115D` 輸入，而 **密碼** 會以字串 *SECRET_DBEngine*來表示。
+ 在下列範例中， **用戶端識別碼** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 已移除連字號並以字串 `EF5C8E094D2A4A769998D93440D8115D` 輸入，而 **密碼** 會以字串 *SECRET_DBEngine* 來表示。
 
 ```sql
 USE master;
@@ -132,7 +132,7 @@ CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;
 ```
 
-下列範例會使用 **用戶端識別碼**和**祕密**字串的變數建立相同的認證，然後串連在一起以形成 **SECRET** 引數。 **REPLACE** 函數可用來從用戶端識別碼中移除連字號。
+下列範例會使用 **用戶端識別碼** 和 **祕密** 字串的變數建立相同的認證，然後串連在一起以形成 **SECRET** 引數。 **REPLACE** 函數可用來從用戶端識別碼中移除連字號。
 
 ```sql
 DECLARE @AuthClientId uniqueidentifier = 'EF5C8E09-4D2A-4A76-9998-D93440D8115D';
@@ -146,14 +146,14 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 權杖建立認證
 
-**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)與 Azure SQL 受控執行個體。
+**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)與 Azure SQL 受控執行個體。
 
 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。 如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。
 
 > [!IMPORTANT]
 > **CREDENTIAL NAME** 引數要求名稱與容器路徑相符，開頭為 https，而且不包含尾端斜線。 **IDENTITY** 引數需要名稱 *SHARED ACCESS SIGNATURE*。 **SECRET** 引數需要共用存取簽章權杖。
 >
-> **SHARED ACCESS SIGNATURE 祕密**開頭不應該有 **?** 。
+> **SHARED ACCESS SIGNATURE 祕密** 開頭不應該有 **?** 。
 
 ```sql
 USE master

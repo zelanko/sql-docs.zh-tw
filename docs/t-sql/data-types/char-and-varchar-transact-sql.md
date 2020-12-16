@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fcc2f6593a7fc7a72c80ee3fe271cdb392ee747
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115395"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462549"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 
@@ -40,13 +40,13 @@ ms.locfileid: "91115395"
 
 ## <a name="arguments"></a>引數
 
-**char** [ ( *n* ) ] 固定大小字串資料。 *n* 會定義字串大小 (單位為位元組)，且必須是 1 到 8,000 之間的值。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組，但可儲存的字元數目可能小於 *n*。 **char** 的 ISO 同義字為 **character**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+**char** [ ( *n* ) ] 固定大小字串資料。 *n* 會定義字串大小 (單位為位元組)，且必須是 1 到 8,000 之間的值。 針對單位元組編碼字元集 (例如 *拉丁字元*)，儲存大小是 *n* 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組，但可儲存的字元數目可能小於 *n*。 **char** 的 ISO 同義字為 **character**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-**varchar** [ ( *n* | **max** ) ] 可變大小字串資料。 您可以使用 *n* 以位元組為單位來定義字串大小，該值可以介於 1 到 8,000，或使用 **max** 來表示資料行大小限制最多為 2^31-1 個位元組 (2 GB) 的儲存體。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+**varchar** [ ( *n* | **max** ) ] 可變大小字串資料。 您可以使用 *n* 以位元組為單位來定義字串大小，該值可以介於 1 到 8,000，或使用 **max** 來表示資料行大小限制最多為 2^31-1 個位元組 (2 GB) 的儲存體。 針對單位元組編碼字元集 (例如 *拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>備註
 
-常見的誤解是假設 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字元數。 但是在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字串長度 (以**位元組**為單位) (0-8,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [NCHAR (*n*) 和 NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 的定義。
+常見的誤解是假設 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字元數。 但是在 [CHAR(*n*) 和 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)，*n* 會定義字串長度 (以 **位元組** 為單位) (0-8,000)。 *n* 一律不會定義可儲存的字元數。 這類似於 [NCHAR (*n*) 和 NVARCHAR (*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 的定義。
 發生誤解的原因是，使用單一位元組編碼時，CHAR 和 VARCHAR 的儲存體大小是 *n* 位元組，而字元數目也是 *n*。 不過，針對多位元組編碼 (例如 [UTF-8](https://www.wikipedia.org/wiki/UTF-8))，較高的 Unicode 範圍 (128-1,114,111) 會使用二或多個位元組來產生單一字元。 例如，在定義為 CHAR (10) 的資料行中，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以儲存 10 個使用單一位元組編碼的字元 (Unicode 範圍 0-127)，但使用多位元組編碼時，則小於 10 個字元 (Unicode 範圍 128-1,114,111)。 如需 Unicode 儲存和字元範圍的詳細資訊，請參閱 [UTF-8 和 UTF-16 之間的儲存差異](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。
 
 當資料定義或變數宣告陳述式中未指定 *n* 時，預設長度為 1。 若使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
@@ -84,7 +84,7 @@ ms.locfileid: "91115395"
 > [!NOTE]
 > 支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不會報告字碼頁翻譯期間的資料遺失。
 
-轉換成近似**數值**資料類型的字元運算式，可包含選擇性的指數標記法。 這個標記法是小寫 e 或大寫 E 加上選擇性的加號 (+) 或減號 (-)，再接數字。
+轉換成近似 **數值** 資料類型的字元運算式，可包含選擇性的指數標記法。 這個標記法是小寫 e 或大寫 E 加上選擇性的加號 (+) 或減號 (-)，再接數字。
 
 轉換成正確 **numeric** 資料類型的字元運算式必須由數字、小數點和選擇性的加號 (+) 或減號 (-) 組成。 前置的空白會被忽略。 字串不能用逗號分隔符號，如 123,456.00 中的千位分隔符號。
 

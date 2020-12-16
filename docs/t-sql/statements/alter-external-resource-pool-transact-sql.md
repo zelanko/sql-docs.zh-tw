@@ -17,31 +17,31 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: de8fe4503436963094dde524c7fb65a677e91826
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283492"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464139"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 變更 Resource Governor 外部集區，其指定外部處理序可以使用的資源。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 若是 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區會控管 `rterm.exe`、`python.exe`、`BxlServer.exe` 及其所繁衍的其他處理序。
 ::: moniker-end
 
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>語法
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -56,7 +56,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
  ```syntaxsql
 
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
@@ -87,20 +87,20 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 這是現有的使用者定義外部資源集區名稱，或是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時建立的預設外部資源集區名稱。
 搭配 `ALTER EXTERNAL RESOURCE POOL` 使用時，"default" 必須加上引號 ("") 或方括號 ([]) 才能避免與系統保留字 `DEFAULT` 產生衝突。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 MAX_CPU_PERCENT =*value*  
-在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 MAX_MEMORY_PERCENT =*value*  
-指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 MAX_PROCESSES =*value*  
 指定允許外部資源集區使用的處理序數目上限。 指定 0 來為集區設定無限的閾值，這在之後只有電腦資源繫結會對其建立繫結。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 MAX_CPU_PERCENT =*value*  
-在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 將外部資源集區附加到指定的 CPU。
@@ -108,7 +108,7 @@ AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spe
 AFFINITY CPU = **(** \<CPU_range_spec> **)** 會將外部資源集區對應到由指定 CPU_ID 所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU。 當使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，外部資源集區會與對應到指定 NUMA 節點或節點範圍的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實體 CPU 同質化。
 
 MAX_MEMORY_PERCENT =*value*  
-指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值*是整數。 允許的 *value* 範圍為 1 至 100。
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *值* 是整數。 允許的 *value* 範圍為 1 至 100。
 
 MAX_PROCESSES =*value*  
 指定允許外部資源集區使用的處理序數目上限。 指定 0 來為集區設定無限的閾值，這在之後只有電腦資源繫結會對其建立繫結。
@@ -127,7 +127,7 @@ MAX_PROCESSES =*value*
 ## <a name="examples"></a>範例
 
 下列陳述式會變更外部集區，其限制 CPU 使用量為 50%，電腦中可用記憶體的最大記憶體為 25%。
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -140,7 +140,7 @@ GO
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

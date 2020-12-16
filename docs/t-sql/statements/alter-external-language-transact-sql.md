@@ -10,13 +10,13 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: bca91a8745a36c845fd3ef7e08e1d0139b37bd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464149"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -99,7 +99,7 @@ ALTER EXTERNAL LANGUAGE language_name
 
 這有可能向外部語言執行階段提供一組參數。 外部處理序啟動之後，參數值會提供給外部執行階段。 但在外部處理序啟動之前，語言延伸模組可以存取環境變數。
 
-. **external_lang_env_variables**
+.**external_lang_env_variables**
 
 這可能會在外部處理序啟動之前，向外部語言執行階段提供一組環境變數。 例如，執行階段本身的主目錄即為環境變數範例。 例如：JRE_HOME。
 
@@ -111,7 +111,7 @@ ALTER EXTERNAL LANGUAGE language_name
 
 ## <a name="remarks"></a>備註
 
-目前，不支援 **PARAMETERS** 和 **ENVIRONMENT_VARIABLES** 。
+目前，不支援 **PARAMETERS** 和 **ENVIRONMENT_VARIABLES**。
 
 ## <a name="permissions"></a>權限
 

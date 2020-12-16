@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77aa77821afc42c3fa45bf0012003ea100671480
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810114"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461829"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91810114"
   
  回復作業也會留下記錄。 每筆交易都會在交易記錄檔中保留空間，以確保有足夠的記錄檔空間可支援由明確回復陳述式所造成的回復，或因發生錯誤而造成的回復。 保留的空間大小須視交易中執行的作業而定，但通常會等於用來記錄每個作業的空間大小。 當交易完成後就會釋放這個保留空間。  
   
-<a name="minlsn"></a> 在記錄檔中，從對成功復原全資料庫而言不可或缺的第一筆記錄檔記錄，一直到最後寫入記錄檔記錄的這個區段，稱為記錄檔的使用中部分，或「使用中的記錄」  ，或「記錄結尾」  。 這是需要進行完整資料庫[復原](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)的記錄區段。 沒有任何使用中的記錄部分可被截斷。 此第一個記錄檔記錄的記錄序號 (LSN) 稱為**最小復原 LSN (*MinLSN*)** 。 如需交易記錄所支援作業的詳細資訊，請參閱[交易記錄 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)。  
+<a name="minlsn"></a> 在記錄檔中，從對成功復原全資料庫而言不可或缺的第一筆記錄檔記錄，一直到最後寫入記錄檔記錄的這個區段，稱為記錄檔的使用中部分，或「使用中的記錄」  ，或「記錄結尾」  。 這是需要進行完整資料庫[復原](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)的記錄區段。 沒有任何使用中的記錄部分可被截斷。 此第一個記錄檔記錄的記錄序號 (LSN) 稱為 **最小復原 LSN (*MinLSN*)** 。 如需交易記錄所支援作業的詳細資訊，請參閱[交易記錄 (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)。  
 
 差異與記錄備份則可將已還原的資料庫推往更後面的時間點，因為它們對應到較高的 LSN。 
   
@@ -83,7 +83,7 @@ ms.locfileid: "91810114"
 >    -  若成長介於 64MB 到 1GB 之間，請建立 8 個能夠涵蓋成長大小的 VLF (例如：成長若為 512MB，請建立八個 64MB 的 VLF)
 >    -  若成長大於 1GB，請建立 16 個能夠涵蓋成長大小的 VLF (例如：成長若為 8 GB，請建立十六個 512MB 的 VLF)
 
-如果記錄檔以許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 **這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。** 相反地，如果記錄檔設定為以少量次數或一次增加而變得很龐大，則會產生一些非常大的虛擬記錄檔。 如需正確估計交易記錄檔的**所需大小**和**自動成長**設定的詳細資訊，請參閱[管理交易記錄檔的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)的＜建議＞一節。
+如果記錄檔以許多少量增加而變得很龐大，將會產生許多虛擬記錄檔。 **這樣會減慢資料庫啟動的速度，也會降低記錄備份和還原作業的執行速度。** 相反地，如果記錄檔設定為以少量次數或一次增加而變得很龐大，則會產生一些非常大的虛擬記錄檔。 如需正確估計交易記錄檔的 **所需大小** 和 **自動成長** 設定的詳細資訊，請參閱 [管理交易記錄檔的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)的＜建議＞一節。
 
 建議您使用達到最佳 VLF　分佈所需的增量，以接近最後所需大小的 *size* 值來指派記錄檔，並且也使用相對較大的 *growth_increment* 值。 若要判斷目前交易記錄大小的最佳 VLF 分佈，請參閱下方的提示。 
  - *size* 值，如 `ALTER DATABASE` 的 `SIZE` 引數所設定，是記錄檔的初始大小。

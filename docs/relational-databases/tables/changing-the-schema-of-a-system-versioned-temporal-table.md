@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538208"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462639"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>變更系統建立版本時態表的結構描述
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>重要備註
 
-- 變更時態表結構描述所需的目前和記錄資料表的**CONTROL** 權限。
+- 變更時態表結構描述所需的目前和記錄資料表的 **CONTROL** 權限。
 - 在 **ALTER TABLE** 作業期間，系統會保留這兩個資料表的結構描述鎖定。
 - 指定的結構描述變更會以適當的方式 (視變更的類型而定) 傳播至記錄資料表。
 - 如果您加入不可為 Null 資料行，或改變現有資料行使其成為不可為 Null，則必須指定現有資料列的預設值。 系統會產生具有相同值的其他預設值，並將它套用到記錄資料表。 將 **DEFAULT** 加入非空白資料表，是所有版本的資料作業大小 (為中繼資料作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 除外)。

@@ -17,13 +17,13 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 20cbd307307993fa7278e457d394947d0246ec4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 8e11fa7b675382cd04ac596fb4794794828a53f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461299"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "88364184"
 
  從 JSON 字串擷取物件或陣列。  
   
- 若要從 JSON 字串而非物件或陣列擷取純量值，請參閱 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)。 如需 **JSON_VALUE** 及 **JSON_QUERY** 之間的差異資訊，請參閱[比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
+ 若要從 JSON 字串而非物件或陣列擷取純量值，請參閱 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)。 如需 **JSON_VALUE** 及 **JSON_QUERY** 之間的差異資訊，請參閱 [比較 JSON_VALUE 與 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,9 +65,9 @@ JSON 路徑可為剖析指定 lax 或 strict 模式。 若您未指定剖析模�
   
  若值並非物件或陣列：  
   
-- 在 lax 模式中，**JSON_QUERY**會傳回 Null。  
+- 在 lax 模式中，**JSON_QUERY** 會傳回 Null。  
   
-- 在 strict 模式中，**JSON_QUERY**會傳回錯誤。  
+- 在 strict 模式中，**JSON_QUERY** 會傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
 

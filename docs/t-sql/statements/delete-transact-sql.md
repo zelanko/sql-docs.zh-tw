@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464089"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -128,9 +128,9 @@ DELETE
  在 FROM *table_source* 子句中指定的別名，代表要刪除資料列的資料表或檢視。  
   
  *server_name*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
- 資料表或檢視所在的伺服器名稱 (使用連結的伺服器名稱或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函式當作伺服器名稱)。 若指定 *server_name* ，則 *database_name* 和 *schema_name* 都為必要項目。  
+ 資料表或檢視所在的伺服器名稱 (使用連結的伺服器名稱或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函式當作伺服器名稱)。 若指定 *server_name*，則 *database_name* 和 *schema_name* 都為必要項目。  
   
  *database_name*  
  資料庫的名稱。  
@@ -146,11 +146,11 @@ DELETE
  *table_or_view_name* 所參考的檢視必須能夠更新，而且必須只參考該檢視定義之 FROM 子句中的單一基底資料表。 如需可更新檢視的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
  *rowset_function_limited*  
- **適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+ **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
  依提供者功能而定，會是 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函式。  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  指定目標資料表允許使用的一個或多個資料表提示。 WITH 關鍵字和括號都是必要的。 不允許使用 NOLOCK 和 READUNCOMMITTED。 如需資料表提示的詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -168,7 +168,7 @@ DELETE
   
  以 WHERE 子句指定的內容為基礎的刪除作業有兩種形式：  
   
--   搜尋刪除指定用來限定要刪除的資料列之搜尋條件。 例如，WHERE *column_name* = *value* 。  
+-   搜尋刪除指定用來限定要刪除的資料列之搜尋條件。 例如，WHERE *column_name* = *value*。  
   
 -   定位刪除利用 CURRENT OF 子句來指定資料指標。 刪除作業發生在資料指標目前的位置上。 這比使用 WHERE *search_condition* 子句來限定要刪除之資料列的搜尋 DELETE 陳述式還要精確。 如果搜尋條件並未唯一識別單一資料列，搜尋 DELETE 陳述式會刪除多個資料列。  
   
@@ -187,7 +187,7 @@ DELETE
  *cursor_variable_name*  
  資料指標變數的名稱。 資料指標變數必須參考允許更新的資料指標。  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  關鍵字，它們會指出要使用哪一個最佳化工具提示來自訂 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳做法  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制刪除的資料列數目  
- 當 TOP ( *n* ) 子句與 DELETE 一起使用時，會隨機選取 *n* 個資料列來執行刪除作業。 以下範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `PurchaseOrderDetail` 資料表中刪除到期日早於 2006 年 7 月 1 日的 `20` 個隨機資料列。  
+ 當 TOP (*n*) 子句與 DELETE 一起使用時，會隨機選取 *n* 個資料列來執行刪除作業。 以下範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `PurchaseOrderDetail` 資料表中刪除到期日早於 2006 年 7 月 1 日的 `20` 個隨機資料列。  
   
 ```sql
 DELETE TOP (20)   
@@ -361,7 +361,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> 從遠端資料表刪除資料列  
  本節的範例會顯示如何使用 [連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函式](../functions/opendatasource-transact-sql.md)來參考遠端資料表，以便刪除遠端資料表的資料列。 遠端資料表存在於 SQL Server 的不同伺服器或執行個體上。  
   
-**適用對象** ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
+**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 使用連結的伺服器刪除遠端資料表的資料  
  下列範例會刪除遠端資料表的資料列。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 接下來，會將連結的伺服器名稱 `MyLinkServer` 指定為 *server.catalog.schema.object* 格式之四部分物件名稱的一部分。  

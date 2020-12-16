@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cea868a3023b8b69ef69384f03983183d869531b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037093"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464249"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -113,7 +113,7 @@ _object\_name_
 ## <a name="applies-to-references"></a>「適用於」參考  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 參考包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新版本)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 相關的文章。   
 
-在每個文章頂端附近，都有一個章節指出支援該文章主題的產品。 如果未列出產品，即表示文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP**一文指出其適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)，因為其不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+在每個文章頂端附近，都有一個章節指出支援該文章主題的產品。 如果未列出產品，即表示文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP** 一文指出其適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更新版本)，因為其不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 文章的一般主題可能適用於某產品，但在某些情況下並非所有的引數都受支援。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 您可以在任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品中使用 **CREATE USER** 陳述式，但 **WITH PASSWORD** 語法就無法在舊版中使用。 文章本文會於適當引數描述中插入額外的＜適用對象＞  一節。  
   

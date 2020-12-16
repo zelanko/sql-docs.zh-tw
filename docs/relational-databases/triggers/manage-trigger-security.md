@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485382"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461509"
 ---
 # <a name="manage-trigger-security"></a>管理觸發程序安全性
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-依預設，DML 與 DDL 觸發程序會在呼叫觸發程序的該使用者之環境下執行。 觸發程序的呼叫者是執行陳述式而引發觸發程序執行的使用者。 例如，如果使用者 **Mary** 執行 DELETE 陳述式而引發 DML 觸發程序 **DML_trigMary** 執行，就會在 **Mary** 使用者權限的環境下執行 **DML_trigMary**內的程式碼。 此預設行為有可能遭到居心不良的使用者加以利用，成為在資料庫或伺服器執行個體中導入惡意程式碼的漏洞。 例如，下列 DDL 觸發程序是由使用者 **JohnDoe** 建立的：  
+依預設，DML 與 DDL 觸發程序會在呼叫觸發程序的該使用者之環境下執行。 觸發程序的呼叫者是執行陳述式而引發觸發程序執行的使用者。 例如，如果使用者 **Mary** 執行 DELETE 陳述式而引發 DML 觸發程序 **DML_trigMary** 執行，就會在 **Mary** 使用者權限的環境下執行 **DML_trigMary** 內的程式碼。 此預設行為有可能遭到居心不良的使用者加以利用，成為在資料庫或伺服器執行個體中導入惡意程式碼的漏洞。 例如，下列 DDL 觸發程序是由使用者 **JohnDoe** 建立的：  
 
 ```sql
 CREATE TRIGGER DDL_trigJohnDoe
@@ -50,7 +50,7 @@ GO
 ## <a name="trigger-security-best-practices"></a>觸發程序安全性最佳作法  
  您可以採用下列措施來防止觸發程序的程式碼在提升權限的情況下執行：  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   請透過查詢 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 與 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) 目錄檢視來了解資料庫與伺服器執行個體上所存在的 DML 與 DDL 觸發程序。 下列查詢會傳回目前資料庫中所有的 DML 與資料庫層級的 DDL 觸發程序，以及在伺服器執行個體上的所有伺服器層級的 DDL 觸發程序：  
   
@@ -65,7 +65,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   透過查詢 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 目錄檢視來了解資料庫上所存在的 DML 與 DDL 觸發程序。 下列查詢會傳回目前資料庫中的所有 DML 和資料庫層級的 DDL 觸發程序：  
   

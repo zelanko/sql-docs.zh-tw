@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670181"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460691"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
@@ -126,7 +126,7 @@ ms.locfileid: "91670181"
   
     8.  按一下 **[是]** 繼續。  
   
-    9. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在這段期間內，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求**將會失敗**，並出現類似下列錯誤：「**無法重新整理資料**」或「**嘗試執行要求的動作時發生錯誤。請再試一次**」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
+    9. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在這段期間內，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求 **將會失敗**，並出現類似下列錯誤：「**無法重新整理資料**」或「**嘗試執行要求的動作時發生錯誤。請再試一次**」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
      如需詳細資訊，請參閱下列：  
   
@@ -167,7 +167,7 @@ ms.locfileid: "91670181"
   
 5.  在執行 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 服務的第一部 SharePoint 應用程式伺服器上，**執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式**，以升級 POWERPIVOT 執行個體。 在 [SQL Server 安裝精靈] 的 [安裝] 頁面上，選擇升級選項。 如需詳細資訊，請參閱 [使用安裝精靈升級為 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
-6.  在執行組態工具之前，請先**重新啟動伺服器** 。 此步驟可確保 SQL Server 安裝程式安裝的任何更新或必要條件完全在系統上設定。  
+6.  在執行組態工具之前，請先 **重新啟動伺服器** 。 此步驟可確保 SQL Server 安裝程式安裝的任何更新或必要條件完全在系統上設定。  
   
 7.  **在 SharePoint 2013 伺服器陣列中的每部伺服器上，執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 服務的第一部 SharePoint 應用程式伺服器上，** 組態工具[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，以升級 SharePoint 中的方案和 Web 服務。 您無法使用管理中心進行此步驟。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "91670181"
   
     10. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在這段期間內，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求將會失敗，並出現如下的錯誤：「無法重新整理資料」或「嘗試執行要求的動作時發生錯誤。 請再試一次」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
-8.  針對伺服器陣列中的每個 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服務**重複此程序**：1) 執行 SQL Server 安裝程式 2) 執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
+8.  針對伺服器陣列中的每個 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服務 **重複此程序**：1) 執行 SQL Server 安裝程式 2) 執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
   
 9. 透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   

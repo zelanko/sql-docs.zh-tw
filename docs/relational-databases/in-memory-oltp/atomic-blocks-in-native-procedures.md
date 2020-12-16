@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867353"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465429"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867353"
   
  如果工作階段上沒有使用中交易， **BEGIN ATOMIC** 將會開始新的交易。 如果區塊範圍之外未擲回任何例外狀況，此交易將會在區塊結尾認可。 如果區塊擲回例外狀況 (也就是說，未在區塊內捕捉及處理例外狀況)，交易將會回復。 如果交易橫跨單一 ATOMIC 區塊 (單一原生編譯的預存程序)，您就不需要撰寫明確的 **BEGIN TRANSACTION** 和 **COMMIT** 或 **ROLLBACK** 陳述式。  
   
- 原生編譯的預存程序支援 **TRY**、 **CATCH**和 **THROW** 建構用於錯誤處理。 不支援**RAISERROR** 。  
+ 原生編譯的預存程序支援 **TRY**、 **CATCH** 和 **THROW** 建構用於錯誤處理。 不支援 **RAISERROR** 。  
   
  下列範例說明使用不可部分完成的區塊和原生編譯預存程序處理錯誤的行為：  
   
@@ -132,19 +132,19 @@ GO
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 **BEGIN ATOMIC** 來指定，而其他設定則一律固定為相同的值。  
   
- **BEGIN ATOMIC**需要以下選項：  
+ **BEGIN ATOMIC** 需要以下選項：  
   
 |必要設定|描述|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|支援的值為 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
+|**TRANSACTION ISOLATION LEVEL**|支援的值為 **SNAPSHOT**、 **REPEATABLEREAD** 和 **SERIALIZABLE**。|  
 |**LANGUAGE**|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
 |選擇性設定|描述|  
 |----------------------|-----------------|  
-|**DATEFORMAT**|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時， **DATEFORMAT** 會覆寫與 **LANGUAGE**相關聯的預設日期格式。|  
-|**DATEFIRST**|當指定時， **DATEFIRST** 會覆寫與 **LANGUAGE**相關聯的預設值。|  
+|**DATEFORMAT**|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時， **DATEFORMAT** 會覆寫與 **LANGUAGE** 相關聯的預設日期格式。|  
+|**DATEFIRST**|當指定時， **DATEFIRST** 會覆寫與 **LANGUAGE** 相關聯的預設值。|  
 |**DELAYED_DURABILITY**|支援的值為 **OFF** 和 **ON**。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久、預設值或延遲的持久。如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)。|  
   
  對於所有原生編譯預存程序中所有不可部分完成的區塊，下列 SET 選項都有相同的系統預設值：  

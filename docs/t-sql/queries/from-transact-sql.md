@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 188610b1f6eef0835bf20f7b86e99647df699539
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464219"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 子句與 JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -229,7 +229,7 @@ FROM { <table_source> [ ,...n ] }
  透過 XML 文件提供資料列集的檢視。 如需詳細資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
   
  *derived_table*  
- 這是從資料庫中擷取資料列的子查詢。 *derived_table*可用來作為外部查詢的輸入。  
+ 這是從資料庫中擷取資料列的子查詢。 *derived_table* 可用來作為外部查詢的輸入。  
   
  *derived_table* 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式功能來指定多個資料列。 例如： `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` 。 如需詳細資訊，請參閱[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)。  
   
@@ -267,7 +267,7 @@ FROM { <table_source> [ ,...n ] }
  指出所選範例可以重新傳回。 以相同的 *repeat_seed* 值指定時，只要沒有對資料表中的任何資料列進行任何變更，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回相同的資料列子集。 以不同的 *repeat_seed* 值指定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將可能傳回資料表中一些不同的資料列樣本。 對資料表執行的下列動作均視為變更：插入、更新、刪除、索引重建或重新組織，以及資料庫還原或附加。  
   
  *repeat_seed*  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed*值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed* 值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 子句
 **適用對象：** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
@@ -353,7 +353,7 @@ ON (p.ProductID = v.ProductID);
  *table_source* PIVOT \<pivot_clause>  
  指定根據 *pivot_column*.對 *table_source* 進行樞紐作業。 *table_source* 是一個資料表或資料表運算式。 輸出是一個包含 *table_source* 之所有資料行 (*pivot_column* 和 *value_column* 除外) 的資料表。 *table_source* 的資料行 (*pivot_column* 和 *value_column* 除外) 稱為樞紐運算子的群組資料行。 如需有關 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
- PIVOT 會對與群組作業資料行相關的輸入資料表執行群組作業，並為每個群組傳回一個資料列。 此外，輸出還會針對 *column_list* (出現在 *input_table* 的 *pivot_column*中) 所指定的每個值各包含一個資料行。  
+ PIVOT 會對與群組作業資料行相關的輸入資料表執行群組作業，並為每個群組傳回一個資料列。 此外，輸出還會針對 *column_list* (出現在 *input_table* 的 *pivot_column* 中) 所指定的每個值各包含一個資料行。  
   
  如需詳細資訊，請參閱稍後的＜備註＞一節。  
   
@@ -363,7 +363,7 @@ ON (p.ProductID = v.ProductID);
  不允許使用 COUNT(*) 系統彙總函式。  
   
  *value_column*  
- 這是 PIVOT 運算子的值資料行。 與 UNPIVOT 搭配使用時，*value_column* 不可以是輸入 *table_source*中現有資料行的名稱。  
+ 這是 PIVOT 運算子的值資料行。 與 UNPIVOT 搭配使用時，*value_column* 不可以是輸入 *table_source* 中現有資料行的名稱。  
   
  FOR *pivot_column*  
  這是 PIVOT 運算子的樞紐資料行。 *pivot_column* 的類型必須可以隱含或明確地轉換成 **nvarchar()** 。 這個資料行不可以是 **image** 或 **rowversion**。  
@@ -431,7 +431,7 @@ APPLY 運算子利用下列方式來產生 FROM 子句的資料表來源：
   
 2.  執行 UNION ALL 作業，將針對 *right_table_source* 之評估中每個資料列產生的結果集與 *left_table_source* 結合在一起。  
   
-    APPLY 運算子結果所產生的資料行清單就是與 *right_table_source*資料行清單結合的 *left_table_source* 資料行集。  
+    APPLY 運算子結果所產生的資料行清單就是與 *right_table_source* 資料行清單結合的 *left_table_source* 資料行集。  
   
 ## <a name="using-pivot-and-unpivot"></a>使用 PIVOT 和 UNPIVOT  
  *pivot_column* 和 *value_column* 是 PIVOT 運算子所使用的群組資料行。 PIVOT 會遵照下列處理序來取得輸出結果集：  

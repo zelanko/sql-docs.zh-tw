@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c4b159f41f998155d4013413e69346ab0c4a239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a81d2b397418a934e51a7e9e0f8491d10e0cdba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462589"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>記憶體最佳化的系統版本設定時態表效能
 
@@ -30,7 +30,7 @@ ms.locfileid: "89516866"
 - 當您將系統版本設定加入現有的非時態表時，因為記錄資料表會自動更新，所以預期會有更新和刪除作業的相關效能影響。
 - 每項更新和刪除作業都會記錄到內部記憶體最佳化記錄資料表，因此您可能會在工作負載大量使用這兩項作業時，遇到未預期的記憶體耗用量。 為此我們建議您︰
 
-  - 清除空間時，不要從目前的資料表執行大量刪除作業來增加可用的 RAM。 請考慮手動叫用資料清除 (叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)) 分批刪除資料，或在 **SYSTEM_VERSIONING = OFF**的情況下刪除資料。
+  - 清除空間時，不要從目前的資料表執行大量刪除作業來增加可用的 RAM。 請考慮手動叫用資料清除 (叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)) 分批刪除資料，或在 **SYSTEM_VERSIONING = OFF** 的情況下刪除資料。
   - 不要一次執行大量資料表更新作業，因為這樣做可能會導致記憶體使用量是更新非最佳化記憶體時態表所需記憶體數量的兩倍。 由於資料排清工作會定期執行，以確保內部暫存表格的記憶體使用量在預期界限內維持穩定狀態 (約目前時態表記憶體使用量的 10%)，因此會暫時有兩倍的記憶體使用量。 請考慮分批或在 **SYSTEM_VERSIONING = OFF** 的情況下執行大量更新，例如使用更新設定新加入資料行的預設值。
 
 - 您無法設定啟用資料排清工作的時間，但您可以叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)的情況下刪除資料。

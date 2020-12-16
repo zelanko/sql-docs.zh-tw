@@ -10,13 +10,13 @@ ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4078d42ddb680c46f763065a47406f855093801c
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a83f33ec132a2d58258ffc29f87195fe534b9080
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460771"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何叢集化 Always On 可用性群組的 DTC 服務
 
