@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477049"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 
@@ -41,7 +41,7 @@ ms.locfileid: "92036624"
   
 1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，指向 [多重伺服器管理]****，然後按一下 [管理目標伺服器]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，指向 [多重伺服器管理]，然後按一下 [管理目標伺服器]。  
   
 3.  按一下 **[公佈指示]**，然後在 **[指示類型]** 清單中選取 **[脫離]**。  
   

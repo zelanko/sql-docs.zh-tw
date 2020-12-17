@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 15047969fdf25727d324ae577414273cc86769cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674136"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471219"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 Python 自訂執行階段
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "94674136"
 
 + 安裝 SQL Server 2019 機器學習服務。 完成一些額外的設定步驟後，可搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)使用語言延伸模組。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 本文說明如何在 Windows 上安裝 Python 適用的自訂執行階段。 若要在 Linux 上安裝，請查看[如何在 Linux 上安裝 SQL Server 適用的 Python 自訂執行階段](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)。
@@ -148,7 +148,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 您可在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上安裝 SQL Server。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 安裝指引](../../linux/sql-server-linux-setup.md)中的＜支援的平台＞一節。
 

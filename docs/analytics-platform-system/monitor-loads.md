@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b67460528da7cac2e7d3d2d10dfbb4719b08d77f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777717"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638067"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>監視負載至平行處理資料倉儲
 使用 Analytics Platform System (AP) 管理主控台或平行資料倉儲 (PDW) [系統檢視](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)，來監視作用中和最近的[dwloader](dwloader.md)負載。 
@@ -26,7 +26,7 @@ ms.locfileid: "88777717"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 無論用來監視負載的方法為何，登入都必須具有存取基礎資料來源的許可權。 
 
 <!-- MISSING LINKS
@@ -49,7 +49,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,7 +58,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>使用系統檢視來監視負載  
 若要使用 SQL Server PDW views 來監視使用中和最近的負載，請依照下列步驟執行。 針對所使用的每個系統檢視，請參閱該視圖的檔，以取得有關此視圖所傳回之資料行和潛在值的詳細資訊。  
   
-1.  在 `request_id` 此視圖的資料行中尋找載入器命令列，以找出 [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) view 中的負載 `command` 。  
+1.  在 `request_id` 此視圖的資料行中尋找載入器命令列，以找出 [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) view 中的負載 `command` 。  
   
     例如，下列命令會傳回命令文字和目前的狀態，以及 `request_id` 。  
   
@@ -66,7 +66,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  使用 `request_id` 來取得負載的額外資訊，方法是使用 [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 和 [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) views。 例如，下列查詢會傳回負載的 `run_id` 開始時間、結束時間和持續時間的相關資訊，以及任何錯誤，以及處理的資料列數目相關資訊：  
+2.  您 `request_id` 可以使用 [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) ，並 [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) 視圖，使用取得負載的額外資訊。 例如，下列查詢會傳回負載的 `run_id` 開始時間、結束時間和持續時間的相關資訊，以及任何錯誤，以及處理的資料列數目相關資訊：  
   
     ```sql  
     SELECT lbr.run_id,   

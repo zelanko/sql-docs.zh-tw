@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474549"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>建立報表伺服器資料庫 (報表伺服器組態管理員)  
 
@@ -23,11 +23,11 @@ ms.locfileid: "91935574"
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫來儲存報表伺服器中繼資料和物件。 一個資料庫做為主要儲存體，而另一個用來儲存暫存資料。 
 
-兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 **reportserver** 和 **reportservertempdb**。 這兩個資料庫統稱為**報表伺服器資料庫**或**報表伺服器目錄**。
+兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 **reportserver** 和 **reportservertempdb**。 這兩個資料庫統稱為 **報表伺服器資料庫** 或 **報表伺服器目錄**。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 模式**含有第三個資料庫，其用於資料警示中繼資料。 系統會為每個 SSRS 服務應用程式建立這三個資料庫。 根據預設，資料庫名稱包括代表服務應用程式的 GUID。 
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 模式** 含有第三個資料庫，其用於資料警示中繼資料。 系統會為每個 SSRS 服務應用程式建立這三個資料庫。 根據預設，資料庫名稱包括代表服務應用程式的 GUID。 
 
 以下是這三個 SharePoint 模式資料庫的範例名稱：
 
@@ -53,12 +53,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 - **手動**： 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來裝載報表伺服器資料庫，就必須手動建立資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
 [報表伺服器安裝選項]  頁面只有一個用於 SharePoint 模式的選項：[僅安裝]  。 這個選項會安裝所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案及 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 SSRS 服務應用程式：  
   
-- 前往 SharePoint Server 的管理中心建立 SSRS 服務應用程式。 如需詳細資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的**建立服務應用程式**章節。  
+- 前往 SharePoint Server 的管理中心建立 SSRS 服務應用程式。 如需詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的 **建立服務應用程式** 章節。  
   
 - 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式建立服務應用程式和報表伺服器資料庫。 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 主題中的建立服務應用程式範例。  
 
@@ -67,14 +67,14 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 ## <a name="database-server-version-requirements"></a>資料庫伺服器版本需求
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用來主控報表伺服器資料庫。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體可以在本機或遠端。 下列支援的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本可以裝載報表伺服器資料庫：  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Azure SQL 受控執行個體
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

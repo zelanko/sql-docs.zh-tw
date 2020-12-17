@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793745"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471119"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>在 SQL Server上安裝預先定型的機器學習模型
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "92793745"
 
 必須啟用外部指令碼，而且 SQL Server LaunchPad 服務必須為執行中。 安裝指示提供啟用及驗證這些功能的步驟。 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 [MicrosoftML R 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)或 [microsoftml Python 套件](/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含預先定型的模型。
 
 [SQL Server 機器學習服務](sql-machine-learning-services-windows-install.md)同時包括機器學習程式庫的兩個語言版本，因此您不需採取任何進一步的動作，就能符合此先決條件。 因為程式庫存在，所以您可以使用此文章中所述的 PowerShell 指令碼將預先定型的模型新增到這些程式庫。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [MicrosoftML R 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)包含預先定型的模型。
 
 [SQL Server R Services](sql-r-services-windows-install.md) (僅限 R) 預設不包括 [MicrosoftML 套件](/machine-learning-server/r-reference/microsoftml/microsoftml-package)。 若要新增 MicrosoftML，您必須執行[元件升級](../install/upgrade-r-and-python.md)。 元件升級的其中一個優點是您可以同時新增預先定型的模型，讓您不需要執行 PowerShell 指令碼。 不過，如果您已升級，而且一開始錯過新增預先定型的模型，您可以依照此文章所述執行 PowerShell 指令碼。 這適用於兩個版本的 SQL Server。 在您執行之前，請確認 MicrosoftML 程式庫存在於 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。
@@ -106,7 +106,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ### <a name="r-verification-steps"></a>R 驗證步驟
 
-1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 的 **RGUI.EXE** 。
+1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 的 **RGUI.EXE**。
 
 2. 在命令提示字元中，貼上下列 R 指令碼。
 
@@ -146,7 +146,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ### <a name="python-verification-steps"></a>Python 驗證步驟
 
-1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES 的 **Python.EXE** 。
+1. 啟動位於 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES 的 **Python.EXE**。
 
 2. 在命令提示字元中，貼上下列 Python 指令碼
 
@@ -196,7 +196,7 @@ R 與 Python 模型的安裝路徑如下所示：
 
 ## <a name="research-and-resources"></a>研究與資源
 
-目前可用的模型為適用於情緒分析與影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型都是使用 Microsoft 的 [計算網路工具組](https://cntk.ai/Features/Index.html) (或稱 **CNTK** ) 來定型的。
+目前可用的模型為適用於情緒分析與影像分類的深度類神經網路 (DNN) 模型。 所有預先定型的模型都是使用 Microsoft 的 [計算網路工具組](https://cntk.ai/Features/Index.html) (或稱 **CNTK**) 來定型的。
 
 每個網路的設定都是以下列參考實作為基礎：
 

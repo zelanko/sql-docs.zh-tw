@@ -17,13 +17,13 @@ ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 14d926337076113671d2dd9eae71ad5a9211bbd9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c4dc7dbfa0f06275b52c76aacabccb9bff935718
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036492"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477089"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

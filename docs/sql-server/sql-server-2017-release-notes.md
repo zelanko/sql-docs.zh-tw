@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985624"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409524"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91985624"
     3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]  ，然後按一下 [套用]  。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **問題和對客戶的影響：**  在使用者權限頁面上，當您將權限授與實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
+- **問題和對客戶的影響：** 在使用者權限頁面上，當您將權限授與實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
 
 - **因應措施：** 
   - 將權限授予樹狀檢視中的子節點而不是根層級。
@@ -120,7 +120,7 @@ ms.locfileid: "91985624"
 
 - **因應措施：** 若要暫時解決此問題，並修正相依於 v13 版本組件的應用程式，請遵循下列步驟：
 
-   1. 移至**新增/移除程式**
+   1. 移至 **新增/移除程式**
    2. 尋找 *Microsoft SQL Server 2019 T-SQL 語言服務 CTP2.1*，按一下右鍵，然後選取 [解除安裝]  。
    3. 移除元件之後，請修復無法運作的應用程式，或重新安裝適當版本的 *TSqlLanguageService.MSI*。
 

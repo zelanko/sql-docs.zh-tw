@@ -8,13 +8,13 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
+ms.openlocfilehash: 5af6eff12d81ea028247f146842d3a5eed0e2eba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986129"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409724"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>安裝 SQL Server 文件以在 SSMS 中離線檢視
 

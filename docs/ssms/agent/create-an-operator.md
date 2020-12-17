@@ -18,13 +18,13 @@ ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bad9dcc1d3fad1e7f0359d7805f93cbe44cb7652
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1c3aa127a22f45d403de94484b590a3fc5db1616
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035041"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477119"
 ---
 # <a name="create-an-operator"></a>建立操作員
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "92035041"
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [操作員]**** 資料夾，然後選取 [新增操作員]****。  
+3.  以滑鼠右鍵按一下 [操作員] 資料夾，然後選取 [新增操作員]。  
   
     下列選項可從 **[新增操作員]** 對話方塊的 **[一般]** 頁面取得：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "92035041"
     指定操作員的電子郵件地址。  
   
     **Net Send 位址**  
-    指定用於 **net send**的位址。  
+    指定用於 **net send** 的位址。  
   
     **呼叫器電子郵件名稱**  
     指定操作員呼叫器所用的電子郵件地址。  
@@ -109,7 +109,7 @@ ms.locfileid: "92035041"
     將電子郵件傳送至呼叫器位址，來通知此操作員。  
   
     **Net Send**  
-    使用 **net send**通知此操作員。  
+    使用 **net send** 通知此操作員。  
   
 4.  完成建立新的操作員後，請按一下 **[確定]**。  
   

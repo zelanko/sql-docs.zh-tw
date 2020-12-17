@@ -25,13 +25,13 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: efaef467cc332d0d398849693b52718c789b96d4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: fba52970690e217bd8f92867122b27f6c3ac2f34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038241"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477019"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -197,7 +197,7 @@ Set oServer = nothing
   
 -   新增或修改命令列選項。  
   
-請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄]**** 指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態]**** 索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
+請注意，如果您將套件部署至 SSIS 目錄並將 [SSIS 目錄] 指定為套件來源，此組態資訊的大部分會從套件中自動取得。 在 [組態] 索引標籤下，您可以指定環境、參數值、連接管理員值、屬性覆寫、以及套件是否會在 32 位元執行階段環境中執行。  
   
 如需建立用於執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件之作業步驟的詳細資訊，請參閱 [套件的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   

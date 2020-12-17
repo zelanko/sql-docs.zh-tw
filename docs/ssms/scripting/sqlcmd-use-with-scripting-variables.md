@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036247"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476879"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 搭配指令碼變數使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "92036247"
   
  指令碼變數可以使用 **setvar** 命令來明確定義，或使用 **sqlcmd -v** 選項來隱含定義。  
   
- 本主題也包含在 Cmd.exe 命令提示字元中使用 **SET**來定義環境變數的範例。  
+ 本主題也包含在 Cmd.exe 命令提示字元中使用 **SET** 來定義環境變數的範例。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>使用 setvar 命令設定指令碼變數  
- **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET**所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar**所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
+ **setvar** 命令可用來定義指令碼變數。 使用 **setvar** 命令定義的變數會儲存在內部。 指令碼變數不應與在命令提示字元中使用 **SET** 所定義的環境變數產生混淆。 如果指令碼參考非環境變數的變數，或不是使用 **setvar** 所定義的變數，則會傳回錯誤訊息並停止執行指令碼。 如需詳細資訊，請參閱 **sqlcmd 公用程式** 中的 [-b](../../tools/sqlcmd-utility.md)選項。  
   
 ## <a name="variable-precedence-low-to-high"></a>變數優先順序 (由低至高)  
  如果有多個類型的變數具有相同的名稱，會使用具有最高優先順序的變數。  
@@ -44,7 +44,7 @@ ms.locfileid: "92036247"
   
 2.  使用者層級環境變數  
   
-3.  在啟動**SET X=Y**之前，於命令提示字元設定命令殼層 ( **SET X=Y**)  
+3.  在啟動 **SET X=Y** 之前，於命令提示字元設定命令殼層 ( **SET X=Y**)  
   
 4.  **sqlcmd -v** X=Y  
   
@@ -101,7 +101,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   如果引號是變數值的一部分，則必須逸出。 例如：`setvar MyVar "spac""e"`。  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Cmd.exe SET 變數值和名稱的指導方針  
- 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd**參考。 請參考下列指引：  
+ 使用 SET 所定義的變數是 Cmd.exe 環境的一部分，並且可供 **sqlcmd** 參考。 請參考下列指引：  
   
 -   變數名稱不能包含空白字元或引號。  
   

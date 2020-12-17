@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471829"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 公用程式
 
@@ -248,7 +248,7 @@ sqlcmd
   >使用 `-G` 與 `-U` 選項搭配 SQLCMD 時，存在一個已知問題：若在 `-G` 選項之前放置 `-U` 選項可能會導致驗證失敗。 請一律先以 `-G` 選項開始，再放置 `-U` 選項。
 
 **-H** _workstation_name_  
- 這是工作站名稱。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDWORKSTATION。 工作站名稱列在 **sys.sysprocesses** 目錄檢視的 **hostname** 資料行中，而且可以使用預存程序 **sp_who**傳回名稱。 如果未指定這個選項，預設值為目前的電腦名稱。 這個名稱可用來識別不同的 
+ 這是工作站名稱。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDWORKSTATION。 工作站名稱列在 **sys.sysprocesses** 目錄檢視的 **hostname** 資料行中，而且可以使用預存程序 **sp_who** 傳回名稱。 如果未指定這個選項，預設值為目前的電腦名稱。 這個名稱可用來識別不同的 
 
 **sqlcmd** 工作階段。  
 
@@ -270,7 +270,7 @@ sqlcmd
 
 我們建議您使用強式密碼。
 
-#### <a name="use-a-strong-password"></a>[**使用強式密碼！** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**使用強式密碼！**](../relational-databases/security/strong-passwords.md)
 
  密碼提示的顯示方式，會以將密碼提示輸出到主控台的方式顯示，如： `Password:`  
   
@@ -311,7 +311,7 @@ sqlcmd
 > [!NOTE]  
 >  可利用 OSQLUSER 環境變數達到回溯相容性。 SQLCMDUSER 環境變數優先於 OSQLUSER 環境變數。 這表示您可以先後使用 **sqlcmd** 和 **osql** ，而不會發生互相干擾的狀況。 這也表示現有的 **osql** 指令碼仍然有效。  
   
- 如果沒有指定 **-U** 選項或 **-P** 選項，**sqlcmd** 便會嘗試使用 Microsoft Windows 驗證模式進行連線。 這項驗證以執行 **sqlcmd**之使用者的 Windows 帳戶為基礎。  
+ 如果沒有指定 **-U** 選項或 **-P** 選項，**sqlcmd** 便會嘗試使用 Microsoft Windows 驗證模式進行連線。 這項驗證以執行 **sqlcmd** 之使用者的 Windows 帳戶為基礎。  
   
  如果同時使用 **-U** 選項和 **-E** 選項 (稍後於本文中描述)，即會產生錯誤訊息。 如果 **-U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
@@ -357,7 +357,7 @@ sqlcmd
  這個選項可以使用一次以上： **-i**_input\_file_ **-I**_I input_file_。  
   
  **-o** _output_file_  
- 識別用來接收 **sqlcmd**輸出的檔案。  
+ 識別用來接收 **sqlcmd** 輸出的檔案。  
   
  如果指定 **-u** ， *output_file* 會以 Unicode 格式儲存。 如果檔案名稱無效，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。 **sqlcmd** 不支援同時將多個 **sqlcmd** 處理序寫入相同的檔案。 檔案輸出會損毀或不正確。 請注意 **-f** 參數也與檔案格式相關。 如果不存在，則會建立這個檔案。 並覆寫先前 **sqlcmd** 工作階段所產生的同名檔案。 此處所指定的檔案並不是 **stdout** 檔案。 如果指定 **stdout** 檔案，則不會使用這個檔案。  
   
@@ -377,7 +377,7 @@ sqlcmd
  讓 **sqlcmd** 根據用戶端的地區設定，將從 SQL Server 擷取的數值、貨幣、日期和時間資料行當地語系化。 根據預設，這些資料行會使用伺服器的地區設定來顯示。  
   
  **-u**  
- 指定無論 *input_file* 的格式為何， *output_file*均以 Unicode 格式儲存。  
+ 指定無論 *input_file* 的格式為何， *output_file* 均以 Unicode 格式儲存。  
   
  **查詢執行選項**  
   **-e**  
@@ -423,7 +423,7 @@ sqlcmd
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 _**var**_= **"** _values_ **"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
+ 建立 **sqlcmd** 指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 _**var**_= **"** _values_ **"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -437,7 +437,7 @@ sqlcmd
  指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 使用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
   
  **-k** [**1** | **2**]  
- 從輸出中移除所有控制字元，如定位字元和新行字元。 此參數會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1**相同。  
+ 從輸出中移除所有控制字元，如定位字元和新行字元。 此參數會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1** 相同。  
   
  **-s** _col_separator_  
  指定資料行分隔字元。 預設值是空格。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDCOLSEP。 若要使用對作業系統有特殊意義的字元，如連字號 (&) 或分號 (;)，請用引號 (") 括住該字元。 資料行分隔字元可以是任何 8 位元的字元。  
@@ -491,12 +491,12 @@ sqlcmd
   
  **錯誤報告選項**  
   **-b**  
- 指定在發生錯誤時， **sqlcmd** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 SQL Server 錯誤訊息的嚴重性層級大於 10 時，傳回 DOS ERRORLEVEL 變數的值是 **1**；否則，傳回的值是 **0**。 如果除了設定 **-b** 以外，還設定了 **-V**選項，且嚴重性層級低於使用 **-V** 所設定的值，則 **sqlcmd**不會報告發生錯誤。 命令提示字元批次檔案可以測試 ERRORLEVEL 的值，而且能夠適當地處理錯誤。 **sqlcmd** 不會報告嚴重性層級 10 (資訊訊息) 的錯誤。  
+ 指定在發生錯誤時， **sqlcmd** 會結束作業並傳回 DOS ERRORLEVEL 值。 當 SQL Server 錯誤訊息的嚴重性層級大於 10 時，傳回 DOS ERRORLEVEL 變數的值是 **1**；否則，傳回的值是 **0**。 如果除了設定 **-b** 以外，還設定了 **-V** 選項，且嚴重性層級低於使用 **-V** 所設定的值，則 **sqlcmd** 不會報告發生錯誤。 命令提示字元批次檔案可以測試 ERRORLEVEL 的值，而且能夠適當地處理錯誤。 **sqlcmd** 不會報告嚴重性層級 10 (資訊訊息) 的錯誤。  
   
  如果 **sqlcmd** 指令碼包含不正確的命令、語法錯誤，或遺漏指令碼變數，則傳回的 ERRORLEVEL 便是 1。  
   
  **-m** _error_level_  
- 控制哪些錯誤訊息會傳送至 **stdout**。 系統會傳送嚴重性層級大於或等於這個層級的訊息。 當這個值設定為 **-1**時，系統就會傳送包括資訊訊息的所有訊息。 **-m** 與 **-1**之間不允許有空格。 例如， **-m-1** 為有效，而 **-m -1** 為無效。  
+ 控制哪些錯誤訊息會傳送至 **stdout**。 系統會傳送嚴重性層級大於或等於這個層級的訊息。 當這個值設定為 **-1** 時，系統就會傳送包括資訊訊息的所有訊息。 **-m** 與 **-1** 之間不允許有空格。 例如， **-m-1** 為有效，而 **-m -1** 為無效。  
   
  這個選項也會設定 **sqlcmd** 指令碼變數 SQLCMDERRORLEVEL。 這個變數具有預設值 0。  
   
@@ -541,7 +541,7 @@ sqlcmd
   
  如果指定了選擇性參數 **1** ，統計資料的輸出格式是用冒號分隔的格式，很容易匯入試算表中，指令碼也很容易處理它。  
   
- 如果選擇性的參數是 **1**以外的任何值，就會產生錯誤，且會結束 **sqlcmd** 。  
+ 如果選擇性的參數是 **1** 以外的任何值，就會產生錯誤，且會結束 **sqlcmd** 。  
   
  **-X**[**1**]  
  停用從批次檔執行 **sqlcmd** 時，可能會危及系統安全性的命令。 仍會辨識停用的命令； **sqlcmd** 會發出一則警告訊息，並繼續作業。 如果指定了選擇性參數 **1** ， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 使用 **-X** 選項時，會停用下列命令：  
@@ -574,7 +574,7 @@ sqlcmd
   
 2.  使用者層級環境變數  
   
-3.  執行**sqlcmd** 之前，在命令提示字元處設定的命令殼層 ( **SET**X=Y)。  
+3.  執行 **sqlcmd** 之前，在命令提示字元處設定的命令殼層 ( **SET** X=Y)。  
   
 4.  **sqlcmd-v** X=Y  
   
@@ -667,7 +667,7 @@ sqlcmd
   
 - 明確地利用 **:Setvar** 命令。  
   
-- 在您執行 **sqlcmd**之前，定義環境變數。  
+- 在您執行 **sqlcmd** 之前，定義環境變數。  
   
 > [!NOTE]  
 >  **-X** 選項會讓您無法將環境變數傳給 **sqlcmd**。  
@@ -684,12 +684,12 @@ sqlcmd
  顯示目前所設定之指令碼變數的清單。  
   
 > [!NOTE]  
->  只顯示 **sqlcmd**所設定的指令碼變數，以及使用 **:Setvar** 命令所設定的指令碼變數。  
+>  只顯示 **sqlcmd** 所設定的指令碼變數，以及使用 **:Setvar** 命令所設定的指令碼變數。  
   
  **輸出命令**  
   **:Error**   
  _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
- 將所有錯誤輸出重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 在指令碼中， **Error** 命令可以重複出現。 根據預設，錯誤輸出會傳送到 **stderr**。  
+ 將所有錯誤輸出重新導向至 *filename* 所指定的檔案、 **stderr** 或 **stdout**。 在指令碼中， **Error** 命令可以重複出現。 根據預設，錯誤輸出會傳送到 **stderr**。  
   
  *file name*  
  建立和開啟用來接收輸出的檔案。 如果檔案已經存在，它會截斷成零位元組。 如果因為權限或其他原因無法使用，就不會切換輸出，輸出會送往最後指定的目的地或預設目的地。  
@@ -701,10 +701,10 @@ sqlcmd
  將錯誤輸出切換到 **stdout** 資料流。 如果它已重新導向，資料流所重新導向的目標會接收這個錯誤輸出。  
   
  **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
- 建立並將所有查詢結果重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 根據預設，輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Out** 命令可以重複出現。  
+ 建立並將所有查詢結果重新導向至 *filename* 所指定的檔案、 **stderr** 或 **stdout**。 根據預設，輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Out** 命令可以重複出現。  
   
  **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
- 建立並將所有效能追蹤資訊重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 根據預設，效能追蹤輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Perftrace** 命令可以重複出現。  
+ 建立並將所有效能追蹤資訊重新導向至 *filename* 所指定的檔案、 **stderr** 或 **stdout**。 根據預設，效能追蹤輸出會傳送到 **stdout**。 如果檔案已經存在，它會截斷成零位元組。 在指令碼中， **Perftrace** 命令可以重複出現。  
   
  **執行控制命令**  
   **:On Error**[ **exit** | **ignore**]  
@@ -718,7 +718,7 @@ sqlcmd
  導致 **sqlcmd** 結束。  
   
  [ **:** ] **EXIT**[ **(** _statement_ **)** ]  
- 可讓您使用 SELECT 陳述式的結果作為 **sqlcmd**的傳回值。 如果為數值，最後一個結果資料列的第一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS、Linux 和 Mac 會將低位元組傳遞給父處理序或作業系統錯誤層級。 Windows 200x 會傳遞完整的 4 位元組整數。 語法為：  
+ 可讓您使用 SELECT 陳述式的結果作為 **sqlcmd** 的傳回值。 如果為數值，最後一個結果資料列的第一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS、Linux 和 Mac 會將低位元組傳遞給父處理序或作業系統錯誤層級。 Windows 200x 會傳遞完整的 4 位元組整數。 語法為：  
   
  `:EXIT(query)`  
   
@@ -823,7 +823,7 @@ sqlcmd
  列出 **sqlcmd** 命令及各命令的簡短描述。  
   
 ### <a name="sqlcmd-file-names"></a>sqlcmd 檔案名稱  
- 您可以使用**sqlcmd** 選項或 **sqlcmd** 命令指定 **sqlcmd** 輸入檔。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
+ 您可以使用 **sqlcmd** 選項或 **sqlcmd** 命令指定 **sqlcmd** 輸入檔。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
   
 - **:Error**、 **:Out** 及 **:Perftrace** 應使用不同的 **\<**_filename_**>** 。 如果使用相同的 **\<**_filename_**>** ，命令，命令的輸入可能會混合在一起。  
   

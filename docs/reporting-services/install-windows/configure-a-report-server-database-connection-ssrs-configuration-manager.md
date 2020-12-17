@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472509"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>設定報表伺服器資料庫連線 (報表伺服器組態管理員)
 
@@ -91,7 +91,7 @@ ms.locfileid: "91935273"
   
 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體設定為 Windows 驗證，而且與報表伺服器電腦位於相同的網域或信任網域中，您可以設定此連接使用透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來當做連接屬性管理的服務帳戶或網域使用者帳戶。 如果資料庫伺服器位於不同的網域，或者您使用的是工作群組安全性，您就必須設定此連接使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫登入。 在此情況下，請務必為此連接加密。  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 使用 Azure SQL 受控執行個體來裝載報表伺服器資料庫時，SQL Server 驗證是唯一支援的認證類型。 此外，請注意，受控執行個體無法裝載報表伺服器執行個體。
@@ -120,7 +120,7 @@ ms.locfileid: "91935273"
 
 - **ReportServer** 資料庫的 **public** 和 **RSExecRole** 角色。  
 
-- **master** 、 **msdb**和 **ReportServerTempDB**資料庫的 **RSExecRole** 角色。  
+- **master** 、 **msdb** 和 **ReportServerTempDB** 資料庫的 **RSExecRole** 角色。  
 
 當您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具建立或修改此連接時，會自動授與這些權限。 如果您使用 rsconfig 公用程式，並且為連接指定不同的帳戶，則必須針對該新帳戶更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中，建立將會更新報表伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的指令碼檔案。  
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e6809a66ce7f5fd425ce9bfeb2b1fea919c4dfaa
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 19f9f1c6cfc293bfba0d44e34e0a30bf386bdb3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956924"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470959"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server"></a>使用 SQL Server 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "91956924"
 
 ## <a name="example"></a>範例
 
-本節說明準備並儲存**即時**預測的模型所需的步驟，並提供如何從 T-SQL 呼叫函式的 R 範例。
+本節說明準備並儲存 **即時** 預測的模型所需的步驟，並提供如何從 T-SQL 呼叫函式的 R 範例。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備及儲存模型
 

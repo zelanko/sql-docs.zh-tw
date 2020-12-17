@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: b4d5b4e01abaf0643f6f121be28abe98972078a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891168"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472429"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891168"
   
  **原生模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中，報表伺服器資料庫實際上是由預設名稱為 ReportServer 和 ReportServerTempDB 的兩個資料庫所組成。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint 模式：** 在 SQL Server 2016 Reporting Services SharePoint 模式中，報表伺服器資料庫實際上是為每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式執行個體而建立的資料庫集合。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "91891168"
  除了報表伺服器資料庫之外，報表伺服器也使用暫存資料庫。 當您升級報表伺服器資料庫時，會自動升級暫存資料庫。  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>升級報表伺服器資料庫所需的權限  
- 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員**權限，則資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
+ 如果您正在升級的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝包含報表伺服器資料庫，則當執行資料庫升級時具備的權限不足時，您可能會看到錯誤訊息。 依預設，安裝程式會使用執行安裝程式之使用者的安全性 Token，以連接到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體並更新結構描述。 如果您在主控報表伺服器資料庫的資料庫伺服器上擁有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **系統管理員** 權限，則資料庫升級將會成功。 同樣地，如果您從命令提示字元執行安裝程式，並為具有修改遠端電腦結構描述之 **系統管理員** 權限的帳戶指定 RSUPGRADEDATABASEACCOUNT 和 RSUPGRADEPASSWORD 引數，資料庫升級將會成功。  
   
  然而，如果您沒有遠端電腦之資料庫的 **系統管理員** 權限，則連線會遭到拒絕，並傳回下列錯誤：  
   

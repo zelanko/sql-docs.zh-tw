@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472369"
 ---
 # <a name="autostart-sql-server-agent"></a>自動啟動 SQL Server Agent
 
@@ -57,6 +57,6 @@ ms.locfileid: "92035741"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要設定 SQL Server Agent 自動重新啟動的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
   
 3.  在 **[一般]** 頁面上，核取 **[如果 SQL Server Agent 非預期地停止，則自動予以重新啟動]**。  

@@ -13,13 +13,13 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5f8796a3103400a457559efc33ac295429562695
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a29d5064bd480b986ce686dd1202c339a44bfe71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036495"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472519"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>警示屬性 - 新增警示 (回應頁面)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "92036495"
 
 ## <a name="options"></a>選項  
 **執行作業**  
-啟用 [作業清單]****、[新增作業]**** 和 [檢視作業]**** 選項。  
+啟用 [作業清單]、[新增作業] 和 [檢視作業] 選項。  
   
 **新增作業**  
-開啟 [新增作業]**** 對話方塊。 未選取 [執行作業]**** 時，無法使用這個按鈕。  
+開啟 [新增作業] 對話方塊。 未選取 [執行作業] 時，無法使用這個按鈕。  
   
 **檢視工作**  
-檢視或修改選取的作業。 未選取 [執行作業]**** 時，無法使用這個選項。  
+檢視或修改選取的作業。 未選取 [執行作業] 時，無法使用這個選項。  
   
 **通知操作員**  
 可啟用讓您加入、移除或變更操作員的控制項。  
   
 **操作員清單**  
-列出發生警示時所要通知的操作員。 若要指定通知方法，請選取顯示於操作員名稱之後的 [電子郵件]****、[呼叫器]**** 或 [Net Send]**** 核取方塊。未選取 [通知操作員]**** 時，無法使用這個選項。  
+列出發生警示時所要通知的操作員。 若要指定通知方法，請選取顯示於操作員名稱之後的 [電子郵件]、[呼叫器] 或 [Net Send] 核取方塊。未選取 [通知操作員] 時，無法使用這個選項。  
   
 **電子郵件**  
 使用電子郵件通知操作員。  
@@ -55,10 +55,10 @@ ms.locfileid: "92036495"
 使用 **net send** 通知操作員。  
   
 **新增操作員**  
-顯示 [新增操作員]**** 對話方塊，可讓您建立新的操作員。  
+顯示 [新增操作員] 對話方塊，可讓您建立新的操作員。  
   
 **檢視操作員**  
-顯示目前選取之操作員的 [屬性]**** 對話方塊。 您可以在 [操作員屬性]**** 對話方塊上檢視及修改操作員屬性。  
+顯示目前選取之操作員的 [屬性] 對話方塊。 您可以在 [操作員屬性] 對話方塊上檢視及修改操作員屬性。  
   
 ## <a name="see-also"></a>另請參閱  
 [警示](../../ssms/agent/alerts.md)  

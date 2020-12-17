@@ -13,19 +13,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df3d33392751bcdc98b2c9efd2ea7b6b24ed5ab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb3212755ce022e588b221d5e2da322a50c49012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036181"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476809"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 偵錯工具 - 呼叫堆疊視窗
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
- [呼叫堆疊]**** 視窗會顯示呼叫堆疊上的模組以及傳遞給模組之任何參數的資料類型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組包括預存程序、函數及觸發程序 若要顯示呼叫堆疊，您必須在偵錯模式中。  
+ [呼叫堆疊] 視窗會顯示呼叫堆疊上的模組以及傳遞給模組之任何參數的資料類型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組包括預存程序、函數及觸發程序 若要顯示呼叫堆疊，您必須在偵錯模式中。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -49,16 +49,16 @@ ms.locfileid: "92036181"
 
 ## <a name="stack-frames"></a>堆疊框架
 
-[呼叫堆疊]**** 視窗中的每一個資料列都稱為堆疊框架，而且代表從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案到模組的呼叫或是從某個模組到另一個模組的呼叫。 顯示畫面底部的堆疊框架表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗中對此堆疊進行第一個呼叫的那一行。 頂端列表示偵錯工具暫停執行的那一行，而且是由視窗左邊界的黃色箭頭所識別。 每一個中間列都表示呼叫下一個更高堆疊框架之原始程式碼的模組和行號。  
+[呼叫堆疊] 視窗中的每一個資料列都稱為堆疊框架，而且代表從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案到模組的呼叫或是從某個模組到另一個模組的呼叫。 顯示畫面底部的堆疊框架表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [查詢編輯器] 視窗中對此堆疊進行第一個呼叫的那一行。 頂端列表示偵錯工具暫停執行的那一行，而且是由視窗左邊界的黃色箭頭所識別。 每一個中間列都表示呼叫下一個更高堆疊框架之原始程式碼的模組和行號。  
 
-[區域變數]、[監看式] 和 [快速監看式] 視窗中的所有運算式都會根據目前的堆疊框架來評估。 [查詢編輯器] 視窗會顯示目前框架的程式碼。 根據預設，目前的堆疊框架就是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具暫停執行所在的框架。 當您將目前的堆疊框架變更為另一個框架時，將會在新框架的內容中重新評估 [區域變數]****、[監看式]**** 和 [快速監看式]**** 視窗中的運算式，而且新框架的原始程式碼會顯示在 [查詢編輯器] 視窗中。  
+[區域變數]、[監看式] 和 [快速監看式] 視窗中的所有運算式都會根據目前的堆疊框架來評估。 [查詢編輯器] 視窗會顯示目前框架的程式碼。 根據預設，目前的堆疊框架就是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具暫停執行所在的框架。 當您將目前的堆疊框架變更為另一個框架時，將會在新框架的內容中重新評估 [區域變數]、[監看式] 和 [快速監看式] 視窗中的運算式，而且新框架的原始程式碼會顯示在 [查詢編輯器] 視窗中。  
   
 ## <a name="columns"></a>資料行
 
  **名稱**  
  顯示有關呼叫堆疊上之模組的資訊。  
   
- 如果是呼叫堆疊內的底部列，[名稱]**** 會列出 [查詢編輯器] 來源視窗及第一次呼叫此堆疊的行號。 如果是其他資料列，[名稱] 的格式為 **Module(Instance.Database)(ParmList) LineNumber**。  
+ 如果是呼叫堆疊內的底部列，[名稱] 會列出 [查詢編輯器] 來源視窗及第一次呼叫此堆疊的行號。 如果是其他資料列，[名稱] 的格式為 **Module(Instance.Database)(ParmList) LineNumber**。  
   
  **模組**  
  這是預存程序、函數或呼叫下一個堆疊之預存程序的名稱。  

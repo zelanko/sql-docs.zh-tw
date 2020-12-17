@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 28dbaf6f3496004ba90731d6bf5eaef693036e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870108"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471049"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>使用 RevoScaleR 來安裝 R 套件
 
@@ -21,7 +21,7 @@ ms.locfileid: "94870108"
 
 此文章描述如何使用 [RevoScaleR](../r/ref-r-revoscaler.md) (9.0.1 版或更新版本) 函式來搭配機器學習服務或 R Services 在 SQL Server 上安裝 R 套件。 RevoScaleR 函式可以由遠端的非系統管理員用來在 SQL Server 上安裝套件，而不需要直接存取伺服器。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 > [!NOTE]
 > SQL Server R Services 客戶必須進行[元件升級](../install/upgrade-r-and-python.md)以取得 RevoScaleR 套件管理函式。 如需如何擷取套件版本及內容的指示，請參閱[取得 R 套件資訊](../package-management/r-package-information.md)。
 ::: moniker-end

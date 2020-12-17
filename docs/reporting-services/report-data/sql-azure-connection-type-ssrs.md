@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478839"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL 連線類型 (SSRS)
 
@@ -130,7 +130,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 當查詢文字包含具有輸入參數的查詢變數或預存程序時，會自動產生資料集的對應查詢參數和報表的報表參數。 查詢文字的查詢變數不能包含 DECLARE 陳述式。  
   
- 例如，下列 SQL 查詢會建立名為 **EmpID**的報表參數：  
+ 例如，下列 SQL 查詢會建立名為 **EmpID** 的報表參數：  
 
 ```sql
 SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN  
@@ -152,7 +152,7 @@ WHERE EmployeeID = (@EmpID)
 
 如需平台與版本支援的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## <a name="azure-sql-database-and-aad"></a>Azure SQL Database 與 AAD
 

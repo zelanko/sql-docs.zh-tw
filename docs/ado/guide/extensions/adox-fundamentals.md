@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bb64cb60584444ba845ef1464fb07886c5db782
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 1e0c1e163aa83eac05d22b551e94135341a37716
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098627"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638077"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基本概念
 適用于資料定義語言和安全性 (ADOX) 的 Microsoft® ActiveX®資料物件延伸模組是 ADO 物件和程式設計模型的延伸。 ADOX 包含用於建立和修改架構的物件，以及安全性。 由於它是以物件為基礎的架構操作方法，您可以撰寫程式碼來處理各種不同的資料來源，而不論其原生語法是否有差異。  
@@ -44,7 +44,7 @@ ms.locfileid: "92098627"
 -   [ADOX 範例](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOX API 參考](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 參考](../../reference/adox-api/adox-object-model.md)   
  [ADOX 程式碼範例](../../reference/adox-api/adox-code-examples.md)   
  [ADOX 集合](../../reference/adox-api/adox-collections.md)   
  [ADOX 列舉常數](../../reference/adox-api/adox-enumerated-constants.md)   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987429"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639645"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
 
@@ -40,14 +40,14 @@ ms.locfileid: "88987429"
   
 |Object|描述|  
 |------------|-----------------|  
-|[[連接]](../ado-api/connection-object-ado.md)|表示資料來源的開啟連接。|  
+|[連線](../ado-api/connection-object-ado.md)|表示資料來源的開啟連接。|  
   
  這些物件之間的關聯性會在 [ADO MD 物件模型](./ado-md-object-model.md)中說明。  
   
- 許多 ADO MD 物件都可以包含在對應的集合中。 例如， [CubeDef](./cubedef-object-ado-md.md)物件可以包含在**目錄**的[CubeDefs](./cubedefs-collection-ado-md.md)集合中。 如需詳細資訊，請參閱 [ADO MD 集合](./ado-md-collections.md)。  
+ 許多 ADO MD 物件都可以包含在對應的集合中。 例如， [CubeDef](./cubedef-object-ado-md.md)物件可以包含在 **目錄** 的 [CubeDefs](./cubedefs-collection-ado-md.md)集合中。 如需詳細資訊，請參閱 [ADO MD 集合](./ado-md-collections.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO MD API 參考](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD API 參考](./ado-md-object-model.md)   
  [ADO MD 程式碼範例](./ado-md-code-examples.md)   
  [ADO MD 集合](./ado-md-collections.md)   
  [ADO MD 列舉常數](./ado-md-enumerated-constants.md)   

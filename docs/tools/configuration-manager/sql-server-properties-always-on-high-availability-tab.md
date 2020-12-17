@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c67f5f1e1021a303a1cdb52e02fdb5c8c1f8f2e2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901541"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478419"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中使用 [SQL Server 屬性]**** 對話方塊的 [AlwaysOn 高可用性]**** 索引標籤，啟用或停用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 AlwaysOn 可用性群組功能。 啟用 AlwaysOn 可用性群組是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將可用性群組作為高可用性和災害復原方案的必要條件。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中使用 [SQL Server 屬性] 對話方塊的 [AlwaysOn 高可用性] 索引標籤，啟用或停用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 AlwaysOn 可用性群組功能。 啟用 AlwaysOn 可用性群組是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將可用性群組作為高可用性和災害復原方案的必要條件。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要條件  
  若要啟用 AlwaysOn 可用性群組，伺服器執行個體必須符合下列必要條件：  

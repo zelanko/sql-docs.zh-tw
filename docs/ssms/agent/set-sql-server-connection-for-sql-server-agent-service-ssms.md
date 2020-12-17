@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac8349306d78075de65e3a14989d2f68261393f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3c8f19565b3dd368764e1e0d2106b622663f4549
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474379"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service"></a>設定 SQL Server Agent 服務的 SQL Server 連線
 
@@ -62,6 +62,6 @@ ms.locfileid: "92037778"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性]**** 對話方塊的 [選取頁面]**** 底下，按一下 [連線]****。  
+3.  在 [SQL Server Agent 屬性] 對話方塊的 [選取頁面] 底下，按一下 [連線]。  
   
-4.  在 [SQL Server 連線]**** 底下選取 [使用 Windows 驗證]****，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用  Windows 驗證來連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的資料庫需要 Windows 驗證。  
+4.  在 [SQL Server 連線] 底下選取 [使用 Windows 驗證]，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用  Windows 驗證來連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的資料庫需要 Windows 驗證。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2a6edd53f73eeac5b2033ad399f0a46bee66ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: db36e1374b94c95691b73e97837aa025d4fb07d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477099"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在資料警示管理員中管理我的資料警示
 
@@ -41,7 +41,7 @@ SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警
   
      [資料警示管理員] 隨即開啟。 根據預設，其中會列出您在文件庫中所選取報表的警示。  
   
-3.  按一下 [檢視報表的警示]**** 清單旁邊的向下箭號，然後選取要檢視其警示的報表，或是按一下 [全部顯示]**** 列出所有警示。  
+3.  按一下 [檢視報表的警示] 清單旁邊的向下箭號，然後選取要檢視其警示的報表，或是按一下 [全部顯示] 列出所有警示。  
   
     > [!NOTE]  
     >  如果您選取的報表沒有任何警示，您不必返回 SharePoint 文件庫也能尋找並選取擁有警示的報表。 只要按一下 [全部顯示] 就可以查看所有警示的清單。  

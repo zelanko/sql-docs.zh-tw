@@ -9,14 +9,14 @@ ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a524b238e980ee4b8972a4a8f7b976a34ca17c3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420120"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>從存放集區將 CSV 資料虛擬化 (巨量資料叢集)
 
@@ -35,9 +35,9 @@ SQL Server 巨量資料叢集可從 HDFS 中的 CSV 檔案將資料虛擬化。 
 
 1. 以滑鼠右鍵按一下 HDFS 根目錄操作功能表。
 2. 按一下 [新增目錄]  。
-3. 將新目錄命名為 *Data* 。
+3. 將新目錄命名為 *Data*。
 
-上傳範例資料。 如需簡單的逐步說明，可使用範例 CSV 資料檔案。 本文使用[美國運輸部](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1)的航空公司誤點原因資料。 請下載未經處理資料，並將資料解壓縮至電腦。 將檔案命名為 *airline_delay_causes.csv* 。
+上傳範例資料。 如需簡單的逐步說明，可使用範例 CSV 資料檔案。 本文使用[美國運輸部](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1)的航空公司誤點原因資料。 請下載未經處理資料，並將資料解壓縮至電腦。 將檔案命名為 *airline_delay_causes.csv*。
 
 解壓縮範例檔案後，將其上傳：
 

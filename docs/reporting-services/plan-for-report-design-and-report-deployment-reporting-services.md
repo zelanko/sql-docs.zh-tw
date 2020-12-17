@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247537"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477059"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>規劃報表設計與報表部署 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供數種撰寫與部署分頁報表的方法。 了解如何針對一起運作的報表撰寫和報表伺服器環境進行規劃。
@@ -53,7 +53,7 @@ ms.locfileid: "87247537"
   
 -   **入口網站：** 從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 將報表上傳至原生模式報表伺服器。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint：** 將報表上傳至以 SharePoint 模式報表伺服器設定的 SharePoint 網站。  
 
@@ -73,7 +73,7 @@ ms.locfileid: "87247537"
   
  您可以從報表伺服器擷取報表定義檔案 (.rdl) 的唯讀複本。 在原生模式報表伺服器上，瀏覽至[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]，然後選取報表並按一下 [下載]。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 在 SharePoint 模式部署中，瀏覽至文件庫，然後選取報表並按一下 **[下載複本]** 。  
 

@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 41c0eb01dbcd2838a1c6f388e8b4304ef1eb3c7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956508"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471279"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 R 語言延伸模組
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -64,7 +64,7 @@ Microsoft 為平行和分散式工作負載新增的 R 套件包含下列程式�
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
 1. 對於 R 執行階段的要求會以傳遞到預存程序 ([sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)) 的參數 _@language='R'_ 表示。 SQL Server 會將此要求傳送到啟動控制板服務。
-在 Linux 中，SQL 會使用**啟動控制板**服務來與每個使用者的不同啟動控制板程序通訊。 如需詳細資料，請參閱[擴充性架構圖表](extensibility-framework.md#architecture-diagram)。
+在 Linux 中，SQL 會使用 **啟動控制板** 服務來與每個使用者的不同啟動控制板程序通訊。 如需詳細資料，請參閱[擴充性架構圖表](extensibility-framework.md#architecture-diagram)。
 2. 啟動控制板服務會啟動適當的啟動器；在此案例中為 RLauncher。
 3. RLauncher 啟動外部 R 處理序。
 4. BxlServer 會與 R 執行階段協調來管理 SQL Server 資料交換與工作結果的儲存。

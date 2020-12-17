@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fe50ef2d018f01e0811c5d950f73ae6cb3d3c5f3
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991069"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638057"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者總覽
 Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../reference/ado-api/recordset-object-ado.md) 物件儲存至檔案中，並在稍後從檔案還原該 **記錄集** 物件。 系統會保留架構資訊、資料和暫止的變更。
@@ -37,7 +37,7 @@ Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../reference/ado-
 ## <a name="errors"></a>Errors
  您可以在應用程式中偵測到此提供者所發出的下列錯誤。
 
-|持續性|描述|
+|常數|描述|
 |--------------|-----------------|
 |E_BADSTREAM|開啟的檔案沒有有效的格式 (也就是說，格式不是 ADTG 或 XML) 。|
 |E_CANTPERSISTROWSET|儲存的 **記錄集** 物件具有阻礙儲存的特性。|
@@ -49,7 +49,4 @@ Microsoft OLE DB 持續性提供者可讓您將 [記錄集](../../reference/ado-
 
  如需持續儲存 **記錄集** 物件的詳細資訊，請參閱 [記錄集持續](../data/more-about-recordset-persistence.md)性。
 
- 當資料流程用來開啟**記錄集時，** 不應該指定**Open**方法的*Source*參數以外的任何參數。
-
-## <a name="see-also"></a>另請參閱
-[Microsoft OLE DB 持續性提供者 (ADO 服務提供者) ]()
+ 當資料流程用來開啟 **記錄集時，** 不應該指定 **Open** 方法的 *Source* 參數以外的任何參數。

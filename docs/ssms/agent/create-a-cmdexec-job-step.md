@@ -13,13 +13,13 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be1cbffcbe5725f3544a635353d3e511a0496e88
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e0bc263e814e0b87300159b98ec59441527f34c4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035641"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472339"
 ---
 # <a name="create-a-cmdexec-job-step"></a>建立 CmdExec 作業步驟
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92035641"
   
 7.  在 **[成功命令的處理序結束碼]** 方塊中，輸入介於 0 到 999999 之間的值。  
   
-8.  **** 在 [命令]方塊中，輸入作業系統命令或可執行的程式。 如需範例，請參閱＜使用 Transact-SQL＞。  
+8.   在 [命令]方塊中，輸入作業系統命令或可執行的程式。 如需範例，請參閱＜使用 Transact-SQL＞。  
   
 9. 按一下 **[進階]** 頁面設定作業步驟選項，例如：作業步驟成功或失敗時要採取什麼動作、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 應該嘗試執行作業步驟多少次，以及可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 寫入作業步驟輸出的檔案。 只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，可以將作業步驟輸出寫入作業系統檔案。  
   

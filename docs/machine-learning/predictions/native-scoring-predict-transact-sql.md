@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956956"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471029"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>使用 PREDICT T-SQL 函式與 SQL 機器學習進行原生評分
 
@@ -60,13 +60,13 @@ ms.locfileid: "91956956"
 | Azure SQL Edge | 是 | 否 |
 | Azure Synapse Analytics | 是 | 否 |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>ONNX 模型
 
 模型必須是 [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 模型格式。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>RevoScale 模型
 
 您必須先使用 [RevoScaleR](../r/ref-r-revoscaler.md) 或 [revoscalepy](../python/ref-py-revoscalepy.md) 套件，以下列其中一種支援的 **rx** 演算法來定型模型。
@@ -106,7 +106,7 @@ revoscalepy 和 RevoScaleR 支援下列演算法。
 ::: moniker-end
 
 ## <a name="examples"></a>範例
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>PREDICT 與 ONNX 模型
 
 這個範例示範如何使用 `dbo.models` 資料表中儲存的 ONNX 模型進行原生評分。
@@ -145,7 +145,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > 由於 **PREDICT** 所傳回的資料行和值可能會因為模型類型而有差異，所以您必須使用 **WITH** 子句來定義傳回資料的結構描述。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>PREDICT 與 RevoScale 模型
 
 在此範例中，您會在 R 中使用 **RevoScaleR** 建立模型，然後從 T-SQL 呼叫即時預測函式。
@@ -221,7 +221,7 @@ FROM ml_models;
 
 #### <a name="step-2-run-predict-on-the-model"></a>步驟 2： 在模型上執行 PREDICT
 
-下列簡單的 PREDICT 陳述式會使用**原生評分**函式，從決策樹模型取得分類。 該函式會根據您提供的屬性、花瓣長度和寬度來預測 iris (鳶尾花) 的品種。
+下列簡單的 PREDICT 陳述式會使用 **原生評分** 函式，從決策樹模型取得分類。 該函式會根據您提供的屬性、花瓣長度和寬度來預測 iris (鳶尾花) 的品種。
 
 ```sql
 DECLARE @model varbinary(max) = (
