@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d3b2da6c649c514dff31225253292642212cd41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7f738e20a84c82879361e999ef795825c31bf311
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195784"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470769"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上設定用於 R 開發的資料科學用戶端
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92195784"
 
 ![用戶端伺服器元件](media/sqlmls-r-client-revo.png "本機和遠端 R 工作階段和程式庫")
 
-若要驗證安裝，您可以使用本文所述的內建 **RGUI** 工具，或是[將程式庫連結](#install-ide)到 RStudio 或您平常使用的任何其他 IDE。
+若要驗證安裝，您可以使用本文所述的內建 **RGUI** 工具，或是 [將程式庫連結](#install-ide)到 RStudio 或您平常使用的任何其他 IDE。
 
 > [!Note]
 > 除了用戶端程式庫安裝之外，還有另一種方式是使用[獨立伺服器](../install/sql-machine-learning-standalone-windows-install.md)作為豐富型用戶端；針對更深入的案例工作，某些客戶會偏好使用此選項。 獨立伺服器會與 SQL Server 完全分離，但由於它具有相同的 R 程式庫，因此您可以使用它作為 SQL Server 資料庫內分析的用戶端。 您也可以將它用於非 SQL 相關的工作，包括從其他資料平台匯入及模型化資料的能力。 如果您安裝獨立伺服器，您可以在此位置找到 R 可執行檔：`C:\Program Files\Microsoft SQL Server\140\R_SERVER`。 若要驗證您的安裝，請[開啟 R 主控台應用程式](#R-tools)，在該位置使用 R.exe 來執行命令。
@@ -239,7 +239,7 @@ SSMS 是個別的下載，很適合用來建立及執行 SQL Server 上的預存
 4. 按一下 [R 工具]  功能表，然後選取 [Windows]  ，以查看您可以在工作區中顯示的其他 R 專屬視窗清單。
  
    + 按 CTRL + 3，可在目前的程式庫中查看套件的說明。
-   + 按 CTRL + 8，則可在**變數總管**中查看 R 變數。
+   + 按 CTRL + 8，則可在 **變數總管** 中查看 R 變數。
 
 ## <a name="next-steps"></a>後續步驟
 

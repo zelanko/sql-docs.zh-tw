@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6589593d7d040f4e2f9a2bf5a690dbb42d89d142
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c85762cabe7b30c2873e5bbdfef5301f1fcefddf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038104"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482093"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 
@@ -59,11 +59,11 @@ ms.locfileid: "92038104"
   
 4.  勾選 **[寫入 Windows 應用程式事件記錄檔]**，並選擇下列其中一項：  
   
-    -   按一下 [當作業成功時]****，在作業成功完成時記錄作業狀態。  
+    -   按一下 [當作業成功時]，在作業成功完成時記錄作業狀態。  
   
-    -   按一下 [當作業失敗時]****，在作業失敗時記錄作業狀態。  
+    -   按一下 [當作業失敗時]，在作業失敗時記錄作業狀態。  
   
-    -   按一下 [作業完成時]****，不論完成狀態為何，一律記錄作業狀態。  
+    -   按一下 [作業完成時]，不論完成狀態為何，一律記錄作業狀態。  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>使用 SQL Server 管理物件  
 **若要將作業狀態寫入到 Windows 應用程式記錄**  

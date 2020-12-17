@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778407"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641551"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>平行處理資料倉儲的 t-sql 語言元素
 分析平臺系統 (AP) SQL Server 平行處理資料倉儲 (PDW) 的 t-sql 語言元素。
@@ -23,7 +23,7 @@ ms.locfileid: "88778407"
 * [語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [物件命名規則](../relational-databases/databases/database-identifiers.md)
 * [保留的關鍵字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [定序](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [定序](../t-sql/statements/collations.md)
 * [評論](../t-sql/language-elements/comment-transact-sql.md)
 * [常數](../t-sql/data-types/constants-transact-sql.md)
 * [資料類型](../t-sql/data-types/data-types-transact-sql.md)

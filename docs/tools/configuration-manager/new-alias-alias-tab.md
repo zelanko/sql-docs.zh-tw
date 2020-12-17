@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d7c12e6807801ab6a7b5dfb2264191244c33dd6
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 564d97244e19a7520d8f9ae86804af76e480009a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900150"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481649"
 ---
 # <a name="new-alias-alias-tab"></a>新增別名 (別名索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88900150"
  要連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
 ## <a name="when-to-use-an-alias"></a>使用別名的時機  
- 依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用記憶體 **通訊協定來連接到** 的本機執行個體；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP **或** 具名管道 **來連接到其他電腦上的**執行個體。 當您想要使用 TCP/IP 或具名管道，並且想要提供自訂連接字串，或當您想要使用其他名稱 (而不使用伺服器名稱) 來進行連接時，請建立別名。  
+ 依預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共用記憶體 **通訊協定來連接到** 的本機執行個體；使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP **或** 具名管道 **來連接到其他電腦上的** 執行個體。 當您想要使用 TCP/IP 或具名管道，並且想要提供自訂連接字串，或當您想要使用其他名稱 (而不使用伺服器名稱) 來進行連接時，請建立別名。  
   
 ### <a name="examples"></a>範例  
   

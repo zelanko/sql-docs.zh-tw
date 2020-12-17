@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6bf16d51d0180b56007f237001d01cedfecf8d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 31e6b8705054001cb603af324ffb87d55bc18100
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470209"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>教學課程：準備資料以使用 SQL 機器學習在 R 中執行叢集
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在這個四部分教學課程系列的第二部分中，您將準備來自資料庫中的資料，以使用 SQL Server 機器學習服務在 R 中執行叢集，或在巨量資料叢集上執行叢集。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在這個四部分教學課程系列的第二部分中，您將準備來自資料庫的資料，以使用 SQL Server 機器學習服務在 R 中執行叢集。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在這個四部分教學課程系列的第二部分中，您將準備來自資料庫的資料，以使用 SQL Server 2016 R Services 在 R 中執行叢集。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在這個四部分教學課程系列的第二部分中，您將準備來自 SQL 資料庫的資料，以使用 Azure SQL 受控執行個體機器學習服務，在 R 中執行叢集。
 ::: moniker-end
 

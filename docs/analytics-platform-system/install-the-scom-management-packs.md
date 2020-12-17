@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: d8f4145b85d505ccdf1d0fe26b22f2cdf02d9e90
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523823"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641491"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝適用于 Analytics Platform System 的 SQL Server Operations Manager (SCOM) 管理套件
 請遵循下列步驟，下載並安裝適用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理套件。 需要有管理元件，才能從 SCOM 監視 SQL Server PDW。  
@@ -29,7 +29,7 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
 若為裝置管理，請下載 [SQL Server 設備基礎管理套件](/previous-versions/system-center/packs/gg602398(v=technet.10))。  
   
-針對較舊版本的 PDW （沒有 AP），請下載[適用于 Microsoft SQL Server 2012 平行資料倉儲設備的 System Center 監視套件](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7)。  
+針對較舊版本的 PDW （沒有 AP），請下載[適用于 Microsoft SQL Server 2012 平行資料倉儲設備的 System Center 監視套件](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7&preserve-view=true)。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -47,11 +47,11 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  按一下 [Install]  。  
+4.  按一下 [安裝]  。  
   
     ![[確認安裝步驟] 上的 [SQL Server 設備基本監視 MP 安裝程式] 的螢幕擷取畫面，其中的 [安裝] 選項以紅色圓圈表示。](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  按一下 [關閉]。  
+5.  按一下 [關閉]  。  
   
     ![按一下 [關閉]](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -67,11 +67,11 @@ System Center Operations Manager 必須安裝並執行。 SQL Server PDW 2012 �
   
     ![選取安裝資料夾](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  按一下 [Install]  。  
+4.  按一下 [安裝]  。  
   
     ![PDWMP 安裝程式的螢幕擷取畫面，其中的 [確認] 安裝步驟中以紅色圈起的安裝選項。](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  按一下 [關閉]。  
+5.  按一下 [關閉]  。  
   
     ![安裝完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc807900a08869ef46628b8aca2456326e617c87
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d256e9a650359a9fdc961a04ddb3c32216961094
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985819"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641361"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
@@ -35,7 +35,7 @@ ms.locfileid: "88985819"
 |[檢視](./views-collection-adox.md)|包含目錄的所有 **View** 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOX API 參考](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 參考](./adox-object-model.md)   
  [ADOX 物件模型](./adox-object-model.md)   
  [ADOX 物件](./adox-objects.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

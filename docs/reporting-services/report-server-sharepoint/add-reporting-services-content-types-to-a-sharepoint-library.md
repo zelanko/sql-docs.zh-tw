@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e2988bfecf08ad5987519ae0c4e166089973d745
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043839"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424853"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -23,7 +23,7 @@ ms.locfileid: "93043839"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]** 、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -107,7 +107,7 @@ ms.locfileid: "93043839"
   
 5.  在 **[從下列位置選取網站內容類型]** ，選取 **[SQL Server Reporting Services 內容類型]** 。  
   
-6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]** ，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
+6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]**，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
   
 7.  若要加入 **[報表模型]** 和 **[報表資料來源]** 內容類型，請重複上一個步驟。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "93043839"
   
 5.  在 **[選取內容類型]** 區段的 **[從下列位置選取網站內容類型]** 中，按一下箭號選取 **[SQL Server Reporting Services 內容類型]** 。  
   
-6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]** ，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
+6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]**，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
   
 7.  若要加入 **[報表模型]** 和 **[報表資料來源]** 內容類型，請重複上一個步驟。  
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425433"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>安裝或解除安裝適用於 SharePoint 的 Reporting Services 增益集 (SSRS)
 
@@ -69,7 +69,7 @@ ms.locfileid: "91890860"
 Rssharepoint.msi /?  
 ```  
   
-1.  下載**增益集的安裝程式 (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+1.  下載 **增益集的安裝程式 (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 2.  以管理員的身分執行 **rsSharepoint.msi** ，執行安裝精靈。 此精靈會顯示 [歡迎使用] 頁面、軟體授權合約和註冊資訊頁面。 安裝程式會在下列路徑下建立資料夾，並將檔案複製到資料夾：  
   
@@ -84,7 +84,7 @@ Rssharepoint.msi /?
 ###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> 僅限檔案安裝  
  若要安裝檔案但略過自訂動作階段，請從命令列執行 .msi 並加上 SKIPCA 選項：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
 2.  執行自訂動作可執行檔：  
   
-    1.  瀏覽至包含 **rsCustomAction.exe**檔案的資料夾。 此檔案會隨僅限檔案安裝增益集複製到您的電腦上。 **rsCustomAction.exe** 位於 **%Temp%** 目錄。 若要導覽至檔案，請在命令提示字元中輸入下列內容：  
+    1.  瀏覽至包含 **rsCustomAction.exe** 檔案的資料夾。 此檔案會隨僅限檔案安裝增益集複製到您的電腦上。 **rsCustomAction.exe** 位於 **%Temp%** 目錄。 若要導覽至檔案，請在命令提示字元中輸入下列內容：  
   
          **CD %temp%** 。  
   
@@ -123,7 +123,7 @@ Rssharepoint.msi /?
   
  若要執行無訊息安裝：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   
@@ -166,7 +166,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-from-the-command-line"></a>從命令列解除安裝  
  若要從命令列解除安裝增益集：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   
@@ -179,7 +179,7 @@ Rssharepoint.msi /?
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>只從本機伺服器解除安裝增益集  
  上述解除安裝增益集的方法會從伺服器陣列中移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能和物件。 如果您擁有多伺服器的伺服器陣列，而只想要解除安裝本機電腦上的增益集，並且讓 SharePoint 伺服器陣列保持運作狀態，請完成下列步驟：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   
@@ -191,7 +191,7 @@ Rssharepoint.msi /?
   
  如果您想要從 SharePoint 取消 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能的註冊，但將檔案留在磁碟上以供稍後使用，請完成下列步驟：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   
@@ -204,7 +204,7 @@ Rssharepoint.msi /?
 ##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> 如何從命令列修復 rsSharePoint.msi  
  若要使用命令列修復或解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集，請完成下列步驟：  
   
-1.  **以系統管理員權限**開啟命令提示字元。  
+1.  **以系統管理員權限** 開啟命令提示字元。  
   
 2.  執行以下命令：  
   

@@ -9,13 +9,13 @@ ms.author: maghan
 reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 564e6ad8cc4ab7cc14d816b34e5332412f912739
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300363"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489728"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -49,7 +49,7 @@ SQL Server Data Tools (SSDT) 提供數個 [Azure Active Directory (Azure AD)](/a
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 互動式驗證
 
-「Active Directory 互動式驗證」適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) 或更新版本。
+「Active Directory 互動式驗證」適用於使用 SSDT 連線到所列 Azure SQL 產品的情況，但僅限於 [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2&preserve-view=true) 或更新版本。
 
 - [下載並安裝 .NET Framework 的任何版本](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 15.6 版](/visualstudio/releasenotes/vs2017-relnotes)或更新版本。

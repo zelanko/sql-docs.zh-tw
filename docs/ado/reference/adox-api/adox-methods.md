@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6986e0bf160bb5dcdb54d6ae485b3d3879a4800a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6b0626880ee69e4a35df9bb86c3f07d9c3c0a1d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985699"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641350"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 
@@ -29,7 +29,7 @@ ms.locfileid: "88985699"
 |[將 (群組附加) ](./append-method-adox-groups.md)|將新的 **群組** 物件加入至 **群組** 集合。|  
 |[附加 (索引) ](./append-method-adox-indexes.md)|將新的 **索引** 物件加入至 **索引** 集合。|  
 |[附加 (金鑰) ](./append-method-adox-keys.md)|將新的索引 **鍵** 物件加入至索引 **鍵** 集合。|  
-|[附加 (程式) ](./append-method-adox-procedures.md)|將新的**程式**物件加入至**Procedure**集合。|  
+|[附加 (程式) ](./append-method-adox-procedures.md)|將新的 **程式** 物件加入至 **Procedure** 集合。|  
 |[附加 (資料表) ](./append-method-adox-tables.md)|將新的 **資料表** 物件加入至 **資料表** 集合。|  
 |[附加 (使用者) ](./append-method-adox-users.md)|將新的 **使用者** 物件加入至 **Users** 集合。|  
 |[附加 (Views) ](./append-method-adox-views.md)|將新的 **View** 物件加入至 **Views** 集合。|  
@@ -42,5 +42,5 @@ ms.locfileid: "88985699"
 |[SetPermissions](./setpermissions-method-adox.md)|指定物件上群組或使用者的許可權。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOX API 參考](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 參考](./adox-object-model.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

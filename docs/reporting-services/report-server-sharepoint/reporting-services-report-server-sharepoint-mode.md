@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d6605fd1fd9aee53bc117701acddd5ffe28e16d8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 73963eb8f7f1e9b1d15e709929fce713301aa450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424949"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91934711"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  為 **SharePoint 模式**設定的 Reporting Services 報表伺服器可以在 SharePoint 產品部署內執行。 SharePoint 模式的報表伺服器可以針對報表和其他 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 內容類型使用 SharePoint 的共同作業和管理功能。 SharePoint 模式需要在 SharePoint Web 前端安裝適用於 SharePoint 產品的正確 Reporting Services 增益集版本。  
+  為 **SharePoint 模式** 設定的 Reporting Services 報表伺服器可以在 SharePoint 產品部署內執行。 SharePoint 模式的報表伺服器可以針對報表和其他 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 內容類型使用 SharePoint 的共同作業和管理功能。 SharePoint 模式需要在 SharePoint Web 前端安裝適用於 SharePoint 產品的正確 Reporting Services 增益集版本。  
   
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。

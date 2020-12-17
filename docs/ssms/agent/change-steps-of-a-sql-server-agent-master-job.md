@@ -11,13 +11,13 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03ba8e6368933afbafab7ca455955bd9e25c2cc3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 310dcdfb9523d1cee89f45039beb485ead4531be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424587"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent Master Job 的步驟
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "92035711"
   
 3.  按一下加號展開 **[作業]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]。  
   
 5.  在 [作業屬性 - _job\_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196984"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642975"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義 - CREATE MEMBER
 
@@ -114,8 +114,8 @@ WHERE ProfitRatio
 |-------------------------|-------------|  
 |SOLVE_ORDER|當導出成員參考另一個導出成員 (亦即，導出成員彼此交叉) 時，解析導出成員的順序。|  
 |FORMAT_STRING|用戶端應用程式在顯示儲存格值時可使用的 Office 樣式格式字串。|  
-|VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 您可以使用 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 函數將可見的匯出成員新增至集合。 非零的值代表可以看見導出成員。 這個屬性的預設值是 *可見*的。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
-|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> 警告此屬性已被取代。 ** \* \* \* \* ** 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2014 中已淘汰的 Analysis Services 功能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) 。|  
+|VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 您可以使用 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 函數將可見的匯出成員新增至集合。 非零的值代表可以看見導出成員。 這個屬性的預設值是 *可見* 的。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
+|NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> 警告此屬性已被取代。 **\* \* \* \*** 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2014 中已淘汰的 Analysis Services 功能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) 。|  
 |CAPTION|用戶端應用程式當做成員標題使用的字串。|  
 |DISPLAY_FOLDER|識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 針對所提供的工具和用戶端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，反斜線 (\\) 是層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
 |ASSOCIATED_MEASURE_GROUP|與此成員建立關聯之量值群組的名稱。|  

@@ -9,20 +9,20 @@ ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
-ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fdf9cb30fead518c36fef8de4e62db4cd56d9560
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810508"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469989"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的新功能
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 本文說明每個 [SQL Server 機器學習服務](sql-server-machine-learning-services.md)版本中所包含的新功能。 在我們繼續擴充、延伸並加深資料平台、進階分析及資料科學之間的整合時，便會將機器學習功能新增至每個版本的 SQL Server 中。 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
 此版本會在 SQL Server 中新增適用於 Python 和 R 機器學習作業的熱門要求功能。 如需此版本中所有功能的詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)與 [SQL Server 2019 的版本資訊](../sql-server/sql-server-version-15-release-notes.md)。
@@ -41,7 +41,7 @@ ms.locfileid: "94810508"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
 此版本新增 [Python 支援和領先業界的機器學習演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) \(英文\)。 SQL Server 2017 引進為了反映新範圍而重新命名的 [SQL Server 機器學習服務 (資料庫內)](sql-server-machine-learning-services.md)，並針對 Python 和 R 提供語言支援。 
@@ -90,7 +90,7 @@ T-SQL 和 Python 整合可透過 [sp_execute_external_script](../relational-data
 此版本也新增 [SQL Server 機器學習伺服器 (獨立式)](r/r-server-standalone.md)，此為完全獨立的資料科學伺服器，支援以 R 和 Python 進行統計和預測性分析。 和 R Services相同，此伺服器是下一版的 SQL Server 2016 R Server (獨立式)。 在使用獨立伺服器的情況下，您可以在不相依於 SQL Server 的情況下散發及調整 R 或 Python 解決方案。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 的新功能
 
 此版本透過 **SQL Server 2016 R Services** 將機器學習功能引進 SQL Server；此資料庫內分析引擎能在資料庫引擎執行個體內的常駐資料上處理 R 指令碼。
@@ -106,7 +106,7 @@ T-SQL 和 Python 整合可透過 [sp_execute_external_script](../relational-data
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="linux-support"></a>Linux 支援
 
 SQL Server 2019 會在您安裝具有資料庫引擎執行個體的機器學習套件時，新增適用於 R 和 Python 的 Linux 支援。 如需詳細資訊，請參閱[在 Linux 上安裝 SQL Server 機器學習服務](../linux/sql-server-linux-setup-machine-learning.md)。

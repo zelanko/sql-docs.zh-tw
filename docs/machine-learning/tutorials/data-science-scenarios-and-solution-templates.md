@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470629"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196322"
 此文章描述數個 SQL Server 機器學習服務解決方案範本。 這些範本示範最佳做法，並提供可協助您快速實作機器學習解決方案的建置組塊。 每個範本都是針對特定類別或產業來解決特定資料科學問題而設計的。
 每個範本所包含的工作，從資料準備和特徵工程，到模型定型和計分，應有盡有。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 使用這些範本來了解 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的運作方式。 然後，您可以隨意自訂範本以符合自己的案例，並建置自訂解決方案。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 使用這些範本來了解 SQL Server 機器學習服務的運作方式。 然後，您可以隨意自訂範本以符合自己的案例，並建置自訂解決方案。
 ::: moniker-end
 
@@ -69,7 +69,7 @@ ms.locfileid: "92196322"
 
 **對象：** 分析及預測客戶流失對任何產業都很重要，無論是銀行業、電信業和零售業等等，都必須管理及防止客戶流失到競爭對手處。 客戶流失分析的目標是為了識別哪些客戶可能流失，然後採取適當動作，以留下這類客戶並保持業務往來。
 
-**方式：** 此範本會將流失問題制訂為**二元分類**問題。 它使用兩個來源 (客戶人口統計和客戶交易) 中的範例資料，將客戶分類為可能流失或不可能流失。
+**方式：** 此範本會將流失問題制訂為 **二元分類** 問題。 它使用兩個來源 (客戶人口統計和客戶交易) 中的範例資料，將客戶分類為可能流失或不可能流失。
   
 ## <a name="predictive-maintenance"></a>預測性維護
 

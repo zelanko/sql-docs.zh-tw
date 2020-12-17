@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810198"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641892"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **Master**資料庫在這個方面是特殊的，因為它包含其他任何資料庫中找不到的其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
+  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **Master** 資料庫在這個方面是特殊的，因為它包含其他任何資料庫中找不到的其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
   
 > [!IMPORTANT]  
 >  系統基底資料表僅用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內部，不供一般客戶使用。 它們隨時可以變更，而且不保證其相容性。  
@@ -89,7 +89,7 @@ ms.locfileid: "91810198"
 |**sys.sysguidrefs**|存在於每個資料庫中。 每個 GUID 分類的識別碼參考都包含一個資料列。|  
   
 ## <a name="updating-system-base-tables"></a>更新系統基表    
-您可以透過 [系統目錄] 視圖來查看系統資料表中的資料。 若要更新系統基表中的中繼資料，請使用適當的 TSQL 介面 (例如) 的 DDL 語句。 您無法手動更新系統資料表。 當您執行系統資料表的直接更新時，SQL Server 會報告下列訊息。
+您可透過系統目錄檢視來查看系統資料表中的資料。 若要更新系統基表中的中繼資料，請使用適當的 TSQL 介面 (例如) 的 DDL 語句。 您無法手動更新系統資料表。 當您執行系統資料表的直接更新時，SQL Server 會報告下列訊息。
 
 ### <a name="a-system-table-is-manually-updated"></a>系統資料表會以手動方式更新
 訊息 17659：警告：已直接在資料庫識別碼 <id> 中更新系統資料表識別碼 <id>，可能未能保持快取的連貫性。 應該重新啟動 SQL Server。
@@ -100,4 +100,4 @@ ms.locfileid: "91810198"
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>手動更新系統資料表後執行 DBCC_CHECKDB 命令
 訊息3859：警告：已直接在資料庫識別碼17中更新系統目錄，最近在 date_time。
 
-如果您對系統資料表執行手動更新，並遇到問題，系統可能會要求您從備份還原，或將資料從受影響的資料庫複製到新的資料庫。 深入瞭解 [使用者動作錯誤訊息](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action)。
+如果您對系統資料表執行手動更新，並遇到問題，系統可能會要求您從備份還原，或將資料從受影響的資料庫複製到新的資料庫。 深入瞭解 [使用者動作錯誤訊息](../errors-events/mssqlserver-8992-database-engine-error.md#user-action)。

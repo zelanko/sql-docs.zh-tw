@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0c677071eb146b7d1a0335108a41f168326d0350
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036117"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480589"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL 偵錯工具 - 監看式視窗
 
@@ -33,7 +33,7 @@ ms.locfileid: "92036117"
 
 **存取監看式視窗**  
   
--   在 **[偵錯]** 功能表上，按一下 **[視窗]** ，再按一下 **[監看式]** ，然後按一下 **Watch 1**、 **Watch 2、Watch 3**或 **Watch 4**。  
+-   在 **[偵錯]** 功能表上，按一下 **[視窗]** ，再按一下 **[監看式]** ，然後按一下 **Watch 1**、 **Watch 2、Watch 3** 或 **Watch 4**。  
   
  **變更運算式的值**  
   

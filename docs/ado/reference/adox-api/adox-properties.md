@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985589"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641147"
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 
@@ -51,5 +51,5 @@ ms.locfileid: "88985589"
 |[UpdateRule](./updaterule-property-adox.md)|指出更新主鍵時所執行的動作。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOX API 參考](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX API 參考](./adox-object-model.md)   
  [資料定義語言和安全性的 ADO 延伸模組 (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777727"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641564"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取數個預防措施來協助保護資料庫，例如設定安全系統、加密機密資產，以及建置圍繞資料庫伺服器的防火牆。 不過，在實體媒體 (（例如磁片磁碟機或備份磁帶）) 遭竊的情況下，惡意物件可以直接還原或附加資料庫，並流覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -142,7 +142,7 @@ TDE 的每一項功能和命令都有個別的權限需求，如同之前所示�
 ## <a name="considerations"></a>考量  
 當資料庫加密作業的重新加密掃描正在進行時，對資料庫的維護作業將會停用。  
   
-您可以使用 **sys. dm_pdw_nodes_database_encryption_keys** 動態管理檢視來尋找資料庫加密的狀態。 如需詳細資訊，請參閱本文稍早的 *類別目錄檢視和動態管理檢視* 一節。  
+您可以使用 **sys.dm_pdw_nodes_database_encryption_keys** 動態管理檢視來尋找資料庫加密的狀態。 如需詳細資訊，請參閱本文稍早的 *類別目錄檢視和動態管理檢視* 一節。  
   
 ### <a name="restrictions"></a>限制  
 在 `CREATE DATABASE ENCRYPTION KEY` 、 `ALTER DATABASE ENCRYPTION KEY` 、或語句中，不允許下列作業 `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION` 。  
@@ -197,7 +197,7 @@ SELECT TOP 1 encryption_state
 在資料庫加密金鑰變更之前寫入交易記錄的所有資料，都會使用之前的資料庫加密金鑰進行加密。  
   
 ### <a name="pdw-activity-logs"></a>PDW 活動記錄  
-SQL Server PDW 會維護一組用於進行疑難排解的記錄檔。  (注意，這不是交易記錄、SQL Server 錯誤記錄檔或 Windows 事件記錄檔。 ) 這些 PDW 活動記錄可包含純文字的完整語句，其中有些可以包含使用者資料。 一般範例為 **INSERT** 和 **UPDATE** 語句。 您可以使用 **sp_pdw_log_user_data_masking**來明確開啟或關閉使用者資料的遮罩。 在 SQL Server PDW 上啟用加密會自動開啟 PDW 活動記錄中的使用者資料遮罩，以保護這些資料。 **sp_pdw_log_user_data_masking** 也可以用來在不使用 TDE 的情況下遮罩語句，但不建議這麼做，因為它可大幅降低 Microsoft 支援服務團隊分析問題的能力。  
+SQL Server PDW 會維護一組用於進行疑難排解的記錄檔。  (注意，這不是交易記錄、SQL Server 錯誤記錄檔或 Windows 事件記錄檔。 ) 這些 PDW 活動記錄可包含純文字的完整語句，其中有些可以包含使用者資料。 一般範例為 **INSERT** 和 **UPDATE** 語句。 您可以使用 **sp_pdw_log_user_data_masking** 來明確開啟或關閉使用者資料的遮罩。 在 SQL Server PDW 上啟用加密會自動開啟 PDW 活動記錄中的使用者資料遮罩，以保護這些資料。 **sp_pdw_log_user_data_masking** 也可以用來在不使用 TDE 的情況下遮罩語句，但不建議這麼做，因為它可大幅降低 Microsoft 支援服務團隊分析問題的能力。  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>透明資料加密和 tempdb 系統資料庫  
 使用 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)啟用加密時，會加密 tempdb 系統資料庫。 這是在任何資料庫可以使用 TDE 之前的必要項。 這可能會對相同 SQL Server PDW 實例上未加密的資料庫造成效能上的影響。  
@@ -207,12 +207,12 @@ SQL Server PDW 會維護一組用於進行疑難排解的記錄檔。  (注意�
   
 系統可以存取金鑰，而不需要人為介入 (例如提供密碼) 。 如果憑證無法使用，系統將會輸出錯誤，說明在有適當的憑證可用之前，DEK 無法解密。  
   
-當您將資料庫從某個設備移至另一個應用裝置時，必須先在目的地伺服器上還原用來保護其 DEK 的憑證。 然後，您可以像平常一樣還原資料庫。 如需詳細資訊，請參閱 [將 TDE 保護的資料庫移至另一個 SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15)的標準 SQL Server 檔。  
+當您將資料庫從某個設備移至另一個應用裝置時，必須先在目的地伺服器上還原用來保護其 DEK 的憑證。 然後，您可以像平常一樣還原資料庫。 如需詳細資訊，請參閱 [將 TDE 保護的資料庫移至另一個 SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)的標準 SQL Server 檔。  
   
 只要有使用這些憑證的資料庫備份，就必須保留用來加密 Dek 的憑證。 憑證備份必須包含憑證私密金鑰，因為沒有私密金鑰，憑證無法用於資料庫還原。 這些憑證私密金鑰備份會儲存在個別的檔案中，並受到必須針對憑證還原提供的密碼所保護。  
   
 ## <a name="restoring-the-master-database"></a>還原 master 資料庫  
-您可以使用 **dwconfig 應用**還原 master 資料庫，做為損毀修復的一部分。  
+您可以使用 **dwconfig 應用** 還原 master 資料庫，做為損毀修復的一部分。  
   
 -   如果控制項節點未變更，也就是在建立 master 資料庫備份的相同和未變更的設備上還原 master 資料庫時，DMK 和所有憑證都可以讀取，而不需執行其他動作。  
   
@@ -246,7 +246,7 @@ SQL Server PDW 會維護一組用於進行疑難排解的記錄檔。  (注意�
   
 在升級期間，如果使用者 DB 已加密且未提供 DMK 密碼，升級動作將會失敗。 在取代期間，如果 DMK 存在時未提供正確的密碼，此作業將會略過 DMK 復原步驟。 所有其他步驟將會在「取代 VM」動作結束時完成，不過，此動作會在結尾回報失敗，以指出需要額外的步驟。 在 [安裝程式記錄檔 (位於 **\ProgramData\Microsoft\Microsoft SQL Server 平行資料 Warehouse\100\Logs\Setup \\<時間戳記> \detail-setup** ]) 中，會在結尾附近顯示下列警告。  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 在 PDW 中手動執行這些語句，然後重新開機設備，以便復原 DMK：  
   

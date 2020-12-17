@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4be9a253767dc25f2db37941ed9d9e1c9c415f7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5a1abf0ec9dcfdaccdafa83c0520508e82e6eafe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035591"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482175"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>修改 SQL Server Agent Proxy
 
@@ -56,9 +56,9 @@ ms.locfileid: "92035591"
   
 3.  按一下加號展開 **[Proxy]** 資料夾。  
   
-4.  按一下加號展開 Proxy 的子系統節點 (例如，[ActiveX Script]****)。  
+4.  按一下加號展開 Proxy 的子系統節點 (例如，[ActiveX Script])。  
   
-5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]****。  
+5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]。  
   
 6.  在 [_proxy\_name_ Proxy 帳戶屬性] 對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   

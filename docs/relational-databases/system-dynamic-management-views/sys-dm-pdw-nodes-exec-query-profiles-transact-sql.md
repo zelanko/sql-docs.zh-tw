@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440794"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644056"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) 
 
@@ -72,7 +72,7 @@ ms.locfileid: "97440794"
   
 ## <a name="remarks"></a>備註
 
-[Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15)中的相同備註也適用。  
+[Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md)中的相同備註也適用。  
 
 ## <a name="permissions"></a>權限  
  需要伺服器的 `VIEW SERVER STATE` 權限。  

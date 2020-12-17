@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412981"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643301"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97412981"
   
  如需定價的詳細資訊，請參閱 [SQL Database 選項和效能： SQL Database 定價](https://azure.microsoft.com/pricing/details/sql-database/) 和 [Azure Synapse Analytics 定價](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
   
- 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-transact-sql.md) 和 [alter database (Azure Synapse Analytics) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest)。  
+ 若要變更服務設定，請參閱 [ALTER database (Azure SQL Database) ](../../t-sql/statements/alter-database-transact-sql.md) 和 [alter database (Azure Synapse Analytics) ](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)。  
   
  Sys.database_service_objectives view 包含下列資料行。  
   
