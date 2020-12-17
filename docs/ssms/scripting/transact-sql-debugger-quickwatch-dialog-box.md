@@ -15,19 +15,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e2bb30bb2527d8b932b64b037a5809587173b4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 79905aa908372f19653f548253d8312b5f760a48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036113"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480619"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 偵錯工具 - 快速監看式對話方塊
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-使用 [快速監看式]**** 對話方塊可在偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼時，快速檢視一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的資料類型和值，例如變數或參數。 若要監看多個運算式，您也可以將此運算式加入到 [監看式] 視窗。  
+使用 [快速監看式] 對話方塊可在偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼時，快速檢視一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的資料類型和值，例如變數或參數。 若要監看多個運算式，您也可以將此運算式加入到 [監看式] 視窗。  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "92036113"
   
 ## <a name="options"></a>選項。  
  **運算式清單**  
- 顯示目前選取的運算式。 此下拉式清單包含您可以選擇顯示的一組運算式。 此清單中的運算式就是目前在 [呼叫堆疊]**** 視窗內選取之堆疊框架範圍內提供的運算式。 若要顯示不同的運算式，請輸入運算式或是從清單中選取。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援以下運算式：名稱以 @@ 開頭的變數、參數和系統函式。  
+ 顯示目前選取的運算式。 此下拉式清單包含您可以選擇顯示的一組運算式。 此清單中的運算式就是目前在 [呼叫堆疊] 視窗內選取之堆疊框架範圍內提供的運算式。 若要顯示不同的運算式，請輸入運算式或是從清單中選取。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具支援以下運算式：名稱以 @@ 開頭的變數、參數和系統函式。  
   
  **值格線**  
  顯示目前所監看之運算式的屬性。  

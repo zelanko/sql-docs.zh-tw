@@ -17,13 +17,13 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f51138ef9e52a8bd44f160f0f9f2fa8366a290a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 79a7b516e7c108cc6e57eca4bf38f959f4ce779a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474329"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>將執行追蹤訊息寫入 SQL Server Agent 錯誤記錄檔
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,6 +63,6 @@ ms.locfileid: "92038110"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 -_server\_name_]**** 對話方塊中，於 [一般]**** 頁面的 [錯誤記錄檔]**** 下，選取 [包含執行追蹤訊息]**** 核取方塊。  
+3.  在 [SQL Server Agent 屬性 -_server\_name_] 對話方塊中，於 [一般] 頁面的 [錯誤記錄檔] 下，選取 [包含執行追蹤訊息] 核取方塊。  
   
 4.  按一下 [確定]  。  

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bcb5b7e7ba0948d758fe35700d271633b63c6619
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9c866dbd86d2f8345675dc04be93907cca1b64a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035551"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466419"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Proxy 帳戶屬性 - 新 Proxy 帳戶 (主體索引標籤)
 

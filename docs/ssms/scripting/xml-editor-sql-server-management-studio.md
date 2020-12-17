@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7215b2bc235b846e67484e19a77ba75cea2f9881
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480559"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
 
@@ -85,7 +85,7 @@ ms.locfileid: "89093561"
 ## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
- 資料檢視中有兩個不同的區域：[資料表] 與 [資料]。 [資料表]**** 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
+ 資料檢視中有兩個不同的區域：[資料表] 與 [資料]。 [資料表] 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
   
 > [!NOTE]  
 >  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，但如果不是結構化資料卻嘗試切換到資料檢視，則會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  

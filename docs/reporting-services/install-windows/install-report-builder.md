@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496983"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425125"
 ---
 # <a name="install-report-builder"></a>安裝報表產生器
 
@@ -33,7 +33,7 @@ ms.locfileid: "92496983"
   
  您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 網站來啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 如需資訊，請參閱 [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -91,7 +91,7 @@ ms.locfileid: "92496983"
   
 3.  在 **[開始]** 功能表上，按一下 **[執行]** 。  
   
-4.  在 [開啟]  方塊中輸入 **cmd.** 。  
+4.  在 [開啟]  方塊中輸入 **cmd.**。  
   
 5.  在 [命令提示字元] 視窗中，巡覽至儲存 ReportBuilder.msi 的資料夾。  
   

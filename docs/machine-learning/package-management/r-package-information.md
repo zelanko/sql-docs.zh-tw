@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470999"
 ---
 # <a name="get-r-package-information"></a>取得 Python 資訊
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文描述如何取得 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)與[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上所安裝 R 套件的資訊。 範例 R 指令碼會示範如何列出套件資訊，例如安裝路徑與版本。
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 本文描述如何取得 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)上所安裝 R 套件的資訊。 範例 R 指令碼會示範如何列出套件資訊，例如安裝路徑與版本。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文描述如何取得 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)上所安裝 R 套件的資訊。 範例 R 指令碼會示範如何列出套件資訊，例如安裝路徑與版本。
 ::: moniker-end
 
@@ -37,7 +37,7 @@ ms.locfileid: "94869966"
 所有在 SQL Server 上資料庫內執行的指令碼都必須從執行個體程式庫載入函式。 SQL Server 無法存取安裝至其他程式庫的套件。 這也適用於遠端用戶端：任何在伺服器計算內容中執行的 R 指令碼都只能使用安裝在執行個體程式庫中的套件。
 為了保護伺服器資產，只有電腦系統管理員才能修改預設執行個體程式庫。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 R 的二進位檔預設路徑是：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ R 的二進位檔預設路徑是：
 這會假設預設 SQL 執行個體 MSSQLSERVER。 如果將 SQL Server 安裝成使用者定義的具名執行個體，則會改用指定的名稱。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 R 的二進位檔預設路徑是：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ R 的二進位檔預設路徑是：
 這會假設預設 SQL 執行個體 MSSQLSERVER。 如果將 SQL Server 安裝成使用者定義的具名執行個體，則會改用指定的名稱。
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 R 的二進位檔預設路徑是：
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>預設 Microsoft R 套件
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 以下是與 SQL Server R Services 一起安裝的 Microsoft R 套件。
 
@@ -84,7 +84,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 以下是您在安裝期間選取 R 功能時，與 SQL Server 機器學習服務一起安裝的 Microsoft R 套件。
 
@@ -97,7 +97,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 以下是您在安裝期間選取 R 功能時，與 SQL Server 機器學習服務一起安裝的 Microsoft R 套件。
 
@@ -114,7 +114,7 @@ GO
 
 預設會透過 Service Pack 和累積更新重新整理 R 套件。 額外套件及核心 R 元件的完整版本升級只有透過產品升級或將 R 支援繫結至 Microsoft Machine Learning Server，才可能實現。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此外，您也可以透過元件升級將 MicrosoftML 和 olapR 套件新增至 SQL Server 執行個體。
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>後續步驟
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [使用 R 工具來安裝套件](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [使用 sqlmlutils 來安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

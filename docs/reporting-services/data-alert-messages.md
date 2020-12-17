@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6af7f155edba97ea558c7bc6427bb5ef143eea47
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7c7f28e92a29dd355d4b74de2121e1c386816116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245161"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425323"
 ---
 # <a name="data-alert-messages"></a>資料警示訊息
 
@@ -45,7 +45,7 @@ SQL Server Reporting Services 資料警示會以電子郵件傳遞兩種類型�
   
 1.  **代表** 包含建立資料警示定義的建立者名稱。  
   
-2.  如果您在警示定義中提供了描述，該描述會顯示於 **代表**下方。  
+2.  如果您在警示定義中提供了描述，該描述會顯示於 **代表** 下方。  
   
 3.  **警示結果** 會以表格格式顯示報表資料摘要中符合警示定義中所指定規則的資料列，或是顯示錯誤描述。 顯示的資料列數並無限制。  
   

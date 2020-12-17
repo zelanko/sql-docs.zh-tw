@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0095984a9358f742147e84e69847ab32781cab07
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 87d4fbcfa114b9f80f19495b3d3728c2dd7678ac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956879"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470829"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (SQL Server 機器學習服務中的 R 套件)
 
@@ -49,7 +49,7 @@ RevoScaleR 可作為分散式資料科學的平台。 例如，您可以在 [Mic
 
 ## <a name="1-data-source-and-compute"></a>1-資料來源與計算
 
-**RevoScaleR** 包含用於建立資料來源及設定計算執行位置 (或*計算內容*) 的函式。 資料來源物件是可一起指定連接字串和您想要之資料集 (可定義為資料表、檢視或查詢) 的容器。 不支援預存程序呼叫。 下表列出與 SQL Server 案例相關的函式。
+**RevoScaleR** 包含用於建立資料來源及設定計算執行位置 (或 *計算內容*) 的函式。 資料來源物件是可一起指定連接字串和您想要之資料集 (可定義為資料表、檢視或查詢) 的容器。 不支援預存程序呼叫。 下表列出與 SQL Server 案例相關的函式。
 
 在某些情況下，SQL Server 和 R 會使用不同的資料類型。 如需 SQL 與 R 資料類型間的對應清單，請參閱 [R 與 SQL 的對應資料類型](r-libraries-and-data-types.md)。
 

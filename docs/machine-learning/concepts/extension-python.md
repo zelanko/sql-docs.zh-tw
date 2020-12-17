@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: da47f54b73faf9507e5c815526bb14d1aa6d8396
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956501"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471289"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server 機器學習服務中的 Python 語言延伸模組
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -70,7 +70,7 @@ Microsoftml 和 revoscalepy 緊密結合；在 microsoftml 中使用的資料來
 ![script-in-db-python](../../machine-learning/python/media/script-in-db-python2.png)
 
 1. Python 執行階段的要求是由傳遞至預存程序的 `@language='Python'` 參數所表示。 SQL Server 會將此要求傳送到啟動控制板服務。
-在 Linux 中，SQL 會使用**啟動控制板**服務來與每個使用者的不同啟動控制板程序通訊。 如需詳細資料，請參閱[擴充性架構圖表](extensibility-framework.md#architecture-diagram)。
+在 Linux 中，SQL 會使用 **啟動控制板** 服務來與每個使用者的不同啟動控制板程序通訊。 如需詳細資料，請參閱[擴充性架構圖表](extensibility-framework.md#architecture-diagram)。
 2. 啟動控制板服務會啟動適當的啟動器，在此案例中為 PythonLauncher。
 3. PythonLauncher 會啟動外部 Python35 程序。
 4. BxlServer 會與 Python 執行階段合作，以管理資料交換，以及處理結果的儲存。

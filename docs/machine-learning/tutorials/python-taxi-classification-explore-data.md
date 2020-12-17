@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bd2c27bbefa22355c63d78a3f5822951b4ca3a94
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0f52df34bb04a94baf14076a9ea345712166ae5a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470319"
 ---
 # <a name="python-tutorial-explore-and-visualize-data"></a>Python 教學課程：探索及視覺化資料
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88178567"
 
 首先，請花一點時間瀏覽資料結構描述，因為我們已進行一些變更，好讓您能更輕鬆地使用 NYC 計程車資料
 
-+ 使用的原始資料集將計程車識別碼和車程記錄的檔案分開。 我們已經在資料行 _medallion_、_hack_license_和 _pickup_datetime_ 上聯結兩個原始資料集。  
++ 使用的原始資料集將計程車識別碼和車程記錄的檔案分開。 我們已經在資料行 _medallion_、_hack_license_ 和 _pickup_datetime_ 上聯結兩個原始資料集。  
 + 原始資料集跨越許多檔案，而且相當大。 我們將抽樣減少，只取得 1% 的原始記錄數目。 目前的資料表有 1,703,957 個資料列和 23 個資料行。
 
 **計程車識別碼**

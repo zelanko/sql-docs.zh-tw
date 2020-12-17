@@ -19,13 +19,13 @@ ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 28b554a05c8ffae76d643b3da3bf6a178691a53c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037331"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466439"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "92037331"
 > [!IMPORTANT]  
 > [Azure SQL 受控執行個體](/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」**。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
+您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
   
-當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」**。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
+當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警示管理伺服器的優點  
 設定警示管理伺服器的優點包括：  

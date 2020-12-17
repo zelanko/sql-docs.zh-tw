@@ -15,13 +15,13 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7685cae3e504a174a099b6b990e568e2987742cd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 89c8b041cbeaba8d82d1a1c9750e2bf88e04d405
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472229"
 ---
 # <a name="stop-a-job"></a>停止作業
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "92030757"
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>限制事項  
   
--   如果作業目前正在執行 **CmdExec** 或 **PowerShell**類型的步驟，則會強制提前結束執行中的處理序 (如 MyProgram.exe)。 提前結束可能造成無法預期的行為，例如，由維持開啟狀態的處理序所使用的檔案。  
+-   如果作業目前正在執行 **CmdExec** 或 **PowerShell** 類型的步驟，則會強制提前結束執行中的處理序 (如 MyProgram.exe)。 提前結束可能造成無法預期的行為，例如，由維持開啟狀態的處理序所使用的檔案。  
   
 -   對於多伺服器作業，作業的 STOP 指令會發佈到作業的所有目標伺服器。  
   

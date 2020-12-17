@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3bb4aa40995db27909162f791ddfbdb3701bb0fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194510"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470649"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>針對 SQL 機器學習進行疑難排解收集資料
 
@@ -228,7 +228,7 @@ SQL Server 會為外部指令碼語言執行階段產生個別的記錄檔。 �
 
 ## <a name="system-events"></a>系統事件
 
-1. 開啟 Windows 事件檢視器，然後在**系統事件**記錄檔中搜尋包含 *Launchpad* 字串的訊息。
+1. 開啟 Windows 事件檢視器，然後在 **系統事件** 記錄檔中搜尋包含 *Launchpad* 字串的訊息。
 2. 開啟 ExtLaunchErrorlog 檔案，並尋找 *ErrorCode* 字串。 檢閱與 ErrorCode 關聯的訊息。
 
 例如，下列訊息是與 SQL Server 擴充性架構相關的常見系統錯誤：

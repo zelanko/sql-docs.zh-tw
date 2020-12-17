@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 651abd2ca0261deae83d77a15b88840499dce957
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535420"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482229"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
@@ -52,7 +52,7 @@ ms.locfileid: "84535420"
   
 -   主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料庫管理員權限。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 -   如果您將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝在網域控制站上，您必須是網域管理員。  
 
@@ -80,7 +80,7 @@ ms.locfileid: "84535420"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
- 執行管理工作的權限是透過兩個預先定義角色所提供：**系統管理員**和**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
+ 執行管理工作的權限是透過兩個預先定義角色所提供：**系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
  用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或入口網站。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 入口網站是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
   

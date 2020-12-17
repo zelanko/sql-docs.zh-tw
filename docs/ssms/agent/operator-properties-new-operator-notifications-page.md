@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e8df9091a470672acb3a52e13c1e8f62bf478bbe
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7201a76acbca92060a90ebbc4cf881a774821571
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038231"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472319"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>操作員屬性/新增操作員 (通知頁面)
 
@@ -52,7 +52,7 @@ ms.locfileid: "92038231"
 將電子郵件傳送至呼叫器位址，來通知此操作員。  
   
 **Net Send**  
-使用 **net send**通知此操作員。  
+使用 **net send** 通知此操作員。  
   
 ## <a name="see-also"></a>另請參閱  
 [運算子](../../ssms/agent/operators.md)  

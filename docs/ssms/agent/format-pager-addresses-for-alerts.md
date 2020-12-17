@@ -18,13 +18,13 @@ ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 862d34f4f26fbeee44e51fe842eb565638fedc04
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d5df0229f84063f11f80fdefa78afffc6b8e2d40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037371"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97422887"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>設定警示的呼叫器位址格式
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "92037371"
   
 1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要傳送至呼叫器的警示。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後選取 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
 3.  在 **[選取頁面]** 底下，選取 **[警示系統]**。  
   
-4.  在 [呼叫器電子郵件位址格式]**** 欄位的 [收件者]**** 和 [副本]**** 方塊中，輸入呼叫器號碼的前置詞和後置詞。 當傳送通知時，就會插入操作員的實際呼叫器號碼。  
+4.  在 [呼叫器電子郵件位址格式] 欄位的 [收件者] 和 [副本] 方塊中，輸入呼叫器號碼的前置詞和後置詞。 當傳送通知時，就會插入操作員的實際呼叫器號碼。  
   
 5.  在 **[主旨]** 方塊中，輸入主旨行前置詞或後置詞。  
   
-6.  選取 [將電子郵件的內文包含在通知訊息中]**** 核取方塊，表示會在呼叫器訊息中加入完整的電子郵件訊息 (而不是僅有主旨行)。  
+6.  選取 [將電子郵件的內文包含在通知訊息中] 核取方塊，表示會在呼叫器訊息中加入完整的電子郵件訊息 (而不是僅有主旨行)。  
   
 7.  完成後，請按一下 **[確定]** 。  

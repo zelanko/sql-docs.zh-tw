@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935320"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466579"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>將快照集加入至報表記錄
 
@@ -24,9 +24,9 @@ ms.locfileid: "91935320"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-1. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
+1. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。
   
 2. 在下拉式功能表中，按一下 **[檢視報表記錄]** 。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "91935320"
   
 1. 若為已經設定成當做報表執行快照集執行的報表，您可以設定其他屬性，以便在每次重新整理快照集時，將快照集的副本儲存至報表記錄。  
   
-2. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+2. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
 3. 在下拉式功能表中，按一下 **[管理]** 。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91935320"
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>若要依照排程自動將快照集加入報表記錄  
   
-1. 在報表管理員中，巡覽至 [內容]**** 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
+1. 在報表管理員中，巡覽至 [內容] 頁面，將滑鼠游標停留在您想要檢視記錄的項目上方，然後按一下下拉箭號。  
   
 2. 在下拉式功能表中，按一下 **[管理]** 。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91935320"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>若要手動將快照集加入至報表記錄
   

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: a701c5d5-f190-4b57-a3f8-954c2572e682
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 323bb0d936a7d231798881946d99852935b7b259
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: cbcce872e012e2ab77745ee8f9b694897ea7adec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465739"
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

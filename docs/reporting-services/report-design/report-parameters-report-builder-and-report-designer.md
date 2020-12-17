@@ -10,22 +10,22 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: 8d0a533d7bd15eb8901c0aba29894e61bbf840ad
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: abbda73ac3aeda94ee8752dbbe638d93bc3d5573
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627527"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425111"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
 
@@ -150,7 +150,7 @@ ms.locfileid: "84627527"
 |--------------|-----------------|  
 |名稱|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若是自動產生的參數，此名稱會與資料集查詢中的參數相同。 根據預設，手動建立的參數類似於 ReportParameter1。|  
 |Prompt|在報表檢視器工具列上顯示於參數旁邊的文字。|  
-|資料類型|報表參數的資料類型必須是下列其中一種：<br /><br /> **布林**。 使用者會從選項按鈕中選取 True 或 False。<br /><br /> **日期時間**： 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> **文字**： 使用者會在文字方塊中輸入值。<br /><br /> 針對某個參數定義了可用的值之後，使用者就可以從下拉式清單中選擇值，即使資料類型是 **DateTime**也一樣。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
+|資料類型|報表參數的資料類型必須是下列其中一種：<br /><br /> **布林**。 使用者會從選項按鈕中選取 True 或 False。<br /><br /> **日期時間**： 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> **文字**： 使用者會在文字方塊中輸入值。<br /><br /> 針對某個參數定義了可用的值之後，使用者就可以從下拉式清單中選擇值，即使資料類型是 **DateTime** 也一樣。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
 |允許空白值|如果參數值可為空字串或空白，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望空白值是其中一個有效值，則必須將它納入做為您指定的其中一個有效值。 選取此選項並不會自動將空白納入做為可用的值。|  
 |允許 null 值|如果參數值可為 null，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望 null 是其中一個有效值，則必須將 null 納入做為您指定的其中一個有效值。 選取此選項並不會自動將 null 納入做為可用的值。|  
 |允許多個值|提供可用的值，建立可供使用者選擇的下拉式清單。 這是確保資料集查詢中只會提交有效值的好方法。<br /><br /> 如果參數值可以是顯示在下拉式清單中的多個值，則選取此選項。 不允許 Null 值。 選取此選項時，系統會將核取方塊加入到參數下拉式清單內可用值的清單中。 清單的頂端包含 **[全選]** 核取方塊。 使用者可以檢查想要的值。<br /><br /> 如果提供值的資料迅速改變，則使用者看見的清單可能不是最新的。|  
@@ -215,7 +215,7 @@ ms.locfileid: "84627527"
  使用員工或個人資料之參數的一個安全替代方式，就是根據包含 Users 集合之 **UserID** 欄位的運算式來選取資料。 Users 集合提供一種方法，來取得執行報表之使用者的識別，並使用該識別來擷取使用者特定資料。  
   
 > [!IMPORTANT]  
->  在任何包含 **String**類型參數的報表中，務必使用可用的值清單 (也稱為有效值清單)，並且確認任何執行報表的使用者僅擁有檢視報表中資料所需的權限。 當您將參數定義為 **String**類型時，使用者會看到一個可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至資料集參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
+>  在任何包含 **String** 類型參數的報表中，務必使用可用的值清單 (也稱為有效值清單)，並且確認任何執行報表的使用者僅擁有檢視報表中資料所需的權限。 當您將參數定義為 **String** 類型時，使用者會看到一個可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至資料集參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
 >   
 >  如果報表參數未繫結至資料集參數，且參數值有包含在報表中，則報表使用者就可以在參數值中輸入運算式語法或 URL，並將報表轉譯為 Excel 或 HTML。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
 >   

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28f72b2b6aafc89d43d4cc493a0c3b8b19c6a8ac
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d4987186486dc6164f9827f03aec8e30e10d40eb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036547"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408848"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
 
@@ -60,7 +60,7 @@ ms.locfileid: "92036547"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -88,7 +88,7 @@ ms.locfileid: "92036547"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -113,7 +113,7 @@ ms.locfileid: "92036547"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  
@@ -145,7 +145,7 @@ ms.locfileid: "92036547"
 將作業步驟輸出記錄至 **msdb** 資料庫中的 **sysjobstepslogs** 資料表。  
   
 **檢視**  
-至少執行一次作業步驟之後，按一下 [檢視]**** 即可在資料表中檢視其輸出。  
+至少執行一次作業步驟之後，按一下 [檢視] 即可在資料表中檢視其輸出。  
   
 **將輸出附加至資料表的現有項目**  
 將輸出附加至現有的資料表內容。 否則，每次執行作業步驟時會覆寫先前的資料表內容。  

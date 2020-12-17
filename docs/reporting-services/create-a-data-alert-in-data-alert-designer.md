@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 28b62c4f3bc15e00337099fd3f954406e3f04122
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425493"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
 
@@ -46,7 +46,7 @@ ms.locfileid: "87247558"
      [資料警示設計工具] 隨即開啟，並且在資料表中顯示報表所產生之第一個資料摘要的前 100 個資料列。  
   
     > [!NOTE]  
-    >  如果您未看見 [新資料警示]**** 選項，表示 SharePoint 網站上未設定警示服務，或是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本未包含資料警示。 如需詳細資訊，請參閱 [Reporting Services SharePoint 服務和服務應用程式](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。  
+    >  如果您未看見 [新資料警示] 選項，表示 SharePoint 網站上未設定警示服務，或是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本未包含資料警示。 如需詳細資訊，請參閱 [Reporting Services SharePoint 服務和服務應用程式](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)。  
     >   
     >  如果 [新資料警示] 選項呈現灰色，表示報表資料來源設定為使用整合式安全性認證或提示輸入認證。 若要使用 [新資料警示] 選項，則必須將資料來源更新為使用預存程序或不使用認證。  
   

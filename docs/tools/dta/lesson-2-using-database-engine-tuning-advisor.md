@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713806"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489908"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 課：使用 Database Engine Tuning Advisor
 
@@ -32,10 +32,10 @@ ms.locfileid: "88713806"
 
 - 安裝 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks2017 範例資料庫](../../samples/adventureworks-install-configure.md?view=sql-server-2017) \(機器翻譯\)。
+- 下載 [AdventureWorks2017 範例資料庫](../../samples/adventureworks-install-configure.md) \(機器翻譯\)。
 
 
-如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+如需在 SSMS 中還原資料庫的指示，請參閱：[還原資料庫。](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > 本教學課程適用於熟悉使用 SQL Server Management Studio 與基本資料庫管理工作的使用者。 
@@ -69,11 +69,11 @@ ms.locfileid: "88713806"
   
 3.  在 Database Engine Tuning Advisor GUI 右窗格的 [一般] 索引標籤中，在 [工作階段名稱] 中輸入 **MySession**。 
   
-4.  針對 [工作負載] 選取 [檔案]，然後選取望遠鏡圖示以**瀏覽工作負載檔案**。 找到您在步驟 1 中儲存的 **MyScript.sql** 檔案。  
+4.  針對 [工作負載] 選取 [檔案]，然後選取望遠鏡圖示以 **瀏覽工作負載檔案**。 找到您在步驟 1 中儲存的 **MyScript.sql** 檔案。  
 
    ![尋找先前儲存的指令碼](media/dta-tutorials/dta-script.png)
   
-5.  在 [工作負載分析的資料庫]**** 清單中選取 [AdventureWorks2017]，在 [選取要微調的資料庫與資料表]**** 方格中選取 [AdventureWorks2017]，並選取 [儲存微調記錄]****。 [工作負載分析的資料庫] 指定在微調工作負載時 Database Engine Tuning Advisor 所連接的第一個資料庫。 在微調開始之後，Database Engine Tuning Advisor 會連接到工作負載包含的 `USE DATABASE` 陳述式所指定的資料庫。  
+5.  在 [工作負載分析的資料庫] 清單中選取 [AdventureWorks2017]，在 [選取要微調的資料庫與資料表] 方格中選取 [AdventureWorks2017]，並選取 [儲存微調記錄]。 [工作負載分析的資料庫] 指定在微調工作負載時 Database Engine Tuning Advisor 所連接的第一個資料庫。 在微調開始之後，Database Engine Tuning Advisor 會連接到工作負載包含的 `USE DATABASE` 陳述式所指定的資料庫。  
 
   ![資料庫的 DTA 選項](media/dta-tutorials/dta-select-db.png)
   
@@ -88,15 +88,15 @@ ms.locfileid: "88713806"
   ![啟動 DTA 分析](media/dta-tutorials/dta-start-analysis.png)
 
   
-8.  完成分析之後，在 [動作] 功能表上，按一下 [儲存建議]，將建議儲存成一份 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 在 [另存新檔]**** 對話方塊中，導覽到用來儲存建議指令碼的目錄，再輸入 **MyRecommendations** 檔案名稱。  
+8.  完成分析之後，在 [動作] 功能表上，按一下 [儲存建議]，將建議儲存成一份 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 在 [另存新檔] 對話方塊中，導覽到用來儲存建議指令碼的目錄，再輸入 **MyRecommendations** 檔案名稱。  
 
   ![儲存 DTA 建議](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>檢視微調建議
   
-1.  在 [建議] 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議] 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會顯示一個 [SQL 指令碼預覽]**** 視窗，供您檢視在這個資料列上建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 按一下 [關閉] 來關閉預覽視窗。  
+1.  在 [建議] 索引標籤上，利用索引標籤頁面底端的捲軸來檢視所有 [索引建議] 資料行。 每個資料列都代表一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議要卸除或建立的資料庫物件 (索引或索引檢視表)。 捲到最右側資料行，按一下 [定義]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會顯示一個 [SQL 指令碼預覽] 視窗，供您檢視在這個資料列上建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 按一下 [關閉] 來關閉預覽視窗。  
   
-    如果您在尋找包含連結的 [定義]**** 時遇到困難，請按一下索引標籤式頁面底端的 [顯示現有的物件]**** 核取方塊加以清除，以減少顯示的資料列數。 當您清除這個核取方塊時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 只會顯示它已產生建議的物件。 選取 [顯示現有的物件] 核取方塊，以檢視 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫目前已存在的所有資料庫物件。 請利用索引標籤頁面右側的捲軸來檢視所有物件。
+    如果您在尋找包含連結的 [定義] 時遇到困難，請按一下索引標籤式頁面底端的 [顯示現有的物件] 核取方塊加以清除，以減少顯示的資料列數。 當您清除這個核取方塊時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 只會顯示它已產生建議的物件。 選取 [顯示現有的物件] 核取方塊，以檢視 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫目前已存在的所有資料庫物件。 請利用索引標籤頁面右側的捲軸來檢視所有物件。
 
   ![DTA 索引建議](media/dta-tutorials/dta-recommendation.png)  
   
@@ -108,16 +108,16 @@ ms.locfileid: "88713806"
   
     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器中，開啟 MySessionRecommendations.sql 指令碼來檢視它。 您可能會在查詢編輯器中執行這份指令碼，將建議套用在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫上，但請勿執行這個動作。 請在查詢編輯器中關閉這份指令碼，不要執行它。  
   
-    或者，您也可以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 [動作]**** 功能表上，按一下 [套用建議]**** 來套用建議，但現在請先不要在這個練習中套用這些建議。  
+    或者，您也可以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的 [動作] 功能表上，按一下 [套用建議] 來套用建議，但現在請先不要在這個練習中套用這些建議。  
   
-4.  如果 [建議]**** 索引標籤中存在多個建議，請清除某些在 [索引建議]**** 方格中列出資料庫物件的資料列。  
+4.  如果 [建議] 索引標籤中存在多個建議，請清除某些在 [索引建議] 方格中列出資料庫物件的資料列。  
   
 5.  在 **[動作]** 功能表上，按一下 **[評估建議]** 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 就會建立一個新的微調工作階段，供您評估 MySession 的部分原始建議。  
   
 6.  輸入 **EvaluateMySession** 來作為新的 [工作階段名稱]，並按一下工具列上的 [開始分析] 按鈕。 您可以針對這個新的微調工作階段，重複步驟 2 和 3 來檢視它的建議。  
   
 ### <a name="summary"></a>摘要  
-如果您在執行工作階段之後，覺得必須變更微調選項，您可能需要評估部分微調建議。 例如，如果您要求 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在指定工作階段的微調選項時考慮索引檢視表，但在產生建議之後，又決定不用索引檢視表。 接著，您可以利用 [動作] 功能表的 [評估建議] 選項，使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在不考慮索引檢視表的情況下，重新評估工作階段。 當您使用 [評估建議]**** 選項時，會以假設的方式，將先前產生的建議套用在目前的實體設計上，以達成第二個微調工作階段的實體設計。  
+如果您在執行工作階段之後，覺得必須變更微調選項，您可能需要評估部分微調建議。 例如，如果您要求 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在指定工作階段的微調選項時考慮索引檢視表，但在產生建議之後，又決定不用索引檢視表。 接著，您可以利用 [動作] 功能表的 [評估建議] 選項，使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在不考慮索引檢視表的情況下，重新評估工作階段。 當您使用 [評估建議] 選項時，會以假設的方式，將先前產生的建議套用在目前的實體設計上，以達成第二個微調工作階段的實體設計。  
   
 您可以在 [報表] 索引標籤中，檢視其他微調結果資訊。這個課程的下一項工作會描述這個索引標籤。  
 

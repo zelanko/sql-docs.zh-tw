@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b058fe7aa723eddcdcf97158d19a053bf2b062b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870047"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471229"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>安裝 SQL Server 適用的 R 自訂執行階段
 
@@ -26,7 +26,7 @@ ms.locfileid: "94870047"
 
 + 安裝 SQL Server 2019 機器學習服務。 完成一些額外的設定步驟後，可搭配 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)使用語言延伸模組。
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > 本文說明如何在 Windows 上安裝 R 適用的自訂執行階段。 若要在 Linux 上安裝，請參閱[安裝適用於 Linux 上的 SQL Server 的 R 自訂執行階段](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true) (英文)。
@@ -182,7 +182,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 您可在 Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES) 和 Ubuntu 上安裝 SQL Server。 如需詳細資訊，請參閱 [Linux 上的 SQL Server 安裝指引](../../linux/sql-server-linux-setup.md#supportedplatforms)中的＜支援的平台＞一節。
 

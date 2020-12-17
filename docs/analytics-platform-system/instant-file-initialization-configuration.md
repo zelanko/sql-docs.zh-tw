@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6843efa430fcd43149d048c9d21c5120954ab896
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766887"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637814"
 ---
 # <a name="instant-file-initialization-configuration"></a>立即檔案初始化設定
 立即檔案初始化是 SQL Server 的功能，可讓資料檔案作業更快速地執行。 核取開啟 [立即檔案初始化] 的方塊，將可改善 SQL Server PDW 的效能。 但是，如果這對您的業務造成安全性風險，請將此方塊保留為未核取。  
@@ -25,7 +25,7 @@ ms.locfileid: "88766887"
 當 TDE 啟用時，無法使用立即檔案初始化。  
   
 ## <a name="add-permission-for-the-backup-account"></a>新增備份帳戶的許可權  
-備份程式需要 (Windows 使用者帳戶) 的網路認證，才能存取備份儲存位置。 您會授權 PDW 使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 程式來使用帳戶。 請參閱 [備份資料庫](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) 以取得整個備份程式。 若要使用立即檔案初始化，必須將許可權授與備份帳戶 `Perform volume maintenance tasks` 。  
+備份程式需要 (Windows 使用者帳戶) 的網路認證，才能存取備份儲存位置。 您會授權 PDW 使用 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) 程式來使用帳戶。 請參閱 [備份資料庫](../t-sql/statements/backup-transact-sql.md) 以取得整個備份程式。 若要使用立即檔案初始化，必須將許可權授與備份帳戶 `Perform volume maintenance tasks` 。  
   
 1.  在備份伺服器上，開啟 [ **本機安全性原則** ] 應用程式 (`secpol.msc`) ]。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "88766887"
   
 3.  在右窗格中，按兩下 [執行磁碟區維護工作]。  
   
-4.  按一下 [新增使用者或群組] **** ，新增用於備份的任何使用者帳戶。  
+4.  按一下 [新增使用者或群組]  ，新增用於備份的任何使用者帳戶。  
   
 5.  按一下 [套用] ，然後關閉所有 [本機安全性原則]  對話方塊。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88766887"
     > [!WARNING]  
     > 當您關閉 [立即檔案初始化] 時，上述針對此功能所討論的安全性考慮，可能仍會套用至 [立即檔案初始化] 啟用時所刪除的檔案。  
   
-4.  按一下 [套用]。 下次重新開機設備服務時，變更將會在 SQL Server PDW 的 SQL Server 實例之間傳播。 若要立即重新開機設備服務，請參閱 [PDW 服務狀態 &#40;Analytics Platform System&#41;](pdw-services-status.md)。  
+4.  按一下 [套用]  。 下次重新開機設備服務時，變更將會在 SQL Server PDW 的 SQL Server 實例之間傳播。 若要立即重新開機設備服務，請參閱 [PDW 服務狀態 &#40;Analytics Platform System&#41;](pdw-services-status.md)。  
   
 5.  您可能會想要重複上述步驟，作為 **備份帳戶的新增許可權** ，以移除「 **執行磁片區維護** 工作」許可權。  
   

@@ -9,13 +9,13 @@ author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 4cce378546ef8c6fa9405f24fb9157dc6a249969
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988460"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471249"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>從 Python 或 R 指令碼對 SQL Server 的回送連線
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

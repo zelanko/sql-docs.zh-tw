@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482505"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644034"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql) 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97482505"
 |request_id|**nvarchar(32)**|request_id 並 step_index 組成此視圖的金鑰。<br /><br /> 與要求相關聯的唯一數值識別碼。|請參閱 [sys.dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)中的 request_id。|  
 |step_index|**int**|request_id 並 step_index 組成此視圖的金鑰。<br /><br /> 此步驟在提出要求的步驟順序中的位置。|0到 (n-1) 用於具有 n 個步驟的要求。|  
 |plan_node_id|**int**|對應至執行計畫中該步驟之操作員識別碼的節點識別碼。|無|  
-|operation_type|**nvarchar(35)**|此步驟所表示的作業類型。|**DMS 查詢計劃作業：** ' ReturnOperation '、' PartitionMoveOperation '、' MoveOperation '、' BroadcastMoveOperation '、' ShuffleMoveOperation '、' TrimMoveOperation '、' CopyOperation '、' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL 查詢計劃作業：** ' OnOperation '、' RemoteOperation '<br /><br /> **其他查詢計劃作業：** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **讀取的外部作業：** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce 的外部作業：** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **寫入的外部作業：** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 如需詳細資訊，請參閱中的「瞭解查詢計劃」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。 <br /><br />  查詢計劃也可能會受到資料庫設定的影響。  查看 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) 以取得詳細資料。|  
+|operation_type|**nvarchar(35)**|此步驟所表示的作業類型。|**DMS 查詢計劃作業：** ' ReturnOperation '、' PartitionMoveOperation '、' MoveOperation '、' BroadcastMoveOperation '、' ShuffleMoveOperation '、' TrimMoveOperation '、' CopyOperation '、' DistributeReplicatedTableMoveOperation '<br /><br /> **SQL 查詢計劃作業：** ' OnOperation '、' RemoteOperation '<br /><br /> **其他查詢計劃作業：** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **讀取的外部作業：** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce 的外部作業：** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **寫入的外部作業：** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 如需詳細資訊，請參閱中的「瞭解查詢計劃」 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。 <br /><br />  查詢計劃也可能會受到資料庫設定的影響。  查看 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) 以取得詳細資料。|  
 |distribution_type|**nvarchar(32)**|此步驟將會進行的散發類型。|' >allnodes '、' AllDistributions '、' AllComputeNodes '、' ComputeNode '、' 散發 '、' SubsetNodes '、' SubsetDistributions '、' 未指定 '|  
 |location_type|**nvarchar(32)**|步驟執行所在的位置。|「計算」、「控制」、「DMS」|  
 |status|**nvarchar(32)**|此步驟的狀態。|暫止、執行中、完成、失敗、UndoFailed、PendingCancel、取消、復原、已中止|  

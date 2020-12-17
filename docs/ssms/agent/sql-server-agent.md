@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036597"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478789"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -105,7 +105,7 @@ ms.locfileid: "92036597"
 -   **net send**  
   
 > [!NOTE]  
-> 若要使用 **net send**來傳送通知，則必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在的電腦上啟動 Windows Messenger 服務。  
+> 若要使用 **net send** 來傳送通知，則必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在的電腦上啟動 Windows Messenger 服務。  
   
 > [!IMPORTANT]  
 > 呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
@@ -115,10 +115,10 @@ ms.locfileid: "92036597"
 您可以將操作員定義成一群人員的別名。 用這種方法，可以同時告知具有該別名的所有成員。 如需詳細資訊，請參閱 [運算子](../../ssms/agent/operators.md)。  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server Agent 管理的安全性  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在 **msdb**資料庫中使用 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole** 固定資料庫角色控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **(系統管理員) 固定伺服器角色成員對** Agent 的存取。 除了這些固定資料庫角色之外，子系統與 Proxy 可協助資料庫管理員確保每一個作業步驟都以執行工作所需的最小權限來執行。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在 **msdb** 資料庫中使用 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole** 固定資料庫角色控制非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin **(系統管理員) 固定伺服器角色成員對** Agent 的存取。 除了這些固定資料庫角色之外，子系統與 Proxy 可協助資料庫管理員確保每一個作業步驟都以執行工作所需的最小權限來執行。  
   
 ### <a name="roles"></a>角色  
-**msdb**中 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole**固定資料庫角色的成員，以及 **系統管理員 (sysadmin)** 固定伺服器角色的成員，都具有存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的權限。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
+**msdb** 中 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole** 固定資料庫角色的成員，以及 **系統管理員 (sysadmin)** 固定伺服器角色的成員，都具有存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的權限。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系統  
 子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟使用 EXECUTE AS 命令來設定作業擁有者的安全性內容。  
@@ -147,7 +147,7 @@ ms.locfileid: "92036597"
 ### <a name="proxies"></a>Proxy  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用 Proxy 來管理安全性內容。 一個 Proxy 可用於多個作業步驟。 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以建立 Proxy。  
   
-每個 Proxy 都對應於一個安全性認證。 每一個 Proxy 可以與一組子系統和一組登入產生關聯。 Proxy 僅適用於使用該 Proxy 相關聯子系統的作業步驟。 若要建立使用特定 Proxy 的作業步驟，則作業擁有者必須使用與該 Proxy 相關的登入，或為可無限制存取 Proxy 的角色成員。 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以自由存取所有 Proxy； **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole** 的成員，則只能使用他們已被授與特定存取權的 Proxy。 屬於這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色成員的每一個使用者，必須被授與特定 Proxy 的存取權，才能建立使用這些 Proxy 的作業步驟。  
+每個 Proxy 都對應於一個安全性認證。 每一個 Proxy 可以與一組子系統和一組登入產生關聯。 Proxy 僅適用於使用該 Proxy 相關聯子系統的作業步驟。 若要建立使用特定 Proxy 的作業步驟，則作業擁有者必須使用與該 Proxy 相關的登入，或為可無限制存取 Proxy 的角色成員。 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以自由存取所有 Proxy； **SQLAgentUserRole**、 **SQLAgentReaderRole** 或 **SQLAgentOperatorRole** 的成員，則只能使用他們已被授與特定存取權的 Proxy。 屬於這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色成員的每一個使用者，必須被授與特定 Proxy 的存取權，才能建立使用這些 Proxy 的作業步驟。  
   
 ## <a name="related-tasks"></a>相關工作  
 您可以使用下列步驟設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以便自動化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理：  

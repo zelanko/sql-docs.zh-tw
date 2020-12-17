@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: b2926817399e0e7604279d25fe46f0a944117a49
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5ecfdb5747eee9fc12934f3514b3df4b74cd8d46
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440783"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644039"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys.dm_pdw_nodes_exec_text_query_plan (Transact-sql) 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97440783"
 |**query_plan**|**nvarchar(max)**|包含以 *plan_handle* 指定之查詢執行計畫的編譯階段顯示計畫標記法。 顯示計畫是文字格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
 
 ## <a name="remarks"></a>備註  
-[Sys.dm_exec_text_query_plan](./sys-dm-exec-text-query-plan-transact-sql.md?view=sql-server-ver15)中的相同備註也適用。  
+[Sys.dm_exec_text_query_plan](./sys-dm-exec-text-query-plan-transact-sql.md)中的相同備註也適用。  
 
 ## <a name="permissions"></a>權限  
  需要伺服器的 **系統管理員（sysadmin** ）伺服器角色或 `VIEW SERVER STATE` 許可權。  

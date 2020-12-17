@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce203349f36ecf05d934903518ec0f783d12537
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9b7df8a2ca180e2f34fbfbc87fe7c000691af1fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901405"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476769"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 偵錯工具 - 錯誤清單視窗
 
@@ -68,9 +68,9 @@ ms.locfileid: "88901405"
   
 -   [錯誤清單] 包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中 IntelliSense 所找到的所有語法和語意錯誤。 當您編輯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，會動態更新這份錯誤清單。 此清單包含編輯器在每一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中找到的所有錯誤。 編輯器在發現指令碼中的錯誤之後，不會停止剖析檔案。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 編輯器中的 IntelliSense 不會支援所有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法元素。 [錯誤清單] 只包含 IntelliSense 支援之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法中的錯誤。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗底端的 [訊息]**** 索引標籤會顯示當執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所傳回的所有錯誤和訊息。 此清單要等到您再次執行此指令碼之後，才會變更。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找到一或兩個編譯錯誤之後，就會停止剖析批次；因此，[訊息]**** 索引標籤可能不會列出指令碼中的所有錯誤。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗底端的 [訊息] 索引標籤會顯示當執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所傳回的所有錯誤和訊息。 此清單要等到您再次執行此指令碼之後，才會變更。 當 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 找到一或兩個編譯錯誤之後，就會停止剖析批次；因此，[訊息] 索引標籤可能不會列出指令碼中的所有錯誤。  
   
- 有時錯誤會同時列在兩個位置。 例如，指令碼檔案可能會有一個語法錯誤列在 [錯誤清單] 中。 如果您在更正錯誤之前執行此指令碼，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 剖析器可以偵測到相同的狀況，並在 [訊息]**** 索引標籤上傳回此錯誤訊息的另一個複本。  
+ 有時錯誤會同時列在兩個位置。 例如，指令碼檔案可能會有一個語法錯誤列在 [錯誤清單] 中。 如果您在更正錯誤之前執行此指令碼，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 剖析器可以偵測到相同的狀況，並在 [訊息] 索引標籤上傳回此錯誤訊息的另一個複本。  
   
 > [!NOTE]  
 >  [錯誤清單] 只會顯示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的錯誤，而不會顯示 MDX、DMX 或 XML/A 編輯器中的錯誤。 所有的 MDX、DMX 和 XML/A 錯誤都會顯示在這些編輯器的 [訊息] 索引標籤上。  

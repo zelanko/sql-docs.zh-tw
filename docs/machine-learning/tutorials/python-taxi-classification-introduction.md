@@ -9,26 +9,26 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b8e0e8df7bd2a5453299751df682e0c33502c25
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 2dd02ddc0dccb0ca41d16688039fa33ad406abd8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585070"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470359"
 ---
 # <a name="python-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Python 教學課程：使用二元分類預測紐約市計程車車資
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上的 Python 整合。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中的 Python 整合。
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [Azure SQL 受控執行個體中機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中的 Python 整合。
 ::: moniker-end
 
@@ -57,7 +57,7 @@ ms.locfileid: "94585070"
 
 ## <a name="prerequisites"></a>必要條件
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + 安裝[使用 Python 的 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 
