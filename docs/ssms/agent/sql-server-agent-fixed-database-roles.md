@@ -20,13 +20,13 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c59f04c31e6400f58d872a98da8498ca6ec38ff5
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: dd46f133a98263a721e0dfb56a7bd5cc25c591cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474359"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "93235668"
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 權限  
 **SQLAgentOperatorRole** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色中具備最多權限的角色。 它包括 **SQLAgentUserRole** 和 **SQLAgentReaderRole** 的所有權限。 此角色的成員也可以檢視操作員和 Proxy 的屬性，並列舉出伺服器上可用的 Proxy 和警示。  
   
-**SQLAgentOperatorRole** 成員對本機作業和排程擁有額外的權限。 他們可以執行、停止或啟動所有本機作業，也可以刪除伺服器上任何本機作業的作業記錄。 還可以啟用或停用伺服器上所有本機作業和排程。 若要啟用或停用本機作業或排程，此角色的成員必須使用預存程序 **sp_update_job** 和 **sp_update_schedule** 。 只有指定作業或排程名稱或識別碼的參數，以及 **\@enabled** 參數可由 **SQLAgentOperatorRole** 的成員指定。 如果他們指定任何其他參數，執行這些預存程序會失敗。 **SQLAgentOperatorRole** 成員無法變更作業擁有權來取得他們尚未擁有之作業的存取權。  
+**SQLAgentOperatorRole** 成員對本機作業和排程擁有額外的權限。 他們可以執行、停止或啟動所有本機作業，也可以刪除伺服器上任何本機作業的作業記錄。 還可以啟用或停用伺服器上所有本機作業和排程。 若要啟用或停用本機作業或排程，此角色的成員必須使用預存程序 **sp_update_job** 和 **sp_update_schedule**。 只有指定作業或排程名稱或識別碼的參數，以及 **\@enabled** 參數可由 **SQLAgentOperatorRole** 的成員指定。 如果他們指定任何其他參數，執行這些預存程序會失敗。 **SQLAgentOperatorRole** 成員無法變更作業擁有權來取得他們尚未擁有之作業的存取權。  
   
 **SQLAgentOperatorRole** 的成員可以看見 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中的 [作業]、[警示]、[操作員] 和 [Proxy] 節點。 只有 [錯誤記錄檔] 節點對此角色的成員是不可見的。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "93235668"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |建立/修改/刪除|否|否|是 (僅擁有的作業)<br /><br />無法變更作業擁有權。|否|是 (僅擁有的排程)|否|  
 |檢視清單 (列舉)|是|是<br /><br />可以取得可用操作員的清單，以便在 **sp_notify_operator** 和 Management Studio 的 [作業屬性] 對話方塊中使用。|是|是|是|是|  
-|啟用/停用|否|否|是<br /><br />**SQLAgentOperatorRole** 成員可以使用預存程序 **sp_update_job** 並指定 **\@enabled** 和 **\@job_id** (或 **\@job_name** ) 參數的值，來啟用或停用非其擁有的本機作業。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。|否|是<br /><br />**SQLAgentOperatorRole** 成員可以使用預存程序 **sp_update_schedule** 並指定 **\@enabled** 和 **\@schedule_id** (或 **\@name** ) 參數的值，來啟用或停用非其擁有的排程。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。|不適用|  
+|啟用/停用|否|否|是<br /><br />**SQLAgentOperatorRole** 成員可以使用預存程序 **sp_update_job** 並指定 **\@enabled** 和 **\@job_id** (或 **\@job_name**) 參數的值，來啟用或停用非其擁有的本機作業。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。|否|是<br /><br />**SQLAgentOperatorRole** 成員可以使用預存程序 **sp_update_schedule** 並指定 **\@enabled** 和 **\@schedule_id** (或 **\@name**) 參數的值，來啟用或停用非其擁有的排程。 如果此角色的成員為此預存程序指定任何其他參數，執行程序會失敗。|不適用|  
 |檢視屬性|是|是|是|是|是|是|  
 |編輯屬性|否|否|是 (僅擁有的作業)|否|是 (僅擁有的排程)|否|  
 |執行/停止/啟動|不適用|不適用|是|否|不適用|不適用|  

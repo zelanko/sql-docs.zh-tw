@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470169"
 ---
 # <a name="r-tutorial-create-data-features"></a>R 教學課程：建立資料特徵
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "92412573"
 
 ## <a name="about-feature-engineering"></a>關於特徵工程
 
-瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」  。 這個程序從未經處理資料建立有意義特徵，是建立分析模型的重要步驟。
+瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」。 這個程序從未經處理資料建立有意義特徵，是建立分析模型的重要步驟。
 
 在此資料集中，距離值是以報告的計量表距離為基礎，不一定代表地理距離或實際的行駛距離。 因此，您必須使用來源紐約市計程車資料集中可用的座標，來計算上車和下車點之間的直線距離。 您可以使用自訂 [函數中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 公式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行這項運算。
 
-您將會使用一個自訂 T-SQL 函數 _fnCalculateDistance_ ，透過 Haversine 公式來計算距離，並使用第二個自訂 T-SQL 函數 _fnEngineerFeatures_ ，建立包含所有特徵的資料表。
+您將會使用一個自訂 T-SQL 函數 _fnCalculateDistance_，透過 Haversine 公式來計算距離，並使用第二個自訂 T-SQL 函數 _fnEngineerFeatures_，建立包含所有特徵的資料表。
 
 整體程序如下：
 
@@ -58,9 +58,9 @@ ms.locfileid: "92412573"
 
 在進行本教學課程的準備工作時，應已下載函數 _fnCalculateDistance_ 並向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。 請花幾分鐘檢閱此程式碼。
   
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]  、[函數]  和 [純量值函式]  。   
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。   
 
-2. 以滑鼠右鍵按一下 [fnCalculateDistance]  ，然後選取 [修改]  ，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+2. 以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -92,7 +92,7 @@ ms.locfileid: "92412573"
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>使用 _fnEngineerFeatures_ 產生特徵
 
-若要將計算值加入可用於定型模型的資料表，您將使用另一個函數 _fnEngineerFeatures_ 。 這個新函數會呼叫先前建立的 T-SQL 函數 _fnCalculateDistance_ ，以取得上車與下車位置之間的直線距離。 
+若要將計算值加入可用於定型模型的資料表，您將使用另一個函數 _fnEngineerFeatures_。 這個新函數會呼叫先前建立的 T-SQL 函數 _fnCalculateDistance_，以取得上車與下車位置之間的直線距離。 
 
 1. 請花幾分鐘檢閱自訂 T-SQL 函數 _fnEngineerFeatures_ 的程式碼，在進行本逐步解說的準備工作時，應該已為您建立此函數。
   

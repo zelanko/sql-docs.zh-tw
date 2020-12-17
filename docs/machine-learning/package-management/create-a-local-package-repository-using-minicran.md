@@ -9,13 +9,13 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a23b12f1cd42a1c6f67a09708481134d8d893d4
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a0edb79e6e23f713767da060fc580ac92c3daaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870466"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471169"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 建立本機 R 套件存放庫
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 當您擁有具備所需套件的本機存放庫之後，將該套件存放庫移至 SQL Server 電腦。 下列程序描述如何使用 R 工具安裝套件。
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > 安裝套件的建議方法是使用 **sqlmlutils**。 請參閱[使用 sqlmlutils 安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)。
 ::: moniker-end
@@ -125,21 +125,21 @@ pdb[, c("Package", "Version", "License")]
 
 2. 開啟與執行個體相關聯的 R 工具 (例如，您可以使用 Rgui.exe)。 以滑鼠右鍵按一下並選取 [以系統管理員身分執行]  ，讓該工具能夠對您的系統進行更新。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    - 例如，RGUI 的預設檔案位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 
-   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    - 例如，RGUI 的檔案位置是 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    - 例如，RGUI 的檔案位置是 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`。
    ::: moniker-end
 
 3. 取得執行個體程式庫的路徑，並將它新增至程式庫路徑清單。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    例如，
 
    ```R
@@ -148,7 +148,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    例如，
 
    ```R
@@ -157,7 +157,7 @@ pdb[, c("Package", "Version", "License")]
 
    ::: moniker-end
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017"
    例如，
 
    ```R

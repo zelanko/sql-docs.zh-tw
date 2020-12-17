@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b50750368dd5c8b9d558a587699fde1e7d94af15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: db28a38415d62abe9bab3540c47567a92df25104
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180339"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470349"
 ---
 # <a name="python-tutorial-create-data-features-using-t-sql"></a>Python 教學課程：使用 T-SQL 建立資料特徵
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 在這個五部分教學課程系列的第三部分中，您將了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，從未經處理的資料建立特徵。 接著，您將從 SQL 預存程序呼叫該函式，以建立包含特徵值的資料表。
 
-*特徵工程*的程序 (從未經處理資料建立特徵)，會是建立進階分析模型的重要步驟。
+*特徵工程* 的程序 (從未經處理資料建立特徵)，會是建立進階分析模型的重要步驟。
 
 在本文中，您將：
 
@@ -48,8 +48,8 @@ ms.locfileid: "88180339"
 
 1. 函式 _fnCalculateDistance_ 包含在範例資料庫中。 請花幾分鐘檢閱此程式碼。
   
-2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]****、[函數]**** 和 [純量值函式]****。
-   以滑鼠右鍵按一下 [fnCalculateDistance]__，然後選取 [修改]****，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
+2. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。
+   以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

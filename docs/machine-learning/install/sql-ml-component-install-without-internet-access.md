@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636152"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471109"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>在沒有網際網路存取的電腦上進行含 Python 與 R 的 SQL Server 機器學習服務的離線安裝
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91636152"
 
 在獨立的伺服器上，機器學習和 R/Python 語言特定功能是透過 CAB 檔案新增。 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>SQL Server 2019 離線安裝
 
 若要在獨立的伺服器上安裝 SQL Server 機器學習服務 (R 和 Python)，請先下載 SQL Server 的初始版本，以及支援 R 及 Python 的相對應 CAB 檔案。 即使您計畫立即更新伺服器以使用最新的累積更新，也必須先安裝初始版本。
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 離線安裝
 
 若要在獨立的伺服器上安裝 SQL Server 機器學習服務 (R 和 Python)，請先下載 SQL Server 的初始版本，以及支援 R 及 Python 的相對應 CAB 檔案。 即使您計畫立即更新伺服器以使用最新的累積更新，也必須先安裝初始版本。
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 離線安裝
 
@@ -142,7 +142,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 我們建議您將最新的累積更新套用至資料庫引擎和機器學習元件。 累積更新是透過安裝程式進行安裝。 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. 從基準執行個體開始。 您只能將累積更新套用到 SQL Server 初始版本的現有安裝上。
 
 2. 在連線到網際網路的裝置上，移至您 SQL Server 版本的累積更新清單：
@@ -150,7 +150,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
    + SQL Server 2019 更新 (尚未提供適用於 2019 的更新) 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. 從基準執行個體開始。 您只能將累積更新套用到 SQL Server 初始版本的現有安裝上。
 
 2. 在連線到網際網路的裝置上，移至您 SQL Server 版本的累積更新清單：
@@ -158,7 +158,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
    + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/) \(英文\)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. 從基準執行個體開始。 您只能將累積更新套用到 SQL Server 2016 初始版本、SQL Server 2016 SP 1，或是 SQL Server 2016 SP 2 的現有安裝上。
 
 2. 在連線到網際網路的裝置上，移至您 SQL Server 版本的累積更新清單：
@@ -180,7 +180,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
+僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出 [會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
 1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
@@ -193,7 +193,7 @@ Python CAB 檔案需要使用 %TEMP% 資料夾。 針對 R，您可以使用 %TE
 
 ## <a name="post-install-configuration"></a>安裝後續設定
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 在安裝結束之後，重新啟動服務並設定伺服器以啟用指令碼執行：
 
 + [啟用外部指令碼執行](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ SQL Server 機器學習服務的初始離線安裝需要和線上安裝相同的
 + [視需要進行其他設定](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在安裝結束之後，重新啟動服務並設定伺服器以啟用指令碼執行：
 
 + [啟用外部指令碼執行](sql-r-services-windows-install.md#bkmk_enableFeature)

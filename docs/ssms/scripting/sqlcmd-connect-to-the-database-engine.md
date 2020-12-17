@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e11f3aa1eb4221790241c4beaaebc4b8ae0cfa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9cf769ae3dc43e6e8c0601d25322627d7dec4920
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466229"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - 連接至 Database Engine
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88901558"
   
 -   **sqlcmd** 使用指定為連接字串一部分的通訊協定，如下所述。  
   
--   如果沒有任何通訊協定指定為連接字串的一部分，則 **sqlcmd** 會使用定義為所連接之別名一部分的通訊協定。 若要設定 **sqlcmd** 透過建立別名來使用特定的網路通訊協定，請參閱[建立或刪除用戶端使用的伺服器別名 #40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
+-   如果沒有任何通訊協定指定為連接字串的一部分，則 **sqlcmd** 會使用定義為所連接之別名一部分的通訊協定。 若要設定 **sqlcmd** 透過建立別名來使用特定的網路通訊協定，請參閱 [建立或刪除用戶端使用的伺服器別名 #40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)。  
   
 -   如果未使用其他方法指定通訊協定，則 **sqlcmd** 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中通訊協定順序所判斷的網路通訊協定。  
   

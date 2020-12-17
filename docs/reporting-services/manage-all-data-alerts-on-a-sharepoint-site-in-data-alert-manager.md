@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a6435b5e113d7ac79546e415479acb47e1c90b89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 9ef302fbbcc11fa5363538092f35b65a94906b8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235694"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466639"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在資料警示管理員中管理 SharePoint 網站上的所有資料警示
 
@@ -43,7 +43,7 @@ SharePoint 警示系統管理員可以檢視任何網站使用者建立之資料
   
 5.  按一下 [檢視使用者的警示] 清單旁邊的向下箭號，然後選取您要檢視其警示的使用者。  
   
-6.  按一下 [檢視報表的警示]**** 清單旁邊的向下箭號，然後選取要檢視的特定警示，或是按一下 [全部顯示]****，列出所選取使用者建立的所有警示。  
+6.  按一下 [檢視報表的警示] 清單旁邊的向下箭號，然後選取要檢視的特定警示，或是按一下 [全部顯示]，列出所選取使用者建立的所有警示。  
   
      資料表會列出名稱、報表名稱、資料警示建立者的名稱、傳送資料警示的次數、上一次修改資料警示定義的時間，以及資料警示的狀態。 如果資料警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解問題。  
   

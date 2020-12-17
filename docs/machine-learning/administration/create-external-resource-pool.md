@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: da6f6817856efd9dd0310211998230d49e6f3d1b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471389"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>建立 SQL Server 機器學習服務的資源集區
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "89283759"
   
      為了能夠以更精細的方式控制哪些工作負載應該優先，您可以建立一個新的使用者定義外部資源集區。 請定義一個分類函式，並將其指派給外部資源集區。 **EXTERNAL** 關鍵字是新的。
   
-     建立新的*使用者定義的外部資源集區*。 在接下來的範例中，該集區是命名為 **ds_ep**。
+     建立新的 *使用者定義的外部資源集區*。 在接下來的範例中，該集區是命名為 **ds_ep**。
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);

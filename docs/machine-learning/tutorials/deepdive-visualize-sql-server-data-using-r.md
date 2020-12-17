@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e9158976b1827eb32e807af1cc97279b0866ff97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196261"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470479"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 將 SQL Server 資料視覺化 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "92196261"
   
 透過這個快速分析，您可以看出詐騙的風險會隨著交易數目和國際交易數目增加而提高。
 
-如需一般 **rxCube** 函數和交叉資料表的更多詳細資訊，請參閱[使用 RevoScaleR 的資料摘要](/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+如需一般 **rxCube** 函數和交叉資料表的更多詳細資訊，請參閱 [使用 RevoScaleR 的資料摘要](/machine-learning-server/r/how-to-revoscaler-data-summaries)。
 
 ## <a name="next-steps"></a>後續步驟
 

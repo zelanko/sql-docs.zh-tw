@@ -8,13 +8,13 @@ ms.date: 11/10/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6489ce49a1236f65ef5ff2fec677327bd6a7f84e
-ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: f68821900b2e304028bccfd79e96f988f02267e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94549982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471719"
 ---
 # <a name="what-is-java-language-extension"></a>什麼是 Java 語言延伸模組？
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]

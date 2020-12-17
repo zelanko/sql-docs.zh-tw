@@ -8,13 +8,13 @@ ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: b57fdb3abd3482d6a395e1e6690f2e628a2a3e9e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470679"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>疑難排解 Launchpad 服務以及在 SQL Server 中執行外部指令碼的問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92194520"
 
 3. 如果服務已停止，請將它重新啟動。 重新啟動時，如果設定發生任何問題，會在系統事件記錄檔中發佈一則訊息，而服務會再次停止。 請檢查系統事件記錄檔，以取得服務停止原因的詳細資料。
 
-4. 請檢閱 RSetup.log 的內容，並確定安裝程式中沒有任何錯誤。 例如，*正在結束，錯誤碼為 0*指示服務啟動失敗。
+4. 請檢閱 RSetup.log 的內容，並確定安裝程式中沒有任何錯誤。 例如，*正在結束，錯誤碼為 0* 指示服務啟動失敗。
 
 5. 若要尋找其他錯誤，請檢查 rlauncher.log 的內容。
 
@@ -77,7 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 本節列出啟動控制板所傳回的最常見錯誤訊息。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>「無法啟動 R 指令碼的執行階段」
 
 如果 R 使用者的 Windows 群組 (也用於 Python) 無法登入正在執行 R Services 的執行個體，您可能會看到下列錯誤：
@@ -186,12 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 若要解決此問題，必須將封裝重新安裝到 SQL Server 執行個體程式庫。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 >[!NOTE]
 >如果您已將 SQL Server 2016 的執行個體升級為使用最新版的 Microsoft R，預設程式庫位置會不同。 如需詳細資訊，請參閱[使用 SqlBindR 升級 R Services 的執行個體](../install/upgrade-r-and-python.md)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>啟動控制板因 DLL 不相符而關閉
 
 如果您安裝具有其他功能的資料庫引擎、修補伺服器，然後稍後使用原始媒體來新增機器學習服務功能，可能會安裝錯誤版本的的機器學習服務元件。 當啟動控制板偵測到版本不符時，它會關閉並建立一個傾印檔案。

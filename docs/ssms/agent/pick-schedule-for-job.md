@@ -15,13 +15,13 @@ ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c095370f69aaa1e9f06cfc3e57500c09442c728a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 860d949cf17c41daee42a3261785e5b067b32ce0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474419"
 ---
 # <a name="pick-schedule-for-job"></a>作業的挑選排程
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92030723"
 列出附加至排程的作業編號。 按一下某個編號以檢視該作業的屬性。  
   
 **屬性**  
-啟動 [作業排程屬性]**** 對話方塊，您可以在其中檢視排程的相關資訊。  
+啟動 [作業排程屬性] 對話方塊，您可以在其中檢視排程的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

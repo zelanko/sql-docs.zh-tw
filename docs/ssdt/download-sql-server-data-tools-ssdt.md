@@ -12,13 +12,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: b69137a197cab3054eeae2ee180a2624e7d564e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474439"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>下載適用於 Visual Studio 的 SQL Server Data Tools (SSDT)
 
@@ -114,7 +114,7 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](/vis
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>可用語言 - 適用於 VS 2017 的 SSDT
 
-這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
+這版 **適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
 * [簡體中文](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
 * [繁體中文](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
@@ -138,7 +138,7 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](/vis
 
 若要在未連線到網際網路時安裝 SSDT，請依照此節中的步驟執行。 如需詳細資訊，請參閱[建立 Visual Studio 2017 的網路安裝](/visualstudio/install/create-a-network-installation-of-visual-studio)。
 
-首先，請在**連線**時完成下列步驟：
+首先，請在 **連線** 時完成下列步驟：
 
 1. [下載 SSDT 的獨立安裝程式](#ssdt-for-vs-2017-standalone-installer)。
 
@@ -148,7 +148,7 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](/vis
    1. 針對特定語言，請傳遞地區設定：`vs_sql.exe --layout c:\<filepath> --lang en-us` (一種語言 ~1 GB)。
    1. 針對所有語言，請省略 `--lang` 引數：`vs_sql.exe --layout c:\<filepath>` (所有語言 ~3.9 GB)。
 
-完成前述步驟之後，就可以**離線**執行下列步驟：
+完成前述步驟之後，就可以 **離線** 執行下列步驟：
 
 1. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
 

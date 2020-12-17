@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469999"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用 R 資料科學家的 SQL 開發
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "92192618"
 在 SQL Server 上安裝套件有幾個選項。 例如，SQL Server 提供 [R 套件管理](../package-management/install-additional-r-packages-on-sql-server.md)功能，可供資料庫管理員建立套件存放庫，並將安裝自己套件的權限指派給使用者。 不過，如果您是電腦上的系統管理員，只要安裝到正確的程式庫，您就可以使用 R 安裝新的套件。
 
 > [!NOTE]
-> 在伺服器上，即使出現提示，也**不要**安裝至使用者程式庫。 如果您安裝至使用者程式庫，SQL Server 執行個體會找不到或無法執行套件。 如需詳細資訊，請參閱[在 SQL Server 上安裝新的 R 套件](../package-management/install-additional-r-packages-on-sql-server.md)。
+> 在伺服器上，即使出現提示，也 **不要** 安裝至使用者程式庫。 如果您安裝至使用者程式庫，SQL Server 執行個體會找不到或無法執行套件。 如需詳細資訊，請參閱[在 SQL Server 上安裝新的 R 套件](../package-management/install-additional-r-packages-on-sql-server.md)。
 
-1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上，**以系統管理員身分**開啟 RGui.exe。  如果您已使用預設值來安裝 SQL Server R Services，則可以在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 中找到 Rgui.exe。
+1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上，**以系統管理員身分** 開啟 RGui.exe。  如果您已使用預設值來安裝 SQL Server R Services，則可以在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 中找到 Rgui.exe。
 
 2. 在 R 提示字元中，執行下列 R 命令：
   

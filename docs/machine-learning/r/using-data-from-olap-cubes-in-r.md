@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e44d7393b3f5dd447cc64a742181e535d05081e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470749"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP Cube 的資料
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -91,7 +91,7 @@ MDX (多維度運算式的簡稱) 是用來查詢 Cube 的語言。 MDX 查詢�
 
 如果您使用用戶端 (例如 SQL Server Management Studio) 連線到 Analysis Services，可以查看資料庫的圖示來一覽支援的模型類型。
 
-您也可以檢視並查詢伺服器屬性，以判斷執行個體支援的模型類型。 **伺服器模式**屬性支援兩個值：「多維度」  或「表格式」  。
+您也可以檢視並查詢伺服器屬性，以判斷執行個體支援的模型類型。 **伺服器模式** 屬性支援兩個值：「多維度」  或「表格式」  。
 
 如需有關這兩種模型類型的一般資訊，請參閱下列文章：
 

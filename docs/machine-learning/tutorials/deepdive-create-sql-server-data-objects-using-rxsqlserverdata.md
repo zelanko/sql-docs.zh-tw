@@ -8,20 +8,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 47864a26c3a5090543c842b45fb6f39ef9862380
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196279"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470599"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>使用 RxSqlServerData 建立 SQL Server 資料物件 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 此教學課程是 [RevoScaleR 教學課程系列](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的第 2 個，該系列說明如何搭配 SQL Server 使用 [RevoScaleR 函式](/machine-learning-server/r-reference/revoscaler/revoscaler) \(英文\)。
 
-此教學課程接續資料庫建立：新增資料表及載入資料。 如果 DBA 在[教學課程二](deepdive-work-with-sql-server-data-using-r.md)中建立資料庫並登入，您可以使用 R IDE (例如 RStudio) 或內建工具 (例如 **Rgui**) 來新增資料表。
+此教學課程接續資料庫建立：新增資料表及載入資料。 如果 DBA 在 [教學課程二](deepdive-work-with-sql-server-data-using-r.md)中建立資料庫並登入，您可以使用 R IDE (例如 RStudio) 或內建工具 (例如 **Rgui**) 來新增資料表。
 
 從 R 連線到 SQL Server，並且使用 **RevoScaleR** 函式來執行下列工作：
 
@@ -55,19 +55,19 @@ ms.locfileid: "92196279"
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    因為已將伺服器執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」** 名稱會變成 instance.database.schema.ccFraudSmall**。
+    因為已將伺服器執行個體和資料庫名稱指定為連接字串的一部分，所以當您合併兩個變數時，新資料表的「完整」名稱會變成 instance.database.schema.ccFraudSmall。
   
-3.  選擇性指定 rowsPerRead**，以控制每個批次中讀取的資料列數目。
+3.  選擇性指定 rowsPerRead，以控制每個批次中讀取的資料列數目。
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    雖然這個參數是選擇性的，但是設定它可以讓計算更有效率。 **RevoScaleR** 和 **MicrosoftML** 中的大部分增強型分析函式會以區塊形式處理資料。 rowsPerRead** 參數會決定每個區塊中的資料列數目。
+    雖然這個參數是選擇性的，但是設定它可以讓計算更有效率。 **RevoScaleR** 和 **MicrosoftML** 中的大部分增強型分析函式會以區塊形式處理資料。 rowsPerRead 參數會決定每個區塊中的資料列數目。
   
-    您可能需要實驗此設定，以找出正確的平衡。 如果值太大，而沒有足夠記憶體可以該大小的區塊形式處理資料，則資料存取可能會變慢。 相反地，在某些系統上，如果 rowsPerRead** 的值太小，效能也會變慢。
+    您可能需要實驗此設定，以找出正確的平衡。 如果值太大，而沒有足夠記憶體可以該大小的區塊形式處理資料，則資料存取可能會變慢。 相反地，在某些系統上，如果 rowsPerRead 的值太小，效能也會變慢。
   
-    作為初始值，使用資料庫引擎執行個體所定義的預設批次處理大小，來控制每個區塊中的資料列數目 (5000 個資料列)。 將該值儲存在 sqlRowsPerRead** 變數中。
+    作為初始值，使用資料庫引擎執行個體所定義的預設批次處理大小，來控制每個區塊中的資料列數目 (5000 個資料列)。 將該值儲存在 sqlRowsPerRead 變數中。
   
 4.  為新的資料來源物件定義一個變數，並將先前定義的引數傳遞至 **RxSqlServerData** 建構函式。 請注意，這只會建立資料來源物件，並不會在其中填入資料。 載入資料是個別的步驟。
   
@@ -106,11 +106,11 @@ ms.locfileid: "92196279"
 **RevoScaleR** 套件包含資料來源類型特有的函式。 若為文字資料，請使用 [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) 來產生資料來源物件。 還有其他函數，可從 Hadoop 資料、ODBC 資料等建立資料來源物件。
 
 > [!NOTE]
-> 在本節中，您必須具有資料庫的**執行 DDL** 權限。
+> 在本節中，您必須具有資料庫的 **執行 DDL** 權限。
 
 ### <a name="load-data-into-the-training-table"></a>將資料載入定型資料表
 
-1. 建立 R 變數 ccFraudCsv**，並將 CSV 檔案 (包含範例資料) 的檔案路徑指派給變數。 **RevoScaleR** 提供此資料集。 "SampleDataDir" 是 **rxGetOption** 函式上的關鍵字。
+1. 建立 R 變數 ccFraudCsv，並將 CSV 檔案 (包含範例資料) 的檔案路徑指派給變數。 **RevoScaleR** 提供此資料集。 "SampleDataDir" 是 **rxGetOption** 函式上的關鍵字。
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
@@ -147,7 +147,7 @@ ms.locfileid: "92196279"
   
     *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
-5. 重新整理資料表清單。 若要確認每個變數具有正確的資料類型且已順利匯入，您也可以使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料表，然後選取 [選取前 1000 個資料列]****。
+5. 重新整理資料表清單。 若要確認每個變數具有正確的資料類型且已順利匯入，您也可以使用滑鼠右鍵按一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的資料表，然後選取 [選取前 1000 個資料列]。
 
 ### <a name="load-data-into-the-scoring-table"></a>將資料載入評分資料表
 
@@ -159,7 +159,7 @@ ms.locfileid: "92196279"
     ccScoreCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudScoreSmall.csv")
     ```
   
-2. 使用 **RxTextData** 函數來取得資料，並將它儲存在變數 *inTextData*中。
+2. 使用 **RxTextData** 函數來取得資料，並將它儲存在變數 *inTextData* 中。
   
     ```R
     inTextData <- RxTextData(file = ccScoreCsv,      colClasses = c(
@@ -179,7 +179,7 @@ ms.locfileid: "92196279"
   
     - *OutFile* 引數會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料表，這是您要儲存資料的位置。
   
-    - 如果資料表已存在，而且您未使用 overwrite** 選項，就會插入而不會截斷結果。
+    - 如果資料表已存在，而且您未使用 overwrite 選項，就會插入而不會截斷結果。
   
 同樣地，如果連線成功，您應該會看到一則訊息，指出完成以及將資料寫入資料表所需的時間︰
 

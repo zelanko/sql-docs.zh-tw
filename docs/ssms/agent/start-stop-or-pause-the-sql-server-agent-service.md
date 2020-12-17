@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02bc27675493e7e8d1b5c5012d7541c0ad295bae
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9e13e201f6ddac0cad1f63364caca4fa99dfd3d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408554"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>啟動、停止或暫停 SQL Server Agent 服務
 
@@ -63,7 +63,7 @@ ms.locfileid: "92038752"
   
 1.  在 **[物件總管]** 中，按一下加號展開要管理 SQL Server Agent 服務所在的伺服器。  
   
-2.  在 [SQL Server Agent]****，然後選取 [啟動]****、[停止]**** 或 [重新啟動]****。  
+2.  在 [SQL Server Agent]，然後選取 [啟動]、[停止] 或 [重新啟動]。  
   
 3.  在 [使用者帳戶控制] 對話方塊中，按一下 [是]。  
   

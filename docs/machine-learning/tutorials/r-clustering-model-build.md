@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 62c7a271a7caf3afa588a48c0ac54ef86a38f785
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: a8520c1ac48b88fe0aaf66096b76cdc7b705a272
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870325"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470219"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中建置群集模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型，或在巨量資料叢集上進行此部署。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 SQL Server R Services 在資料庫中部署此模型。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 R 中建立一個 K-Means 模型以執行群集。 在本系列的下一部分中，您將使用 Azure SQL 受控執行個體機器學習服務，在資料庫中部署此模型。
 ::: moniker-end
 

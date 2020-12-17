@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 314520a54bb9052fb091932b63b9cf4c817a0f16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195080"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470499"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>對新資料評分 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "92195080"
   
     - 參數 *predVarNames* 指定儲存結果的變數。 您在這裡傳遞新的變數，`ccFraudLogitScore`。
   
-    - *rxPredict* 的 **type** 參數定義您要如何計算預測。 指定關鍵字**回應**，根據回應變數的小數位數來產生分數。 或者，使用關鍵字**連結**，根據基礎連結函式產生分數，在此情況下，會使用羅吉斯小數位數來建立預測。
+    - *rxPredict* 的 **type** 參數定義您要如何計算預測。 指定關鍵字 **回應**，根據回應變數的小數位數來產生分數。 或者，使用關鍵字 **連結**，根據基礎連結函式產生分數，在此情況下，會使用羅吉斯小數位數來建立預測。
 
 6. 在一段時間之後，您可以在 Management Studio 中重新整理資料表清單，以查看新的資料表及其資料。
 
@@ -116,7 +116,7 @@ ms.locfileid: "92195080"
         connectionString = sqlConnString)
     ```
 
-     此範例中，您可以看到使用 **RxSqlServerData** 資料來源物件，根據 SQL 查詢、函數或預存程序定義任意資料集，然後在您的 R 程式碼中使用它們有多容易。 變數不會儲存實際的值，而只會儲存資料來源定義。唯有在您將它用於例如 **rxImport**的函數中時，才會執行查詢來產生值。
+     此範例中，您可以看到使用 **RxSqlServerData** 資料來源物件，根據 SQL 查詢、函數或預存程序定義任意資料集，然後在您的 R 程式碼中使用它們有多容易。 變數不會儲存實際的值，而只會儲存資料來源定義。唯有在您將它用於例如 **rxImport** 的函數中時，才會執行查詢來產生值。
       
 2. 呼叫 [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) 函式將值放入可跨計算內容共用的資料框架。
   

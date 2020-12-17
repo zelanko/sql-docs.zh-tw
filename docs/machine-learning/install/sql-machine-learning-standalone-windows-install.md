@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d446416076160642f86c035082481d318479d594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471179"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安裝程式安裝 Machine Learning Server (獨立式) 或 R Server (獨立式)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server 安裝程式包含 [共用功能]  選項，可用於安裝在 SQL Server 外部執行的獨立機器學習伺服器。 其稱為 **Machine Learning Server (獨立式)** ，且包括 Python 與 R。 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server 安裝程式包含 [共用功能]  選項，可用於安裝在 SQL Server 外部執行的獨立機器學習伺服器。 在 SQL Server 2016 中，這項功能稱為 **R Server (獨立式)** 。  
 ::: moniker-end
 
@@ -59,7 +59,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="run-setup"></a>執行安裝程式
 
 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。
@@ -69,13 +69,13 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 2. 按一下 [安裝]  索引標籤，然後選取 [新的 Machine Learning 伺服器 (獨立式) 安裝]  。
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![安裝 Machine Learning Server 獨立式](media/2017setup-installation-page-mlsvr.png "開始安裝 Machine Learning Server 獨立式")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![安裝 Machine Learning Server 獨立式](media/2019setup-installation-page-mlsvr.png "開始安裝 Machine Learning Server 獨立式")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. 完成規則檢查之後，請接受 SQL Server 授權條款，然後選取新的安裝。
 
@@ -86,18 +86,18 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
     - 預設會同時選取 **R** 和 **Python**。 您可以取消選取任一種語言，但我們建議您至少安裝其中一種支援的語言。
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![選擇 R 或 Python 功能](media/2017setup-features-page-mlsvr-rpy.png "開始安裝 Machine Learning Server 獨立式")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![選擇 R 或 Python 功能](media/2019setup-features-page-mlsvr-rpy.png "開始安裝 Machine Learning Server 獨立式")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    您應該忽略所有其他選項。 
     
    > [!NOTE]
-   > 如果電腦已經安裝適用於 SQL Server 資料庫內分析的機器學習服務，則避免安裝**共用功能**。 這會建立重複的程式庫。
+   > 如果電腦已經安裝適用於 SQL Server 資料庫內分析的機器學習服務，則避免安裝 **共用功能**。 這會建立重複的程式庫。
    > 
    > 此外，雖然 SQL Server 中執行的 R 或 Python 指令碼是由 SQL Server 管理，以免與其他資料庫引擎服務使用的記憶體衝突，但獨立機器學習伺服器沒有這種約束，並且可能會干擾其他資料庫作業。 最後，透過 RDP 工作階段 (通常用於作業) 的遠端存取通常是由資料庫管理員封鎖。
    > 
@@ -130,7 +130,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
    您可以忽略所有其他選項。 
     
    > [!NOTE]
-   > 如果您是在已安裝 R Services 進行 SQL Server 資料庫內分析的電腦上執行安裝程式，請避免安裝**共用功能**。 這會建立重複的程式庫。
+   > 如果您是在已安裝 R Services 進行 SQL Server 資料庫內分析的電腦上執行安裝程式，請避免安裝 **共用功能**。 這會建立重複的程式庫。
    > 
    > 在 SQL Server 中執行的 R 指令碼是由 SQL Server 管理，因此不會與其他資料庫引擎服務使用的記憶體衝突，而獨立 R Server 沒有這類約束，而且可能會干擾其他資料庫作業。
    > 
@@ -143,7 +143,7 @@ SQL Server 安裝程式所安裝的獨立伺服器在功能上相當於非 SQL �
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
+僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出 [會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
 1. 在 [控制台] 中，按一下 [系統及安全性]   > [系統]   > [進階系統設定]   > [環境變數]  。
 
@@ -228,7 +228,7 @@ R 開發人員可以從一些簡單的範例開始，並了解 R 如何搭配 SQ
 + [快速入門：在 T-SQL 中執行 R](../tutorials/quickstart-r-create-script.md)
 + [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Python 開發人員可以遵循下列教學課程，以了解如何搭配使用 Python 與 SQL Server：
 
 + [Python 教學課程：在 SQL Server 機器學習服務中使用線性迴歸來預測滑雪工具租用](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d83caf3f80369da449175fca78a47677e10e861
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: cadb382861d868a96319483cbc54e847093fbe17
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098777"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471039"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python 與 SQL Server 之間的資料類型對應
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92098777"
 | **bit**              | `bool`      |
 | **char**             | `str`       |
 | **date**             | `datetime`  |
-| **datetime**         |`datetime`   | 支援 SQL Server 2017 CU6 和更新版本 (具有 `datetime.datetime` 或 **Pandas** `pandas.Timestamp` 類型的**NumPy** 陣列)。 `sp_execute_external_script` 現在支援使用小數秒數的 `datetime` 類型。|
+| **datetime**         |`datetime`   | 支援 SQL Server 2017 CU6 和更新版本 (具有 `datetime.datetime` 或 **Pandas** `pandas.Timestamp` 類型的 **NumPy** 陣列)。 `sp_execute_external_script` 現在支援使用小數秒數的 `datetime` 類型。|
 | **float**            | `float64`   |
 | **nchar**            | `str`       |
 | **nvarchar**         | `str`       |

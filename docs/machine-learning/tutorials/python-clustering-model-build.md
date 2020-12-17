@@ -10,24 +10,24 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 571943e82ca844339a03a2e2af92199c3df16601
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef96e0ac95014fad9e479ef039df547dee6b8471
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870434"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470439"
 ---
 # <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教學課程：使用 SQL 機器學習來建置模型以分類客戶
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型，或在巨量資料叢集上進行此部署。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 SQL Server 機器學習服務在資料庫中部署此模型。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在這個教學課程系列的第三部分 (總共四個部分) 中，您將在 Python 中建立一個 K-Means 模型以執行叢集。 在本系列的下一部分中，您將使用 Azure SQL 受控執行個體機器學習服務在資料庫中部署此模型。
 ::: moniker-end
 

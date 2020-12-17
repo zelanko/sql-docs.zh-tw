@@ -26,13 +26,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04adcfacb3a540a9275f445a71ee9813c1702246
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093402"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408336"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
 
@@ -117,7 +117,7 @@ ms.locfileid: "89093402"
   
 2.  在 [編輯] 功能表上，指向 [進階]，再按一下 [將選取範圍定位點轉空白]。  
   
- 這些命令的行為會隨著 [選項] 對話方塊中的定位點設定而不同。 例如，如果定位點設定是 4，[將選取範圍空白鍵轉定點]**** 會每 4 個連續空格建立一個定位點，[選取範圍定位鍵轉空白鍵]**** 會每個定位點建立 4 個空格。  
+ 這些命令的行為會隨著 [選項] 對話方塊中的定位點設定而不同。 例如，如果定位點設定是 4，[將選取範圍空白鍵轉定點] 會每 4 個連續空格建立一個定位點，[選取範圍定位鍵轉空白鍵] 會每個定位點建立 4 個空格。  
   
 ## <a name="converting-text-to-upper-and-lower-case"></a>將文字轉換成大寫和小寫  
  您可以利用命令，將文字轉換成全為大寫或小寫。  

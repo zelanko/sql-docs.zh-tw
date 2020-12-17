@@ -8,13 +8,13 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470979"
 ---
 # <a name="tips-for-using-r-packages"></a>使用 R 套件的祕訣
 
@@ -36,11 +36,11 @@ R 套件經常依存於多個其他套件，其中有些可能在執行個體所
 
 R 套件有多個來源，例如 [CRAN](https://cran.r-project.org/) 和 [Bioconductor](https://www.bioconductor.org/)。 R 語言的官方網站 (<https://www.r-project.org/>) 這當中列出許多資源。 Microsoft 提供 [MRAN](https://mran.microsoft.com/) 來散發其開放原始碼 R ([MRO](https://mran.microsoft.com/open)) 及其他套件。 許多套件都發佈到 GitHub，開發人員可從該處取得原始程式碼。
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 R 套件可在多個運算平台上執行。 請確定您安裝的版本是 Windows 二進為檔。
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 R 套件可在多個運算平台上執行。 請確定您安裝的版本是 Linux 二進為檔。
 ::: moniker-end
 
@@ -90,9 +90,9 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 ## <a name="see-also"></a>另請參閱
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [使用 R 工具來安裝套件](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [使用 sqlmlutils 來安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

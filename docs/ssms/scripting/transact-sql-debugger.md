@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: af3715492f71a9b4015f007e303c8a71e6309d38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472189"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
 
@@ -35,7 +35,7 @@ ms.locfileid: "92036127"
 
 - 在個別的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上設定中斷點。
 
-    中斷點是指您要暫停執行以便檢查資料的點。 當您啟動偵錯工具時，它會在 [查詢編輯器] 視窗的第一行程式碼上暫停。 若要執行到您已設定的第一個中斷點，可以使用 [繼續] 功能。 您也可以使用 [繼續] 功能，從視窗目前暫停的任何位置執行到下一個中斷點。 您可以編輯中斷點以指定動作，例如中斷點應暫停執行的條件、指向 [輸出]**** 視窗的資訊，以及變更中斷點的位置。  
+    中斷點是指您要暫停執行以便檢查資料的點。 當您啟動偵錯工具時，它會在 [查詢編輯器] 視窗的第一行程式碼上暫停。 若要執行到您已設定的第一個中斷點，可以使用 [繼續] 功能。 您也可以使用 [繼續] 功能，從視窗目前暫停的任何位置執行到下一個中斷點。 您可以編輯中斷點以指定動作，例如中斷點應暫停執行的條件、指向 [輸出] 視窗的資訊，以及變更中斷點的位置。  
 
 - 逐步執行下一個陳述式。  
 

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fce7b2b128920038f20967c72567d2d51db8b48
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4530aebde58448903015b8f948ad8f005d9134ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472239"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service"></a>設定 SQL Server Agent 服務的 SQL Server 別名
 
@@ -60,7 +60,7 @@ ms.locfileid: "92038796"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後按一下 [屬性]。  
   
 3.  在 [SQL Server Agent 屬性 _server\_name_] 對話方塊的 [選取頁面] 底下，選取 [連線]，然後  
   

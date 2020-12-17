@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f5356abbfc1dbafb110c18a7ea60b4dd5282a987
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 094261f20c1b673df6041d477018f76b5189c595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030563"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472259"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 
@@ -63,7 +63,7 @@ ms.locfileid: "92030563"
   
 2.  按一下加號展開 **[本機伺服器群組]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員...]****。  
+3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員...]。  
   
 4.  在 [使用者帳戶控制] 對話方塊中，按一下 [是]。  
   
@@ -71,12 +71,12 @@ ms.locfileid: "92030563"
   
 6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent _(server\_name)_ ]，其中 *server_name* 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
   
-7.  在 [SQL Server Agent _(server\_name) 屬性]****_ **** 對話方塊的 [登入]**** 索引標籤中，選取 [登入身分]**** 下的下列其中一個選項：  
+7.  在 [SQL Server Agent _(server\_name) 屬性]_  對話方塊的 [登入] 索引標籤中，選取 [登入身分] 下的下列其中一個選項：  
   
     -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](./select-an-account-for-the-sql-server-agent-service.md)。  
   
         > [!IMPORTANT]  
-        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務不支援 **** 中的 [本機服務] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帳戶。  
+        > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務不支援  中的 [本機服務] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]帳戶。  
   
     -   **這個帳戶**：如果您的作業需要網路上的資源 (包括應用程式資源)，或想要將事件轉寄給其他 Windows 應用程式記錄檔，又或者想要透過電子郵件或呼叫器來通知操作員，請選取此選項。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "92030563"
   
         1.  在 **[帳戶名稱]** 方塊中，輸入將用來執行 SQL Server Agent 的帳戶。 或者，按一下 **[瀏覽]** 開啟 **[選取使用者或群組]** 對話方塊，然後選取要使用的帳戶。  
   
-        2.  在 **[密碼]** 方塊中，輸入帳戶的密碼。 在 [確認密碼]**** 方塊中重新輸入密碼。  
+        2.  在 **[密碼]** 方塊中，輸入帳戶的密碼。 在 [確認密碼] 方塊中重新輸入密碼。  
   
 8.  按一下 [確定]。  
   

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9938cdeca70e4fd7a97c9ce8b9d38035022ce714
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195100"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470559"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查詢及修改 SQL Server 資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92195100"
 > * 傳回變數的基本資訊
 > * 從原始資料建立類別資料
 
-類別資料或*因素變數*，對於探勘資料視覺效果很有用。 您可以使用它們作為長條圖的輸入值，以了解變數資料看起來的樣子。
+類別資料或 *因素變數*，對於探勘資料視覺效果很有用。 您可以使用它們作為長條圖的輸入值，以了解變數資料看起來的樣子。
 
 ## <a name="query-for-columns-and-types"></a>查詢資料行和類型
 
@@ -71,7 +71,7 @@ Var 9: fraudRisk, Type: integer
         "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY")
     ```
 
-2. 接下來，建立名為 *ccColInfo*的資料行資訊物件，指定現有整數值對類別層級 (各州的縮寫) 的對應。
+2. 接下來，建立名為 *ccColInfo* 的資料行資訊物件，指定現有整數值對類別層級 (各州的縮寫) 的對應。
   
     此陳述式也會建立針對 gender 和 cardholder 的因素變數。
   
@@ -127,7 +127,7 @@ Var 9: fraudRisk, Type: integer
     Var 9: fraudRisk, Type: integer
     ```
 
-現在您指定的三個變數 (*gender*、 *state*和 *cardholder*) 被視為因素。
+現在您指定的三個變數 (*gender*、 *state* 和 *cardholder*) 被視為因素。
 
 ## <a name="next-steps"></a>後續步驟
 
