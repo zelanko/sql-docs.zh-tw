@@ -9,18 +9,18 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c67f28d8cefb03edc2a12b97657d4054359727c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 4e101a017197d83217a574ca6521dd60328f536a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180319"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470329"
 ---
 # <a name="python-tutorial-run-predictions-using-python-embedded-in-a-stored-procedure"></a>Python 教學課程：在預存程序中使用 Python 內嵌執行預測
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-在這五部分教學課程系列的第五部分中，您將了解如何*運作*您在上一個部分中定型並儲存的模型。
+在這五部分教學課程系列的第五部分中，您將了解如何 *運作* 您在上一個部分中定型並儲存的模型。
 
 在此案例中，運作化表示將模型部署至生產環境以進行評分。 與 SQL Server 的整合讓這項操作變得相當簡單，因為您可以在預存程序中內嵌 Python 程式碼。 若要根據新的輸入從模型取得預測，請直接從應用程式呼叫預存程序，並傳遞新的資料。
 
@@ -52,7 +52,7 @@ ms.locfileid: "88180319"
 + 要使用的確切模型名稱會做為預存程序的輸入參數來提供。 預存程序會使用預存程序中的 SELECT 陳述式，從資料庫資料表中載入序列化模型`nyc_taxi_models`資料表。
 + 序列化模型會儲存在 Python 變數 `mod` 中，以使用 Python 進行進一步處理。
 + 需要評分的新案例是從 `@input_data_1` 中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢取得。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。
-+ 這兩個預存程序都會使用 `sklearn` 的函數來計算精確度計量 AUC (曲線下的區域)。 只有當您也提供目標標籤 (_獲得小費_資料行) 時，才可以產生精確度計量 (例如 AUC)。 預測不需要目標標籤 (變數 `y`)，但精確度計量計算會需要。
++ 這兩個預存程序都會使用 `sklearn` 的函數來計算精確度計量 AUC (曲線下的區域)。 只有當您也提供目標標籤 (_獲得小費_ 資料行) 時，才可以產生精確度計量 (例如 AUC)。 預測不需要目標標籤 (變數 `y`)，但精確度計量計算會需要。
 
   因此，如果要計分的資料沒有目標標籤，您可以修改預存程序來移除 AUC 計算，並且只傳回功能的小費機率 (預存程序中的變數 `X`)。
 
@@ -60,7 +60,7 @@ ms.locfileid: "88180319"
 
 執行下列 T-SQL 陳述式以建立預存程序。 此預存程序需要以 scikit-learn 為基礎的模型，因為它使用該套件的特定函式。
 
-包含輸入的資料框架會傳遞至羅吉斯回歸模型 `mod` 的 `predict_proba` 函數。 `predict_proba` 函數 (`probArray = mod.predict_proba(X)`) 傳回**浮點數**，代表給小費 (任何金額) 的機率。
+包含輸入的資料框架會傳遞至羅吉斯回歸模型 `mod` 的 `predict_proba` 函數。 `predict_proba` 函數 (`probArray = mod.predict_proba(X)`) 傳回 **浮點數**，代表給小費 (任何金額) 的機率。
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -167,7 +167,7 @@ GO
 
    預存程序會針對傳入做為輸入查詢中的每趟車程，傳回預測的機率。 
 
-   如果您使用 SSMS (SQL Server Management Studio) 執行查詢，則機率會顯示為 [結果] 窗格中的資料表。 [訊息]**** 窗格會輸出精確度計量 (AUC (曲線下的區域))，其值為 0.56。
+   如果您使用 SSMS (SQL Server Management Studio) 執行查詢，則機率會顯示為 [結果] 窗格中的資料表。 [訊息] 窗格會輸出精確度計量 (AUC (曲線下的區域))，其值為 0.56。
 
 2. 若要使用 **revoscalepy** 模型進行評分，請呼叫預存程序 **PredictTipRxPy**，傳遞模型名稱和查詢字串做為輸入。
 
@@ -338,7 +338,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>從模型產生分數
 
-建立預存程序之後，就可以輕鬆地根據其中一個模型來產生分數。 直接開啟新的 [查詢]**** 視窗，並針對每個特徵資料行輸入或貼上參數。 以下為這些特徵資料行所需的七個值，依序為：
+建立預存程序之後，就可以輕鬆地根據其中一個模型來產生分數。 直接開啟新的 [查詢] 視窗，並針對每個特徵資料行輸入或貼上參數。 以下為這些特徵資料行所需的七個值，依序為：
 
 + *passenger_count*
 + *trip_distance*

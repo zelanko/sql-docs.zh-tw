@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1974c58ad2adbad3b7e136ffa36ffa88b5783fc6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196246"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470049"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>建置 R 模型並儲存至 SQL Server (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -155,7 +155,7 @@ GO
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    此呼叫會傳回用來計算 ROC 圖表的值。 標籤資料行是_獲得小費_，其中包含您嘗試要預測的實際結果，而_分數_資料行則具有預測。
+    此呼叫會傳回用來計算 ROC 圖表的值。 標籤資料行是 _獲得小費_，其中包含您嘗試要預測的實際結果，而 _分數_ 資料行則具有預測。
 
 2. 若要實際繪製圖表，您可以儲存 ROC 物件，然後使用繪圖函數繪製它。 圖形是建立於遠端計算內容上，並傳回您的 R 環境。
 
@@ -203,7 +203,7 @@ GO
 
 ## <a name="deploy-the-model"></a>部署模型
 
-在您建立模型並確認它的執行狀況良好之後，您可能會想要將它部署到組織中的使用者或人員可以使用模型的網站，或可能定期重新定型和重新校準模型。 此程式有時稱為*運作化*模型。 在 SQL Server 中，運作化是藉由在預存程序中內嵌 R 程式碼來達成。 因為程式碼位於程式中，所以可以從任何可連線到 SQL Server 的應用程式呼叫。
+在您建立模型並確認它的執行狀況良好之後，您可能會想要將它部署到組織中的使用者或人員可以使用模型的網站，或可能定期重新定型和重新校準模型。 此程式有時稱為 *運作化* 模型。 在 SQL Server 中，運作化是藉由在預存程序中內嵌 R 程式碼來達成。 因為程式碼位於程式中，所以可以從任何可連線到 SQL Server 的應用程式呼叫。
 
 您必須將模型儲存至用於生產環境的資料庫，才能從外部應用程式呼叫模型。 定型的模型會以二進位形式儲存在 **varbinary(max)** 類型的單一資料行中。
 

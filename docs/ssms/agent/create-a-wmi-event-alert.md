@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035070"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464469"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "92035070"
   
 6.  在 **[類型]** 清單中，選取 **[WMI 事件警示]**。  
   
-7.  在 [WMI 事件警示定義]**** 底下的 [命名空間]**** 方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
+7.  在 [WMI 事件警示定義] 底下的 [命名空間] 方塊中，指定 WMI 查詢語言 (WQL) 陳述式的 WMI 命名空間，以識別哪個 WMI 事件將會觸發此警示。  
   
 8.  在 **[查詢]** 方塊中，指定會識別警示所回應之事件的 WQL 陳述式。  
   

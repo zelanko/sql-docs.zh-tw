@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8b9d2d95bb16ea5d94245a2a50866d6ff0701b92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193655"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470079"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立資料分割模型
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,7 +69,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="create-calculatedistance"></a>建立 CalculateDistance
 
-示範資料庫隨附用來計算距離的純量函式，但我們的預存程序更適合使用資料表值函式。 執行下列指令碼以建立稍後會在[定型步驟](#training-step)中使用的 **CalculateDistance** 函式。
+示範資料庫隨附用來計算距離的純量函式，但我們的預存程序更適合使用資料表值函式。 執行下列指令碼以建立稍後會在 [定型步驟](#training-step)中使用的 **CalculateDistance** 函式。
 
 若要確認已建立函式，請檢查 [物件總管] 中 **NYCTaxi_Sample** 資料庫下方的 \Programmability\Functions\Table-valued 函式。
 

@@ -8,24 +8,24 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 6e527f7ba5d9a0f97a52cf068565b1b24ee696bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178545"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470309"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>SQL 機器學習的 Python 教學課程
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文說明 [SQL Server](../sql-server-machine-learning-services.md) 和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上機器學習服務的 Python 教學課程和快速入門。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 本文說明 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的 Python 教學課程和快速入門。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文描述 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)的 Python 教學課程和快速入門。
 ::: moniker-end
 
@@ -33,7 +33,7 @@ ms.locfileid: "88178545"
 
 ## <a name="python-tutorials"></a>Python 教學課程
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 | 教學課程 | 描述 |
 |-|-|
 | [使用線性迴歸來預測雪橇租賃](python-ski-rental-linear-regression.md) | 使用 Python 和線性迴歸來預測雪橇租賃的數量。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |

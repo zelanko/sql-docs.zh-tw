@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: e9cebd9b809cc6033a293c2736f774dda62e14a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987564"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461349"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -30,17 +30,17 @@ SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 資料庫引擎
 
 SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效能提升。 
-- **CLR 組件**現在可以新增至信任組件的清單，以解決 CTP 2.0 中所述的 `clr strict security` 功能問題。 已新增 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的清單 (RC1)。  
-- **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
+- **CLR 組件** 現在可以新增至信任組件的清單，以解決 CTP 2.0 中所述的 `clr strict security` 功能問題。 已新增 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的清單 (RC1)。  
+- **繼續線上索引重建** 可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
-- 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md) (SQL 資料庫中的智慧查詢處理)。
-- **自動資料庫調整**可深入探索潛在的查詢效能問題、建議解決方法，而且可以自動修正找到的問題。 請參閱[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
-- 新增可模型化多對多關聯性的**圖表資料庫功能**，包括新增用於建立節點和邊緣資料表的 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及用於查詢的關鍵字 [MATCH](../t-sql/queries/match-sql-graph.md)。 請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
+- 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版 **自適性查詢處理** 功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的 **交錯執行**。  請參閱 [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md) (SQL 資料庫中的智慧查詢處理)。
+- **自動資料庫調整** 可深入探索潛在的查詢效能問題、建議解決方法，而且可以自動修正找到的問題。 請參閱[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
+- 新增可模型化多對多關聯性的 **圖表資料庫功能**，包括新增用於建立節點和邊緣資料表的 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及用於查詢的關鍵字 [MATCH](../t-sql/queries/match-sql-graph.md)。 請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 預設會啟用 sp_configure 選項 `clr strict security` 以增強 CLR 組件的安全性。 請參閱 [CLR 嚴格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)
 - 安裝程式現在可針對每個檔案最多指定 **256 GB** (262,144 MB) 的初始 tempdb 檔案大小，並在檔案大小設定為大於 1 GB 且 IFI 未啟用時出現警告。 (CTP 2.0)
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中的 **modified_extent_page_count** 資料行會追蹤每個資料庫檔案中的差異變更，並啟用智慧型備份解決方案，以根據資料庫中已變更頁面的百分比來執行差異備份或完整備份。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 語法現在支援使用 **ON** 關鍵字，將資料表載入使用者預設值以外的檔案群組中。 (CTP 2.0)
-- 現在支援在屬於 **AlwaysOn 可用性群組**的所有資料庫 (包括屬於相同執行個體的資料庫) 之間進行跨資料庫交易。 請參閱[交易 - AlwaysOn 可用性群組和資料庫鏡像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
+- 現在支援在屬於 **AlwaysOn 可用性群組** 的所有資料庫 (包括屬於相同執行個體的資料庫) 之間進行跨資料庫交易。 請參閱[交易 - AlwaysOn 可用性群組和資料庫鏡像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
 - 新的 [可用性群組]  功能包括無叢集讀取級別支援、最小複本認可可用性群組設定，以及 Windows-Linux 跨 OS 移轉和測試。 (CTP 1.3)
 - 新的動態管理檢視：
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 會公開摘要層級屬性和交易記錄檔的相關資訊，適用於監視交易記錄健全狀況。 (CTP 2.1)
@@ -49,10 +49,10 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
     - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 是可查看統計資料的新動態管理檢視。 (CTP 1.3)
     - **sys.dm_os_host_info** 提供 Windows 和 Linux 作業系統資訊。 (CTP 1.0)
 - **Database Tuning Advisor (DTA)** 包含其他選項並提升效能。 (CTP 1.2)
-- **記憶體內部增強功能**包括經記憶體最佳化的資料表中之計算資料行的支援，以及原生編譯模組中之 JSON 函式和 CROSS APPLY 運算子的完整支援。 (CTP 1.1)
-- 新的**字串函式**包括 CONCAT_WS、TRANSLATE 和 TRIM，而且 STRING_AGG 函式現在支援 WITHIN GROUP。 (CTP 1.1)
-- CSV 和 Azure Blob 檔案有新的**大量存取選項** (BULK INSERT 和 OPENROWSET(BULK...))。 (CTP 1.1)
-- **記憶體最佳化物件的增強功能**包括經記憶體最佳化資料表的 sp_spaceused 和 8 個索引限制排除、經記憶體最佳化資料表和原生編譯 T-SQL 模組的 sp_rename，以及原生編譯 T-SQL 模組的 CASE 和 TOP (N) WITH TIES。 經記憶體最佳化檔案群組檔案現在可以在 Azure 儲存體上儲存、備份及還原。 (CTP 1.0)
+- **記憶體內部增強功能** 包括經記憶體最佳化的資料表中之計算資料行的支援，以及原生編譯模組中之 JSON 函式和 CROSS APPLY 運算子的完整支援。 (CTP 1.1)
+- 新的 **字串函式** 包括 CONCAT_WS、TRANSLATE 和 TRIM，而且 STRING_AGG 函式現在支援 WITHIN GROUP。 (CTP 1.1)
+- CSV 和 Azure Blob 檔案有新的 **大量存取選項** (BULK INSERT 和 OPENROWSET(BULK...))。 (CTP 1.1)
+- **記憶體最佳化物件的增強功能** 包括經記憶體最佳化資料表的 sp_spaceused 和 8 個索引限制排除、經記憶體最佳化資料表和原生編譯 T-SQL 模組的 sp_rename，以及原生編譯 T-SQL 模組的 CASE 和 TOP (N) WITH TIES。 經記憶體最佳化檔案群組檔案現在可以在 Azure 儲存體上儲存、備份及還原。 (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** 是新的安全性實體類別，支援 CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP 和 VIEW DEFINITION 權限。 ADMINISTER DATABASE BULK OPERATIONS 現在會顯示在 sys.fn_builtin_permissions 中。 (CTP 1.0)
 - 新增了資料庫 **COMPATIBILITY_LEVEL 140**。 (CTP 1.0)  
 
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 為表格式模型引進許多增強功能。 
 - 支援表格式模型的 **1400 相容性層級**。 若要建立新的或升級現有的表格式模型專案至 1400 相容性層級，請下載並安裝 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
 - 1400 相容性層級之表格式模型的最新 [取得資料]  體驗。 請參閱 [Analysis Services 小組部落格](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services)。 (CTP 1.1)
 - [隱藏成員]  屬性，可隱藏不完全階層中的空白成員。 (CTP 1.1)
-- 新的 [詳細資料列]  終端使用者動作，可**顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
+- 新的 [詳細資料列]  終端使用者動作，可 **顯示彙總資訊的詳細資料**。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 **DETAILROWS** 函式，可建立詳細資料列運算式。 (CTP 1.1)
 - DAX **IN** 運算子，可指定多個值。 (CTP 1.1)
 
 如需詳細資訊，請參閱 [SQL Server Analysis Services 的新功能](/analysis-services/what-s-new-in-analysis-services)。

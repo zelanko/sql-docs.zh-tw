@@ -8,13 +8,13 @@ ms.date: 08/06/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+monikerRange: =sql-server-2016
+ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227088"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470759"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>什麼是 SQL Server 2016 R Services？
 
@@ -55,7 +55,7 @@ R 服務使用擴充性架構在 SQL Server 中執行 R 指令碼。 深入了�
 
 + 最常見的方式是使用 T-SQL 預存程序 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-+ 您也可以使用慣用的 R 用戶端，然後撰寫會將執行 (稱為「遠端計算內容」**) 推送至遠端 SQL Server 的指令碼。 如需詳細資訊，請參閱[設定資料科學用戶端 R 開發](../r/set-up-a-data-science-client.md)。
++ 您也可以使用慣用的 R 用戶端，然後撰寫會將執行 (稱為「遠端計算內容」) 推送至遠端 SQL Server 的指令碼。 如需詳細資訊，請參閱[設定資料科學用戶端 R 開發](../r/set-up-a-data-science-client.md)。
 
 <a name="version"></a>
 

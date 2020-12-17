@@ -10,13 +10,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c88e83bcc0b4722bf52da697bdaa03af37b972d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c16a4184665052781ae88ad37635ede298d668
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440493"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 
@@ -26,7 +26,7 @@ SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Serv
 
 SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 設計及部署要在舊版 SQL Server 上執行的資料庫、模型、報表及套件。
 
-過去會使用 Visual Studio Shell 來建立已用其他各種名稱發行的 SQL Server 內容類型，包括 **SQL Server Data Tools**、 **SQL Server Data Tools - Business Intelligence**以及 **Business Intelligence Development Studio**。 舊版隨附不同的專案範本集。 若要在一個 SSDT 中取得所有專案範本，您需要使用 [最新版本](download-sql-server-data-tools-ssdt.md)。 否則，您可能會需要安裝多個舊版本才能取得 SQL Server 中使用的所有範本。 每個 Visual Studio 版本只會安裝一個 Shell；安裝第二個 SSDT 只會新增缺少的範本。
+過去會使用 Visual Studio Shell 來建立已用其他各種名稱發行的 SQL Server 內容類型，包括 **SQL Server Data Tools**、 **SQL Server Data Tools - Business Intelligence** 以及 **Business Intelligence Development Studio**。 舊版隨附不同的專案範本集。 若要在一個 SSDT 中取得所有專案範本，您需要使用 [最新版本](download-sql-server-data-tools-ssdt.md)。 否則，您可能會需要安裝多個舊版本才能取得 SQL Server 中使用的所有範本。 每個 Visual Studio 版本只會安裝一個 Shell；安裝第二個 SSDT 只會新增缺少的範本。
 
 ## <a name="previous-ssdt-releases"></a>舊版 SSDT
 
@@ -43,7 +43,7 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 **[下載適用於 Visual Studio 2017 的 SSDT (15.8)](https://go.microsoft.com/fwlink/?linkid=2124319)**
 
-此**適用於 Visual Studio 2017 的 SSDT** 版本可安裝於下列語言版本：
+此 **適用於 Visual Studio 2017 的 SSDT** 版本可安裝於下列語言版本：
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2124319&clcid=0x40a)
 

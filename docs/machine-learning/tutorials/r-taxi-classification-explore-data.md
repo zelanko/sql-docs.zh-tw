@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 571b49dfa3ce555aad02ffe8d6ba7c68a033bbdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92412525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470119"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R 教學課程：探索及視覺化資料
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "92412525"
 
 ## <a name="create-plots-using-r-in-t-sql"></a>在 T-SQL 中使用 R 建立繪圖
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > 從 SQL Server 2019 開始，隔離機制會要求您授與繪圖檔案儲存所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
 ::: moniker-end

@@ -7,13 +7,13 @@ ms.date: 10/17/2018
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8cf14b294c85f90b0e44375f751a84a50b30e04
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 44fa8b361f74fb670dd5671bb9fbeaa9e635faad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180415"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470699"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的防火牆組態
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88180415"
 
 在 SQL Server 2016 和 2017 中，這些規則是以本機使用者帳戶為基礎，其中安裝程式會針對 **SQLRUserGroup** 建立一個輸出規則，該規則拒絕對其成員的網路存取 (每個背景工作角色帳戶都被列為受該規則約束的本機原則)。 如需 SQLRUserGroup 的詳細資訊，請參閱 [SQL Server 機器學習服務中擴充性架構的安全性概觀](../../machine-learning/concepts/security.md#sqlrusergroup)。
 
-在 SQL Server 2019 內移至 AppContainers 的過程中，有一些以 AppContainer SID 為基礎的新防火牆規則：SQL Server 安裝程式所建立的 20 個 AppContainer 各有一個。 防火牆規則名稱的命名慣例是**在 SQL Server 執行個體 MSSQLSERVER 中封鎖 AppContainer-00 的網路存取**，其中 00 是 AppContainer 的數目 (預設為 00-20)，而 MSSQLSERVER 是 SQL Server 執行個體的名稱。
+在 SQL Server 2019 內移至 AppContainers 的過程中，有一些以 AppContainer SID 為基礎的新防火牆規則：SQL Server 安裝程式所建立的 20 個 AppContainer 各有一個。 防火牆規則名稱的命名慣例是 **在 SQL Server 執行個體 MSSQLSERVER 中封鎖 AppContainer-00 的網路存取**，其中 00 是 AppContainer 的數目 (預設為 00-20)，而 MSSQLSERVER 是 SQL Server 執行個體的名稱。
 
 > [!Note]
 > 如果需要網路呼叫，您可以停用 Windows 防火牆中的輸出規則。

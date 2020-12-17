@@ -18,13 +18,13 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8a5a8ceb8aaa26d9c18a9b37e4acb84247f2e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 11ea9a4bff085843b571fbf69df5b79d9c3a9f8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466449"
 ---
 # <a name="notify-an-operator-of-job-status"></a>通知操作員作業狀態
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "92038813"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]****。  
+2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下要編輯的作業，然後選取 [屬性]。  
   
 3.  在 **[作業屬性]** 對話方塊中，選取 **[通知]** 頁面。  
   
-4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]****、從清單選取操作員，然後選取下列其中一個選項：  
+4.  如果您想以電子郵件通知操作員，請核取 [電子郵件]、從清單選取操作員，然後選取下列其中一個選項：  
   
     -   **[當作業成功時]** 即可在作業順利完成時，通知操作員。  
   

@@ -7,13 +7,13 @@ ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
+ms.openlocfilehash: 0ea96bf157c6ab781e8e0fa34dc8146e590c4b2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987244"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461369"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL 版本設定系統文件
 
@@ -23,9 +23,9 @@ ms.locfileid: "91987244"
 
 ## <a name="applies-to-products"></a>適用對象產品
 
-大多數的 SQL Server 文章都會在其標題下方包含**適用對象**文字。 在同一行上，接著會列出方便使用的 SQL「產品」清單，指出文章是否與該產品相關。 例如，SQL Server 產品可能會標記為相關，但同時 Azure SQL Database 則可能會標記為與文章無關。
+大多數的 SQL Server 文章都會在其標題下方包含 **適用對象** 文字。 在同一行上，接著會列出方便使用的 SQL「產品」清單，指出文章是否與該產品相關。 例如，SQL Server 產品可能會標記為相關，但同時 Azure SQL Database 則可能會標記為與文章無關。
 
-**適用對象**一行不了解產品的「版本」。 我們會努力避免**適用對象**一行和我們版本設定系統設定產品面之間的不一致。
+**適用對象** 一行不了解產品的「版本」。 我們會努力避免 **適用對象** 一行和我們版本設定系統設定產品面之間的不一致。
 
 ## <a name="history-of-separate-file-sets"></a>個別檔案集歷程記錄
 
@@ -115,7 +115,7 @@ ms.locfileid: "91987244"
 | 屬性 | 值 |
 | :-------- | :---- |
 | Title | SQL Server 2017 的新功能 |
-| moniker 範圍 | `>= sql-server-2017 || = sqlallproducts-allversions` |
+| moniker 範圍 | `=">= sql-server-2017"` |
 | `https` 位址 | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
 
@@ -131,9 +131,9 @@ ms.locfileid: "91987244"
 
 ### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> 所有 SQL - 不隱藏項目，特殊的 moniker
 
-有一個特殊的 moniker 產品名稱是**所有 SQL**，且其唯一的版本是**不隱藏項目**。 此 moniker 的目的是用於在內部測試特定變更。 若由客戶使用，則相較於通知，此 moniker 更可能會誤導客戶。
+有一個特殊的 moniker 產品名稱是 **所有 SQL**，且其唯一的版本是 **不隱藏項目**。 此 moniker 的目的是用於在內部測試特定變更。 若由客戶使用，則相較於通知，此 moniker 更可能會誤導客戶。
 
-有些文章包含與多個 SQL Server 版本相關的資訊。 每個一般 moniker 都會隱藏已建立版本的區段；這些區段原先可能會顯示 moniker 版本的不正確、令人困惑或矛盾資訊。 特殊的**所有 SQL** moniker 會顯示所有版本區段，且顯示不正確的資訊時可能並不明顯。
+有些文章包含與多個 SQL Server 版本相關的資訊。 每個一般 moniker 都會隱藏已建立版本的區段；這些區段原先可能會顯示 moniker 版本的不正確、令人困惑或矛盾資訊。 特殊的 **所有 SQL** moniker 會顯示所有版本區段，且顯示不正確的資訊時可能並不明顯。
 
 ## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> 訊息：所要求的頁面無法提供 \<moniker\> 使用
 
@@ -158,7 +158,7 @@ ms.locfileid: "91987244"
 版本設定系統已為 SQL Server 2016 版本之後的版本完全實作。
 
 - 2012 及較舊版本：&nbsp; SQL Server 2012 及較舊的版本並未使用版本設定系統。
-    - **SQL Server - 舊版**的特殊 moniker 旨在隱藏幾乎所有文章。 少見的例外狀況是舊版客戶可能一次只需要幾篇文章。
+    - **SQL Server - 舊版** 的特殊 moniker 旨在隱藏幾乎所有文章。 少見的例外狀況是舊版客戶可能一次只需要幾篇文章。
     - [SQL Server 的先前版本，2012-2005](./previous-versions-sql-server.md)
 
 - 2014：&nbsp; 版本設定系統已為 SQL Server 2014 實作一半。 您可以在版本設定控制項中選擇 SQL Server 2014，它會正常運作。 但是在內部，2014 的檔案仍僅專屬於 2014，也就是和 2008 的檔案僅專屬於 2008 相同。

@@ -15,13 +15,13 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ee3d89dc77a92a9e5aa44f3e1b79d1cb308f5cb
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: bb8a33273c8bcc5531465ae84394f96385e52cc5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464459"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "92035101"
   
 4.  在 **[新增作業步驟]** 對話方塊中，輸入一個作業 **步驟名稱**。  
   
-5.  在 [類型]**** 清單中，按一下 [Transact-SQL 指令碼 (TSQL)]****。  
+5.  在 [類型] 清單中，按一下 [Transact-SQL 指令碼 (TSQL)]。  
   
 6.  在 **[命令]** 方塊中，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令批次，或按一下 **[開啟舊檔]** 來選取要作為命令使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檔。  
   

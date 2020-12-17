@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987702"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559110"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以修改部署計劃
 
@@ -64,7 +64,7 @@ ms.locfileid: "91987702"
   
 4.  選取 [Framework] 索引標籤上的 [System.ComponentModel.Composition]。  
   
-5.  按一下 [瀏覽]**** 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 目錄，選取 [Microsoft.SqlServer.TransactSql.ScriptDom.dll]****，然後按一下 [確定]****。  
+5.  按一下 [瀏覽] 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\SDK\Assemblies** 目錄，選取 [Microsoft.SqlServer.TransactSql.ScriptDom.dll]，然後按一下 [確定]。  
   
 6.  加入必要的 SQL 參考：以滑鼠右鍵按一下專案節點，然後按一下 [加入參考]。 按一下 [瀏覽] 並巡覽至 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** 資料夾。 選擇 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll** 和 **Microsoft.Data.Tools.Schema.Sql.dll** 項目，按一下 [加入]，然後按一下 [確定]。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91987702"
   
 #### <a name="to-define-the-sqlrestartablescriptcontributor-class"></a>若要定義 SqlRestartableScriptContributor 類別  
   
-1.  在程式碼編輯器中，更新 class1.cs 檔案，以符合下列 **using**陳述式：  
+1.  在程式碼編輯器中，更新 class1.cs 檔案，以符合下列 **using** 陳述式：  
   
     ```csharp  
     using System;  
@@ -775,7 +775,7 @@ ms.locfileid: "91987702"
         > 如果部署的資料庫專案與目標資料庫相同，產生的報表不會有多大意義。 若要更有意義的結果，請將變更部署至資料庫或部署新的資料庫。  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>使用產生的 dacpac 檔案進行命令列部署  
-建置 SQL 專案後，產生的 dacpac 檔案可用來從命令列部署結構描述，因此可以從另一部電腦 (例如組建電腦) 執行部署。 SqlPackage 是啟用 dacpac 部署的命令列公用程式，具有全套的選項可讓使用者部署 dacpac 或產生部署指令碼，以及其他動作。 如需詳細資訊，請參閱 [SqlPackage.exe](../tools/sqlpackage.md) \(機器翻譯\)。  
+建置 SQL 專案後，產生的 dacpac 檔案可用來從命令列部署結構描述，因此可以從另一部電腦 (例如組建電腦) 執行部署。 SqlPackage 是啟用 dacpac 部署的命令列公用程式，具有全套的選項可讓使用者部署 dacpac 或產生部署指令碼，以及其他動作。 如需詳細資訊，請參閱 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) \(機器翻譯\)。  
   
 > [!NOTE]  
 > 若要成功部署已定義 DeploymentContributors 屬性的專案所建立的 dacpac，在使用的電腦必須安裝包含部署參與者的 DLL。 這是因為它們已經標示為部署順利完成的必要項。  

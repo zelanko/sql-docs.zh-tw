@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 38b7faba88897317e1165b8938b0f6bfc69941de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987404"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440469"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 
@@ -280,9 +280,9 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> 資料警示使用者介面  
  資料警示提供了管理警示的 SharePoint 頁面，以及建立和編輯資料警示定義的設計工具。  
   
--   您用來建立或編輯資料警示定義的**資料警示設計工具** 。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md)、 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
+-   您用來建立或編輯資料警示定義的 **資料警示設計工具** 。 如需詳細資訊，請參閱 [資料警示設計工具](../reporting-services/data-alert-designer.md)、 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](../reporting-services/edit-a-data-alert-in-alert-designer.md)。  
   
--   您用來檢視資料警示清單、刪除警示及開啟警示進行編輯的**資料警示管理員** 。 [資料警示管理員] 有兩種版本：一種可供使用者管理自己建立的警示，另一種可供系統管理員管理屬於網站使用者的警示。  
+-   您用來檢視資料警示清單、刪除警示及開啟警示進行編輯的 **資料警示管理員** 。 [資料警示管理員] 有兩種版本：一種可供使用者管理自己建立的警示，另一種可供系統管理員管理屬於網站使用者的警示。  
   
      如需管理所建立資料警示的詳細資訊，請參閱 [SharePoint 使用者的資料警示管理員](../reporting-services/data-alert-manager-for-sharepoint-users.md) 和 [在資料警示管理員中管理我的資料警示](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)。  
   

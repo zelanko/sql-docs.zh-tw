@@ -14,13 +14,13 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 404971a6874de15cfae2408e5fa2d4bc2e387c0e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0542509d087aee51d942aeb1d8c59e382fa80b63
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039180"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461379"
 ---
 # <a name="create-a-job"></a>建立作業
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "92039180"
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [新增作業...]****。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業...]。  
   
 4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;一般頁面&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "92039180"
   
 7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;警示頁面&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md)  
   
-8.  在 [通知]**** 頁面上設定當作業完成時，[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;通知頁面&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md)。  
+8.  在 [通知] 頁面上設定當作業完成時，[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;通知頁面&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md)。  
   
 9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;目標頁面&#41;](../../ssms/agent/job-properties-new-job-targets-page.md)。  
   

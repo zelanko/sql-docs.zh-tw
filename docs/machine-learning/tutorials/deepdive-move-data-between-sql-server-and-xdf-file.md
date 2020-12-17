@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 99fad5d6f8ec325e51eb898e34400c1ce8bbaea8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195120"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470539"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 與 XDF 檔案之間移動資料 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92195120"
     ----|----|----
     5|38|48
     
-2. 定義想要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 SQL Server 帶過來的資料。  稍後您將使用此變數作為 **rxImport** 的 inData** 引數。
+2. 定義想要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 SQL Server 帶過來的資料。  稍後您將使用此變數作為 **rxImport** 的 inData 引數。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")

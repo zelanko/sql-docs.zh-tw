@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035626"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409113"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "92035626"
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
   
 4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [新增]。  
   

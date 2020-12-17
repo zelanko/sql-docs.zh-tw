@@ -22,13 +22,13 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f7d4af9a2e2b35ebb2ac10a594141a4fa7ca9a5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 2d135926a87fe6350ace308a6efd44a93accfcd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034906"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408974"
 ---
 # <a name="make-a-master-server"></a>設定為主要伺服器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "92034906"
   
 2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多重伺服器管理]**，然後按一下 **[設為主要伺服器]**。 **「主要伺服器精靈」** 會引導您完成設定主要伺服器與新增目標伺服器的步驟。  
   
-3.  從 [主要伺服器操作員]**** 頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send**傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
+3.  從 [主要伺服器操作員] 頁面設定主要伺服器的操作員。若要使用電子郵件或呼叫器傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來傳送電子郵件。 若要使用 **net send** 傳送通知給操作員， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所在伺服器上必須執行 Messenger 服務。  
   
     **電子郵件地址**  
     設定操作員的電子郵件地址。  

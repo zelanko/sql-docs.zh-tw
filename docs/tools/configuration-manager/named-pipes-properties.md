@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: efeb00d679ca93e45da50988b36710a8f4c9dbe2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c4929816503430c151c80735078d6a71b0221e71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463856"
 ---
 # <a name="named-pipes-properties"></a>具名管道屬性
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  使用具名管道通訊協定時，您可以使用 [具名管道屬性]**** 對話方塊上的 [通訊協定]**** 頁面，以檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的具名管道。  
+  使用具名管道通訊協定時，您可以使用 [具名管道屬性] 對話方塊上的 [通訊協定] 頁面，以檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的具名管道。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須重新啟動，才能啟用或停用通訊協定或變更具名管道。  
   

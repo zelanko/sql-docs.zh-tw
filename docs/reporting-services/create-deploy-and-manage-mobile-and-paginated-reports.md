@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: b6c33eaeda2a7600039b80c49e1ba3c0fa9e36b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679200"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439363"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
@@ -100,7 +100,7 @@ Reporting Services 與「傳統」分頁報表相關聯，適用於已針對列�
 
 深入了解 [入口網站](../reporting-services/web-portal-ssrs-native-mode.md)。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 整合模式的 Reporting Services
 

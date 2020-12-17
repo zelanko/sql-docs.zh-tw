@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: aee6dcfce5e07b62d53420328221999bed0f887f
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 8b9836119612aa64b941f056902e7886deb8233b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870256"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470089"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>SQL 機器學習的 R 教學課程
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 本文說明 [SQL Server](../sql-server-machine-learning-services.md) 和[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上機器學習服務的 R 教學課程和快速入門。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 此文章說明 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)的 R 教學課程和快速入門。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 此文說明 [SQL Server 2016 R Services](../r/sql-server-r-services.md) 的 R 教學課程和快速入門。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 本文描述 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)的 Python 教學課程和快速入門。
 ::: moniker-end
 
@@ -38,7 +38,7 @@ ms.locfileid: "94870256"
 
 ## <a name="r-tutorials"></a>R 教學課程
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 | 教學課程 | 描述 |
 |------|-------------|
 | [使用決策樹預測滑雪工具租用](r-predictive-model-introduction.md) | 使用 R 和決策樹模型來預測未來的滑雪工具租用數。 在 Azure Data Studio 中使用筆記本來準備資料及訓練模型，並使用 T-SQL 進行模型部署。 |

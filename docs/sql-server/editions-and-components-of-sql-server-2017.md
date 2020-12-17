@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d0ce5b51dffbb057ad3299689f5bb400bb017d6
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: f5d591fb4ca068251cc0a4effbdd9477f80e4606
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92257727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402607"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -74,7 +74,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
 |---------------------------------------|----------------|  
 |Enterprise|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition 這套頂級供應項目不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化<sup>1</sup>，以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
-|標準|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
+|標準|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 版本針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援適用於內部部署與雲端的一般開發工具，能以最少的 IT 資源提供最有效率的資料庫管理。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
 |開發人員|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB 是輕量版 Express，其中包含所有程式設計功能，以使用者模式執行，並配備快速的零設定安裝，而且所需必要條件很少。|  
@@ -203,9 +203,9 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |交錯執行多重陳述式資料表值函式|是|是|是|是|是|
 |大量插入增強功能|是|是|是|是|是|
 
-<sup>1</sup> 記憶體內部 OLTP 資料大小和資料行存放區區段快取都限制為版本[縮放限制](#Cross-BoxScaleLimits)區段指定的記憶體數量。 [批次模式](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)作業的平行處理原則程度 (DOP) 限制如下：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 為 2，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web Edition 和 Express Edition 為 1。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
+<sup>1</sup> 記憶體內部 OLTP 資料大小和資料行存放區區段快取，都會有依版本指定的記憶體數量限制，如[縮放限制](#Cross-BoxScaleLimits)一節中所述。 [批次模式](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)作業的平行處理原則程度 (DOP) 限制如下：[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition 為 2，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web Edition 和 Express Edition 為 1。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
 
-<sup>2</sup> 彙總下推、字串述詞下推和 SIMD 最佳化是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition 的擴充性增強功能。 如需詳細資訊，請參閱[資料行存放區索引 - 新功能](../relational-databases/indexes/columnstore-indexes-what-s-new.md)。
+<sup>2</sup> 彙總下推、字串述詞下推和 SIMD 最佳化是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 版本的可擴縮性增強功能。 如需詳細資料，請參閱[資料行存放區索引 - 新功能](../relational-databases/indexes/columnstore-indexes-what-s-new.md)。
 
 <sup>3</sup> 這項功能不會納入 LocalDB 安裝選項。
 

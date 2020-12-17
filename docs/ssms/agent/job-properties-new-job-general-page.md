@@ -13,13 +13,13 @@ ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9da8480712a40612b4078af57864dffdec561c4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 992a0ecbc8ec36ce88ca44490d04a6354828a116
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037913"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408862"
 ---
 # <a name="job-properties---new-job-general-page"></a>作業屬性 - 新增作業 (一般頁面)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,19 +49,19 @@ ms.locfileid: "92037913"
 啟用作業。 未啟用作業時，則不會執行作業以回應排程或警示，但是您仍可以使用 **sp_start_job** 預存程序來啟動作業。  
   
 **Source**  
-顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的主要伺服器。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **建立日期**  
-顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的建立日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **上次修改**  
-顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業的上次修改日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **上次執行**  
-顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+顯示作業上次開始執行的日期和時間。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 **檢視作業記錄**  
-檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般]**** 頁面使用。  
+檢視作業的作業記錄。 只能在 [作業屬性] 的 [一般] 頁面使用。  
   
 ## <a name="see-also"></a>另請參閱  
 [實作作業](../../ssms/agent/implement-jobs.md)  

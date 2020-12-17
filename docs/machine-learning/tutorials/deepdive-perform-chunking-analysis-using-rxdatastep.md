@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 38749e2c0e0bea1d70b253a9bc1dcbcae1c54de3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195110"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470519"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 執行區塊化分析 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]

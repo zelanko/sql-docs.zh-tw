@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f96e73135889e94cda9e84a39c8f03b59c39973f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f79af39e2ba871a0ee4acf9f33c23f54f2bfd3b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764796"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461459"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
 

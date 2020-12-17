@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 774c59b22a6c12dafa5f7191439ebdfd7bf0ac52
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 35dd145772aa7c2184f814d28b46d59b5955de33
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470149"
 ---
 # <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>教學課程：使用 SQL 機器學習在 R 中部署預測模型
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在這個四部分教學課程系列中，您將在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或在[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上使用 R 和機器學習模型來預測滑雪工具租用的數目。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在這個四部分教學課程系列中，您將在 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中使用 R 和機器學習模型來預測滑雪工具租用的數目。
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在這個四部分教學課程系列中，您將在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 和機器學習模型來預測滑雪工具租用的數目。
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 在這個四部分教學課程系列中，您將在 [Azure SQL 受控執行個體機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中使用 R 和機器學習模型來預測滑雪工具租用的數目。
 ::: moniker-end
 
@@ -51,16 +51,16 @@ ms.locfileid: "94870337"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 * SQL Server 機器學習服務 - 若要安裝機器學習服務，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安裝指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 您也可以[啟用 SQL Server 巨量資料叢集上的機器學習服務](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 * SQL Server 機器學習服務 - 若要安裝機器學習服務，請參閱 [Windows 安裝指南](../install/sql-machine-learning-services-windows-install.md)。 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 * SQL Server 2016 R Services。 若要安裝 R Services，請參閱 [Windows 安裝指南](../install/sql-r-services-windows-install.md)。 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 * Azure SQL 受控執行個體機器學習服務。 如需詳細資訊，請參閱 [Azure SQL 受控執行個體機器學習服務概觀](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 * 請參閱 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)，以了解如何將範例資料庫還原到 Azure SQL 受控執行個體。
@@ -76,12 +76,12 @@ ms.locfileid: "94870337"
 
 此教學課程中使用的範例資料庫已儲存為 **.bak** 資料庫備份檔案，以供您下載並使用。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > 如果您是在巨量資料叢集上使用機器學習服務，請參閱如何[將資料庫還原至 SQL Server 巨量資料叢集主要執行個體](../../big-data-cluster/data-ingestion-restore-database.md)。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 1. 下載 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) 檔案。
 
 1. 請遵循在 Azure Data Studio 中[從備份檔案還原資料庫](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的指示，使用下列詳細資料：
@@ -96,7 +96,7 @@ ms.locfileid: "94870337"
    SELECT * FROM [dbo].[rental_data];
    ```
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 1. 下載 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) 檔案。
 
 1. 遵循 SQL Server Management Studio 中[將資料庫還原至受控執行個體](/azure/sql-database/sql-database-managed-instance-get-started-restore)的指示，使用下列詳細資料：

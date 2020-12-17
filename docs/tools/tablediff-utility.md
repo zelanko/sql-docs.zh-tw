@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fc5868edc1456f2588d450f60a23a4de36afaa07
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71becc4645aa71a3e6d60a00766b913546ff7c22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463709"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -133,13 +133,13 @@ tablediff
  是大型物件資料類型資料行要比較的位元組數，包括︰ **text**、 **ntext**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
  **-bf**  _number_of_statements_  
- 這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
+ 這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements* 時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
   
  **-c**  
  比較資料行層級的差異。  
   
  **-dt**  
- 卸除 *table_name*指定的結果資料表 (如果該資料表已存在的話)。  
+ 卸除 *table_name* 指定的結果資料表 (如果該資料表已存在的話)。  
   
  **-et** _table_name_  
  指定要建立的結果資料表名稱。 如果這份資料表已經存在，就必須使用 **-DT** ，否則作業會失敗。  
@@ -182,7 +182,7 @@ tablediff
   
 |來源資料類型|目的地資料類型|  
 |----------------------|---------------------------|  
-|**tinyint**|**smallint**、 **int**或 **bigint**|  
+|**tinyint**|**smallint**、 **int** 或 **bigint**|  
 |**smallint**|**int** 或 **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  

@@ -15,13 +15,13 @@ ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a41c43454c91a95f3d359319f99597704c6b859e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 480872ee1465590fc7beb3c002b11a99bbfde79c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038249"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440429"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

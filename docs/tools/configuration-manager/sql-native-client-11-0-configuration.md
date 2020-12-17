@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f0b074f92d4c61c6721a56abe5dc2d44422a9f0
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: aa0eac24445ec24c4b86c54bad6fc1c94c7072d4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901073"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463759"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  本區段包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中 **SQL Server Native Client 組態**對話方塊的 F1 說明主題。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 為用戶端電腦用來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始。  
+  本區段包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中 **SQL Server Native Client 組態** 對話方塊的 F1 說明主題。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 為用戶端電腦用來與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始。  
   
  執行用戶端程式的電腦會使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 組態」中的設定。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上設定時，它們只會影響在伺服器執行的用戶端程式。  
   

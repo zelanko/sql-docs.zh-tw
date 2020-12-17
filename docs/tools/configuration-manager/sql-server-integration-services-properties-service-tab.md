@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 98a8cda889ba282079560d0c9f49793454a44f85
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 2b335440c5f1cf54404f74d8550e5ee687d08307
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901190"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463739"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 屬性 (服務索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88901190"
  1 表示 `SERVICE_ERROR_NORMAL`。 如果在電腦啟動過程中，服務無法啟動，啟動程式就會記錄錯誤並顯示快顯訊息方塊，但是仍會繼續啟動作業。 這項值不能被改變。  
   
  **結束碼**  
- 定義啟動或停止服務時所遇到之問題的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 錯誤碼。 當錯誤對於此類別所代表的服務而言是唯一時，此屬性會設定為 [ERROR_SERVICE_SPECIFIC_ERROR]**** \(1066)，此錯誤的相關資訊可見於 **ServiceSpecificExitCode** 屬性。 服務執行時會將此值設定為 NO_ERROR (0)，並在正常結束後再將此值設定為 NO_ERROR (0)。  
+ 定義啟動或停止服務時所遇到之問題的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 錯誤碼。 當錯誤對於此類別所代表的服務而言是唯一時，此屬性會設定為 [ERROR_SERVICE_SPECIFIC_ERROR] \(1066)，此錯誤的相關資訊可見於 **ServiceSpecificExitCode** 屬性。 服務執行時會將此值設定為 NO_ERROR (0)，並在正常結束後再將此值設定為 NO_ERROR (0)。  
   
  **Host Name**  
  顯示執行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務之電腦或叢集的名稱。  

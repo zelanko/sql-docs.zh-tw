@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2acca0bd84985700395cb3d073e6476167577b68
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ab2a821d2c7d14f16caefb7f881f69962b3eaa94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901181"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465769"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88901181"
  顯示產品存貨保持單元 (SKU)，有時也稱作產品版本 (product edition)。  
   
  **啟動參數**  
- 列出這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所使用的任何啟動參數。 參數是由分號區隔開來的。 預設的參數包含 master 資料庫 (`master.mdf`)、master 資料庫的記錄檔 (`mastlog.ldf`) 以及錯誤記錄檔的資料檔案路徑。 如需啟動參數的語法，請搜尋《線上叢書》的 **＜使用 SQL 伺服器啟動選項＞**主題。  
+ 列出這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所使用的任何啟動參數。 參數是由分號區隔開來的。 預設的參數包含 master 資料庫 (`master.mdf`)、master 資料庫的記錄檔 (`mastlog.ldf`) 以及錯誤記錄檔的資料檔案路徑。 如需啟動參數的語法，請搜尋《線上叢書》的 **＜使用 SQL 伺服器啟動選項＞** 主題。  
   
  **存貨保持單元**  
  顯示產品存貨保持單元 (SKU) 號碼。  
@@ -70,6 +70,6 @@ ms.locfileid: "88901181"
  顯示這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的版本號碼。  
   
  **虛擬伺服器名稱**  
- 當**安裝在叢集伺服器時的** 虛擬伺服器名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 當 **安裝在叢集伺服器時的** 虛擬伺服器名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
   

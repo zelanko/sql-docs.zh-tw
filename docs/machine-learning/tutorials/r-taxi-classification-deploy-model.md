@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470109"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R 教學課程：在 SQL 預存程序中執行預測
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "92412521"
 
 本文示範執行評分的兩種方式：
 
-+ **批次評分模式** ：使用 SELECT 查詢做為預存程序輸入。 此預存程序會傳回對應至輸入案例的觀察值資料表。
++ **批次評分模式**：使用 SELECT 查詢做為預存程序輸入。 此預存程序會傳回對應至輸入案例的觀察值資料表。
 
-+ **個別計分模式** ︰傳遞一組個別參數值作為輸入。  此預存程序會傳回單一資料列或值。
++ **個別計分模式**︰傳遞一組個別參數值作為輸入。  此預存程序會傳回單一資料列或值。
 
 在本文中，您將：
 
@@ -76,7 +76,7 @@ GO
   
   因為 data.frame 可以包含單一資料列，所以您可以使用相同的程式碼進行批次或單一計分。
   
-+ `PREDICT` 函數所傳回的值是 **浮點數** ，代表司機收到小費 (任何金額) 的機率。
++ `PREDICT` 函數所傳回的值是 **浮點數**，代表司機收到小費 (任何金額) 的機率。
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>批次評分 (預測清單)
 
@@ -154,7 +154,7 @@ GO
   
 如果您從外部應用程式呼叫預存程序，請確定資料符合 R 模型的需求。 這可能包括確保輸入資料可轉型或轉換成 R 資料類型，或是驗證資料類型和資料長度。
 
-1. 建立預存程序 **RPredictSingleRow** 。
+1. 建立預存程序 **RPredictSingleRow**。
   
    ```sql
    CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

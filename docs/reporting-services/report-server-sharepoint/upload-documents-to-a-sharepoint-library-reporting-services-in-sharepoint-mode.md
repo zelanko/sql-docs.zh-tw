@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 0d033bdfe9ae0d2773e7c3d8622b7321ed60e02e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935494"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461419"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "91935494"
 > [!NOTE]  
 >  您必須針對 SharePoint 模式設定報表伺服器，同時 SharePoint 產品的執行個體必須具有 Reporting Services 增益集，以便提供從 SharePoint 網站儲存及存取報表伺服器項目的程式檔案。  
   
- 若要將文件上傳至文件庫，您必須擁有網站層級的「加入項目」權限。 如果使用預設安全性設定，擁有完整控制權限等級的**擁有者**群組和擁有「參與」(Contribute) 權限等級的**成員**群組都會取得這個權限。  
+ 若要將文件上傳至文件庫，您必須擁有網站層級的「加入項目」權限。 如果使用預設安全性設定，擁有完整控制權限等級的 **擁有者** 群組和擁有「參與」(Contribute) 權限等級的 **成員** 群組都會取得這個權限。  
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>將報表定義或報表模型新增至文件庫
   
