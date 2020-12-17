@@ -7,13 +7,13 @@ ms.date: 03/05/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 53f339b871022e68e367c91797c3beed2212505a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956739"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471079"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019：機器學習服務的隔離變更
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91956739"
 
 根據預設，SQL Server 會藉由建立防火牆規則來停用輸出連線。 過去，這些規則是以本機使用者帳戶為基礎，其中安裝程式會針對 **SQLRUserGroup** 建立一個輸出規則，該規則拒絕對其成員的網路存取 (每個背景工作角色帳戶都被列為受該規則約束的本機原則)。 
 
-在移至 AppContainers 的過程中，有一些以 AppContainer SID 為基礎的新防火牆規則：SQL Server 安裝程式所建立的 20 個 AppContainers 中的每一個。 防火牆規則名稱的命名慣例是**在 SQL Server 執行個體 MSSQLSERVER 中封鎖 AppContainer-00 的網路存取**，其中 00 是 AppContainer 的數目 (預設為 00-20)，而 MSSQLSERVER 是 SQL Server 執行個體的名稱。 
+在移至 AppContainers 的過程中，有一些以 AppContainer SID 為基礎的新防火牆規則：SQL Server 安裝程式所建立的 20 個 AppContainers 中的每一個。 防火牆規則名稱的命名慣例是 **在 SQL Server 執行個體 MSSQLSERVER 中封鎖 AppContainer-00 的網路存取**，其中 00 是 AppContainer 的數目 (預設為 00-20)，而 MSSQLSERVER 是 SQL Server 執行個體的名稱。 
 
 > [!Note]
 > 如果需要網路呼叫，您可以停用 Windows 防火牆中的輸出規則。
@@ -58,7 +58,7 @@ ms.locfileid: "91956739"
 
 根據預設，外部 Python 與 R 指令碼只能讀取其工作目錄。 
 
-如果 Python 或 R 指令碼需要存取任何其他目錄，則必須為 **NT Service\MSSQLLaunchpad** 服務使用者帳戶以及此目錄中的**所有應用程式套件**提供 [讀取並執行]  及/或 [寫入]  權限。
+如果 Python 或 R 指令碼需要存取任何其他目錄，則必須為 **NT Service\MSSQLLaunchpad** 服務使用者帳戶以及此目錄中的 **所有應用程式套件** 提供 [讀取並執行]  及/或 [寫入]  權限。
 
 請遵循下列步驟來授與存取權。
 
@@ -66,7 +66,7 @@ ms.locfileid: "91956739"
 1. 選取 [安全性]  然後按一下 [編輯...]  以變更權限。
 1. 按一下 [新增...] 
 1. 請確定 [從這個位置]  為本機電腦名稱。
-1. 在 [輸入要選取的物件名稱]  中輸入**所有應用程式套件**，然後按一下 [檢查名稱]  。 按一下 [確定]  。
+1. 在 [輸入要選取的物件名稱]  中輸入 **所有應用程式套件**，然後按一下 [檢查名稱]  。 按一下 [確定]  。
 1. 選取 [允許]  欄位內的 [讀取並執行]  。
 1. 如果想要授與寫入權限，請選取 [允許]  欄位下的 [寫入]  。
 1. 按一下 [確定]  ，然後按一下 [確定]  。

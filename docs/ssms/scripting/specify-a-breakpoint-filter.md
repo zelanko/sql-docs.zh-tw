@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466269"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
 
@@ -41,11 +41,11 @@ ms.locfileid: "92036297"
   
      在 [中斷點] 視窗中，以滑鼠右鍵按一下中斷點字符，然後按一下捷徑功能表上的 [篩選]。  
   
-2.  在 [中斷點篩選條件]**** 對話方塊中，使用 [篩選]**** 方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
+2.  在 [中斷點篩選條件] 對話方塊中，使用 [篩選] 方塊來指定電腦 (依名稱) 或作業系統處理序和執行緒 (依名稱或識別碼)：  
   
     -   **MachineName** 是執行 Database Engine 執行個體的電腦。  
   
-    -   **ProcessID**和 **ProcessName** 是執行 Database Engine 執行個體的作業系統處理序。  
+    -   **ProcessID** 和 **ProcessName** 是執行 Database Engine 執行個體的作業系統處理序。  
   
     -   **ThreadID** 和 **ThreadName** 是在 Database Engine 執行個體中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、程序或函數的作業系統執行緒。  
   

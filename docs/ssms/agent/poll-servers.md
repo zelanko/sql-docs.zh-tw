@@ -17,13 +17,13 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e2ff9d591745d6c8859ea35f5e98a90100802d4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f28cb7829046b27ad0579ce546373834d6199d02
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477009"
 ---
 # <a name="poll-servers"></a>輪詢伺服器
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92030332"
 > [!IMPORTANT]  
 > 「Azure SQL 受控執行個體/docs.microsoft.com/azure/sql-database/sql-database-managed-instance」目前支援大部分的 SQL Server Agent 功能，但並非全數支援。 如需詳細資料，請參閱 [Azure SQL 受控執行個體與 SQL Server 之間的 T-SQL 差異](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-在實作多伺服器管理時，目標伺服器會定期連絡主要伺服器，來上傳已執行作業的相關資訊，並下載新的作業。 連絡主要伺服器的程序稱為「伺服器輪詢」**，它會以定期的「輪詢間隔」** 來進行。  
+在實作多伺服器管理時，目標伺服器會定期連絡主要伺服器，來上傳已執行作業的相關資訊，並下載新的作業。 連絡主要伺服器的程序稱為「伺服器輪詢」，它會以定期的「輪詢間隔」來進行。  
   
 ## <a name="polling-intervals"></a>輪詢間隔  
 輪詢間隔 (預設值為一分鐘) 可控制目標伺服器連接到主要伺服器，以下載指示與上傳作業執行結果的頻率。  

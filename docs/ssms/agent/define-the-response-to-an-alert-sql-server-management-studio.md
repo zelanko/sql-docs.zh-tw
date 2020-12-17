@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4207b3492ac0bf29e66a20002a0baa34d453b9c0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 8515cb0a2269b5cc9a19d8fa50fada7291436015
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038091"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409155"
 ---
 # <a name="define-the-response-to-an-alert"></a>定義對警示的回應
 
@@ -57,13 +57,13 @@ ms.locfileid: "92038091"
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  在要定義回應的警示上按一下滑鼠右鍵，然後選取 [屬性]****。  
+4.  在要定義回應的警示上按一下滑鼠右鍵，然後選取 [屬性]。  
   
-5.  在 [_alert\_name_ 警示屬性]**** 對話方塊中，選取 [選取頁面]**** 底下的 [回應]****。  
+5.  在 [_alert\_name_ 警示屬性] 對話方塊中，選取 [選取頁面] 底下的 [回應]。  
   
-6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業]**** 與 [作業屬性 _job\_name_]**** 對話方塊中使用的選項詳細資訊，請參閱[建立作業](../../ssms/agent/create-a-job.md)及[檢視作業](../../ssms/agent/view-a-job.md)。  
+6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性 _job\_name_] 對話方塊中使用的選項詳細資訊，請參閱 [建立作業](../../ssms/agent/create-a-job.md)及 [檢視作業](../../ssms/agent/view-a-job.md)。  
   
-7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在**運算子清單**中，選取下列一或多種方法通知操作員：[電子郵件]****、[呼叫器]**** 或 [Net Send]****。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](../../ssms/agent/create-an-operator.md) ＞和＜ [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)＞。  
+7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在 **運算子清單** 中，選取下列一或多種方法通知操作員：[電子郵件]、[呼叫器] 或 [Net Send]。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](../../ssms/agent/create-an-operator.md) ＞和＜ [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)＞。  
   
 8.  完成後，請按一下 **[確定]** 。  
   

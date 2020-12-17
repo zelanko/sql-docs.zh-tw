@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036261"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476899"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd**執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
+  **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd** 執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元] 來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元] 來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd** 所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 **陳述式，或者將公用程式指向包含要執行之** 陳述式的文字檔，來提交 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "92036261"
     > **提示！！** 若要查看 **sqlcmd** 公用程式所支援的選項清單，請執行： `sqlcmd -?`。  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以互動方式執行 Transact-SQL 陳述式  
- 您可以使用 **sqlcmd** 公用程式，以互動方式在 [命令提示字元] 視窗中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **以互動方式執行**陳述式，請執行公用程式，但是不要使用 **-Q**、 **-q**、 **-Z**或 **-i** 選項指定任何輸入檔或查詢。 例如：  
+ 您可以使用 **sqlcmd** 公用程式，以互動方式在 [命令提示字元] 視窗中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **以互動方式執行** 陳述式，請執行公用程式，但是不要使用 **-Q**、 **-q**、 **-Z** 或 **-i** 選項指定任何輸入檔或查詢。 例如：  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -385,7 +385,7 @@ ms.locfileid: "92036261"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. 在 Windows 指令碼檔案中使用 sqlcmd  
- **sqlcmd**命令 (例如 `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` ) 可以在 .bat 檔案中與 VBScript 一起執行。 在這種情況下，請不要使用互動式選項。 **sqlcmd** 必須安裝在執行 .bat 檔案的電腦上。  
+ **sqlcmd** 命令 (例如 `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` ) 可以在 .bat 檔案中與 VBScript 一起執行。 在這種情況下，請不要使用互動式選項。 **sqlcmd** 必須安裝在執行 .bat 檔案的電腦上。  
   
  首先，建立下列四個檔案：  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036261"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 設定 Azure SQL Database 的加密  
- **sqlcmd**可以在與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料的連接上執行，以指定加密及憑證信任。 有兩個 **sqlcmd**`` 選項可以使用：  
+ **sqlcmd** 可以在與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料的連接上執行，以指定加密及憑證信任。 有兩個 **sqlcmd**`` 選項可以使用：  
   
 -   -N 參數是由用戶端用來要求加密的連接。 這個選項相當於 ADO.net 選項 `ENCRYPT = true`。  
   

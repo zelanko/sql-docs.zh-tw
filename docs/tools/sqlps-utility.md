@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fcf85aa9657da37d2fc1f64300c5a773d6de63ca
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 85f3fd590ee204cac018cffd59d0ba180831d8df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476519"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,13 +63,13 @@ sqlps
  指定 **sqlps** 公用程式的輸入要格式化為文字字串 (**Text**) 或序列化的 CLIXML 格式 (**XML**)。  
   
  **-Command**  
- 指定 **sqlps** 公用程式要執行的命令。 除非同時指定了 **-NoExit** ，否則 **sqlps** 公用程式會執行此命令，然後結束。 請勿在 **-Command**之後指定任何其他參數，因為這些參數將會讀取成命令參數。  
+ 指定 **sqlps** 公用程式要執行的命令。 除非同時指定了 **-NoExit** ，否則 **sqlps** 公用程式會執行此命令，然後結束。 請勿在 **-Command** 之後指定任何其他參數，因為這些參數將會讀取成命令參數。  
   
  **-**  
  **-Command-** 會指定 **sqlps** 公用程式從標準輸入中讀取輸入。  
   
  *script_block* [ **-args**_argument\_array_ ]  
- 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
+ 指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有當 *Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block* 中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
  指定包含要執行之 PowerShell 命令的字串。 使用 **"&{** _command_ **}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  

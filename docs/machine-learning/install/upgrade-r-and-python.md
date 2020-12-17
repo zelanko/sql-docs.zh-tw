@@ -7,13 +7,13 @@ ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 7abbcf2297083b8e0bd9f05be12650e1efc1c942
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471099"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>使用繫結在 SQL Server 機器學習服務中升級 Python 和 R 執行階段
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "94870450"
 > [!NOTE]
 > 繫結僅適用於繫結至 SQL Server 執行個體的資料庫內執行個體。 在此情況下，獨立安裝不需要繫結。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 **SQL Server 2016 繫結考量**
 
 針對 SQL Server 2016 R Services 客戶，繫結提供：
@@ -58,7 +58,7 @@ ms.locfileid: "94870450"
 
 繫結不保證 R 或 Anaconda 的最新版本。 當您繫結至 Microsoft Machine Learning Server 時，您可以透過安裝程式安裝 R 或 Python 版本，安裝程式可能不是 Web 上可取得的最新版本。
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 元件 |初始版本 | [R Server 9.0.1](/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](/machine-learning-server/install/r-server-install-windows) | [Machine Learning Server 9.2.1](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) | [Machine Learning Server 9.3](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\) |  [Machine Learning Server 9.4.7](/machine-learning-server/install/machine-learning-server-windows-install) \(英文\)
@@ -71,7 +71,7 @@ Microsoft R Open (MRO) (R) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3
 [olapR](/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 | 1.0 |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 [**SQL Server 2017 機器學習服務**](../install/sql-machine-learning-services-windows-install.md)
 
 元件 |初始版本 | Machine Learning Server 9.3 | Machine Learning Server 9.4.7 |

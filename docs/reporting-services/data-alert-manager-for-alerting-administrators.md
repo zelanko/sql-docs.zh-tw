@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 7bd656cc4b543ecb2c291adcd9745f3c4b1c79bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246340"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484340"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
 
@@ -49,7 +49,7 @@ SQL Server Reporting Services 提供 [資料警示管理員] 讓 SharePoint 警�
   
  [資料警示管理員] 包含一個資料表，其中列出警示名稱、報表名稱、警示擁有者的名稱、傳送的警示訊息數目、上一次執行警示的時間、上一次修改警示定義的時間，以及警示訊息的狀態。 如果警示無法產生或是傳送，狀態資料行就會包含有關錯誤的資訊並協助您疑難排解警示。 如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
- 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態]**** 欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
+ 下表顯示 [資料警示管理員] 中資料表的範例資料。 當發生錯誤時，資料表的 [狀態] 欄位中會包含錯誤訊息和記錄中項目的識別碼 (GUID)。  
   
 |警示名稱|報表名稱|建立者|傳送警示|最後執行|上次修改|狀態|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  

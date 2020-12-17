@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471059"
 ---
 # <a name="install-packages-with-r-tools"></a>使用 R 工具來安裝套件
 
@@ -24,7 +24,7 @@ ms.locfileid: "94869948"
 除了標準的 R 工具以外，您也可以使用以下工具安裝 R 套件：
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ ms.locfileid: "94869948"
 
 + R 套件程式庫位於 SQL Server 執行個體的 Program Files 資料夾中，而且根據預設，在此資料夾中安裝需要系統管理員權限。 如需詳細資訊，請參閱[套件程式庫位置](../package-management/r-package-information.md#default-r-library-location)。
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   非系統管理員可以使用 RevoScaleR 9.0.1 與更新版本，或使用 CREATE EXTERNAL LIBRARY 來安裝套件。 **dbo_owner** 使用者，或具有 CREATE EXTERNAL LIBRARY 權限的使用者，可以將 R 套件安裝到目前的資料庫。 如需詳細資訊，請參閱
   + [使用 RevoScaleR 來安裝 R 套件](install-r-packages-with-revoscaler.md)
   + [使用 T-SQL (CREATE EXTERNAL LIBRARY) 在 SQL Server 上安裝 R 套件](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   非系統管理員可以使用 RevoScaleR 9.0.1 與更新版本來安裝套件。 **dbo_owner** 使用者可以將 R 套件安裝到目前的資料庫。 如需詳細資訊，請參閱[使用 RevoScaleR 來安裝 R 套件](install-r-packages-with-revoscaler.md)。
   ::: moniker-end
 
@@ -56,13 +56,13 @@ ms.locfileid: "94869948"
 
 1. 判斷執行個體程式庫的位置 (請參閱[取得 R 套件資訊](../package-management/r-package-information.md))，並瀏覽至 R 工具安裝所在的資料夾。
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    例如，SQL Server 預設執行個體的預設路徑為：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    例如，SQL Server 預設執行個體的預設路徑為：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ ms.locfileid: "94869948"
 
 1. 判斷執行個體程式庫的位置 (請參閱[取得 R 套件資訊](../package-management/r-package-information.md))，並瀏覽至 R 工具安裝所在的資料夾。 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    例如，SQL Server 預設執行個體的預設路徑為：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    例如，SQL Server 預設執行個體的預設路徑為：
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

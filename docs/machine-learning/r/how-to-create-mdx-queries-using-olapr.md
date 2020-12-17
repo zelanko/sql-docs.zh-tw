@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 107b4cc7c68f1fdf91a685235d336556740547c7
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8e2f37542ae3363e654370f6dcdcbc76cc941335
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956589"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470849"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91956589"
      
      + `axis()` 指定要在查詢中使用之其他座標軸的名稱。 
      
-         OLAP Cube 最多可以包含 128 個查詢座標軸。 前四個軸通常稱為**資料行**、**資料列**、**頁面**和**章節**。 
+         OLAP Cube 最多可以包含 128 個查詢座標軸。 前四個軸通常稱為 **資料行**、**資料列**、**頁面** 和 **章節**。 
          
          如果您的查詢相當簡單，您可以使用 `columns`、 `rows`等函式來建置查詢。 不過，您也可以使用索引值非零的 `axis()` 函式來建置具有許多限定詞的 MDX 查詢，或將額外維度新增為限定詞。
 
@@ -148,7 +148,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 若要檢視您具有檢視權限的執行個體上的所有 Cube 或檢視方塊，請提供控制代碼作為 `explore`的引數。
 
 > [!IMPORTANT]
-> 最終結果**不是** Cube；TRUE 僅表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
+> 最終結果 **不是** Cube；TRUE 僅表示中繼資料作業成功。 如果引數無效，則會擲回錯誤。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"

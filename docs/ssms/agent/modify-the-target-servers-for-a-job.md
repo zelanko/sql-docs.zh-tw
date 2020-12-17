@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e070d2afa3b26d7c7d0c63f597571a3f526ae1d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482187"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>修改作業的目標伺服器
 
@@ -51,9 +51,9 @@ ms.locfileid: "92035581"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下某個作業，然後按一下 [屬性]****。  
+2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下某個作業，然後按一下 [屬性]。  
   
-3.  在 [作業屬性]**** 對話方塊中，選取 [目標]**** 頁面，然後按一下 [目標本機伺服器]**** 或 [目標多個伺服器]****。  
+3.  在 [作業屬性] 對話方塊中，選取 [目標] 頁面，然後按一下 [目標本機伺服器] 或 [目標多個伺服器]。  
   
     如果選擇 **[目標多個伺服器]**，請選取伺服器名稱左邊的方塊，以指定要做為作業目標的伺服器。 至於不要做為作業目標的伺服器，請確認已取消選取其核取方塊。  
   

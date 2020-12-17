@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d01a008e00d2effccb109555799bbe6d55baf1e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466569"
 ---
 # <a name="limit-report-history---reporting-services"></a>限制報表記錄 - Reporting Services
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 您可以視需要建立報表記錄，或是排程在報表記錄中建立和加入快照集的頻率。  
   
  報表記錄會儲存在報表伺服器資料庫中。 若報表快照集包含大量資料，建議您考慮限制報表記錄，以將快照集保留對資料庫大小的影響降到最低。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## <a name="to-configure-report-history-for-a-report-server"></a>若要設定報表伺服器的報表記錄  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91986654"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-configure-report-history-for-a-report-server"></a>若要設定報表伺服器的報表記錄  
   

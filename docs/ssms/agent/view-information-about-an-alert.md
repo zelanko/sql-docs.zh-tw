@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3b87208c7e1105d881816297cc70c8cee54f46f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96aaa12ce934da18818bd99fde009f6ec0747aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480729"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
 
@@ -51,7 +51,7 @@ ms.locfileid: "92037252"
   
 3.  按一下加號展開 **[警示]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您想要檢視其資訊的警示，然後選取 [屬性]。  
   
     如需 [_alert\_name_ 警示屬性] 對話方塊中可用選項的詳細資訊，請參閱：  
   

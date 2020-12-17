@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478809"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
 
@@ -146,7 +146,7 @@ ms.locfileid: "92039015"
 
 ### <a name="advanced-scripting-options-page"></a><a name="AdvScriptOpt"></a> 進階編寫指令碼選項頁面
 
-您可以使用這個頁面來指定要如何讓此精靈產生指令碼。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或**版本不支援選項，選項會呈現灰色。
+您可以使用這個頁面來指定要如何讓此精靈產生指令碼。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或** 版本不支援選項，選項會呈現灰色。
 
 ![進階選項](media/generate-and-publish-scripts-wizard/advanced.png)
 
@@ -160,7 +160,7 @@ ms.locfileid: "92039015"
 
 - **檢查物件是否存在** - 當為 **True** 時，會先新增存在檢查，然後為 SQL 物件產生 CREATE 陳述式。 例如：資料表、檢視表、函式或預存程序。 CREATE 陳述式會包裝在 IF 陳述式中。 如果您知道目標是簡潔的，則指令碼就會簡潔得多。 如果您不希望這些物件存在於目標上，則會出現錯誤。 預設值為 **False**。
 
-- **發生錯誤時繼續撰寫指令碼**：設定為 **False**時，指令碼撰寫會在發生錯誤時停止。 設定為 **True** 時，則會繼續撰寫指令碼。 預設值為 **False**。
+- **發生錯誤時繼續撰寫指令碼**：設定為 **False** 時，指令碼撰寫會在發生錯誤時停止。 設定為 **True** 時，則會繼續撰寫指令碼。 預設值為 **False**。
 
 - **將 UDDT 轉換為基底類型** ：設定為 **[True]** 時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 [True]  。 設定為 **[False]** 時，就會使用 UDDT。 預設值為 **False**。
 
@@ -272,7 +272,7 @@ ms.locfileid: "92039015"
     2. 資料庫引擎版本的指令碼：**Microsoft Azure SQL 資料倉儲版**。
 5. 依序選取 [儲存或發佈指令碼]  與 [完成]  。
 
-系統不會記憶步驟 4 所設定的選項。 如果您想要記憶這些選項，請遵循 **如何將預設指令碼選項設為 SQL 資料倉儲**中的指示。
+系統不會記憶步驟 4 所設定的選項。 如果您想要記憶這些選項，請遵循 **如何將預設指令碼選項設為 SQL 資料倉儲** 中的指示。
 
 ## <a name="see-also"></a>另請參閱
 

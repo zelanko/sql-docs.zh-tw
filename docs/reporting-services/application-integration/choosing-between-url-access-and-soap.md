@@ -9,13 +9,13 @@ ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: = sql-server-2016
+ms.openlocfilehash: bab3605274c3858577fa1bb5f82743c6cd447772
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484360"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 的 URL 存取與 SOAP 之間選擇
 

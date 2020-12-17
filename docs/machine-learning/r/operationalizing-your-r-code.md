@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 0ed09befa391211f8fc5457036f4362bfbf45894
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098837"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470869"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 機器學習服務中使用預存程序以便讓 R 程式碼能夠運作
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "92098837"
 
 下列教學課程提供在批次和單一資料列模式中使用預存程序評分的範例：
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [適用於 SQL Server 中 R 的端對端資料科學逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + [R 教學課程：使用二元分類預測紐約市計程車車資](../tutorials/r-taxi-classification-introduction.md)
 ::: moniker-end
 
@@ -63,11 +63,11 @@ ms.locfileid: "92098837"
 
 如果您的 R 解決方案使用複雜的彙總或牽涉到大型資料集，就能運用 SQL Server 的高效率記憶體內部彙總及資料行存放區索引，讓 R 程式碼能夠處理統計計算與評分。
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>針對其他平台或計算內容調整 R 程式碼
 
-當您在 SQL Server 安裝程式中使用[獨立伺服器選項](../install/sql-machine-learning-standalone-windows-install.md)時，或在安裝非 SQL 品牌的產品 Microsoft Machine Learning Server (先前稱為 **Microsoft R Server**) 時，您針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料執行的相同 R 程式碼就能用於其他資料來源 (例如透過 HDFS 的 Spark)：
+當您在 SQL Server 安裝程式中使用 [獨立伺服器選項](../install/sql-machine-learning-standalone-windows-install.md)時，或在安裝非 SQL 品牌的產品 Microsoft Machine Learning Server (先前稱為 **Microsoft R Server**) 時，您針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料執行的相同 R 程式碼就能用於其他資料來源 (例如透過 HDFS 的 Spark)：
 
 + [Machine Learning Server 文件](/r-server/) \(英文\)
 

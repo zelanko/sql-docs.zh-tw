@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e465f1e4e8c6cc9e5effb27c1cc97ee7633309eb
-ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 97f9707792d134f0a2b23a5deb8ff33fe9b9ca88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96297960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472459"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server 終止支援選項 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

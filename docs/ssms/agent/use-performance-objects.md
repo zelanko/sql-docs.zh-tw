@@ -21,13 +21,13 @@ ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb2e78a371639f3898e21c2661a44c91ba241545
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f6b7aa5d5028dabe94e9112ca935afc3e5199fd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476959"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

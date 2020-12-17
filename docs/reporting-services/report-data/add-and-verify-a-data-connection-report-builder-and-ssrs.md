@@ -9,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 03/01/2017
-ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/13/2020
+ms.openlocfilehash: b99ed7142dece1c256962b21dacf46bc78470967
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891788"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489848"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>加入及驗證資料連接 (報表產生器及 SSRS)
 
@@ -25,7 +25,7 @@ ms.locfileid: "91891788"
 
 若要建立內嵌資料來源，您必須具有外部資料來源的連接資訊，而且必須知道存取資料必須擁有哪些權限。 這項資訊通常是來自於資料來源的擁有者。 您可以測試此連接，以確認指定的認證是否足夠。
 
-如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)，以及[在報表產生器中指定認證](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017) (機器翻譯)
+如需詳細資訊，請參閱[建立資料連接字串 - 報表產生器 & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)，以及[在報表產生器中指定認證](./specify-credential-and-connection-information-for-report-data-sources.md) (機器翻譯)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91891788"
 
 5. 按一下 **[詳細資料]** ，並使用該資訊來更正問題。
 
-    如需詳細資訊，請參閱 [在報表產生器中指定認證](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017)。
+    如需詳細資訊，請參閱 [在報表產生器中指定認證](./specify-credential-and-connection-information-for-report-data-sources.md)。
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

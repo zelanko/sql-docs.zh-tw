@@ -11,19 +11,19 @@ ms.author: maghan
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76d942c643b510f956f5199920c228e4071795e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480649"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用 **物件總管** 中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。
 
 如需使用 SQL Server Management Studio (SSMS) 撰寫各種物件指令碼的詳細教學課程，請參閱[教學課程：在 SSMS 中撰寫指令碼](../tutorials/scripting-ssms.md)。
 

@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b7516d42e7b4ce804061f977ed530ecb03eba572
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384537"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472419"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 

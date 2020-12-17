@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ac81810036e4159843142cb419deb3d06c57848c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470789"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (SQL Server 機器學習服務中的 R 套件)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "92195808"
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>定義預存程序參數和輸入
 
-`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」 ** 物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
+`StoredProcedure` 是用來建置預存程序的主要建構函式。 這個建構函式會產生「SQL Server 預存程序」  物件，並選擇性地建立文字檔，其中包含可用來產生使用 T-SQL 命令之預存程序的查詢。 
 
 選擇性， *StoredProcedure* 函式也可以註冊具有所指定執行個體和資料庫的預存程序。
 

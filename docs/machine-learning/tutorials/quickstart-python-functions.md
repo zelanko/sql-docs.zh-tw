@@ -9,13 +9,13 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: edd4ec79799cbb62c32c70a9d40236ffd4a76b73
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 48f888b5d4050bd25518dfe1891ecba330e1838c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869998"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470279"
 ---
 # <a name="quickstart-python-functions-with-sql-machine-learning"></a>快速入門：Python 函式搭配 SQL 機器學習
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

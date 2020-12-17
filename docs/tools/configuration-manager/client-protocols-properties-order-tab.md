@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b4b16ac626cc68b6b989aa9c68d9ce93b69b6820
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 0265cc910186dd17ee1a23419e6843ee293a779d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900562"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481699"
 ---
 # <a name="client-protocols-properties-order-tab"></a>用戶端通訊協定屬性 (順序索引標籤)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88900562"
   
  按一下通訊協定，然後按一下 [啟用] 或 [停用]，將選取的通訊協定移到 [停用通訊協定] 或 [啟用通訊協定] 清單中。  
   
- 系統會以所列的順序嘗試通訊協定，亦即先嘗試使用第一順位的通訊協定，然後再嘗試使用第二順位的通訊協定，依此類推。若要上移或下移 [啟用的通訊協定] 清單中的通訊協定，請按一下向上箭頭或向下箭頭按鈕。 當您從該電腦上的用戶端連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，一律會先嘗試使用**共用記憶體**通訊協定 (若已啟用)。  
+ 系統會以所列的順序嘗試通訊協定，亦即先嘗試使用第一順位的通訊協定，然後再嘗試使用第二順位的通訊協定，依此類推。若要上移或下移 [啟用的通訊協定] 清單中的通訊協定，請按一下向上箭頭或向下箭頭按鈕。 當您從該電腦上的用戶端連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，一律會先嘗試使用 **共用記憶體** 通訊協定 (若已啟用)。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient 不會使用這些設定。 .NET SqlClient 的通訊協定順序最先是 TCP，接著是具名管道，您無法變更此順序。  

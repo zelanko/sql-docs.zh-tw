@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 496a5e901ec802cbd7a7ffbb810a14ee31734dcc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01294938af5e2d1813a371091e89b03321268637
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478779"
 ---
 # <a name="synchronize-target-server-clocks"></a>將目標伺服器的時鐘同步化
 
@@ -47,7 +47,7 @@ ms.locfileid: "92037752"
   
 1.  在 **[物件總管]** 中，按一下加號，展開要將目標伺服器的時鐘與主要伺服器的時鐘進行同步處理的伺服器。  
   
-2.  以滑鼠右鍵按一下 [SQL Server Agent]****、指向 [多伺服器管理]****，然後選取 [管理目標伺服器]****。  
+2.  以滑鼠右鍵按一下 [SQL Server Agent]、指向 [多伺服器管理]，然後選取 [管理目標伺服器]。  
   
 3.  在 **[管理目標伺服器]** 對話方塊中，按一下 **[公佈指示]**。  
   

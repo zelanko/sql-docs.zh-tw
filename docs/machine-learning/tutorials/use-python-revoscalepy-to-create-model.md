@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: aa5e3e9da0e13a9946ed0a2c985512a7e9452307
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193630"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470069"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>使用 Python 搭配 revoscalepy 建立可在 SQL Server 上遠端執行的模型
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -64,8 +64,8 @@ Microsoft 的 [revoscalepy](/machine-learning-server/python-reference/revoscalep
 程式碼會執行下列步驟：
 
 1. 匯入必要的程式庫和函數。
-2. 建立 SQL Server 的連線。 建立處理資料的**資料來源**物件。
-3. 使用**轉換**修改資料，以便可由邏輯迴歸演算法使用。
+2. 建立 SQL Server 的連線。 建立處理資料的 **資料來源** 物件。
+3. 使用 **轉換** 修改資料，以便可由邏輯迴歸演算法使用。
 4. 呼叫 `rx_lin_mod` 並定義用來配合模型的公式。
 5. 根據原始資料產生一組預測。
 6. 根據預測的值建立摘要。
@@ -129,9 +129,9 @@ def test_linmod_sql():
 
 + Python 變數 (例如 `sql_query` 和 `sql_connection_string` 定義資料的來源)。 
 
-    將這些變數傳遞至 [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) 的函數，以執行名為 `data_source` 的**資料來源物件**。
+    將這些變數傳遞至 [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) 的函數，以執行名為 `data_source` 的 **資料來源物件**。
 
-+ 您可以使用 [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 的函數建立**計算內容物件**。 產生的**計算內容物件** 會命名為 `sql_cc`。
++ 您可以使用 [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 的函數建立 **計算內容物件**。 產生的 **計算內容物件** 會命名為 `sql_cc`。
 
     這個範例會假設資料位於您將用來做為計算內容的同一個 SQL Server 執行個體上，並依此重複使用您在資料來源中使用的相同連接字串。 
     
@@ -139,7 +139,7 @@ def test_linmod_sql():
  
 ### <a name="changing-compute-contexts"></a>變更計算內容
 
-定義計算內容之後，您必須設定**使用中的計算內容**。 
+定義計算內容之後，您必須設定 **使用中的計算內容**。 
 
 大部分的作業預設都是在本機執行，這表示如果您未指定不同的計算內容，系統則會從資料來源擷取資料，而程式碼會在您目前的 Python 環境中執行。
 

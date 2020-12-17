@@ -8,13 +8,13 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: b73b8521593b81e38d5b0b3931da793f943c45a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94582580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470689"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>什麼是使用 Python 和 R 的 SQL Server 機器學習服務？
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "94582580"
 
 如需其他 SQL 平台上的機器學習，請參閱 [SQL 機器學習文件](index.yml)。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > 若要在 SQL Server 中執行 Java，請參閱 [Java 語言延伸模組文件](../language-extensions/java-overview.md)。
 ::: moniker-end
@@ -44,7 +44,7 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 ## <a name="get-started-with-machine-learning-services"></a>開始使用機器學習服務
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. 在 [Windows](install/sql-machine-learning-services-windows-install.md) 或 [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json) 上安裝 SQL Server 機器學習服務。 您也可以使用[巨量資料叢集的機器學習服務](../big-data-cluster/machine-learning-services.md)和 [Azure SQL 受控執行個體中的機器學習服務 ](/azure/azure-sql/managed-instance/machine-learning-services-overview)。
 
 1. 設定您的開發工具。 您可以在 [Azure Data Studio 筆記本](install/sql-machine-learning-azure-data-studio.md)中使用和執行 Python 和 R 指令碼。 也可以在 [Azure Data Studio](../azure-data-studio/what-is.md) 中執行 T-SQL。
@@ -55,14 +55,14 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
    + [SQL 機器學習的 R 教學課程](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + 撰寫您的第一個 Python 或 R 指令碼。
 
    + [SQL 機器學習的 Python 教學課程](tutorials/python-tutorials.md)
    + [SQL 機器學習的 R 教學課程](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. [在 Windows 上安裝 SQL Server 機器學習服務](install/sql-machine-learning-services-windows-install.md)。
 
 1. 設定您的開發工具。 您可以在 [Azure Data Studio 筆記本](install/sql-machine-learning-azure-data-studio.md)中使用和執行 Python 和 R 指令碼。 也可以在 [Azure Data Studio](../azure-data-studio/what-is.md) 中使用 T-SQL。
@@ -104,13 +104,13 @@ SQL Server 機器學習服務，可讓您在資料庫中執行 Python 和 R 指�
 
 如需機器學習服務安裝了哪些套件，以及如何安裝其他套件的詳細資訊，請參閱：
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + [取得 Python 套件資訊](package-management/python-package-information.md)
 + [使用 sqlmlutils 安裝 Python 套件](package-management/install-additional-python-packages-on-sql-server.md)
 + [取得 R 套件資訊](package-management/r-package-information.md)
 + [使用 sqlmlutils 安裝新的 R 套件](package-management/install-additional-r-packages-on-sql-server.md)。
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [取得 Python 套件資訊](package-management/python-package-information.md)
 + [在 SQL Server 上使用 Python 工具來安裝套件](package-management/install-python-packages-standard-tools.md)
 + [取得 R 套件資訊](package-management/r-package-information.md)

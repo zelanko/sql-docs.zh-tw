@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ada99a4058b2b3657a9064e42f2f2ca1f2aedbb3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470009"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 建立圖表和繪圖 (逐步解說)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "92196232"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2), " seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate plot.", sep=""))
     ```
 
-2. 針對開發環境，在 R 圖形裝置中傳回影像。  例如，在 RStudio 中，按一下 [繪製] **** 視窗。  在 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中，開啟個別的圖形視窗。
+2. 針對開發環境，在 R 圖形裝置中傳回影像。  例如，在 RStudio 中，按一下 [繪製]  視窗。  在 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]中，開啟個別的圖形視窗。
 
     ![使用 rxHistogram 繪製費用金額](media/rsql-e2e-rxhistogramresult.png "使用 rxHistogram 繪製費用金額")
 
@@ -57,7 +57,7 @@ ms.locfileid: "92196232"
 
 一般而言，資料庫伺服器會封鎖網際網路存取。 但如果您使用需要下載地圖或其他影像以產生繪圖的 R 套件，這就會造成不便。 不過，有一個實用的因應措施或許可以幫助您的應用程式開發工作。 基本上，您可以在用戶端中產生地圖展示，然後將儲存為 SQL Server 資料表中屬性的點重疊在地圖上。
 
-1. 定義可建立 R 繪圖物件的函數。 自訂函數 *mapPlot* 會建立散佈圖，而這個散佈圖會使用計程車上車位置來繪製從每個位置開始的乘車次數。 它會使用應該已[安裝並載入](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)的 **ggplot2** 和 **ggmap**。
+1. 定義可建立 R 繪圖物件的函數。 自訂函數 *mapPlot* 會建立散佈圖，而這個散佈圖會使用計程車上車位置來繪製從每個位置開始的乘車次數。 它會使用應該已 [安裝並載入](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)的 **ggplot2** 和 **ggmap**。
 
     ```R
     mapPlot <- function(inDataSource, googMap){

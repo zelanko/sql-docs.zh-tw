@@ -1,19 +1,19 @@
 ---
 description: 安裝 SQL Server Reporting Services
 title: 安裝 SQL Server Reporting Services | Microsoft Docs
-ms.date: 05/01/2020
+ms.date: 12/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891928"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484230"
 ---
 # <a name="install-sql-server-reporting-services"></a>安裝 SQL Server Reporting Services
 
@@ -21,12 +21,12 @@ ms.locfileid: "91891928"
 
 SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報表項目、轉譯報表，以及處理訂閱和其他報表服務。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 從 Microsoft 下載中心下載 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 從 Microsoft 下載中心下載 [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。
 
 ::: moniker-end
@@ -72,7 +72,7 @@ SQL Server Reporting Services 安裝所涉及的伺服器元件包括儲存報�
 
 ## <a name="configure-your-report-server"></a>設定報表伺服器
 
-在安裝程式中選取 [設定報表伺服器]  後，您會看到**報表伺服器設定管理員**。 如需詳細資訊，請參閱[報表伺服器設定管理員](reporting-services-configuration-manager-native-mode.md)。
+在安裝程式中選取 [設定報表伺服器]  後，您會看到 **報表伺服器設定管理員**。 如需詳細資訊，請參閱[報表伺服器設定管理員](reporting-services-configuration-manager-native-mode.md)。
 
 您需要[建立報表伺服器資料庫](ssrs-report-server-create-a-report-server-database.md)以完成 Reporting Services 的初始設定。 SQL Server Database 伺服器需要完成此步驟。
 
@@ -127,7 +127,7 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 
 如需如何安裝 SQL Server Reporting Services 原生模式的資訊，請參閱[安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 如需如何在 SharePoint 整合模式中安裝 SQL Server 2016 Reporting Services (和更早版本) 的資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。
 

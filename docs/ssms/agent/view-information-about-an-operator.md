@@ -18,13 +18,13 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7ee5c9f7a26979891a26ff44c34a5b4502b6026
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a9fb20b3a5d161c4d69d15740defc3dd10ebe7a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038704"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480709"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "92038704"
   
 3.  按一下加號展開 **[操作員]** 資料夾。  
   
-4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]****。  
+4.  以滑鼠右鍵按一下您要檢視的操作員，然後選取 [屬性]。  
   
-    如需 [<操作員名稱> 屬性]__**** 對話方塊中之可用選項的詳細資訊，請參閱：  
+    如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
     -   [操作員屬性 - 新增操作員 &#40;一般頁面&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409344"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>建立、刪除或修改資料夾 - Reporting Services
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>若要建立資料夾  
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](../web-portal-ssrs-native-mode.md)。  
   
-2.  在報表管理員中，選取主資料夾，然後按一下 [新增資料夾]。 或者若要在現有資料夾下建立資料夾，請在 [內容]**** 頁面中巡覽到該資料夾，然後按一下資料夾以開啟資料夾。 接著按一下 [新增資料夾]。  
+2.  在報表管理員中，選取主資料夾，然後按一下 [新增資料夾]。 或者若要在現有資料夾下建立資料夾，請在 [內容] 頁面中巡覽到該資料夾，然後按一下資料夾以開啟資料夾。 接著按一下 [新增資料夾]。  
   
      [新增資料夾] 頁面隨即開啟。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "91987184"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>若要建立資料夾  
   
 1. 開啟[報表伺服器的入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)。  
   
-2. 巡覽至您想要在其中尋找新資料夾的資料夾或子資料夾。 選取 [主資料夾]**** 資料夾，方法是選取頁面左上角工具列上的 [瀏覽]**** 按鈕，以在資料夾階層的頂端建立該資料夾。  
+2. 巡覽至您想要在其中尋找新資料夾的資料夾或子資料夾。 選取 [主資料夾] 資料夾，方法是選取頁面左上角工具列上的 [瀏覽] 按鈕，以在資料夾階層的頂端建立該資料夾。  
   
 3. 選取報表伺服器工具列右上方的 [新增] 按鈕，然後從下拉式功能表中選取 [資料夾]。  
   

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098867"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470949"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換 R 程式碼以在 SQL Server (資料庫內) 執行個體中執行
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "92098867"
 
 + 請盡可能將您的主要輸入資料定義為 SQL 查詢，以避免資料移動。
 
-+ 在預存程序中執行 R 時，您可以傳遞多個**純量**輸入。 針對您想要在輸出中使用的任何參數，請加入 **OUTPUT** 關鍵字。 
++ 在預存程序中執行 R 時，您可以傳遞多個 **純量** 輸入。 針對您想要在輸出中使用的任何參數，請加入 **OUTPUT** 關鍵字。 
 
   例如，下列純量輸入 `@model_name` 包含模型名稱，這也會在結果中它自己的資料行中輸出：
 
@@ -103,7 +103,7 @@ ms.locfileid: "92098867"
 
 ### <a name="improve-performance-and-security"></a>改善效能和安全性
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + 避免將預測或中繼結果存檔。 改為將預測寫入資料表，以避免資料移動。
 ::: moniker-end
 
@@ -117,7 +117,7 @@ ms.locfileid: "92098867"
 
 + 尋找使用 T-SQL 而不使用 R 程式碼來進行集合型計算的方式。
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   例如，這個 R 解決方案會顯示使用者定義的 T-SQL 函式和 R 如何執行相同的特徵工程工作：[資料科學端對端逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)。
   ::: moniker-end
 
@@ -169,6 +169,6 @@ ms.locfileid: "92098867"
 
 + [R 教學課程：使用二元分類預測紐約市計程車車資](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [端對端資料科學解決方案](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) - 包含 R 和 T-SQL 中特徵工程的比較
 ::: moniker-end

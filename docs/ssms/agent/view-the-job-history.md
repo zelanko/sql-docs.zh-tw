@@ -17,13 +17,13 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b22dc30718a2b3f97252d14fcb98235834fd644
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 38af7227ffc682b786c767c4cde4dc5bad9283d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038151"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482135"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

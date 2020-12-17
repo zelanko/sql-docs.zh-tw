@@ -7,13 +7,13 @@ ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d435340ec276de3dd2b08f340ecd49bb8c03787
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: 1fcaa82829b35926e2707dda792ac2c376241650
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956899"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470929"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (SQL Server 機器學習服務中的 Python 套件)
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91956899"
 + 資料科學函式 (可透過分散式或平行處理進行調整)
 + 提升效能 (包括使用 Intel 數學程式庫)
 
-您在 **revoscalepy**中建立的資料來源和計算內容也可以在機器學習演算法中使用。 如需這些演算法的簡介，請參閱 [SQL Server 中的 microsoftml Python 模組](ref-py-microsoftml.md)。
+您在 **revoscalepy** 中建立的資料來源和計算內容也可以在機器學習演算法中使用。 如需這些演算法的簡介，請參閱 [SQL Server 中的 microsoftml Python 模組](ref-py-microsoftml.md)。
 
 ## <a name="full-reference-documentation"></a>完整參考文件
 
@@ -99,7 +99,7 @@ ms.locfileid: "91956899"
 
 ## <a name="how-to-work-with-revoscalepy"></a>如何使用 revoscalepy
 
-封裝在預存程序中的 Python 程式碼可呼叫 **revoscalepy** 中的函式。 大多數開發人員會在本機建置 **revoscalepy**解決方案，然後將完成的 Python 程式碼移轉至預存程序作為部署練習。
+封裝在預存程序中的 Python 程式碼可呼叫 **revoscalepy** 中的函式。 大多數開發人員會在本機建置 **revoscalepy** 解決方案，然後將完成的 Python 程式碼移轉至預存程序作為部署練習。
 
 在本機執行時，您通常會從命令列或從 Python 開發環境執行 Python 指令碼，然後使用其中一個 **revoscalepy** 函式來指定 SQL Server 計算內容。 您可以將遠端計算內容用於整個程式碼，也可以用於個別函式。 例如，您可以將模型定型卸載至伺服器，以使用最新資料並避免資料移動。
 

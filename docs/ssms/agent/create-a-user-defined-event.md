@@ -24,13 +24,13 @@ ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf18385b89ac7af32bfde26d704880eb4e9bb300
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: de6830e6256a0cff840d34e179b198803f03016d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036649"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464419"
 ---
 # <a name="create-a-user-defined-event"></a>建立使用者定義的事件
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92036649"
 若要監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預先定義之事件以外的其他事件，您可以建立使用者自訂的事件。 您也可以指派嚴重性層級到每個使用者自訂事件。  
   
 > [!NOTE]  
-> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，請針對每個使用者自訂事件訊息選取 [寫入 Windows 應用程式事件記錄]**** 選項，以確保該訊息會被記錄下來。 根據預設，發生嚴重性低於 19 的使用者自訂訊息時，不會將這些訊息傳送到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄。 因此，嚴重性低於 19 的使用者自訂訊息不會觸發 SQL Server Agent 警示。  
+> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 時，請針對每個使用者自訂事件訊息選取 [寫入 Windows 應用程式事件記錄] 選項，以確保該訊息會被記錄下來。 根據預設，發生嚴重性低於 19 的使用者自訂訊息時，不會將這些訊息傳送到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄。 因此，嚴重性低於 19 的使用者自訂訊息不會觸發 SQL Server Agent 警示。  
   
 使用者自訂事件必須有唯一的訊息編號。 使用者自訂事件的訊息編號必須大於 50,000。 您可以使用多種語言來定義事件訊息。 但是，必須有 **En-US** 錯誤訊息，才能新增其他語言的訊息。  
   

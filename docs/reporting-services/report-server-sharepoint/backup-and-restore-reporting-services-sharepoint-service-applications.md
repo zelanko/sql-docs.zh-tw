@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 559b88b776c92abfd98929f5b73cabb04a7f6d80
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474519"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
 
@@ -32,7 +32,7 @@ ms.locfileid: "91935533"
 ### <a name="limitations-and-restrictions"></a>限制事項
 
 > [!NOTE]
->  使用 SharePoint 備份和還原功能，就可以部分備份和還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要執行其他步驟** ，且這些步驟記錄在本主題中。 目前備份程序**不會**將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫。
+>  使用 SharePoint 備份和還原功能，就可以部分備份和還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 **需要執行其他步驟** ，且這些步驟記錄在本主題中。 目前備份程序 **不會** 將自動執行帳戶 (UEA) 或 Windows 驗證的加密金鑰和認證備份至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫。
 
 ### <a name="recommendations"></a>建議
   

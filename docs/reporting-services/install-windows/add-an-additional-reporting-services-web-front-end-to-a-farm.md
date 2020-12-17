@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 09aa986c6f943b204cc037b452fe831bc0e8757e
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 914e4fb3254458579e20b81d8ef079ad2fed592b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472449"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>將其他 Reporting Services Web 前端加入至伺服器陣列
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包含應用程式伺服器和 Web 前端 (WFE) 伺服器所需的元件。 本主題的重點在於安裝 WFE 伺服器的必要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能所使用的應用程式頁面，例如訂閱、資料警示和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝是安裝適用於 SharePoint 2016 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。  
@@ -49,7 +49,7 @@ ms.locfileid: "91891408"
 |步驟|說明和連結|  
 |----------|--------------------------|  
 |將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列](/SharePoint/install/add-web-or-application-server-to-the-farm)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服陣列](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服陣列)。|  
-|安裝適用於 SharePoint 2016 產品的 SQL Server Reporting Services 增益集。|安裝此增益集的方法有許多種。 下列步驟會使用 SQL Server 安裝精靈。 如需有關安裝增益集的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。<br /><br /> 1) 執行 SQL Server 安裝。<br /><br /> 2) 在 [安裝程式角色]**** 頁面上，選取 [SQL Server 功能安裝]****。<br /><br /> 3) 在 [特徵選取]**** 頁面上，選取 [適用於 SharePoint 產品的 Reporting Services 增益集]****<br /><br /> 4) 在後續許多頁面上，按一下 [下一步]**** 完成安裝選項。<br /><br/>如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)|  
+|安裝適用於 SharePoint 2016 產品的 SQL Server Reporting Services 增益集。|安裝此增益集的方法有許多種。 下列步驟會使用 SQL Server 安裝精靈。 如需有關安裝增益集的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。<br /><br /> 1) 執行 SQL Server 安裝。<br /><br /> 2) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]。<br /><br /> 3) 在 [特徵選取] 頁面上，選取 [適用於 SharePoint 產品的 Reporting Services 增益集]<br /><br /> 4) 在後續許多頁面上，按一下 [下一步] 完成安裝選項。<br /><br/>如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)|  
 |確認新的伺服器可以運作。|1) 在 SharePoint 管理中心內，按一下 [系統設定] 群組中的 [管理此伺服器陣列中的伺服器]。<br /><br /> 2) 確認新的伺服器位於清單中。|  
 |更新您的 NLB 解決方案。|依照適當的情況，將您的硬體或軟體 NLB 環境更新為包含新的伺服器。|  
 

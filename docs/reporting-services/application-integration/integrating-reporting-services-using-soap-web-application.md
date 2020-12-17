@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78ebc356c31dcd32c650d0b04e78c20939e1cabb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466629"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>使用 SOAP 整合 Reporting Services - Web 應用程式
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 因為它是一種 Web 服務，所以可以輕易地存取 SOAP API，以提供企業報表功能給自訂商務應用程式。 您可以從 Web 應用程式存取報表伺服器 Web 服務，這與從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式存取 SOAP API 非常類似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開報表伺服器 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建置以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  
@@ -43,13 +43,13 @@ ms.locfileid: "79198191"
   
 ## <a name="managing-the-report-server-using-soap-api"></a>使用 SOAP API 管理報表伺服器。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  您也可以使用 Web 應用程式來管理報表伺服器及其內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的報表管理員，是完全使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 與 Reporting Services SOAP API 建立的 Web 應用程式範例。 您可以將報表管理員的報表管理功能加入自訂 Web 應用程式。 例如，您可以傳回報表伺服器資料庫中可用報表的清單，並將其顯示在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 控制項中，以供您的使用者選擇。 下列程式碼會連接報表伺服器資料庫，並在報表伺服器資料庫中傳回項目的清單。 接著會將可用的報表加入 Listbox 控制項，如此會顯示每個報表的路徑。  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
  您也可以使用 Web 應用程式來管理報表伺服器及其內容。 Web 入口網站 (隨附於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]) 是 Web 應用程式的範例，它會管理通常使用 Reporting Services 執行的大部分工作。 您可以將入口網站的報表管理功能新增到自訂 Web 應用程式。 例如，您可以傳回報表伺服器資料庫中可用報表的清單，並將其顯示在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 控制項中，以供您的使用者選擇。 下列程式碼會連接報表伺服器資料庫，並在報表伺服器資料庫中傳回項目的清單。 接著會將可用的報表加入 Listbox 控制項，如此會顯示每個報表的路徑。  
 

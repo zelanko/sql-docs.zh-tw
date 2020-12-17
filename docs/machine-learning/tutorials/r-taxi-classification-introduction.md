@@ -9,30 +9,30 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: afc692cdd0b7766ff0366f0de5d13e47d6dc27e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470179"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R 教學課程：使用二元分類預測紐約市計程車車資
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中或[巨量資料叢集](../../big-data-cluster/machine-learning-services.md)上的 R 整合。
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [SQL Server 機器學習服務](../sql-server-machine-learning-services.md)中的 R 整合。
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [SQL Server 2016 R Services](../sql-server-machine-learning-services.md) 中的 R 整合。
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 在 SQL 程式設計人員的這個五部分教學課程系列中，您將了解 [Azure SQL 受控執行個體中機器學習服務](/azure/azure-sql/managed-instance/machine-learning-services-overview)中的 R 整合。
 ::: moniker-end
 
@@ -61,11 +61,11 @@ ms.locfileid: "94585028"
 
 ## <a name="prerequisites"></a>必要條件
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 + 安裝 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + 安裝[啟用 R 的 SQL Server 機器學習服務](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 
@@ -73,7 +73,7 @@ ms.locfileid: "94585028"
 
 + [授與執行 Python 指令碼的權限](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + 從 SQL Server 2019 開始，隔離機制會要求您授與繪圖檔案儲存所在目錄的適當權限。 如需有關如何設定這些權限的詳細資訊，請參閱 [Windows 上 SQL Server 2019 中的檔案權限區段：機器學習服務的隔離變更](../install/sql-server-machine-learning-services-2019.md#file-permissions)
 ::: moniker-end
 

@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
-monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: =sql-server-2016
+ms.openlocfilehash: 05802b7d3a0bc9f4922cb1db68162d89a576f18c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471129"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 
@@ -95,7 +95,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
 ## <a name="set-environment-variables"></a>設定環境變數
 
-僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出[會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
+僅針對 R 功能整合，您應該設定 **MKL_CBWR** 環境變數，以確保來自 Intel Math Kernel Library (MKL) 計算的輸出 [會保持一致](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) \(英文\)。
 
 1. 在 [控制台] 中，按一下 [系統及安全性] > [系統] > [進階系統設定] > [環境變數]。
 
@@ -147,7 +147,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
     **run_value** 現在應該設定為 1。
 
-1. 開啟 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務**正在執行。 您應該為每個安裝 R 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。
+1. 開啟 SQL Server 組態管理員，並確認 **SQL Server Launchpad 服務** 正在執行。 您應該為每個安裝 R 的資料庫引擎執行個體都提供一個服務。 如需服務的詳細資訊，請參閱[擴充性架構](../concepts/extensibility-framework.md)。
 
 1. 如果 Launchpad 正在執行，您應該能夠執行簡單 R 來確認外部指令碼執行階段可以與 SQL Server 通訊。
 

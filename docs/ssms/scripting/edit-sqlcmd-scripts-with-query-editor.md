@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474309"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
 
@@ -32,7 +32,7 @@ ms.locfileid: "89093431"
 您可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器，以 SQLCMD 指令碼撰寫和編輯查詢。 當您必須在相同的指令碼中處理 Windows 系統命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，就可以使用 SQLCMD 指令碼。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 模式  
- 若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器來撰寫或編輯 SQLCMD 指令碼，您必須啟用 SQLCMD 指令碼模式。 根據預設，查詢編輯器不會啟用 SQLCMD 模式。 您可以按一下工具列上的 **SQLCMD 模式**圖示，或從 [查詢] 功能表中選取 [SQLCMD 模式]啟用指令碼模式。  
+ 若要使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器來撰寫或編輯 SQLCMD 指令碼，您必須啟用 SQLCMD 指令碼模式。 根據預設，查詢編輯器不會啟用 SQLCMD 模式。 您可以按一下工具列上的 **SQLCMD 模式** 圖示，或從 [查詢] 功能表中選取 [SQLCMD 模式]啟用指令碼模式。  
   
 > [!NOTE]  
 >  啟用 SQLCMD 模式就會關閉 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中的 IntelliSense 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。  
@@ -91,7 +91,7 @@ ms.locfileid: "89093431"
  如需有關如何執行 SQLCMD 的詳細資訊，請參閱 [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)，或進入 SQLCMD 教學課程。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>依預設，會啟用 SQLCMD 指令碼  
- 若要依預設開啟 SQLCMD 指令碼，請在 [工具]**** 功能表中選取 [選項]****，展開 [執行查詢]**** 和 **SQL Server**，按一下 [一般]**** 頁面，再核取 [預設會以 SQLCMD 模式開啟新查詢]**** 方塊。  
+ 若要依預設開啟 SQLCMD 指令碼，請在 [工具] 功能表中選取 [選項]，展開 [執行查詢] 和 **SQL Server**，按一下 [一般] 頁面，再核取 [預設會以 SQLCMD 模式開啟新查詢] 方塊。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>撰寫和編輯 SQLCMD 指令碼  
  在啟用指令碼模式之後，您便可以撰寫 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 適用的規則如下：  

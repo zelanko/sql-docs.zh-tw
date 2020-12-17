@@ -7,13 +7,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb16c276b9cc716f52e6ce73da5ec4ba3843dfbd
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 36b68809377492e3643ebc7c60e0b2111d52f638
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678891"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484240"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
 
@@ -137,7 +137,7 @@ ms.locfileid: "92678891"
   
     -   **Reporting Services - SharePoint**  
   
-    -   **適用於 SharePoint 產品的 Reporting Services 增益集** 。  
+    -   **適用於 SharePoint 產品的 Reporting Services 增益集**。  
   
     -   您也可以選擇性地選取完整環境的 [Database Engine 服務]  不過，您應該會有主控 SharePoint 資料庫的 SQL Server Database Engine 執行個體。  
   
@@ -193,13 +193,13 @@ ms.locfileid: "92678891"
     > [!NOTE]
     > 標準 Windows PowerShell 視窗無法辨識 SharePoint 命令。 使用 [SharePoint 管理命令介面]  。  
   
-4.  執行下列 PowerShell 命令安裝 Reporting Services SharePoint 服務。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後， **不會有任何訊息傳回** 管理命令介面：  
+4.  執行下列 PowerShell 命令安裝 Reporting Services SharePoint 服務。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後，**不會有任何訊息傳回** 管理命令介面：  
   
     ```  
     Install-SPRSService  
     ```  
   
-5.  執行下列 PowerShell 命令安裝 Reporting Services 服務 Proxy。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後， **不會有任何訊息傳回** 管理命令介面：  
+5.  執行下列 PowerShell 命令安裝 Reporting Services 服務 Proxy。 成功完成命令會在管理命令介面中顯示新行。 成功完成命令之後，**不會有任何訊息傳回** 管理命令介面：  
   
     ```  
     Install-SPRSServiceProxy  
@@ -241,7 +241,7 @@ ms.locfileid: "92678891"
 3.  在 [新增] 功能表中，選取 [SQL Server Reporting Services 服務應用程式]。  
   
     > [!IMPORTANT]  
-    >  如果清單中未出現 Reporting Services 選項， **表示未安裝 Reporting Services 共用服務** 。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 Reporting Services 服務的相關資訊。  
+    >  如果清單中未出現 Reporting Services 選項，**表示未安裝 Reporting Services 共用服務**。 檢閱上一節中，如何使用 PowerShell Cmdlt 來安裝 Reporting Services 服務的相關資訊。  
   
 4.  在 **[建立新的 SQL Server Reporting Services 服務應用程式]** 頁面中，輸入應用程式的名稱。 如果您要建立多個 Reporting Services 服務應用程式，描述性名稱和命名慣例將有助於您組織管理作業。  
   
@@ -275,7 +275,7 @@ ms.locfileid: "92678891"
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>啟用或確認 Power View 網站集合功能  
   
-1.  下列步驟會假設您的 SharePoint 網站設定為適用於 SharePoint 2013 的 2013 **體驗版** 。  
+1.  下列步驟會假設您的 SharePoint 網站設定為適用於 SharePoint 2013 的 2013 **體驗版**。  
   
      開啟瀏覽器，移至所要的 SharePoint 網站。 例如， https://\<servername>/sites/bi  
   

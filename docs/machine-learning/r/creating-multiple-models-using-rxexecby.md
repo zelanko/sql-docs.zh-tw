@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0a8e216069b831e14e4888aced79013ab5b55770
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 94f54e84a7f78dd92bacee399415149ca3b08a07
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470899"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>使用 rxExecBy 建立多個模型
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ RevoScaleR 中的 rxExecBy 函式是針對大量小型資料集的高容量平�
 
 ## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 語法和範例
 
-**rxExecBy** 接受四個輸入，其中一個輸入是資料集或資料來源物件，可在指定的**索引鍵**資料行上進行分割。 函式會傳回每個分割的輸出。 輸出的形式取決於當做引數傳遞的函式。 例如，如果您傳遞 rxLinMod 之類的模型化函式，您可以針對資料集的每個分割傳回個別的定型模型。
+**rxExecBy** 接受四個輸入，其中一個輸入是資料集或資料來源物件，可在指定的 **索引鍵** 資料行上進行分割。 函式會傳回每個分割的輸出。 輸出的形式取決於當做引數傳遞的函式。 例如，如果您傳遞 rxLinMod 之類的模型化函式，您可以針對資料集的每個分割傳回個別的定型模型。
 
 ### <a name="supported-functions"></a>支援的函數
 

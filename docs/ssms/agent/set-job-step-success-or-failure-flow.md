@@ -16,13 +16,13 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56fb2ab9d8f7de8e6e2a143939b3c8007446ef8a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 994faf31dd5cffac9c69fa996478baf539465b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035528"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472269"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,15 +55,15 @@ ms.locfileid: "92035528"
   
 1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
   
-2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]****。  
+2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]。  
   
 3.  按一下 **[步驟]** 頁面，再按一下步驟，然後按一下 **[編輯]**。  
   
 4.  在 **[作業步驟屬性]** 對話方塊中，選取 **[進階]** 頁面。  
   
-5.  在 [成功時的動作]**** 清單中，按一下作業步驟順利完成時要執行的動作。  
+5.  在 [成功時的動作] 清單中，按一下作業步驟順利完成時要執行的動作。  
   
-6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數]**** 方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)]**** 方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
+6.  在 **[重試次數]** 方塊中，輸入介於 0 到 9999 間的值，此值是當發生作業步驟失敗前應該重試的次數。 如果在 [重試次數] 方塊中指定大於 0 的值，請在 [重試間隔 (分鐘)] 方塊內輸入 1 至 9999 間的分鐘數，此值為作業步驟在重試前所應等待的時間。  
   
 7.  在 **[當動作失敗時]** 清單中，按一下當作業步驟失敗時要執行的動作。  
   

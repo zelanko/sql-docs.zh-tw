@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765937"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489668"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>針對 SQL Server 巨量資料叢集部署設定 Azure Kubernetes Service
 
@@ -149,7 +149,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
 
 ## <a name="connect-to-the-cluster"></a>連線至叢集
 
-1. 若要設定 kubectl 以連線到您的 Kubernetes 叢集，請執行 [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) \(英文\) 命令。 此步驟會下載認證，並設定 kubectl CLI 以使用它們。
+1. 若要設定 kubectl 以連線到您的 Kubernetes 叢集，請執行 [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) \(英文\) 命令。 此步驟會下載認證，並設定 kubectl CLI 以使用它們。
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Azure 資源群組是部署及管理 Azure 資源所在的邏輯群組。 下列
 
 如果您在使用上述命令建立 Azure Kubernetes Service 時遇到任何問題，請嘗試下列解決方法：
 
-- 確定您已安裝[最新版本的 Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 確定您已安裝[最新版本的 Azure CLI](/cli/azure/install-azure-cli)。
 - 使用不同的資源群組和叢集名稱來嘗試相同的步驟。
 - 請參閱詳細的 [AKS 疑難排解文件](/azure/aks/troubleshooting)。
 

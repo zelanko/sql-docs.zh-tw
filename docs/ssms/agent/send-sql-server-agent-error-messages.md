@@ -16,13 +16,13 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 77438199f38c3120e6445a0c4bef5a130bd20af0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5c973d0f1ee4921361ead88ef734b4fc85b02d90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474409"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>傳送 SQL Server Agent 錯誤訊息
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

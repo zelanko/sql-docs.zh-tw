@@ -7,13 +7,13 @@ ms.date: 03/09/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f787cdef6baeeaa57e79c9c5c167e12395508b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: bd7dacd4807e4e779f43d396d9d1e9b19d4134dc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471199"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>使用 SQL Server 機器學習服務在 Azure Data Studio 筆記本中執行 Python 和 R 指令碼
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -79,7 +79,7 @@ SQL 筆記本包含程式碼和文字資料格。 程式碼資料格可用來透
     '
     ```
 
-1. 按一下**執行資料格** (圓形黑色箭號)，或按 **F5** 鍵來執行單一資料格。
+1. 按一下 **執行資料格** (圓形黑色箭號)，或按 **F5** 鍵來執行單一資料格。
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL 筆記本的執行 Python 程式碼](media/ads-run-python.png)  
@@ -111,7 +111,7 @@ SQL 筆記本包含程式碼和文字資料格。 程式碼資料格可用來透
     '
     ```
 
-1. 按一下**執行資料格** (圓形黑色箭號)，或按 **F5** 鍵來執行單一資料格。
+1. 按一下 **執行資料格** (圓形黑色箭號)，或按 **F5** 鍵來執行單一資料格。
 
     > [!div class="mx-imgBorder"]
     > ![Azure Data Studio SQL 筆記本的執行 R 程式碼](media/ads-run-r.png)  

@@ -13,24 +13,24 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 902b22b19f356b0c59c6550ddeb8bfc6200f367b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474299"
 ---
 # <a name="manage-bookmarks"></a>管理書籤
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-使用程式碼編輯器時，[書籤]**** 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  
+使用程式碼編輯器時，[書籤] 視窗可讓您建立連結至文件內之程式碼的特定行。 您可以從 [檢視] 功能表顯示這個視窗。  
   
  若要建立和巡覽整個書籤，請按一下位於 [文字編輯器] 工具列上和 [書籤] 視窗上方的按鈕。 您可加入和刪除書籤、啟動或停用書籤以及將書籤組織到資料夾中。 [書籤] 視窗的捷徑功能表中，也有一些可用的特定命令。 若要加入或移除書籤，請將插入點放在適用的編輯器行上，然後按一下 [切換書籤]。 若要啟用書籤，請在 [書籤] 視窗中選取其核取方塊；若要停用 (而非移除) 書籤，則請清除其核取方塊。  
   
 ## <a name="text-editor-toolbar"></a>文字編輯器工具列  
- 在編輯器中開啟文字文件時，會啟用 [文字編輯器] 工具列的下列按鈕。 在使用查詢編輯器時，若要顯示 [文字編輯器]**** 工具列，請在 [檢視]**** 功能表上指向 [工具列]****，然後按一下 [文字編輯器]****。  
+ 在編輯器中開啟文字文件時，會啟用 [文字編輯器] 工具列的下列按鈕。 在使用查詢編輯器時，若要顯示 [文字編輯器] 工具列，請在 [檢視] 功能表上指向 [工具列]，然後按一下 [文字編輯器]。  
   
  **在目前的行上切換書籤**  
  在使用中的編輯器內，於文件的選取行上加入或移除書籤。 這不會改變有書籤的程式碼行。  

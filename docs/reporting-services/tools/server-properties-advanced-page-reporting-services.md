@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466659"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>伺服器屬性進階頁面 - Power BI 報表伺服器和 Reporting Services
 
@@ -161,10 +161,10 @@ ms.locfileid: "92194273"
 指出當使用者使用報表伺服器來測試資料來源連線時，是否要將詳細的錯誤訊息傳送至用戶端電腦。 預設值為 **true**。 如果此選項設定為 **false**，就只會傳送一般錯誤訊息。
 
 ###  <a name="executionlogdayskept"></a>ExecutionLogDaysKept  
-要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **-1** 至 **2**、**147**、**483**和**647**。 如果此值為 **-1**，系統不會從執行記錄資料表中刪除項目。 預設值是 **60**秒。  
+要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括 **-1** 至 **2**、**147**、**483** 和 **647**。 如果此值為 **-1**，系統不會從執行記錄資料表中刪除項目。 預設值是 **60** 秒。  
 
 > [!NOTE]
-> 將值設定為 **0 會「刪除」** ** 執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
+> 將值設定為 **0 會「刪除」** 執行記錄中的所有項目。 **-1** 值會保留執行記錄的項目，且不會將其刪除。
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 設定執行記錄層級。 *預設值為「標準」。*
@@ -185,7 +185,7 @@ ms.locfileid: "92194273"
 (僅限 Power BI 報表伺服器) 設定未使用模型從記憶體收回的頻率 (以分鐘為單位)。 *預設值為 60。*
 
 ###  <a name="myreportsrole"></a>MyReportsRole  
-在使用者之 [我的報表] 資料夾上建立安全性原則時所使用的角色名稱。 預設值是 **My Reports Role**秒。  
+在使用者之 [我的報表] 資料夾上建立安全性原則時所使用的角色名稱。 預設值是 **My Reports Role** 秒。  
 
 ### <a name="officeaccesstokenexpirationseconds"></a>OfficeAccessTokenExpirationSeconds 
 (僅限 Power BI 報表伺服器、Reporting Services 2019 及更新版本) 設定您要 Office 存取權杖多久到期 (以秒為單位)。 *預設值為 60。*
@@ -194,7 +194,7 @@ ms.locfileid: "92194273"
 (僅限 Power BI 報表伺服器) 設定 Office Online Server 執行個體的位址以檢視 Excel 活頁簿。
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名空間中所有受控報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800**秒。
+RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名空間中所有受控報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800** 秒。
 
 ### <a name="requireintune"></a>RequireIntune
 (僅限 Power BI 報表伺服器、Reporting Services 2017 及更新版本) 需要 Intune 透過 Power BI 行動應用程式來存取您組織的報表。 *預設值為 False。*
@@ -206,7 +206,7 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 (僅限 Power Bi 報表伺服器) 在含內嵌 AS 模型的 PowerBI 報表上排定重新整理的資料重新整理逾時 (以分鐘為單位)。 預設值是 120 分鐘。
 
 ### <a name="sessiontimeout"></a>SessionTimeout
-工作階段維持作用中狀態的時間長度 (以秒為單位)。 預設值是 **600**秒。  
+工作階段維持作用中狀態的時間長度 (以秒為單位)。 預設值是 **600** 秒。  
 
 ### <a name="sharepointintegratedmode"></a>SharePointIntegratedMode
 此唯讀屬性指出伺服器模式。 如果此值為 False，報表伺服器就會以原生模式執行。  
@@ -218,7 +218,7 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 顯示在入口網站頁面標題中的報表伺服器網站名稱。 預設值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 這個屬性可以是空字串。 最大長度是 8,000 個字元。  
 
 ### <a name="snapshotcompression"></a>SnapshotCompression
-定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：
+定義快照集的壓縮方式。 預設值是 **SQL** 秒。 有效值如下：
 
 |值|描述|
 |---------|---------|
@@ -230,13 +230,13 @@ RDLX 報表 *(SharePoint Server 中的 Power View 報表)* 報表伺服器命名
 指定預存參數可儲存的最大天數。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值為 **180** 天。  
 
 ### <a name="storedparametersthreshold"></a>StoredParametersThreshold
-指定報表伺服器可儲存的最大參數值數目。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值是 **1500**秒。  
+指定報表伺服器可儲存的最大參數值數目。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值是 **1500** 秒。  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
 (僅限 Power BI 報表伺服器 2019 年 1 月、Reporting Services 2019 及更新版本)：設定可在超連結動作上定義以便轉譯的 URI 配置清單 (以逗號分隔)，或 “&ast;” 以啟用所有超連結配置。 例如，設定 “http,https” 會允許 “https://www. 但是會移除 “mailto:bill@contoso.com” 或 “javascript:window.open(‘ www.contoso.com’, ‘_blank’)” 的超連結。 預設為 "&ast;"。
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-在報表伺服器命名空間中管理之所有報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800**秒。  
+在報表伺服器命名空間中管理之所有報表的預設報表處理逾時值 (以秒為單位)。 在報表層級可以覆寫這個值。 如果已設定此屬性，當指定的時間已過期時，報表伺服器就會嘗試停止處理報表。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，命名空間中的報表就不會在處理期間逾時。 預設值是 **1800** 秒。  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
 針對報表所儲存之快照集的最大數目。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，表示沒有任何快照集限制。  

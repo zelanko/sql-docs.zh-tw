@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3b19e905d68d53764a496ab5ee7745e3529484cf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194484"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489898"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 的航班抵達示範資料教學課程
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 在此練習中，請建立 SQL Server 資料庫，以儲存來自 R 或 Python 內建航空公司示範資料集的匯入資料。 R 和 Python 發佈提供對等的資料，您可以使用 Management Studio 將其匯入 SQL Server 資料庫。
 
-若要完成此練習，您應該具備 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) 或可執行 T-SQL 查詢的其他工具。
+若要完成此練習，您應該具備 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 或可執行 T-SQL 查詢的其他工具。
 
 使用此資料集的教學課程和快速入門包括下列內容：
 
@@ -32,9 +32,9 @@ ms.locfileid: "92194484"
 
 1. 啟動 SQL Server Management Studio，連線到具有 R 或 Python 整合的資料庫引擎執行個體。  
 
-2. 在 [物件總管] 中，以滑鼠右鍵按一下 [資料庫]****，然後建立名為 **flightdata** 的新資料庫。
+2. 在 [物件總管] 中，以滑鼠右鍵按一下 [資料庫]，然後建立名為 **flightdata** 的新資料庫。
 
-3. 以滑鼠右鍵按一下 [flightdata]****，按一下 [工作]****，然後按一下 [匯入一般檔案]****。
+3. 以滑鼠右鍵按一下 [flightdata]，按一下 [工作]，然後按一下 [匯入一般檔案]。
 
 4. 開啟 R 或 Python 發佈中提供的 AirlineDemoData.csv 檔案，視您安裝的語言而定。
 
@@ -53,7 +53,7 @@ ms.locfileid: "92194484"
 
 執行查詢以確認資料已上傳，作為驗證步驟。
 
-1. 在 [物件總管] 的 [資料庫] 下，以滑鼠右鍵按一下 [flightdata]**** 資料庫，然後開始新的查詢。
+1. 在 [物件總管] 的 [資料庫] 下，以滑鼠右鍵按一下 [flightdata] 資料庫，然後開始新的查詢。
 
 2. 執行一些簡單的查詢：
 
