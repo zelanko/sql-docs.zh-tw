@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: f90c1b004dae28f98b1b7f250cf16e0ed0d2ae5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470859"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>使用 sqlrutils 建立預存程序
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "92098827"
 - 邏輯
 - raw
 
-如果輸入類型不是上述類型之一，就必須將其序列化並以 *未經處理的*形式傳遞給函式。 在此情況下，函式也必須包含可還原序列化輸入項目的程式碼。
+如果輸入類型不是上述類型之一，就必須將其序列化並以 *未經處理的* 形式傳遞給函式。 在此情況下，函式也必須包含可還原序列化輸入項目的程式碼。
 
 ### <a name="outputs"></a>輸出
 
@@ -89,7 +89,7 @@ ms.locfileid: "92098827"
 
 為了說明，假設您想要使用這些參數來建立名為 **sp_rsample** 的預存程序：
 
-- 使用現有的函式 **foosql**。 函式是以 R 函式 **foo** 中的現有程式碼為基礎，但是您重寫了函式以符合[本節](#bkmk_rewrite)中所述的需求，並將更新的函式命名為 **foosql**。
+- 使用現有的函式 **foosql**。 函式是以 R 函式 **foo** 中的現有程式碼為基礎，但是您重寫了函式以符合 [本節](#bkmk_rewrite)中所述的需求，並將更新的函式命名為 **foosql**。
 - 使用資料框架 **queryinput** 作為輸入
 - 使用 R 變數名稱 (**sqloutput**) 以輸出形式產生資料框架
 - 您想要建立 T-SQL 程式碼作為 `C:\Temp` 資料夾中的檔案，以便您可以在稍後使用 SQL Server Management Studio 執行它
@@ -119,7 +119,7 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 您可以使用 R 來註冊預存程序，也可以在 T-SQL 中執行 CREATE PROCEDURE 陳述式。
 
 - 使用 T-SQL。  如果您更熟悉 T-SQL，請開啟 SQL Server Management Studio (或任何其他可執行 SQL DDL 命令的用戶端)，然後使用 `StoredProcedure` 函式準備的程式碼來執行 CREATE PROCEDURE 陳述式。
-- 使用 R。在您仍在 R 環境中時，可以使用 `registerStoredProcedure`sqlrutils**中的** 函式向資料庫註冊預存程序。
+- 使用 R。在您仍在 R 環境中時，可以使用 `registerStoredProcedure`sqlrutils **中的** 函式向資料庫註冊預存程序。
 
   例如，您可以藉由進行此 R 呼叫，在 **sqlConnStr** 中定義的執行個體和資料庫中註冊預存程序 *sp_rsample*：
 
@@ -228,7 +228,7 @@ myetl1function <- function() {
 
 > [!NOTE]
 > 
-> 雖然您不需要明確地在程式碼中開啟 ODBC 連接，但使用 **sqlrutils**時仍需要 ODBC 連接。
+> 雖然您不需要明確地在程式碼中開啟 ODBC 連接，但使用 **sqlrutils** 時仍需要 ODBC 連接。
 
 ## <a name="see-also"></a>另請參閱
 

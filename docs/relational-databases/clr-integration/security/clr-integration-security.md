@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7774d83d959bccea3a1de1d7d0a06660d52c191b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196866"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641898"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 
@@ -55,7 +55,7 @@ ms.locfileid: "92196866"
   
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
- [應用程式網域和 CLR 整合安全性](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [應用程式網域和 CLR 整合安全性](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014&preserve-view=true)  
  描述如何將組件載入應用程式網域中。  
   
 ## <a name="see-also"></a>另請參閱  
