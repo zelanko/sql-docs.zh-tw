@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: ae05adf9876b572bd01c9b7f239ef8aa08e67337
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194500"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489968"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>建立資料庫和權限 (SQL Server 和 RevoScaleR 教學課程)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -96,15 +96,15 @@ GO
   
     在使用伺服器執行 R 程式碼之前，您可能想檢查資料庫是否能與 R 開發環境連線。 [Visual Studio 中的伺服器總管](/previous-versions/x603htbk(v=vs.140)) 和 [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) 都是免費工具，具有功能強大的資料庫連線和管理功能。
   
-    如果您不想安裝其他資料庫管理工具，可以使用控制台的 [ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) ，建立與 SQL Server 執行個體的測試連線。 如果資料庫已正確設定且輸入的使用者名稱和密碼皆無誤時，您應可看到剛建立的資料庫，並可將其選取為預設資料庫。
+    如果您不想安裝其他資料庫管理工具，可以使用控制台的 [ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md) ，建立與 SQL Server 執行個體的測試連線。 如果資料庫已正確設定且輸入的使用者名稱和密碼皆無誤時，您應可看到剛建立的資料庫，並可將其選取為預設資料庫。
   
     連線失敗的常見原因包括伺服器未啟用遠端連線，而且未啟用具名管道通訊協定。 您可以在這篇文章找到更多疑難排解秘訣：[對 SQL Server 資料庫引擎的連線進行疑難排解](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
   
 - **為什麼我的資料表名稱前會加上資料讀取元？**
   
-    當您將某位使用者的預設結構描述指定為 **db_datareader** 時，由該位使用者建立的所有資料表和其他新物件都會在前面加上這個*結構描述*名稱。 結構描述就像是一個資料夾，您可以新增到資料庫以便組織物件。 結構描述也可定義資料庫內的使用者權限。
+    當您將某位使用者的預設結構描述指定為 **db_datareader** 時，由該位使用者建立的所有資料表和其他新物件都會在前面加上這個 *結構描述* 名稱。 結構描述就像是一個資料夾，您可以新增到資料庫以便組織物件。 結構描述也可定義資料庫內的使用者權限。
   
-    如果結構描述已與某個特定的使用者名稱建立關聯，則該使用者為_結構描述擁有者_。 在建立物件時，除非您特別要求要以另一個結構描述來建立，否則一律會以您自己的結構描述來建立物件。
+    如果結構描述已與某個特定的使用者名稱建立關聯，則該使用者為 _結構描述擁有者_。 在建立物件時，除非您特別要求要以另一個結構描述來建立，否則一律會以您自己的結構描述來建立物件。
   
     例如，如果您建立的資料表名稱為 **TestData**，而預設結構描述是 **db_datareader**，則會以名稱 `<database_name>.db_datareader.TestData` 建立資料表。
   
