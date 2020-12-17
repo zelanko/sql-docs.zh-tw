@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: eb35ae0143b2146d5d5d38ebf0f2ab6d51a94049
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439323"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91933761"
   
  **原生模式：** 報表伺服器組態管理員或 **rskeymgmt** 公用程式。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91933761"
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
-2.  按一下 [加密金鑰]****，然後選取 [備份]****。  
+2.  按一下 [加密金鑰]，然後選取 [備份]。  
   
 3.  輸入增強式密碼。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91933761"
   
 1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
-2.  在 [加密金鑰] 頁面上，選取 [還原]****。  
+2.  在 [加密金鑰] 頁面上，選取 [還原]。  
   
 3.  選取包含備份副本的 .snk 檔案。  
   

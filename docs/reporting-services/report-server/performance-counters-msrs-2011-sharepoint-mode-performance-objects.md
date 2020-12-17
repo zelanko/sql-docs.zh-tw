@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 01ec0494fa258aed08c723869efb414600eb8359
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 95742efced8c5b5704863d2582c6ca80c5b227e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988724"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440479"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  

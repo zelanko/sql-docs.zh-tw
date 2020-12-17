@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772189"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559200"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>由 DataReader 擷取的資料
 
@@ -53,7 +53,7 @@ reader = command.ExecuteReader();
 > 在 **DataReader** 開啟期間，**Connection** 只能供該 **DataReader** 使用。 必須等到原始 **DataReader** 關閉後，才能執行 **Connection** 的任何命令 (包括建立其他 **DataReader**)。  
 
 > [!NOTE]
-> 請不要在 **Connection** 上呼叫 **Close** 或 **Dispose**、呼叫 **DataReader**，或您類別之 **Finalize** 方法中的任何其他 Managed 物件。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 **Finalize** 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/standard/garbage-collection/index.md)。
+> 請不要在 **Connection** 上呼叫 **Close** 或 **Dispose**、呼叫 **DataReader**，或您類別之 **Finalize** 方法中的任何其他 Managed 物件。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 **Finalize** 方法。 如需詳細資訊，請參閱[記憶體回收](/dotnet/standard/garbage-collection/index)。
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>使用 NextResult 擷取多個結果集
 

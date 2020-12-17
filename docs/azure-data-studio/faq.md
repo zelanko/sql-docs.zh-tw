@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035934"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559030"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio 常見問題集
 
@@ -91,9 +91,9 @@ SMO API 尚無法在 Linux 或 macOS 上使用。 我們已將 Azure Data Studio
 
 ## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>您是否計劃將 DACFx API 和/或 sqlpackage.exe 和/或 SSDT 移植到 Linux 和 macOS？
 
-是。
+可以。
 
-[SqlPackage.exe](../tools/sqlpackage-download.md) 現已在適用於 Windows、macOS 及 Linux 的 .NET Core 上提供。  SQL 專案 (SSDT) 功能已在 Azure Data Studio 的 [SQL Database Projects 延伸模組](extensions/sql-database-project-extension.md)中啟用。
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) 現已在適用於 Windows、macOS 及 Linux 的 .NET Core 上提供。  SQL 專案 (SSDT) 功能已在 Azure Data Studio 的 [SQL Database Projects 延伸模組](extensions/sql-database-project-extension.md)中啟用。
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell Cmdlet 是否可以在 Linux 和 macOS 上使用？
 

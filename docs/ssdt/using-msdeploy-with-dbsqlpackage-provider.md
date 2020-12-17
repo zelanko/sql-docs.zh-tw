@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987764"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559190"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 
@@ -29,7 +29,7 @@ ms.locfileid: "91987764"
   
 -   **Script**：建立相當於「發行動作」所執行指令碼的 Transact\-SQL 指令碼。  
   
-如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage.md) (DACFx 命令列工具)。  
+如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx 命令列工具)。  
   
 > [!IMPORTANT]  
 > dbSqlPackage 提供者功能將從 Visual Studio 的下一個主要版本中移除。 如需如何利用 Web Deploy 進行資料庫發行的相關資訊，請參閱[用於累加資料庫發行的 dbDacFx 提供者](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) \(英文\)。  
@@ -59,7 +59,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 如果您的輸入來源是 SQL Server/Azure SQL Database 的連接字串，**dbSqlPackage** 將會從 SQL Server/Azure SQL Database 中擷取資料庫快照集 (.dacpac 格式的檔案)。  
   
-**來源**參數包括：  
+**來源** 參數包括：  
   
 |參數|預設|描述|  
 |-------------|-----------|---------------|  
@@ -82,11 +82,11 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|N/A|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的完整或部分路徑。 如果 *input* 是檔案路徑，就不得指定其他參數。|  
   
-下列的**目的地**參數可供所有 **dbSqlPackage** 作業使用：  
+下列的 **目的地** 參數可供所有 **dbSqlPackage** 作業使用：  
   
 |屬性|預設|描述|  
 |------------|-----------|---------------|  
-|**Action={Publish&#124;DeployReport&#124;Script}**|N/A|指定要在**目的地**執行之動作的選擇性參數。|  
+|**Action={Publish&#124;DeployReport&#124;Script}**|N/A|指定要在 **目的地** 執行之動作的選擇性參數。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|指定 **SqlClr** 發行是否會在部署計畫中卸除封鎖的組件。 根據預設，如果必須卸除任何參考組件，則該封鎖或參考組件會封鎖組件更新。|  
 |**AllowIncompatiblePlatform={True &#124; False}**|**False**|指定儘管 SQL Server 平台可能不相容，是否仍要進行發行動作。|  
 |**BackupDatabaseBeforeChanges={True &#124; False}**|**False**|在部署任何變更之前，先備份資料庫。|  
@@ -170,14 +170,14 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 > [!NOTE]  
 > 您必須在發行設定檔來源參數中指定 **SQLCMD** 變數和值，因為它們無法指定為目的地參數。  
   
-下列的**目的地**參數只提供 **DeployReport** 和 **Script** 作業使用：  
+下列的 **目的地** 參數只提供 **DeployReport** 和 **Script** 作業使用：  
   
 |參數|預設|描述|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *string* }|N/A|選擇性參數，告知 **dbSqlPackage** 在 *string* 所指定的磁碟位置建立 DeployReport XML 輸出檔或 Script SQL 輸出檔。 這個動作會覆寫目前在 string 所指定位置上的任何指令碼。|  
   
 > [!NOTE]  
-> 如果沒有針對 **DeployReport** 或**Script** 動作提供 **OutputPath** 參數，就會以訊息的形式傳回輸出。  
+> 如果沒有針對 **DeployReport** 或 **Script** 動作提供 **OutputPath** 參數，就會以訊息的形式傳回輸出。  
   
 ## <a name="examples"></a>範例  
 下面是使用 **dbSqlPackage** 之 **Extract** 作業的範例語法：  

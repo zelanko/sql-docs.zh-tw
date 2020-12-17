@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384665"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559290"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +154,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>在安裝 Reporting Services 之前，安裝並設定 SharePoint Server 2013  
-**問題：** 安裝 SQL Server Reporting Services (SSRS) **之前** ，請先完成下列需求。  
+**問題：** 安裝 SQL Server Reporting Services (SSRS) **之前**，請先完成下列需求。  
   
 1.  執行 SharePoint 2013 產品準備工具。  
   
@@ -165,7 +165,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 **因應措施：** 若您在設定 SharePoint 伺服器陣列之前，即已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，所要採取的因應措施取決於所安裝的其他元件。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 中的 Power View 需要使用 Microsoft.AnalysisServices.SPClient.dll  
-**問題** ：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件： **Microsoft.AnalysisServices.SPClient.dll** 。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi** ，則 Power View 將無法運作且會出現下列徵兆。  
+**問題**：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件：**Microsoft.AnalysisServices.SPClient.dll**。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi** ，則 Power View 將無法運作且會出現下列徵兆。  
   
 **徵兆：** 當您嘗試建立 Power View 報表時，會出現類似下列錯誤訊息：  
   
@@ -175,19 +175,19 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
   
 -   「連接字串屬性 'User Identity' 不支援值 'SharePoint Principal'。」  
   
-**因應措施：** 在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 ( **spPowerPivot.msi** )。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)下載此功能套件。  
+**因應措施：** 在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 (**spPowerPivot.msi**)。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35575)下載此功能套件。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>執行已排定的資料重新整理之後，PowerPivot 活頁簿中的 Power View 工作表被刪除  
-**問題** ：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
+**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
   
-**因應措施** ：若要搭配 Power View 活頁簿使用 [排定的資料重新整理]  ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
+**因應措施**：若要搭配 Power View 活頁簿使用 [排定的資料重新整理]  ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>不正確的 SQL Server 2012 版本中提供了 DQS  
 **問題：** 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，除了 Enterprise、Business Intelligence 和 Developer Edition 之外的所有 SQL Server 版本，都會提供 Data Quality Services (DQS) 功能。 安裝 SQL Server 2012 SP1 之後，除了 Enterprise、Business Intelligence 和 Developer Edition 以外，所有版本都不再提供 DQS。  
   
-**因應措施** ：若在不支援的版本中使用 DQS，請升級為支援的版本，或從應用程式中移除這項功能的相依性。  
+**因應措施**：若在不支援的版本中使用 DQS，請升級為支援的版本，或從應用程式中移除這項功能的相依性。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ DACFx 先前並不能將資料表上定義的檢查條件約束狀態 (WITH CHEC
   
 -   匯入 BACPAC - 匯入 .bacpac 檔案以全新建立或填入空的 SQL Server 或 Azure SQL Database。  
   
-MSDN 上的完整 SqlPackage.exe 文件可以在 [此處](../tools/sqlpackage.md)找到。  
+MSDN 上的完整 SqlPackage.exe 文件可以在 [此處](../tools/sqlpackage/sqlpackage.md)找到。  
   
 **套件相容性**  
   

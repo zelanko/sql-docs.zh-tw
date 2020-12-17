@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc0463e49bf19c60cab94a12c10c4d8e8289e848
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402824"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
 
@@ -33,7 +33,7 @@ ms.locfileid: "88418664"
     - [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [遷移 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
@@ -46,21 +46,21 @@ ms.locfileid: "88418664"
   
 -   使用簡易復原模式備份 **reportservertempdb** 資料庫。  
   
--   您可以針對每個資料庫使用不同的備份排程。 備份 **reportservertempdb** 的唯一理由，是避免在發生硬體故障時必須重新建立資料庫。 如果發生硬體故障，您不必復原 **reportservertempdb**中的資料，只需要資料表結構。 如果您遺失 **reportservertempdb**，要再度獲得資料庫的唯一方法是重新建立報表伺服器資料庫。 如果您重新建立 **reportservertempdb**，請務必確認此資料庫的名稱與主要報表伺服器資料庫的名稱相同。  
+-   您可以針對每個資料庫使用不同的備份排程。 備份 **reportservertempdb** 的唯一理由，是避免在發生硬體故障時必須重新建立資料庫。 如果發生硬體故障，您不必復原 **reportservertempdb** 中的資料，只需要資料表結構。 如果您遺失 **reportservertempdb**，要再度獲得資料庫的唯一方法是重新建立報表伺服器資料庫。 如果您重新建立 **reportservertempdb**，請務必確認此資料庫的名稱與主要報表伺服器資料庫的名稱相同。  
   
  如需備份和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
->  如果您的報表伺服器處於 SharePoint 模式，則要連線其他資料庫，包括 SharePoint 設定資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊，請參閱[備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  如果您的報表伺服器處於 SharePoint 模式，則要連線其他資料庫，包括 SharePoint 設定資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb** 和 **dataalerting** 資料庫。 如需詳細資訊，請參閱[備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
 
 ::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
  當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 針對 SharePoint 模式的報表伺服器，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
 

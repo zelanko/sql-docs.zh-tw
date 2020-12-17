@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 08/17/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: release-landing
+ms.technology: migration-guide
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: 81b631c6b5810fc45ce3b14449a458544fdf6200
+ms.sourcegitcommit: 18e2f0706e03d0b2b6324845244fbafaa077a8dd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97100354"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>移轉指南：DB2 到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -56,18 +56,18 @@ ms.locfileid: "92734662"
 
 1. 在 [連線至 DB2] 對話方塊上，輸入 DB2 連線詳細資料的值。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="連線至 DB2 執行個體":::
 
 
 1. 以滑鼠右鍵按一下所要移轉的 DB2 結構描述，然後選擇 [建立報表]。 這會產生 HTML 報表。 或者，您也可以在選取結構描述之後，從導覽列選擇 [建立報表]。 
 
-   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="以滑鼠右鍵按一下結構描述，然後選擇 [建立報表]":::
 
 1. 請檢閱 HTML 報表，以了解轉換統計資料以及任何錯誤或警告。 您也可以在 Excel 中開啟報表，以取得 DB2 物件的詳細目錄，以及執行結構描述轉換所需的工作。 報表其預設位置是在 SSMAProjects 內的報表資料夾中。
 
    例如： `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>` 。 
 
-   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="檢閱報告以識別任何錯誤或警告":::
 
 
 ### <a name="validate-data-types"></a>驗證資料類型
@@ -78,7 +78,7 @@ ms.locfileid: "92734662"
 1. 選取 [專案設定]。 
 1. 選取 [類型對應] 索引標籤。 
 
-   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="選取 [結構描述]，然後鍵入對應":::
 
 1. 您可藉由選取 [DB2 Metadata Explorer] 中資料表來變更每個資料表的類型對應。 
 
@@ -92,16 +92,16 @@ ms.locfileid: "92734662"
     1. 選擇連接到目標伺服器上現有的資料庫，或提供新的名稱，以在目標伺服器上建立新的資料庫。 
     1. 選取 [連接]  。 
 
-   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="填入詳細資料以連線至 SQL Server":::
 
 
 1. 使用滑鼠右鍵按一下結構描述，然後選取 [轉換結構描述]。 或者，您也可以在選取結構描述之後，從上方導覽列選擇 [轉換結構描述]。 
 
-   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="使用滑鼠右鍵按一下結構描述，然後選取 [轉換結構描述]":::
 
 1. 轉換完成之後，請比較並檢閱結構描述的結構，以找出潛在的問題，並根據建議加以解決。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="請比較並檢閱結構描述的結構，以找出潛在的問題，並根據建議加以解決。":::
 
 1. 將專案儲存在本機，以進行離線結構描述補救練習。 從 [檔案] 功能表中選取 [儲存專案]。 
 
@@ -114,20 +114,20 @@ ms.locfileid: "92734662"
 
 1. 發佈結構描述：以滑鼠右鍵按一下 [SQL Server Metadata Explorer] 中 [資料庫] 節點的資料庫，然後選擇 [與資料庫同步處理]。
 
-   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="以滑鼠右鍵按一下資料庫，然後選擇 [與資料庫同步處理]":::
 
 1. 移轉資料：以滑鼠右鍵按一下 [DB2 Metadata Explorer] 中的結構描述，然後選擇 [移轉資料]。 
 
-   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/migrate-data.png" alt-text="以滑鼠右鍵按一下結構描述，然後選擇 [移轉資料]":::
 
 1. 提供 DB2 及 SQL Server 執行個體的連線詳細資料。 
-1. 查看 **資料移轉報表** 。 
+1. 查看 **資料移轉報表**。 
 
-   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/data-migration-report.png" alt-text="檢閱資料移轉報表":::
 
 1. 使用 SQL Server Management Studio 連線至 SQL Server 執行個體，並藉由檢閱資料及結構描述來驗證移轉。 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="提供專案詳細資料，然後選取 [確定] 以儲存。":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="比較 SSMS 中的結構描述":::
 
 ## <a name="post-migration"></a>移轉後 
 
@@ -141,10 +141,10 @@ ms.locfileid: "92734662"
 
 資料庫移轉的測試方法包含下列活動：
 
-1. **開發驗證測試** ：若要測試資料庫移轉，則需要使用 SQL 查詢。 您必須建立驗證查詢，以針對來源及目標資料庫執行。 驗證查詢應涵蓋已定義的範圍。
-1. **設定測試環境** ：測試環境應該包含來源資料庫及目標資料庫的複本。 請務必隔離測試環境。
-1. **執行驗證測試** ：對來源及目標執行驗證測試，然後分析結果。
-1. **執行效能測試** ：對來源及目標執行效能測試，然後分析並比較結果。
+1. **開發驗證測試**：若要測試資料庫移轉，則需要使用 SQL 查詢。 您必須建立驗證查詢，以針對來源及目標資料庫執行。 驗證查詢應涵蓋已定義的範圍。
+1. **設定測試環境**：測試環境應該包含來源資料庫及目標資料庫的複本。 請務必隔離測試環境。
+1. **執行驗證測試**：對來源及目標執行驗證測試，然後分析結果。
+1. **執行效能測試**：對來源及目標執行效能測試，然後分析並比較結果。
 
    > [!NOTE]
    > 如需開發及執行後續移轉驗證測試的協助，請考慮合作夥伴 [QuerySurge](https://www.querysurge.com/company/partners/microsoft) 所提供的資料品質解決方案。 

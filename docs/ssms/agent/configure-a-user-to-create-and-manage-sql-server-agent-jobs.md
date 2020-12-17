@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbe9bfd3727e90b330ea894ba3e2fdc590486a29
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 33a2a8e5eee76214f9d7fdf3cedd8baaf4eeaa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440439"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 
@@ -54,9 +54,9 @@ ms.locfileid: "92035668"
   
 2.  展開 **[安全性]**，再展開 **[登入]**。  
   
-3.  以滑鼠右鍵按一下您要新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的登入，然後選取 [屬性]****。  
+3.  以滑鼠右鍵按一下您要新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的登入，然後選取 [屬性]。  
   
-4.  在 **[登入屬性]** 對話方塊的 **[使用者對應]** 頁面上，選取包含 **msdb**的資料列。  
+4.  在 **[登入屬性]** 對話方塊的 **[使用者對應]** 頁面上，選取包含 **msdb** 的資料列。  
   
 5.  在 **[資料庫角色成員資格對象: msdb]** 底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "92035668"
   
 2.  展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [Proxy]****，然後選取 [新增 Proxy]****。  
+3.  以滑鼠右鍵按一下 [Proxy]，然後選取 [新增 Proxy]。  
   
 4.  在 **[新 Proxy 帳戶]** 對話方塊的 **[一般]** 頁面上，指定新 Proxy 的 Proxy 名稱、認證名稱及描述。 請注意，在建立 SQL Server Agent Proxy 之前，您必須先建立認證。 如需建立認證的詳細資訊，請參閱[如何：建立認證](../../relational-databases/security/authentication-access/create-a-credential.md)與 [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)。  
   

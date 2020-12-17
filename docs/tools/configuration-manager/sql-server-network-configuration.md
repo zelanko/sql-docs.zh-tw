@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3482c46024fe547c0b03a665ad718d22d0e2892d
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ec9ef922b8cf9d101ff10446853a1fda9669f547
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900910"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463729"
 ---
 # <a name="sql-server-network-configuration"></a>SQL Server 網路組態
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

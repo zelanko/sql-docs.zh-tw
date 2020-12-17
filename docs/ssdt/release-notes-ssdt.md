@@ -11,13 +11,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987834"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440490"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
 
@@ -755,16 +755,16 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
     - 在 PowerQuery 中透過範例新增資料行
     - 1400 模型 (M 引擎所使用的模型層級屬性) 中的資料存取選項
         - 啟用快速合併 (預設值為 false - 設定為 true 時，交互式 Web 應用程式引擎會在合併資料時忽略資料來源的隱私權等級)
-        - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
-        - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設定為 false 時，所引發的例外狀況是資料格包含錯誤)  
+        - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。    例如，從 HTTPS 至 HTTP URI 的重新導向)  
+        - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設定為 false 時，所引發的例外狀況是資料格包含錯誤)  
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
-        - Excel 
-        - 文字/CSV 
-        - Xml 
-        - Json 
-        - 資料夾 
-        - Access 資料庫 
-        - Azure Blob 儲存體 
+        - Excel 
+        - 文字/CSV 
+        - Xml 
+        - Json 
+        - 資料夾 
+        - Access 資料庫 
+        - Azure Blob 儲存體 
     - 當地語系化的 PowerQuery 使用者介面
 - DAX 編輯器工具視窗
     - 改善量值、導出資料行和詳細資料列運算式的 DAX 編輯體驗，可透過 SSDT 中的 [檢視]、其他 Windows 功能表存取
@@ -873,24 +873,24 @@ Script 動作應使用現有的「輸出路徑」引數或新的指令碼/報表
 DacFx 中已新增兩個新的 API：DacServices.Publish() 和 DacServices.Script()。 這些 API 也支援在單一作業中執行發行 + 編寫指令碼 + 報告的動作。 範例使用方式︰
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -925,7 +925,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **整合服務**
 
-* 已修正 Connect Bug  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)：移動多個整合服務套件工作
+* 已修正連接錯誤 [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)︰Move Multiple Integration Service Package Tasks (移動多個整合服務封裝工作)
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4，適用於 VS 2015 的 SSDT
 
@@ -935,7 +935,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **新功能**
 
-SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資料，請參閱  [SqlPackage 與 Data-Tier Application Framework 的結構描述比較](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) \(英文\)。
+SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資訊，請參閱 [SqlPackage 和 Data-Tier Application Framework 中的結構描述比較 (英文)](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx)。
 
 **Analysis Services - SSDT 表格式 (SSAS) 的整合式工作區模式**
 

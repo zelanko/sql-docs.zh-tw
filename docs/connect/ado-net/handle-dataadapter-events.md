@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 003a8e77ad80f83c210ffb565ce4fac5c93c2166
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e3715f2060857bf6d5fabb37c049d6e9cff1ee40
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772187"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559210"
 ---
 # <a name="handle-dataadapter-events"></a>處理 DataAdapter 事件
 
@@ -78,5 +78,5 @@ Microsoft SqlClient Data Provider for SQL Server <xref:Microsoft.Data.SqlClient.
 ## <a name="see-also"></a>請參閱
 
 - [DataAdapter 和 DataReader](dataadapters-datareaders.md)
-- [事件](/dotnet/standard/events/index.md)
+- [事件](/dotnet/standard/events/index)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

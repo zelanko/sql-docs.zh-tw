@@ -15,13 +15,13 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fd2f7210ed0c585088d979d9eb52600078869d20
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 9a1dc39795646c704d8168858475095cd549cb0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461359"
 ---
 # <a name="give-others-ownership-of-a-job"></a>將作業擁有權授與其他人
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "92037342"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [SQL Server Agent]**** 和 [作業]****、以滑鼠右鍵按一下作業，然後按一下 [屬性]****。  
+2.  依序展開 [SQL Server Agent] 和 [作業]、以滑鼠右鍵按一下作業，然後按一下 [屬性]。  
   
 3.  在 **[擁有者]** 清單選取登入。 您必須是系統管理員，才能夠變更作業的擁有者。  
   

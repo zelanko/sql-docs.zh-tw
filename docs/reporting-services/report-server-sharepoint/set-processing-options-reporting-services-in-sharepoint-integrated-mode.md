@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461469"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "83764793"
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]** 。  
   
-3.  如果您要使用在報表伺服器層級指定的值，請在 [處理逾時] 中選取 [使用網站預設值]。 否則，請選取 [報表處理不會逾時]**** 或 [限制報表處理的秒數]****，使用無逾時或其他逾時值覆寫該值。  
+3.  如果您要使用在報表伺服器層級指定的值，請在 [處理逾時] 中選取 [使用網站預設值]。 否則，請選取 [報表處理不會逾時] 或 [限制報表處理的秒數]，使用無逾時或其他逾時值覆寫該值。  
   
 ## <a name="set-report-history-options-and-limits"></a>設定報表記錄選項和限制
   

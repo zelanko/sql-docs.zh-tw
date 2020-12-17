@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518978"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559080"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝及管理延伸模組
 
@@ -37,7 +37,7 @@ ms.locfileid: "85518978"
 |擴充功能類型|命令列服務|安裝資料夾|  
 |------------------|------------------------|------------------|  
 |SQL Server 單元測試的自訂測試條件|MSBuild / MSTest 可以用來從 Visual Studio 2013 開發人員命令提示字元和類似命令列工具執行單元測試。|與在 Visual Studio 內執行時相同。|  
-|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md)：若位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
+|建置參與者<br /><br />部署參與者|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)，或在建置資料庫專案時使用 MSBuild 部署或發行目標。|MSBuild：與在 Visual Studio 內執行時相同。<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md)：若位於 Visual Studio 目錄中，則與先前相同。<br /><br />如果 SqlPackage.exe 和其他 DacFx DLL 位於該目錄外，則擴充功能應該放置在相同目錄，或放置在 C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 中。|  
 |靜態程式碼分析規則|MSBuild 可以用來建置專案，並執行靜態程式碼分析。<br /><br />此外，您也可以從自己的應用程式使用 CodeAnalysisService API 來執行程式碼分析。 在此情況下，擴充功能查閱規則的運作方式與使用 SqlPackage.exe 的方式相同。|對建置參與者和部署參與者皆相同|  
   
 > [!NOTE]  

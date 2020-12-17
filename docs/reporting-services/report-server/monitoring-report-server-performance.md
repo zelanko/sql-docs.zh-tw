@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461409"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -55,21 +55,21 @@ ms.locfileid: "84547940"
   
 -   驗證系統組態的變更對效能有正面的影響。  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 效能物件  
 SQL Server 2016 Reporting Services 或更新版本 (SSRS) 包含下列效能物件：  
   
--   監視報表伺服器效能的**MSRS 2011 Web 服務** 和 **MSRS 2011 SharePoint 模式 Web 服務** 。 這些效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
+-   監視報表伺服器效能的 **MSRS 2011 Web 服務** 和 **MSRS 2011 SharePoint 模式 Web 服務** 。 這些效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 每當 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
   
--   監視已排程作業和報表傳遞的**MSRS 2011 Windows 服務** 和 **MSRS 2011 Windows 服務 SharePoint Mode** to monitor scheduled operations 和 report delivery. 這些效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 已排程的作業包括訂閱與傳遞、報表執行快照集，以及報表記錄。  
+-   監視已排程作業和報表傳遞的 **MSRS 2011 Windows 服務** 和 **MSRS 2011 Windows 服務 SharePoint Mode** to monitor scheduled operations 和 report delivery. 這些效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 已排程的作業包括訂閱與傳遞、報表執行快照集，以及報表記錄。  
   
--   監視 HTTP 相關事件和記憶體管理的**ReportServer Service** 和 **ReportServerSharePoint:Service** 以監視 HTTP 相關事件與記憶體管理。 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連線和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
+-   監視 HTTP 相關事件和記憶體管理的 **ReportServer Service** 和 **ReportServerSharePoint:Service** 以監視 HTTP 相關事件與記憶體管理。 這些計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連線和登入嘗試。 這個效能物件也包含與記憶體管理相關的計數器。  
   
  如果您在單一電腦上有多個報表伺服器執行個體，則可以一起或分開監視這些執行個體。 加入計數器時，選擇要包含哪些執行個體。 如需使用效能主控台 (perfmon.msc) 與加入計數器的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
 ## <a name="other-performance-counters"></a>其他效能計數器  
- 僅針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web 服務 **、** MSRS 2008 Windows 服務 **和**ReportServer:Service **提供自訂的**效能計數器。 下列效能物件會提供報表伺服器的其他效能監視資料。  
+ 僅針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web 服務 **、** MSRS 2008 Windows 服務 **和** ReportServer:Service **提供自訂的** 效能計數器。 下列效能物件會提供報表伺服器的其他效能監視資料。  
   
 |效能物件|注意|  
 |------------------------|-----------|  

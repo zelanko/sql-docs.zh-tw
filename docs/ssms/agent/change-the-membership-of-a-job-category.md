@@ -16,13 +16,13 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4bd4131d55022e494c54a4350d666615ac59493
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f603cebc7157aa57c7f72cf2017a898cb7c6d119
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440449"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>變更作業類別的成員資格
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,15 +47,15 @@ ms.locfileid: "92035691"
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業]**** 資料夾，然後選取 [管理作業類別目錄]****。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>]****__ 對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]****。  
+4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取要編輯的作業類別目錄，然後按一下 [檢視作業]。  
   
 5.  選取 **[顯示所有作業]** 核取方塊。  
   
 6.  若要將作業加入至類別目錄，在主要方格中選取該作業所對應之 **[選取]** 資料行中的核取方塊。 若要移除類別目錄中的作業，請清除該方塊。 完成後，請按一下 **[確定]** 。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>]****__ 對話方塊。  
+7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>使用 Transact-SQL  
   
