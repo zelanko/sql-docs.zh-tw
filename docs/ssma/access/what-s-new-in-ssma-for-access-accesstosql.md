@@ -4,22 +4,30 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手 (SSMA) 存取 (Acc
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: c563769ec4c0b15ac3009b6cbe3207896e7f7c4c
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 1482ec079e0410fd7713ac183f6181c2a8793a11
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036054"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665850"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access 的新功能 (AccessToSQL) 
 
 本文列出每個版本的 SQL Server 移轉小幫手 (SSMA) 存取變更。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+適用于 Access 的 SSMA v 8.16 版本包含下列變更：
+
+* 在 HTML 轉換報表中顯示查詢的 SQL 文字
+* 移除舊版剖析器的支援
+* 修正無法從資料庫重新整理之物件的問題
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -87,7 +95,7 @@ SSMA for Access 的8.7 版本已改善查詢中函式的轉換 `IIF` ，以及�
 
 除了針對改善可用性和效能而設計的一組目標修正之外，也藉由新增可讓使用者在轉換的程式碼中省略 SSMA 擴充屬性的設定，來增強 SSMA for Access 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA 中，流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
+若要利用這項設定，請在 SSMA 中，流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
 
 ![省略擴充屬性設定](../access/media/ssma-omit-extended-properties.png)
 
@@ -139,7 +147,7 @@ SSMA for Access 的8.0 版可利用專為改善品質和轉換度量而設計的
 
   ![SQL MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)
+* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)
 
 * 初步的資料庫/架構選取。
 
@@ -321,7 +329,7 @@ SSMA for Access 的2006年11月版本包含下列變更：
 * 加入新的資料庫移轉嚮導，引導您將單一資料庫從存取權遷移至 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 加入新的轉換、載入和遷移命令，可轉換 Access 資料庫、將轉換的物件載入 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ，並 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 在一個步驟中將資料移轉至全部。
 * 改進的查詢遷移。 查詢遷移現在會將更多的選取查詢轉換成 views。 如需詳細資訊，請參閱 [轉換 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。
-* 新增在 [資料表] 索引標籤上編輯資料表和索引屬性的功能 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Table** 。
+* 新增在 [資料表] 索引標籤上編輯資料表和索引屬性的功能 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]  。
 * 新增通用設定：
   * 您可以選擇在編輯器視窗中顯示行號。
   * 您可以設定 SSMA 以提示取代重複的物件，或在架構轉換期間一律或永遠取代重複的物件。

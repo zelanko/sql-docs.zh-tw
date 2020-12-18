@@ -4,22 +4,32 @@ description: 瞭解每個版本的 SQL Server 移轉小幫手 (SSMA) for DB2 (DB
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: b35e5a01f28feb8b5dd42f592cf2c310d6c410f3
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 37d0898d242073c9bc842d0d3cca645acc02a851
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036024"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665819"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 的新功能 (DB2ToSQL) 
 
 本文列出每個版本中 SQL Server 移轉小幫手 DB2 變更的 (SSMA) 。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+SSMA for DB2 的 v 8.16 版本包含下列變更：
+
+* 修正具有特殊字元的資料行別名轉換
+* 修正子句的轉換 `SELECTIVITY`
+* 改進子句的轉換 `WITH ROW MOVEMENT`
+* 移除舊版剖析器的支援
+* 修正無法從資料庫重新整理之物件的問題
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -106,7 +116,7 @@ SSMA for DB2 的8.7 版包含全新的 DB2 語法剖析器，以及圖形化使�
 
 除了針對改善可用性和效能而設計的一組目標修正之外，還新增了一個可讓使用者在轉換後的程式碼中省略 SSMA 擴充屬性的設定，藉此增強 SSMA for DB2 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for DB2 中，流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
+若要利用這項設定，請在 SSMA for DB2 中，流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
 
 ![省略擴充屬性設定](../db2/media/ssma-omit-extended-properties.png)
 
@@ -180,7 +190,7 @@ SSMA for DB2 8.0 版的增強功能，可提供旨在改善品質和轉換度量
 
   ![SQL MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
+* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
 
 * 初步的資料庫/架構選取。
 
@@ -208,7 +218,7 @@ SSMA for DB2 的 v 7.9 版本包含下列變更：
 
 SSMA for DB2 的7.8 版包含下列變更：
 
-* 在 [ *專案設定* ] 中反白顯示變更類型對應。
+* 在 [ *專案設定*] 中反白顯示變更類型對應。
 * 使用者停用遙測的能力。
 
 ## <a name="ssma-v77"></a>SSMA 7。7

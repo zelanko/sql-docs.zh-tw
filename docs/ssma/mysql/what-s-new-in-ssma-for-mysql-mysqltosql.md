@@ -4,22 +4,32 @@ description: 瞭解適用于 MySQL 的 SQL Server 移轉小幫手 (SSMA) 的變�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036034"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665829"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 的新功能 (MySqlToSql)
 
 本文列出在每個版本中，適用于 MySQL 變更的 SQL Server 移轉小幫手 (SSMA) 。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+適用于 MySQL 的 SSMA v 8.16 版本包含下列變更：
+
+* 新增計算資料行的支援
+* 修正轉換 `INSERT` 具有唯一條件約束和主鍵之資料表的語句時所發生的問題
+* 更新剖析器以尊重 `ANSI_QUOTES` 和 `NO_BACKSLASH_ESCAPES` 伺服器模式
+* 移除舊版剖析器的支援
+* 修正無法從資料庫重新整理之物件的問題
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -83,7 +93,7 @@ SSMA for MySQL 的 v 8.7 版本在圖形化使用者介面中有輕微的修正�
 
 除了針對改善可用性和效能而設計的一組目標修正之外，還新增了一個可讓使用者在轉換的程式碼中省略 SSMA 擴充屬性的設定，藉此增強 SSMA for MySQL 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for MySQL 中流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
+若要利用這項設定，請在 SSMA for MySQL 中流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
 
 ![省略擴充屬性設定](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -137,7 +147,7 @@ SSMA for MySQL 的8.1 版已透過專為改善品質和轉換度量而設計的�
 
   ![SQL MI 專案](../media/ssma-newproject-sqldbmi.png)
 
-* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
+* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
 
 * 初步的資料庫/架構選取。
 

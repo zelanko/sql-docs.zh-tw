@@ -8506,8 +8506,14 @@
               href: ssms/sql-server-management-studio-ssms.md
         - name: 快速入門
           items:
-            - name: 連線與查詢 SQL Server
-              href: ssms/quickstarts/connect-query-sql-server.md
+            - name: 連線及查詢 SQL Server
+              href: ssms/quickstarts/ssms-connect-query-sql-server.md
+            - name: 連線到 Azure VM 上的 SQL Server 並進行查詢
+              href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+            - name: 連線及查詢 Azure SQL Database
+              href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+            - name: 連線到 Azure Synapse Analytics 中的專用 SQL 集區並進行查詢
+              href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
         - name: 教學課程
           items:
             - name: SSMS 組態

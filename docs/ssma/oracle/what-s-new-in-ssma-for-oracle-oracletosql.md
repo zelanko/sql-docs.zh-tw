@@ -4,22 +4,30 @@ description: 瞭解每個版本的 Oracle (OracleToSQL) SQL Server 移轉小幫�
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036014"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665839"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 的新功能 (OracleToSQL) 
 
 本文列出每個版本中 Oracle 變更的 SQL Server 移轉小幫手 (SSMA) 。
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+適用于 Oracle 的 SSMA v 8.16 版包含下列變更：
+
+* 加入識別欄位的支援
+* 移除舊版剖析器的支援
+* 修正無法從資料庫重新整理之物件的問題
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -110,7 +118,7 @@ SSMA for Oracle 的 v 8.7 版本在圖形化使用者介面中有輕微的修正
 
 除了針對改善可用性和效能而設計的一組目標修正之外，還新增了一個可讓使用者在轉換的程式碼中省略 SSMA 擴充屬性的設定，藉此增強 SSMA for Oracle 的 v 8.6 版本。
 
-若要利用這項設定，請在 SSMA for Oracle 中流覽至 [ **工具**  >  **專案設定**  >  **一般**  >  **轉換** ]，然後在 [ **其他** ] 下，將 [ **省略擴充屬性** ] 設定的值更新為 **[是]** 。
+若要利用這項設定，請在 SSMA for Oracle 中流覽至 [**工具**  >  **專案設定**  >  **一般**  >  **轉換**]，然後在 [**其他**] 下，將 [**省略擴充屬性**] 設定的值更新為 **[是]**。
 
 ![省略擴充屬性設定](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -196,7 +204,7 @@ SSMA for Oracle 8.0 版的增強功能，已透過設計來改善品質和轉換
 
   以 Azure SQL 受控執行個體為目標時，不支援某些功能，包括測試人員和伺服器端資料移轉。 請在[此處](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)閱讀相關資訊。
 
-* 轉換後的 **修正程式** 。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
+* 轉換後的 **修正程式**。 若要深入瞭解[，請參閱。](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)
 
 * 初步的資料庫/架構選取。
 
@@ -233,7 +241,7 @@ SSMA for Oracle 的7.8 版版包含下列變更：
   * 子句的資料列運算式 `IN` 。
   * 隱含類型轉換。
   * `UID` Azure SQL Database 的轉換。
-* 在 [ **專案設定** ] 中反白顯示變更類型對應。
+* 在 [ **專案設定**] 中反白顯示變更類型對應。
 * 使用者停用遙測的能力。
 
 ## <a name="ssma-v77"></a>SSMA 7。7
