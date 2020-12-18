@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 897172c3a268ac07f1fccb0c3756d10d89054978
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6126a2676e20230e21502ae7022adca2eeb3df63
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426170"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934000"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 
@@ -33,6 +33,7 @@ Change Data Capture for Oracle (由 Attunity 所提供) 下載包括下列兩個
 
 根據您使用的 SQL Server 版本，從下面的連結下載對應的 Microsoft Change Data Capture Designer and Service for Oracle (由 Attunity 所提供)：
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)

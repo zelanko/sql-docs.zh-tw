@@ -17,47 +17,44 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
-ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
+ms.openlocfilehash: 5b07fbe64b4625fdddbf35189d210ae240f4348f
+ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94447114"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97038976"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 SQL Server 中設定 [平行處理原則的最大程度 (MAXDOP)] 伺服器組態選項。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體在具有多個微處理器或 CPU 的電腦上執行時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測是否可以使用平行處理原則。 平行處理原則程度會針對每個平行計劃執行，設定執行單一陳述式所運用的處理器數目。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 如需有關 [平行處理原則的最大程度 (MAXDOP)] 所設限制的詳細資訊，請參閱本頁面的[限制事項](#Restrictions)一節。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 SQL Server 中設定 [平行處理原則的最大程度 (MAXDOP)] 伺服器組態選項。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體在具有多個微處理器或 CPU 的電腦上執行時，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會偵測是否可以使用平行處理原則。 平行處理原則程度會針對每個平行計劃執行，設定執行單一陳述式所運用的處理器數目。 您可以使用 **max degree of parallelism** 選項來限制要用於平行計畫執行的處理器數目。 如需有關 [平行處理原則的最大程度 (MAXDOP)] 所設限制的詳細資料，請參閱本頁面中的[考量](#Considerations)一節。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對查詢、索引資料定義語言 (DDL) 作業、平行插入、線上改變資料行、平行收集統計資料，以及靜態和索引鍵集驅動資料指標擴展，考慮平行執行計畫。
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 會根據可用的處理器數目，說明於安裝過程中設定 MAXDOP 伺服器組態選項的自動建議。 安裝程式使用者介面可讓您接受建議的設定，或輸入您自己的值。 如需詳細資訊，請參閱[資料庫引擎定 - MaxDOP 頁面](../../sql-server/install/instance-configuration.md#maxdop)。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制事項  
-  
--   如果 affinity mask 選項不是設成預設值，它可能會限制對稱式多處理 (SMP) 系統上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的處理器個數。  
-
--   **平行處理原則最大程度 (MAXDOP)** 限制的設定會根據 [工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。 它不是根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可繁衍多個工作 (最多為 MAXDOP 限制)，且每個工作都會使用一個背景工作和一個排程器。 如需詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)中的＜排程平行工作＞一節。 
-  
-###  <a name="recommendations"></a><a name="Recommendations"></a> 建議  
-  
+###  <a name="considerations"></a><a name="Considerations"></a> 考量  
 -   此選項是進階選項，只有具經驗的資料庫管理員或通過認證的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專業人員才可變更。  
+
+-   如果 affinity mask 選項不是設成預設值，它可能會限制對稱式多處理 (SMP) 系統上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用的處理器個數。 
   
--   若要讓伺服器判斷平行處理原則的最大程度，請將此選項設定為 0 (預設值)。 將平行處理原則的最大程度設定為 0 就會允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用所有可用的處理器 (最多 64 個處理器)。 若要抑制平行計畫的產生，請將 **max degree of parallelism** 設成 1。 將此值設成 1 到 32,767 的數字會指定單一查詢執行可用的最大處理器核心數目。 如果指定的數值大於可用的處理器數目，就會使用可用處理器的實際數目。 如果電腦只有一個處理器，則會忽略 **max degree of parallelism** 值。  
+-   將平行處理原則的最大程度 (MAXDOP) 設定為 0 就會允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用所有可用處理器 (最多 64 個處理器)。 不過，在大多數情況下，並不建議使用此值。 如需平行處理原則最大程度的建議值詳細資訊，請參閱本頁面中的[建議](#Recommendations)一節。
+
+-   若要抑制平行計畫的產生，請將 **max degree of parallelism** 設成 1。 將此值設成為 1 到 32,767 的數字，以指定執行單一查詢時可用的最大處理器核心數目。 如果指定的數值大於可用的處理器數目，就會使用可用處理器的實際數目。 如果電腦只有一個處理器，則會忽略 **max degree of parallelism** 值。  
+
+-   平行處理原則最大程度的限制會根據[工作](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)而設定。 它不是根據[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)或查詢限制。 這表示在平行查詢執行期間，單一要求可繁衍多個工作 (最多為 MAXDOP 限制)，且每個工作都會使用一個背景工作和一個排程器。 如需詳細資訊，請參閱[執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)中的＜排程平行工作＞一節。 
   
--   您可以在查詢陳述適中指定 MAXDOP 查詢提示，來覆寫查詢中的 max degree of parallelism 值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
-  
+-   您可覆寫平行處理原則最大程度的伺服器組態值：
+    -   在查詢層級，使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。     
+    -   在資料庫層級，使用 **MAXDOP** [資料庫範圍組態](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
+    -   在工作負載層級，使用 **MAX_DOP** [Resource Governor 工作負載群組組態選項](../../t-sql/statements/create-workload-group-transact-sql.md)。
+
 -   建立或重建索引的索引作業，或者卸除叢集索引的索引作業，都需要大量資源。 您可以在索引陳述式中指定 MAXDOP 索引選項，覆寫索引作業中的 max degree of parallelism 值。 MAXDOP 值會在執行時套用至陳述式，且不會儲存在索引中繼資料內。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 -   除了查詢作業和索引作業外，此選項也會控制 DBCC CHECKTABLE、DBCC CHECKDB 和 DBCC CHECKFILEGROUP 的平行處理原則。 您可以使用追蹤旗標 2528 來停用這些陳述式的平行執行計畫。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
-> [!TIP]
-> 若要在查詢層級完成此操作，請使用 **MAXDOP** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。     
-> 若要在資料庫層級完成此操作，請使用 **MAXDOP** [資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。      
-> 若要在工作負載層級完成此操作，請使用 **MAX_DOP** [Resource Governor 工作負載群組組態選項](../../t-sql/statements/create-workload-group-transact-sql.md)。      
-
-###  <a name="guidelines"></a><a name="Guidelines"></a> 指導方針  
+###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 建議  
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在服務啟動期間偵測到啟動時每個 NUMA 節點或通訊端有超過八個實體核心，則會根據預設自動建立軟體式 NUMA 節點。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會將來自相同實體核心的邏輯處理器放入不同軟體式 NUMA 節點。 下表中建議事項目標是使所有平行查詢的背景工作執行緒保持在相同軟體式 NUMA 節點內。 這會改善查詢效能及工作負載 NUMA 節點中的背景工作執行緒分佈。 如需詳細資訊，請參閱[軟體式 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，請在您設定 **最大平行處理程度** 伺服器設定值時，使用下列方針：

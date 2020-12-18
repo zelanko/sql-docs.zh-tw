@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867601"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467299"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted 的金鑰管理概觀
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "91867601"
 
 [永遠加密](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 使用兩種密碼編譯金鑰類型來保護您的資料 - 一種金鑰用來加密您的資料，而另一種金鑰則用來對加密資料的金鑰進行加密。 資料行加密金鑰會加密您的資料，而資料行主要金鑰則會加密資料行加密金鑰。 本文提供詳細概觀來說明如何管理這些加密金鑰。  
 
-當討論到永遠加密金鑰和金鑰管理時，請務必了解實際的密碼編譯金鑰與「描述」金鑰的中繼資料物件之間的差異。 我們使用**資料行加密金鑰**和**資料行主要金鑰**等詞彙來表示實際的密碼編譯金鑰，並使用**資料行加密金鑰中繼資料**和**資料行主要金鑰中繼資料**來表示資料庫中的永遠加密金鑰「描述」。
+當討論到永遠加密金鑰和金鑰管理時，請務必了解實際的密碼編譯金鑰與「描述」金鑰的中繼資料物件之間的差異。 我們使用 **資料行加密金鑰** 和 **資料行主要金鑰** 等詞彙來表示實際的密碼編譯金鑰，並使用 **資料行加密金鑰中繼資料** 和 **資料行主要金鑰中繼資料** 來表示資料庫中的永遠加密金鑰「描述」。
 
-- 「資料行加密金鑰」是用來加密資料的內容加密金鑰。 顧名思義，您可以使用資料行加密金鑰來加密資料庫資料行中的資料。 您可以使用相同的資料行加密金鑰來加密一或多個資料行，或根據您的應用程式需求，使用多個資料行加密金鑰。 資料行加密金鑰本身經過加密，只有資料行加密金鑰的加密值會儲存在資料庫中 (當作資料行加密金鑰中繼資料的一部分)。 資料行加密金鑰中繼資料則會儲存在 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目錄檢視中。 搭配 AES-256 演算法使用之資料行加密金鑰的長度為 256 位元。
+- 「資料行加密金鑰」*_是用來加密資料的內容加密金鑰。 顧名思義，您可以使用資料行加密金鑰來加密資料庫資料行中的資料。 您可以使用相同的資料行加密金鑰來加密一或多個資料行，或根據您的應用程式需求，使用多個資料行加密金鑰。 資料行加密金鑰本身經過加密，只有資料行加密金鑰的加密值會儲存在資料庫中 (當作資料行加密金鑰中繼資料的一部分)。 資料行加密金鑰中繼資料則會儲存在 [sys.column_encryption_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 目錄檢視中。 搭配 AES-256 演算法使用之資料行加密金鑰的長度為 256 位元。
 
 
 - 「資料行主要金鑰」是用來加密資料行加密金鑰的金鑰保護型金鑰。 資料行主要金鑰必須儲存在受信任的金鑰存放區中，例如 Windows 憑證存放區、Azure 金鑰保存庫或硬體安全模組。 資料庫只會包含資料行主要金鑰的相關中繼資料 (金鑰存放區類型和位置)。 資料行主要金鑰中繼資料則會儲存在 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 目錄檢視中。  
@@ -42,7 +42,7 @@ ms.locfileid: "91867601"
 
 管理金鑰的程序可分為下列高階工作：
 
-- **金鑰佈建** - 在受信任的金鑰存放區 (例如 Windows 憑證存放區、Azure 金鑰保存庫或硬體安全模組) 中建立實體金鑰；使用資料行主要金鑰來加密資料行加密金鑰；以及在資料庫中建立這兩種金鑰類型的中繼資料。
+- _ *金鑰佈建** - 在受信任的金鑰存放區 (例如 Windows 憑證存放區、Azure 金鑰保存庫或硬體安全模組) 中建立實體金鑰；使用資料行主要金鑰來加密資料行加密金鑰；以及在資料庫中建立這兩種金鑰類型的中繼資料。
 
 - **金鑰輪替** - 定期以新的金鑰更換現有的金鑰。 如果金鑰已遭洩漏，或是為了符合您的組織原則或必須更換授權密碼編譯金鑰的標準規定，您可能必須更換金鑰。 
 
@@ -54,7 +54,7 @@ ms.locfileid: "91867601"
 - **安全性系統管理員** - 產生資料行加密金鑰和資料行主要金鑰，以及管理包含資料行主要金鑰的金鑰存放區。 若要執行這些工作，安全性系統管理員必須能夠存取金鑰和金鑰存放區，但不需要資料庫的存取權。
 - **DBA** - 管理資料庫中金鑰的相關中繼資料。 若要執行金鑰管理工作，DBA 必須能管理資料庫中的金鑰中繼資料，但不需要金鑰或保留資料行主要金鑰之金鑰存放區的存取權。
 
-就上述角色而言，執行永遠加密之金鑰管理工作的方式有兩種： *使用角色隔離*和 *不使用角色隔離*。 您可以根據組織的需求，選擇最適合您需求的金鑰管理程序。
+就上述角色而言，執行永遠加密之金鑰管理工作的方式有兩種： *使用角色隔離* 和 *不使用角色隔離*。 您可以根據組織的需求，選擇最適合您需求的金鑰管理程序。
 
 ## <a name="managing-keys-with-role-separation"></a>使用角色隔離管理金鑰
 使用角色隔離管理永遠加密金鑰時，會由組織中的不同人員擔任安全性系統管理員和 DBA 角色。 使用角色隔離的金鑰管理程序可確保 DBA 無法存取金鑰或保留實際金鑰的金鑰存放區，且安全性系統管理員無法存取包含敏感性資料的資料庫。 如果您的目標是確保組織中的 DBA 無法存取敏感性資料，建議使用角色隔離管理金鑰。 
@@ -90,7 +90,7 @@ ms.locfileid: "91867601"
 
 為了確保永遠加密能夠有效地防止這類攻擊，您的金鑰管理程序必須確保資料行主要金鑰和資料行加密金鑰，以及包含資料行主要金鑰的金鑰存放區認證永遠不會洩漏給潛在攻擊者。 以下是您應該遵循的一些方針：
 
-- 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示**您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具**，因為如果攻擊者存取用來佈建或維護 Always Encrypted 金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
+- 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示 **您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具**，因為如果攻擊者存取用來佈建或維護 Always Encrypted 金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
 - 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
 
 ## <a name="next-steps"></a>後續步驟

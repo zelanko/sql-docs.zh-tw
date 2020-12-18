@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394983"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999223"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -230,7 +230,7 @@ replmerg [-?]
 |**0**|記錄最終代理程式狀態訊息、最終工作階段詳細資料，以及任何錯誤。|  
 |**1**|除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料，包括完成百分比。|  
 |**2**|預設值。 除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料和發行項層級工作階段詳細資料，包括完成百分比。 此外，系統也會記錄代理程式狀態訊息。|  
-|**3**|與 **-HistoryVerboseLevel** = **2**相同，但是系統會記錄更多代理程式進度訊息。|  
+|**3**|與 **-HistoryVerboseLevel** = **2** 相同，但是系統會記錄更多代理程式進度訊息。|  
   
  **-Hostname** _host_name_  
  這是本機電腦的網路名稱。 預設值為本機電腦名稱。  
@@ -251,7 +251,7 @@ replmerg [-?]
  指定連接至需要驗證之 Proxy 伺服器 (定義於 *internet_proxy_server*) 時使用的密碼。  
   
  **-InternetProxyServer**  *internet_proxy_server*  
- 指定要在存取 *internet_url*中指定之 HTTP 資源時使用的 Proxy 伺服器。  
+ 指定要在存取 *internet_url* 中指定之 HTTP 資源時使用的 Proxy 伺服器。  
   
  **-InternetSecurityMode** [**0**\|**1**]  
  指定在 Web 同步處理期間，連接至 Web 伺服器時使用的 IIS 安全性模式。 值為 **0** 表示基本驗證，而值為 **1** 則表示 Windows 整合式驗證 (預設值)。  
@@ -271,7 +271,7 @@ replmerg [-?]
  **-MakeGenerationInterval** _make_generation_interval_seconds_  
  這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為 **1** 秒。  
   
- Makegeneration 是準備將發行者變更下載到訂閱者的程序，而且在它下載期間可能是效能瓶頸。 如果 makegeneration 程序已經在 **-MakeGenerationInterval**指定的間隔內執行，則會略過目前同步處理工作階段的程序。 這有助於進行並行同步處理，而且在訂閱者不想要下載變更時特別實用。  
+ Makegeneration 是準備將發行者變更下載到訂閱者的程序，而且在它下載期間可能是效能瓶頸。 如果 makegeneration 程序已經在 **-MakeGenerationInterval** 指定的間隔內執行，則會略過目前同步處理工作階段的程序。 這有助於進行並行同步處理，而且在訂閱者不想要下載變更時特別實用。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或發行集資料庫之系統資料表 **sysmergeschemachange** 中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 0 的值而且沒有硬式編碼的上限。 預設為 **1**。  
@@ -292,7 +292,12 @@ replmerg [-?]
  指定輸出是否應該詳細。 如果詳細資訊層級為 0，系統就只會列印錯誤訊息。 如果詳細資訊層級為 **1**，系統就會列印所有進度報表訊息。 如果詳細資訊層級為 2 (預設值)，系統就會列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- 指定合併代理程式是否應該以平行方式處理上傳至發行者的變更以及下載至訂閱者的變更，而且這個參數在具有高網路頻寬的高容量環境中很有用。 如果 **ParallelUploadDownload** 是 **1**，就會啟用平行處理。  
+ 指定合併代理程式是否應該以平行方式處理上傳至發行者的變更，以及下載至訂閱者的變更，且這個參數在具有高網路頻寬的高容量環境中很有用。 不過，當 **ParallelUploadDownload** 設定為 **1** 時，請注意下列警告。
+ 
+這個參數可能在不久後即會予以淘汰。 建議將 **ParallelUploadDownload** 參數設定為 0，並避免使用「高容量伺服器對伺服器」合併代理程式設定檔，因為在此設定檔中，**ParallelUploadDownload** 設定為 1。
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
@@ -338,7 +343,7 @@ replmerg [-?]
 |**3**|建立新的資料庫、附加該資料庫，然後啟用可能存在檔案中的所有訂閱。|  
   
 > [!NOTE]  
->  當您使用 **2** 和 **3**值時，就必須在 **SubscriberDatabasePath** 選項中指定訂閱者的資料庫路徑。  
+>  當您使用 **2** 和 **3** 值時，就必須在 **SubscriberDatabasePath** 選項中指定訂閱者的資料庫路徑。  
   
  **-SubscriberLogin** _subscriber_login_  
  這是訂閱者登入名稱。 如果 **SubscriberSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  

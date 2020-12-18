@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867347"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478249"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>藉由重新組織或重建索引來解決索引片段
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 如需詳細資訊，請參閱 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檢查資料行存放區索引的片段
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>使用 Transact-SQL 檢查資料行存放區索引的片段
 
 下列範例會在 `AdventureWorksDW2016` 資料庫的 `dbo.FactResellerSalesXL_CCI` 資料表中尋找所有索引的平均片段百分比。
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 檢查索引片段
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 無法用來計算 SQL Server 中資料行存放區索引的片段，而且無法用來計算 Azure SQL Database 中任何索引的片段。 請針對這些情節使用上述 [!INCLUDE[tsql](../../includes/tsql-md.md)] [範例](#to-check-the-fragmentation-of-a-columnstore-index-using-)。
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 無法用來計算 SQL Server 中資料行存放區索引的片段，而且無法用來計算 Azure SQL Database 中任何索引的片段。 使用上述[!INCLUDE[tsql](../../includes/tsql-md.md)] [範例](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql)。
 
 1. 在 [物件總管] 中，展開包含您要檢查其索引片段之資料表的資料庫。
 2. 展開 **[資料表]** 資料夾。

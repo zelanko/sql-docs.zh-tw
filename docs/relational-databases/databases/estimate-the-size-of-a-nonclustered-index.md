@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+monikerRange: = azuresqldb-current || >= sql-server-2016
+ms.openlocfilehash: 9c234bb8371d99025bd97cfb86f5d85472d34ee4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864499"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474079"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
 
@@ -47,19 +47,19 @@ ms.locfileid: "87864499"
   
 1.  指定資料表中將會有的資料列數目：  
   
-     ***Num_Rows***  = 資料表中的資料列數目  
+     ***Num_Rows** _  = 資料表中的資料列數目  
   
 2.  指定索引鍵中固定長度和可變長度資料行的數目，並計算儲存它們所需的空間：  
   
      索引的索引鍵資料行可以包含固定長度和可變長度的資料行。 若要估計內部層級的索引資料列大小，請計算這些資料行群組在索引資料列中佔用的空間。 資料行的大小取決於資料類型和長度規格。  
   
-     ***Num_Key_Cols***  = 索引鍵資料行 (固定長度和可變長度) 總數  
+     _*_Num_Key_Cols_*_  = 索引鍵資料行 (固定長度和可變長度) 總數  
   
-     ***Num_Key_Cols***  = 所有固定長度索引鍵資料行的總位元組大小  
+     _*_Fixed_Key_Size_*_  = 所有固定長度索引鍵資料行的總位元組大小  
   
-     ***Num_Variable_Key_Cols***  = 可變長度索引鍵資料行的數目  
+     _*_Num_Variable_Key_Cols_*_  = 可變長度索引鍵資料行的數目  
   
-     ***Max_Var_Key_Size***  = 所有可變長度索引鍵資料行的最大位元組大小  
+     _*_Max_Var_Key_Size_*_  = 所有可變長度索引鍵資料行的最大位元組大小  
   
 3.  如果索引不是唯一的，就需說明資料列定位器：  
   
@@ -67,49 +67,49 @@ ms.locfileid: "87864499"
   
      如果非叢集索引是在堆積上，資料列定位器就是堆積 RID。 這是 8 位元組的大小。  
   
-     ***Num_Key_Cols***  = ***Num_Key_Cols*** + 1  
+     _*_Num_Key_Cols_*_  = _*_Num_Key_Cols_*_ + 1  
   
-     ***Num_Variable_Key_Cols***  = ***Num_Variable_Key_Cols*** + 1  
+     _*_Num_Variable_Key_Cols_*_  = _*_Num_Variable_Key_Cols_*_ + 1  
   
-     ***Max_Var_Key_Size***  = ***Max_Var_Key_Size*** + 8  
+     _*_Max_Var_Key_Size_*_  = _*_Max_Var_Key_Size_*_ + 8  
   
      如果非叢集索引是在叢集索引上，資料列定位器就是叢集索引鍵。 必須與非叢集索引鍵結合的資料行是那些在叢集索引鍵中的資料行，這些資料行並未存在於非叢集索引鍵資料行集中。  
   
-     ***Num_Key_Cols***  = ***Num_Key_Cols*** + 不是位於非叢集索引鍵資料行集中之叢集索引鍵資料行的數目 (如果叢集索引不是唯一的，則 + 1)  
+     _*_Num_Key_Cols_*_  = _*_Num_Key_Cols_*_ + 叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的數目 (如果叢集索引不是唯一的，則 + 1)  
   
-     ***Fixed_Key_Size***  = ***Fixed_Key_Size*** + 不是位於非叢集索引鍵資料行集中之固定長度叢集索引鍵資料行的總位元組大小  
+     _*_Fixed_Key_Size_*_  = _*_Fixed_Key_Size_*_ + 固定長度叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的總位元組大小  
   
-     ***Num_Variable_Key_Cols***  = ***Num_Variable_Key_Cols*** + 不是位於非叢集索引鍵資料行集中之可變長度叢集索引鍵資料行的數目 (如果叢集索引不是唯一的，則 + 1)  
+     _*_Num_Variable_Key_Cols_*_  = _*_Num_Variable_Key_Cols_*_ + 可變長度叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的數目 (如果叢集索引不是唯一的，則 + 1)  
   
-     ***Max_Var_Key_Size***  = ***Max_Var_Key_Size*** + 不是位於非叢集索引鍵資料行集中之可變長度叢集索引鍵資料行的最大位元組大小 (如果叢集索引不是唯一的，則 + 4)  
+     _*_Max_Var_Key_Size_*_  = _*_Max_Var_Key_Size_*_ + 可變長度叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的最大位元組大小 (如果叢集索引不是唯一的，則 + 4)  
   
 4.  資料列的一部分，又稱為 Null 點陣圖，可用以管理資料行的 Null 屬性。 計算它的大小：  
   
      如果索引鍵中有可為 Null 資料行，包含步驟 1、3 中所描述的任何所需叢集索引鍵資料行，一部分的索引資料列將保留做為 Null 點陣圖。  
   
-     ***Index_Null_Bitmap***  = 2 + ((索引資料列中的資料行數目 + 7) / 8)  
+     _*_Index_Null_Bitmap_*_  = 2 + ((索引資料列中的資料行數目 + 7) / 8)  
   
      您應該僅使用先前運算式的整數部分。 請捨去任何餘數。  
   
-     如果沒有可為 Null 的索引鍵資料行，請將 ***Index_Null_Bitmap*** 設成 0。  
+     如果沒有可為 Null 的索引鍵資料行，請將 _*_Index_Null_Bitmap_*_ 設成 0。  
   
 5.  計算可變長度的資料大小：  
   
      如果在索引鍵中有可變長度的資料行，包含任何所需的叢集索引鍵資料行，請決定在索引資料列中儲存資料行所需的空間。  
   
-     ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
+     _*_Variable_Key_Size_*_  = 2 + (_*_Num_Variable_Key_Cols_*_ x 2) + _*_Max_Var_Key_Size_*_  
   
-     加入 ***Max_Var_Key_Size*** 的位元組是用於追蹤每個變數資料行。這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所使用的儲存空間百分比會比較小，您可以經由調整百分比所得的 ***Max_Var_Key_Size*** 值，產生更精確的整體資料表大小之估計。  
+     加入 _*_Max_Var_Key_Size_*_ 的位元組是用於追蹤每個變數資料行。這個公式假設所有可變長度的資料行都是 100% 填滿的。 如果您預期可變長度資料行所使用的儲存空間百分比會比較小，您可以經由調整百分比所得的 _*_Max_Var_Key_Size_*_ 值，產生更精確的整體資料表大小估計值。  
   
-     若沒有可變長度的資料行，請將 ***Variable_Key_Size*** 設成 0。  
+     如果沒有可變長度資料行，請將 _*_Variable_Key_Size_*_ 設成 0。  
   
 6.  計算索引資料列的大小：  
   
-     ***Index_Row_Size***  = ***Fixed_Key_Size*** + ***Variable_Key_Size*** + ***Index_Null_Bitmap*** + 1 (索引資料列的資料列標頭上方) + 6 (子頁面識別碼指標)  
+     _*_Index_Row_Size_*_  = _*_Fixed_Key_Size_*_ + _*_Variable_Key_Size_*_ + _*_Index_Null_Bitmap_*_ + 1 (索引資料列的資料列標頭上方) + 6 (子頁面識別碼指標)  
   
 7.  計算每個分頁的索引資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
-     ***Index_Rows_Per_Page***  = 8096 / (***Index_Row_Size*** + 2)  
+     _*_Index_Rows_Per_Page_*_  = 8096 / (_*_Index_Row_Size_*_ + 2)  
   
      由於索引資料列並不會跨越分頁，因此每個分頁索引資料列的數目應該捨去小數，而取最接近的整數列數。 公式中的 2 是給分頁位置陣列中的該資料列項目。  
   
@@ -122,27 +122,27 @@ ms.locfileid: "87864499"
     >  除了索引鍵資料行之外，包含非索引鍵資料行將可擴充非叢集索引。 這些額外的資料行只會儲存在非叢集索引的分葉層級。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar**、 **varbinary**或 **sql_variant** 資料行的 8,000 個位元組限制內，以及 **nvarchar** 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 _*varchar**、**nvarchar**、**varbinary** 或 **sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar**、 **varbinary** 或 **sql_variant** 資料行的 8,000 個位元組限制內，以及 **nvarchar** 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
   
      如果非叢集索引沒有任何內含的資料行，請使用步驟 1 的值，包含步驟 1、3 中所決定的任何修改：  
   
-     ***Num_Leaf_Cols***  = ***Num_Key_Cols***  
+     **_Num_Leaf_Cols_* _  = _*_Num_Key_Cols_*_  
   
-     ***Fixed_Leaf_Size***  = ***Fixed_Key_Size***  
+     _*_Fixed_Leaf_Size_*_  = _*_Fixed_Key_Size_*_  
   
-     ***Num_Variable_Leaf_Cols***  = ***Num_Variable_Key_Cols***  
+     _*_Num_Variable_Leaf_Cols_*_  = _*_Num_Variable_Key_Cols_*_  
   
-     ***Max_Var_Leaf_Size***  = ***Max_Var_Key_Size***  
+     _*_Max_Var_Leaf_Size_*_  = _*_Max_Var_Key_Size_*_  
   
      如果非叢集索引沒有任何內含的資料行，請加入適當的值至步驟 1 的值中，包含在步驟 1、3 中所做的任何修改。 資料行的大小取決於資料類型和長度規格。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。  
   
-     ***Num_Leaf_Cols***  = ***Num_Key_Cols*** + 內含資料行的數目  
+     _*_Num_Leaf_Cols_*_  = _*_Num_Key_Cols_*_ + 內含資料行的數目  
   
-     ***Fixed_Leaf_Size***  = ***Fixed_Key_Size*** + 固定長度內含資料行的總位元組大小  
+     _*_Fixed_Leaf_Size_*_  = _*_Fixed_Key_Size_*_ + 固定長度內含資料行的總位元組大小  
   
-     ***Num_Variable_Leaf_Cols***  = ***Num_Variable_Key_Cols*** + 可變長度內含資料行的數目  
+     _*_Num_Variable_Leaf_Cols_*_  = _*_Num_Variable_Key_Cols_*_ + 可變長度內含資料行的數目  
   
-     ***Max_Var_Leaf_Size***  = ***Max_Var_Key_Size*** + 可變長度內含資料行的最大位元組大小  
+     _*_Max_Var_Leaf_Size_*_  = _*_Max_Var_Key_Size_*_ + 可變長度內含資料行的最大位元組大小  
   
 2.  說明資料列定位器：  
   
@@ -152,25 +152,25 @@ ms.locfileid: "87864499"
   
      如果非叢集索引是在堆積上，資料列定位器就是堆積 RID (大小是 8 位元組)。  
   
-     ***Num_Leaf_Cols***  = ***Num_Leaf_Cols*** + 1  
+     _*_Num_Leaf_Cols_*_  = _*_Num_Leaf_Cols_*_ + 1  
   
-     ***Num_Variable_Leaf_Cols***  = ***Num_Variable_Leaf_Cols*** + 1  
+     _*_Num_Variable_Leaf_Cols_*_  = _*_Num_Variable_Leaf_Cols_*_ + 1  
   
-     ***Max_Var_Leaf_Size***  = ***Max_Var_Leaf_Size*** + 8  
+     _*_Max_Var_Leaf_Size_*_  = _*_Max_Var_Leaf_Size_*_ + 8  
   
      如果非叢集索引是在叢集索引上，資料列定位器就是叢集索引鍵。 必須與非叢集索引鍵結合的資料行是那些在叢集索引鍵中的資料行，這些資料行並未存在於非叢集索引鍵資料行集中。  
   
-     ***Num_Leaf_Cols***  = ***Num_Leaf_Cols*** + 不是位於非叢集索引鍵資料行集中之叢集索引鍵資料行的數目 (如果叢集索引不是唯一的，則 + 1)  
+     _*_Num_Leaf_Cols_*_  = _*_Num_Leaf_Cols_*_ + 叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的數目 (如果叢集索引不是唯一的，則 + 1)  
   
-     ***Fixed_Leaf_Size***  = ***Fixed_Leaf_Size*** + 不是位於非叢集索引鍵資料行集中之固定長度叢集索引鍵資料行的數目  
+     _*_Fixed_Leaf_Size_*_  = _*_Fixed_Leaf_Size_*_ + 固定長度叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的數目  
   
-     ***Num_Variable_Leaf_Cols***  = ***Num_Variable_Leaf_Cols*** + 不是位於非叢集索引鍵資料行集中之可變長度叢集索引鍵資料行的數目 (如果叢集索引不是唯一的，則 + 1)  
+     _*_Num_Variable_Leaf_Cols_*_  = _*_Num_Variable_Leaf_Cols_*_ + 叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的數目 (如果叢集索引不是唯一的，則 + 1)  
   
-     ***Max_Var_Leaf_Size***  = ***Max_Var_Leaf_Size*** + 不是位於非叢集索引鍵資料行集中之可變長度叢集索引鍵資料行的位元組大小 (如果叢集索引不是唯一的，則 + 4)  
+     _*_Max_Var_Leaf_Size_*_  = _*_Max_Var_Leaf_Size_*_ + 可變長度叢集索引鍵資料行 (不是位於非叢集索引鍵資料行集中) 的位元組大小 (如果叢集索引不是唯一的，則 + 4)  
   
 3.  計算 Null 點陣圖大小：  
   
-     ***Leaf_Null_Bitmap***  = 2 + ((***Num_Leaf_Cols*** + 7) / 8)  
+     _*_Leaf_Null_Bitmap_*_  = 2 + ((_*_Num_Leaf_Cols_*_ + 7) / 8)  
   
      您應該僅使用先前運算式的整數部分。 請捨去任何餘數。  
   
@@ -178,65 +178,65 @@ ms.locfileid: "87864499"
   
      如果有可變長度的資料行 (索引鍵資料行或已包含)，包含先前步驟 2.2 中所描述的任何所需叢集索引鍵資料行，請決定在索引資料列中儲存資料行所需的空間：  
   
-     ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
+     _*_Variable_Leaf_Size_*_  = 2 + (_*_Num_Variable_Leaf_Cols_*_ x 2) + _*_Max_Var_Leaf_Size_*_  
   
-     加入 ***Max_Var_Key_Size*** 的位元組是用於追蹤每個變數資料行。這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所使用的儲存空間百分比會比較小，您可以經由調整百分比所得的 ***Max_Var_Leaf_Size*** 值，產生更精確的整體資料表大小之估計。  
+     加入 _*_Max_Var_Key_Size_*_ 的位元組是用於追蹤每個變數資料行。這個公式假設所有可變長度的資料行都是 100% 填滿的。 如果您預期可變長度資料行所使用的儲存空間百分比會比較小，您可以經由調整百分比所得的 _*_Max_Var_Leaf_Size_*_ 值，產生更精確的整體資料表大小估計值。  
   
-     如果沒有可變長度的資料行 (索引鍵資料行或已包含)，請將 ***Variable_Leaf_Size*** 設成 0。  
+     如果沒有可變長度的資料行 (索引鍵資料行或包含)，請將 _*_Variable_Leaf_Size_*_ 設成 0。  
   
 5.  計算索引資料列的大小：  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (索引資料列的資料列標頭上方)  
+     _*_Leaf_Row_Size_*_  = _*_Fixed_Leaf_Size_*_ + _*_Variable_Leaf_Size_*_ + _*_Leaf_Null_Bitmap_*_ + 1 (索引資料列的資料列標頭上方)  
   
 6.  計算每個分頁的索引資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
-     ***Leaf_Rows_Per_Page***  = 8096 / (***Leaf_Row_Size*** + 2)  
+     _*_Leaf_Rows_Per_Page_*_  = 8096 / (_*_Leaf_Row_Size_*_ + 2)  
   
      由於索引資料列並不會跨越分頁，因此每個分頁索引資料列的數目應該捨去小數，而取最接近的整數列數。 公式中的 2 是給分頁位置陣列中的該資料列項目。  
   
 7.  根據指定的 [填滿因數](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) ，計算每個分頁所保留的可用資料列數目：  
   
-     ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
+     _*_Free_Rows_Per_Page_*_  = 8096 x ((100 - _*_Fill_Factor_*_) / 100) / (_*_Leaf_Row_Size_*_ + 2)  
   
      計算中所使用的填滿因數是整數值而不是百分比。 因為資料列不能跨頁，每個分頁的資料列數目必須無條件捨去小數，而取最接近的整數資料列。 當填滿因數變大時，每個分頁上會儲存更多資料，分頁也會比較少。 公式中的 2 是給分頁位置陣列中的該資料列項目。  
   
 8.  計算儲存所有資料列所需的分頁數目：  
   
-     ***Num_Leaf_Pages***  = ***Num_Rows*** / (***Leaf_Rows_Per_Page*** - ***Free_Rows_Per_Page***)  
+     _*_Num_Leaf_Pages_*_  = _*_Num_Rows_*_ / (_*_Leaf_Rows_Per_Page_*_ - _*_Free_Rows_Per_Page_*_ )  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   
 9. 計算索引的大小 (每個分頁共有 8192 個位元組)：  
   
-     ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
+     _*_Leaf_Space_Used_*_  = 8192 x _*_Num_Leaf_Pages_*_  
   
 ## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>步驟 3： 計算在非分葉層級中儲存索引資訊所用的空間  
  請遵循下列步驟來估計儲存索引之中繼和根層級所需的空間量。 您將需要步驟 2 和 3 中所保留的值來完成此步驟。  
   
 1.  計算索引中的非分葉層級數目：  
   
-     ***Non-leaf Levels***  = 1 + log( Index_Rows_Per_Page) (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     _*_Non-leaf Levels_*_  = 1 + log( Index_Rows_Per_Page) (_*_Num_Leaf_Pages_*_ / _*_Index_Rows_Per_Page_*_)  
   
      將這個值無條件向上進位到最近的整數。 此值不包含非叢集索引的分葉層級。  
   
 2.  計算索引中的非分葉頁面數目：  
   
-     ***Num_Index_Pages***  = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***^Level)，其中 1 <= Level <= ***Levels***  
+     _*_Num_Index_Pages_*_  = ∑Level (_*_Num_Leaf_Pages/Index_Rows_Per_Page_*_^Level)，其中 1 <= Level <= _*_Levels_*_  
   
-     將每個被加數無條件向上進位到最近的整數。 簡單舉例說明，假設有個索引，其中 ***Num_Leaf_Pages*** = 1000 和 ***Index_Rows_Per_Page*** = 25。 分葉層級上方的第一個索引層級會儲存 1000 個索引資料列，這是每個分葉頁面的一個索引資料列，而且每個頁面可以容納 25 個索引資料列。 這表示儲存這 1000 個索引資料列需要 40 頁。 索引的下一個層級必須儲存 40 個資料列， 這表示它需要 2 頁。 索引的最後一個層級必須儲存 2 個資料列。 這表示它需要 1 頁。 這會產生 43 個非分葉索引頁面。 在上述公式中使用這些數字時，結果如下：  
+     將每個被加數無條件向上進位到最近的整數。 簡單舉例說明，假設有個索引，其中 _*_Num_Leaf_Pages_*_ = 1000 且 _*_Index_Rows_Per_Page_*_ = 25。 分葉層級上方的第一個索引層級會儲存 1000 個索引資料列，這是每個分葉頁面的一個索引資料列，而且每個頁面可以容納 25 個索引資料列。 這表示儲存這 1000 個索引資料列需要 40 頁。 索引的下一個層級必須儲存 40 個資料列， 這表示它需要 2 頁。 索引的最後一個層級必須儲存 2 個資料列。 這表示它需要 1 頁。 這會產生 43 個非分葉索引頁面。 在上述公式中使用這些數字時，結果如下：  
   
-     ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
+     _*_Non-leaf_Levels_*_  = 1 + log(25) (1000 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43，這是範例中所描述的頁數。  
+     _*_Num_Index_Pages_*_ = 1000/(25^3)+ 1000/(25^2) + 1000/(25^1) = 1 + 2 + 40 = 43，這是範例中所描述的頁數。  
   
 3.  計算索引的大小 (每個分頁共有 8192 個位元組)：  
   
-     ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
+     _*_Index_Space_Used_*_  = 8192 x _*_Num_Index_Pages_*_  
   
 ## <a name="step-4-total-the-calculated-values"></a>步驟 4： 加總計算的值  
  將前兩個步驟所取得的值加總：  
   
- 非叢集索引大小 (位元組) = ***Leaf_Space_Used*** + ***Index_Space_used***  
+ 非叢集索引大小 (位元組) = _*_Leaf_Space_Used_*_ + _*_Index_Space_used_*_  
   
  上述計算未考慮下列項目：  
   
@@ -250,7 +250,7 @@ ms.locfileid: "87864499"
   
 -   大型物件 (LOB) 值  
   
-     決定到底要使用多少空間來儲存 LOB 資料類型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**、 **xml**和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
+     決定到底要使用多少空間以儲存 LOB 資料類型 _*varchar(max)**、**varbinary(max)** 、**nvarchar(max)** 、**text**、**ntext**、**xml** 和 **image** 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 **_Num_Rows_**，再將此值加上非叢集索引總大小，這就足夠。  
   
 -   壓縮  
   

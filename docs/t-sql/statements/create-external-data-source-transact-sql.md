@@ -19,13 +19,13 @@ helpviewer_keywords:
 - PolyBase, create data source
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e85d783f9e06c5b0a7ede983f6ab4d1079ef2a5e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443101"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489416"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "96443101"
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -124,7 +124,8 @@ WITH
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
-透過 `ODBC` 連線到外部資料來源時，請指定其他選項。
+透過 `ODBC` 連線到外部資料來源時，請指定其他選項。 若要使用多個連線選項，請以分號進行分隔。
+
 
 至少需要驅動程式的名稱，但還有其他選項 (例如 `APP='<your_application_name>'` 或 `ApplicationIntent= ReadOnly|ReadWrite`) 若加以設定也會很有用，並可協助進行疑難排解。
 
@@ -422,11 +423,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -650,11 +651,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)
@@ -920,11 +921,11 @@ WITH
 [sas_token]: /azure/storage/storage-dotnet-shared-access-signature-part-1
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)

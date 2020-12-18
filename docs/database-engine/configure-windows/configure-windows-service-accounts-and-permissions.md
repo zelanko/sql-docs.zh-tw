@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f02f8883b0a6f913eee65047a183d013c75b800b
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: b52093904be2bd3ae649e4472dc9b08ffdea89b6
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834346"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901024"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 
@@ -189,13 +189,13 @@ ms.locfileid: "91834346"
   |服務|虛擬帳戶名稱|
   |-------------|--------------------------|
   |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的預設執行個體|**NT SERVICE\MSSQLSERVER**|
-  |名為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之 **之**服務的具名執行個體|**NT SERVICE\MSSQL$PAYROLL**|
+  |名為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之 **之** 服務的具名執行個體|**NT SERVICE\MSSQL$PAYROLL**|
   |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|
-  |名為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **執行個體上的**Agent 服務|**NT SERVICE\SQLAGENT$PAYROLL**|
+  |名為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **執行個體上的** Agent 服務|**NT SERVICE\SQLAGENT$PAYROLL**|
 
-如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。
+如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱 [服務帳戶的逐步指南](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的 **受管理的服務帳戶和虛擬帳戶概念** 一節，以及 [受管理的服務帳戶常見問題集 (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。
 
-**安全性注意事項：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 請在允許情況下使用 [MSA](#MSA)、[gMSA](#GMSA) 或[虛擬帳戶](#VA_Desc)。 如果無法使用 MSA、gMSA 或虛擬帳戶，請使用特定低權限的使用者帳戶或網域帳戶，而不要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的共用帳戶。 針對不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用個別的帳戶。 請勿將其他權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或服務群組。 權限將透過群組成員資格授與，或直接授與服務 SID (如果支援服務 SID)。
+**安全性注意事項：** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 請在允許情況下使用 [MSA](#MSA)、[gMSA](#GMSA) 或 [虛擬帳戶](#VA_Desc)。 如果無法使用 MSA、gMSA 或虛擬帳戶，請使用特定低權限的使用者帳戶或網域帳戶，而不要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的共用帳戶。 針對不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用個別的帳戶。 請勿將其他權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或服務群組。 權限將透過群組成員資格授與，或直接授與服務 SID (如果支援服務 SID)。
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> 自動啟動
 
@@ -270,20 +270,9 @@ ms.locfileid: "91834346"
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式授與的權限|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\MSSQLSERVER**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)|
-|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體與具名執行個體：**NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|
-|**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$** _InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser** _$ComputerName_。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer：**<br /><br /> (所有權利都會授與個別服務 SID。 預設或具名執行個體：**NT Service\SQLWriter**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer 的具名執行個體沒有個別處理序。)|SQLWriter 服務會以 LOCAL SYSTEM 帳戶執行，該帳戶擁有所有必要的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會檢查或授與此服務的權限。|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller：**|**以服務方式登入** (SeServiceLogonRight)|
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client：**|**以服務方式登入** (SeServiceLogonRight)|
-|**PolyBase 引擎和 DMS**| **以服務方式登入** (SeServiceLogonRight)|
-|**Launchpad：**|**以服務方式登入** (SeServiceLogonRight) <br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br />**略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br />**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|
-|**R 服務/機器學習服務：** **SQLRUserGroup** (SQL 2016 和 2017) |預設沒有 [允許本機登入] 權限 |
-|**機器學習服務** '**所有應用程式套件' [AppContainer]** (SQL 2019) |SQL Server 'Binn'、R_Services 和 PYTHON_Services 目錄的**讀取和執行權限** |
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\MSSQLSERVER**。 具名執行個體：**NT Service\MSSQLServer$** _InstanceName_)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|
+
+| **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$** _InstanceName_)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)| | **[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)| | **[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$** _InstanceName_)。|**以服務方式登入** (SeServiceLogonRight)| | **[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體與具名執行個體：**NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序)|。**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)| |**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$** _InstanceName_)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser** _$ComputerName_。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器沒有具名執行個體的個別處理序)。|**Log on as a service** (SeServiceLogonRight)| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 寫入器：**<br /><br /> (所有權利都會授與個別服務 SID。 預設或具名執行個體：**NT Service\SQLWriter**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]　VSS 寫入器沒有具名執行個體的個別處理序)。|SQL 寫入器服務會以 LOCAL SYSTEM 帳戶執行，該帳戶擁有所有必要的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會檢查或授與此服務的權限。 || **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器：** |**以服務方式登入** (SeServiceLogonRight)| | **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 用戶端：** |**以服務方式登入** (SeServiceLogonRight)| |**PolyBase 引擎和 DMS**| **以服務方式登入** (SeServiceLogonRight)| |**啟動控制板：** |**以服務方式登入** (SeServiceLogonRight) <br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br />**略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br />**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)| |**R 服務/機器學習服務：** **SQLRUserGroup** (SQL 2016 和 2017) |預設沒有 **允許本機登入** 權限 | |**機器學習服務** '**所有應用程式套件 ' [AppContainer]** (SQL 2019) |對 SQL Server ' Binn '、R_Services 與 PYTHON_Services 目錄的 **讀取和執行權限** |
 
  \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 代理程式服務。
 
@@ -444,12 +433,12 @@ ms.locfileid: "91834346"
 
 ### <a name="wmi"></a><a name="WMI"></a> WMI
 
-Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 為支援此功能，會在**中提供 Windows WMI 提供者 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的個別服務 SID。
+Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 為支援此功能，會在 **中提供 Windows WMI 提供者 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的個別服務 SID。
 
 SQL WMI 提供者需要下列最低權限：
 
 - msdb 資料庫中 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員資格。
-- 伺服器中的**CREATE DDL EVENT NOTIFICATION** 權限。
+- 伺服器中的 **CREATE DDL EVENT NOTIFICATION** 權限。
 - **中的** CREATE TRACE EVENT NOTIFICATION [!INCLUDE[ssDE](../../includes/ssde-md.md)]權限。
 - **VIEW ANY DATABASE** 伺服器層級權限。
 

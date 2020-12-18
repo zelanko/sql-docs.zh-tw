@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300438"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464169"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 如果資料表已經有叢集資料行存放區索引，則您可以指定與現有索引相同的名稱，或您可以使用 DROP EXISTING 選項來指定新名稱。  
   
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集索引，則該資料表會從資料列存放區轉換成資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。 若要轉換成已排序的叢集資料行存放區索引，現有的索引必須是叢集資料行存放區索引。
   
@@ -219,11 +219,11 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    指定索引的名稱。 *index_name* 在資料表中必須是唯一的，但在資料庫中不需要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     指定要存放的資料行。 非叢集資料行存放區索引僅限 1024 個資料行。  
    每個資料行必須是資料行存放區索引支援的資料類型。 如需支援的資料類型清單，請參閱[限制](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    指定包含索引之資料表的一部分、兩部分或三部分名稱。  
 
 #### <a name="with-options"></a>WITH 選項
@@ -283,7 +283,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 *partition_scheme_name* **(** _column_name_ **)**  
    指定資料分割配置來定義檔案群組，以便對應分割索引的分割區。 我們可以執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)，這樣資料庫中就一定會有分割區配置。 
    *column_name* 會指定分割區索引進行分割所依據的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 對資料行存放區索引進行分割時，如果未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的資料行。  
-   如果未指定 *partition_scheme_name* 或 *filegroup* ，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。  
+   如果未指定 *partition_scheme_name* 或 *filegroup*，且已分割資料表，則會使用相同的分割資料行，將索引放在與基礎資料表相同的資料分割配置中。  
    分割資料表的資料行存放區索引必須保持分割區對齊。  
    如需分割索引的詳細資訊，請參閱[資料分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
 
@@ -402,7 +402,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 這些限制僅套用到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我們引進了可更新的叢集資料行存放區索引。 非叢集資料行存放區索引仍然是唯讀的。  
 
 -   變更追蹤。 您無法搭配資料行存放區索引使用變更追蹤。  
--   異動資料擷取。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用異動資料擷取。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
+-   異動資料擷取。 無法在具有叢集資料行存放區索引的資料表上啟用變更資料擷取。 從 SQL Server 2016 開始，您可以在具有非叢集資料行存放區索引的資料表上啟用此功能。  
 -   可讀取的次要複本。 您無法從 AlwaysOn 可用性群組的可讀取次要複本來存取叢集資料行存放區索引 (CCI)。  您可以從可讀取的次要複本來存取非叢集資料行存放區索引 (NCCI)。  
 -   Multiple Active Result Sets (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。 不過，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會終止連線並中止交易。  
 -  無法在檢視表或索引檢視表上建立非叢集資料行存放區索引。

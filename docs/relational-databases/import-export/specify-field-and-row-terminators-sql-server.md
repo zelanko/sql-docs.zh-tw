@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001714"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407559"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|描述|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***field_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
-    |ROWTERMINATOR **='***row_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
+    |FIELDTERMINATOR **='** _field_terminator_*_'_*|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
+    |ROWTERMINATOR **='** _row_terminator_*_'_*|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
   
      如需詳細資訊，請參閱 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   

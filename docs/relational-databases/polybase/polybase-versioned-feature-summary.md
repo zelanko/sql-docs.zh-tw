@@ -10,13 +10,13 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2afdc0e62fdd725584c464bda516fc6284d20f01
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631744"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489988"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -28,18 +28,21 @@ ms.locfileid: "94631744"
 
 下表列出 PolyBase 的重要功能以及提供這些功能的產品。  
 
-|**功能** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**平行處理資料倉儲** |
+|**功能** |**SQL Server** (自 2016 年起) |**Azure SQL Database** |**Azure Synapse Analytics** |**平行處理資料倉儲** |
 |---------|---------|---------|---------|---------|
 |使用下列項目查詢 Hadoop 資料： [!INCLUDE[tsql](../../includes/tsql-md.md)]|是|否|否|是|
 |從 Hadoop 匯入資料|是|否|否|是|
 |匯出資料至 Hadoop  |是|否|否| 是|
 |在 Azure HDInsight 中查詢、匯入、匯出 |否|否|否|否
 |將查詢計算下推到 Hadoop|是|否|否|是|  
-|從 Azure Blob 儲存體匯入資料|是|否|是|是|
+|從 Azure Blob 儲存體匯入資料|是|是<sup>*</sup>|是|是|
 |匯出資料至 Azure Blob 儲存體|是|否|是|是|  
 |從 Azure Data Lake Store 匯入資料|否|否|是|否|
 |將資料匯出至 Azure Data Lake Store|否|否|是|否|
 |從 Microsoft BI 工具執行 PolyBase 查詢|是|否|是|是|
+
+<sup>*</sup> 於 SQL Server 2017 中引進，請參閱 [Azure Blob 儲存體中大量存取資料的範例](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 運算子支援下推計算
 
@@ -71,7 +74,7 @@ PolyBase 具有下列限制：
 - 若您使用 Hive 資料表，且 transactional = true，PolyBase 就無法存取 Hive 資料表目錄中的資料。
 
 <!--SQL Server 2016-->
-::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-2016 "
 
 - [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)。
 

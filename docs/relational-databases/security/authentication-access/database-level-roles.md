@@ -38,23 +38,23 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce99d5ffe875283675e62069efed8b855ad6d43a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 268aafa5b95bed4c9e2687fef430aa4a972ea2c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463159"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  
+  為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 角色就像是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 作業系統中的***群組** _。 資料庫層級角色的權限範圍為整個資料庫。  
 
 若要新增和移除資料庫角色的使用者，請使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 陳述式的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 選項。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 和 Azure Synapse 不支援使用 `ALTER ROLE`。 請改用舊版的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 程序。
   
- 資料庫層級角色類型有兩種：在資料庫中預先定義的「固定資料庫角色」  以及您可以建立的「使用者定義資料庫角色」  。  
+ 資料庫層級角色類型有兩種：資料庫中預先定義的「固定資料庫角色」_*，以及可建立的「使用者定義資料庫角色」。  
   
  固定資料庫角色義於資料庫層級，並存在每個資料庫中。 **db_owner** 資料庫角色的成員可以管理固定的資料庫角色成員資格。 在 msdb 資料庫中，也有一些特殊用途的資料庫角色。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "91867425"
 
 ## <a name="fixed-database-roles"></a>固定資料庫角色
   
- 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了**公用**資料庫角色外，指派給固定資料庫角色的權限無法變更。   
+ 下表顯示固定資料庫角色及其功能。 這些角色存在所有資料庫中。 除了 **公用** 資料庫角色外，指派給固定資料庫角色的權限無法變更。   
   
 |固定資料庫角色名稱|描述|  
 |-------------------------------|-----------------|  

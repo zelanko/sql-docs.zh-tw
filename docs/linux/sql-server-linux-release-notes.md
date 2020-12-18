@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322053"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 版本資訊
 
@@ -28,8 +28,8 @@ ms.locfileid: "90013671"
 
 | 平台 | 檔案系統 | 安裝指南 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 或 8 伺服器 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
+| Red Hat Enterprise Linux 7.3 - 7.8，或 8.0 - 8.3 伺服器 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
 | Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | N/A | [安裝指南](quickstart-install-connect-docker.md) | 
 
@@ -554,7 +554,7 @@ sudo systemctl start mssql-server
 
 - **sa** 登入的預設語言是英文。
 
-    - **解決方法**：使用 **ALTER LOGIN**陳述式來變更 **sa** 登入的語言。
+    - **解決方法**：使用 **ALTER LOGIN** 陳述式來變更 **sa** 登入的語言。
 
 #### <a name="databases"></a>資料庫
 
@@ -607,7 +607,7 @@ sudo systemctl start mssql-server
 1. 從開機 cmdline 中移除 `ipv6.disable=1` 以在核心中啟用 IPv6。 執行此動作的方式取決於 Linux 發行版本和開機載入器 (例如 grub)。 如果您想要停用 IPv6，您仍然可以透過在 `sysctl` 設定 (例如 `/etc/sysctl.conf`) 中設定 `net.ipv6.conf.all.disable_ipv6 = 1` 來予以停用。 這將仍然防止系統的網路介面卡取得 IPv6 位址，但可允許 sqlservr 功能正常運作。
 
 #### <a name="network-file-system-nfs"></a>網路檔案系統 (NFS)
-如果您在生產環境中使用**網路檔案系統 (NFS)** 遠端共用，請注意下列支援需求：
+如果您在生產環境中使用 **網路檔案系統 (NFS)** 遠端共用，請注意下列支援需求：
 
 - 使用 NFS 版本 **4.2 或更新的版本**。 舊版 NFS 不支援現代檔案系統常用的必要功能，例如 fallocate 和疏鬆檔案建立。
 - 僅尋找 NFS 掛接上的 **/var/opt/mssql** 目錄。 其他檔案 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統二進位檔案) 並不受支援。

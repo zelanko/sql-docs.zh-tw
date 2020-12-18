@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ea494a48932fac171eb4d9e8bc3e032001e55b
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465080"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999228"
 ---
 # <a name="heterogeneous-database-replication"></a>異質資料庫複寫  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88465080"
   |狀況|2016 或更早版本 |2017 或更新版本 |
   |-------|-------|--------|
   |從 Oracle 複寫 |只支援 Oracle 10g 或更早版本 |只支援 Oracle 10g 或更早版本 |
-  |複寫到 Oracle |最高到 Oracle 12c |不支援 |
+  |複寫到 Oracle |Oracle 12c 之前的所有版本 |不支援 |
 
 
  非 SQL Server 訂閱者的異質性複寫已被取代。 Oracle 發行已被取代。 若要移動資料，請使用異動資料擷取和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]建立方案。  

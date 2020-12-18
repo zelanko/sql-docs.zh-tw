@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175966"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460481"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -265,7 +265,7 @@ CREATE TYPE dbo.typeTableD
   
 ## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server 的必要條件 FILEGROUP  
   
-在 Microsoft SQL Server 上，若要使用記憶體最佳化功能，您的資料庫必須有以 **MEMORY_OPTIMIZED_DATA**宣告的 FILEGROUP。  
+在 Microsoft SQL Server 上，若要使用記憶體最佳化功能，您的資料庫必須有以 **MEMORY_OPTIMIZED_DATA** 宣告的 FILEGROUP。  
   
 - Azure SQL Database 不需要建立此 FILEGROUP。  
   
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Batch execution completed 5001 times.
 - [估計記憶體最佳化資料表的記憶體需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [經記憶體最佳化資料表中的資料表和資料列大小：範例計算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-針對較大的資料表變數，非叢集索引會使用比記憶體最佳化「資料表」更多的記憶體。 資料列計數和索引鍵愈大，所增加的差異愈多。  
+針對較大的資料表變數，非叢集索引會使用比記憶體最佳化「資料表」_*更多的記憶體。 資料列計數和索引鍵愈大，所增加的差異愈多。  
   
 如果每次存取只能使用一個索引鍵值來存取記憶體資料表變數，則雜湊索引可能比非叢集索引更適合。 不過，如果您無法估計正確的 BUCKET_COUNT，則非叢集索引是不錯的次要選擇。  
   

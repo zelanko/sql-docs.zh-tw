@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 3ecec5879e66f17426b9aa68014c2b2d0f751153
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 759b8d7067ca9215e8b9862b810294667e4d409b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471519"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
+::: moniker range="= sql-server-2017 "
 從 SQL Server 2017 開始，SQL Server 可以在 Linux 上執行。 這是相同的 SQL Server 資料庫引擎，無論您的作業系統為何，都提供許多類似的功能和服務。
 ::: moniker-end
 
@@ -37,10 +37,8 @@ SQL Server 2019 可在 Linux 上執行。 這是相同的 SQL Server 資料庫�
 > [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) 已可供使用！ 若要了解最新版本中適用於 Linux 的新功能，請參閱 [Linux 上的 SQL Server 2019 新功能](sql-server-linux-whats-new-2019.md?view=sql-server-linux-ver15)。
 ::: moniker-end
 
-::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
 > SQL Server 2019 已可供使用！ 若要了解最新版本中適用於 Linux 的新功能，請參閱 [Linux 上的 SQL Server 2019 新功能](sql-server-linux-whats-new-2019.md)。
-::: moniker-end
 
 ## <a name="install"></a>安裝
 
@@ -84,8 +82,8 @@ SQL Server 2017 在所有支援的平台 (包括 Linux) 上都有相同的基礎
 
 ::: moniker-end
 
-<!--SQL Server All Versions-->
-::: moniker range="=sqlallproducts-allversions"
+
+### <a name="all-versions-of-sql-server"></a>SQL Server 的所有版本
 
 SQL Server 2017 和 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 在所有支援的平台 (包括 Linux) 上都有相同的基礎資料庫引擎。 因此，許多現有的特性與功能在 Linux 上的運作方式都相同。 文件的此區域會從 Linux 的觀點來公開其中一些功能。 它也強調在 Linux 上有獨特需求的區域。
 
@@ -98,8 +96,6 @@ SQL Server 2017 和 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 在�
 
 - [SQL Server 2017 新功能](sql-server-linux-whats-new.md)
 - [Linux 上的 SQL Server 2019 新功能](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
-
-::: moniker-end
 
 > [!TIP]
 > 如需常見問題的解答，請參閱 [Linux 上的 SQL Server 常見問題集](sql-server-linux-faq.md)。

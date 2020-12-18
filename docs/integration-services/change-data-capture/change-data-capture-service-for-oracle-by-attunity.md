@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257963"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934040"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257963"
 
 根據您使用的 SQL Server 版本，從下面的連結下載對應的 Microsoft Change Data Capture Designer and Service for Oracle (由 Attunity 所提供)：
 
+- [Microsoft SQL Server 2012 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ ms.locfileid: "92257963"
 -   Oracle Database 10g Release 2
 -   Oracle Database 11g Release 1 和 Release 2
 -   Oracle Database 12c 正在進行傳統安裝。 (不支援多租用戶安裝。)  
+-   Oracle Database 18c 傳統安裝。 (不支援多租用戶安裝。) 
+-   Oracle Database 19c 傳統安裝。 (不支援多租用戶安裝。) 
   
 ### <a name="target-sql-server-database"></a>目標 SQL Server 資料庫  
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  

@@ -5,19 +5,19 @@ ms.technology: linux
 ms.topic: include
 ms.date: 06/22/2020
 ms.author: vanto
-ms.openlocfilehash: f8a9409f01f7dd8f7b9097a4b838bde1350db30c
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 9117ad52cbe1875a80ab129cc45f4f0512563e3e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97351220"
 ---
 ## <a name="supported-platforms"></a>支援的平台
 
 | 平台 | 檔案系統 | 安裝指南 | Get |
 |-----|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 - 7.8，或 8.0 - 8.2 伺服器 | XFS 或 EXT4 | [安裝指南](../linux/quickstart-install-connect-red-hat.md) | [取得 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
-| SUSE Enterprise Linux Server v12 SP2、SP3、SP4 或 SP5 | XFS 或 EXT4 | [安裝指南](../linux/quickstart-install-connect-suse.md) | [取得 SLES v12](https://www.suse.com/products/server) |
+| Red Hat Enterprise Linux 7.3 - 7.8，或 8.0 - 8.3 伺服器 | XFS 或 EXT4 | [安裝指南](../linux/quickstart-install-connect-red-hat.md) | [取得 RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
+| SUSE Enterprise Linux Server v12 SP2 - SP5 | XFS 或 EXT4 | [安裝指南](../linux/quickstart-install-connect-suse.md) | [取得 SLES v12](https://www.suse.com/products/server) |
 | Ubuntu 16.04 LTS、18.04 LTS | XFS 或 EXT4 | [安裝指南](../linux/quickstart-install-connect-ubuntu.md) | [Get Ubuntu 18.04](http://releases.ubuntu.com/bionic/) |
 | Windows、Mac 或 Linux 上的 Docker Engine 1.8+ | N/A | [安裝指南](../linux/quickstart-install-connect-docker.md) | [取得 Docker](https://www.docker.com/get-started) |
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866668"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407991"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>準備資料以進行大量匯出或匯入
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866668"
   
 -   若要從包含固定長度或固定寬度欄位的資料檔案匯入資料，請使用格式檔案。 如需詳細資訊，請參閱 [XML 格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，CSV 檔案可用來當做資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，CSV 檔案的欄位結束字元不必是逗號。 為了能夠當做資料檔使用來進行大量匯入，CSV 檔案必須符合下列限制：  
+-  從 SQL Server 2017 開始，CSV 檔案可用作資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請注意，CSV 檔案的欄位結束字元不必是逗號。 為了能夠當做資料檔使用來進行大量匯入，CSV 檔案必須符合下列限制：  
   
     -   資料欄位永遠不會包含欄位結束字元。  
   

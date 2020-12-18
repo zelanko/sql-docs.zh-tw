@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d0c6f18fc92c778478066c218707fbc17c45c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463733"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900956"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88463733"
  異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更之相關資訊新增至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解異動資料擷取和擷取執行個體  
- 您必須先針對資料庫明確啟用異動資料擷取，然後才能追蹤該資料庫內部任何個別資料表的變更。 這項作業是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)預存程序完成的。 啟用資料庫之後，您就可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)預存程序，將來源資料表識別為追蹤資料表。 當某個資料表啟用異動資料擷取時，系統就會建立相關聯的擷取執行個體，以便支援來源資料表中變更資料的散播。 此擷取執行個體包含一個變更資料表以及最多兩個查詢函數。 描述擷取執行個體之組態詳細資料的中繼資料會包含在變更資料擷取中繼資料資料表 **cdc.change_tables**、 **cdc.index_columns**和 **cdc.captured_columns**中。 您可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程序來擷取這項資訊。  
+ 您必須先針對資料庫明確啟用異動資料擷取，然後才能追蹤該資料庫內部任何個別資料表的變更。 這項作業是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)預存程序完成的。 啟用資料庫之後，您就可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)預存程序，將來源資料表識別為追蹤資料表。 當某個資料表啟用異動資料擷取時，系統就會建立相關聯的擷取執行個體，以便支援來源資料表中變更資料的散播。 此擷取執行個體包含一個變更資料表以及最多兩個查詢函數。 描述擷取執行個體之組態詳細資料的中繼資料會包含在變更資料擷取中繼資料資料表 **cdc.change_tables**、 **cdc.index_columns** 和 **cdc.captured_columns** 中。 您可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程序來擷取這項資訊。  
   
  與擷取執行個體相關聯的所有物件都會建立在啟用資料庫的異動資料擷取結構描述中。 擷取執行個體名稱的需求包括，它必須是有效的物件名稱，而且它在資料庫擷取執行個體中必須是唯一的。 根據預設，此名稱是來源資料表的 \<*schema name*\_*table name*>。 其相關聯變更資料表的命名方式是將 **_CT** 附加至擷取執行個體名稱。 用來查詢所有變更之函數的命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_all_changes_** 。 如果擷取執行個體設定為支援 **net changes**，系統也會建立 **net_changes** 查詢函數，而且其命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_net_changes\_** 。  
   
@@ -137,6 +137,10 @@ CREATE TABLE T1(
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
+
+## <a name="columnstore-indexes"></a>資料行存放區索引
+
+無法在具有叢集資料行存放區索引的資料表上啟用變更資料擷取。 從 SQL Server 2016 開始，可在具有非叢集資料行存放區索引的資料表上啟用此功能。
 
 ## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

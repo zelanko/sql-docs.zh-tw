@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481289"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定資料檔中的前置長度 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   為了讓原生格式的資料大量匯出至資料檔時，能夠有最精簡的檔案儲存方式， **bcp** 命令會在每個欄位前面都加上一個或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」* (Length prefix characters)。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>前置長度的 bcp 提示字元  
- 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w**或 **-N**)，此命令就會提示您輸入每個資料欄位的前置長度，如下所示：  
+ 如果互動式 **bcp** 命令包含 **in** 或 **out** 選項，但沒有格式檔案參數 ( **-f**) 或資料格式參數 ( **-n**、 **-c**、 **-w** 或 **-N**)，此命令就會提示您輸入每個資料欄位的前置長度，如下所示：  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -59,12 +59,12 @@ ms.locfileid: "86003143"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text***|4|4|4|4|  
-|**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**text** _|4|4|4|4|  
+|_*ntext**_|4|4|4|4|  
+|_ *binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
+|**image** _|4|4|4|4|  
+|_ *datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  
@@ -85,13 +85,13 @@ ms.locfileid: "86003143"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***的未來版本將會移除**ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
+ \***的未來版本將會移除** ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 **nvarchar(max)** 、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大量匯入的前置長度  
  大量匯入資料時，前置長度就是原先建立資料檔時即指定的值。 如果資料檔案不是由 **bcp** 命令所建立，則長度前置字元可能不存在。 在此狀況下，可指定 0 做為前置長度。  
   
 > [!NOTE]  
->  若要在並非使用 **bcp**所建立的資料檔中指定前置長度，請使用本主題稍早在 [大量匯出的前置長度](#PrefixLengthsExport)中提供的長度。  
+>  若要在並非使用 **bcp** 所建立的資料檔中指定前置長度，請使用本主題稍早在 [大量匯出的前置長度](#PrefixLengthsExport)中提供的長度。  
   
 ## <a name="see-also"></a>另請參閱  
  [bcp 公用程式](../../tools/bcp-utility.md)   

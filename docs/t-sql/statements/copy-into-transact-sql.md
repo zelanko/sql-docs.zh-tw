@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96787979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460781"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ COPY 命令是否會有更好的效能，需取決於您的工作負載。 為�
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>檔案的數目或大小是否有任何限制？
 檔案的數目或大小沒有限制，為了獲得最佳效能，我們建議檔案至少為 4MB。
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>COPY 陳述式是否有任何已知問題？
+如果您有在 2020 年 12 月 7 日之前建立的 Synapse 工作區，使用受控識別進行驗證時，可能會遇到類似的錯誤訊息：
+
+com.microsoft.sqlserver.jdbc.SQLServerException:*受控服務識別尚未在此伺服器上啟用。* 請啟用受控服務識別並再試一次。
+
+請依照下列步驟，重新註冊工作區的受控識別來解決此問題：
+
+1. 移至 Azure 入口網站中的 Synapse 工作區
+2. 移至受控識別刀鋒視窗 
+3. 如果已勾選 [允許管線] 選項，則必須取消勾選此設定並儲存
+4. 勾選 [允許管線] 選項並儲存
 
 
 ## <a name="see-also"></a>另請參閱  

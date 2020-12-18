@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868794"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481469"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
@@ -128,7 +128,7 @@ ms.locfileid: "91868794"
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-接下來，仍在 [事件]   > [設定]  區段中，我們看到 [**resource_type** 已設為 [PAGE]  ](#resource_type_dmv_actual_row)。 這表示，只要 **resource_type** 值是 [PAGE]  ，事件資料就會從事件引擎傳送到目標。
+接下來，仍在 [事件]   > [設定]  區段中，我們看到 [**resource_type** 已設為 [PAGE]](#resource_type_dmv_actual_row)。 這表示，只要 **resource_type** 值是 [PAGE]  ，事件資料就會從事件引擎傳送到目標。
 
 我們會看到資料庫名稱和計數器的其他述詞篩選。
 
@@ -621,7 +621,7 @@ SELECT  -- C.4
 ### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 和事件欄位
 
 
-下列 SELECT 包含名為 *sys.dm_xe_map_values*之複雜檢視的 JOIN。
+下列 SELECT 包含名為 *sys.dm_xe_map_values* 之複雜檢視的 JOIN。
 
 SELECT 旨在顯示您可為事件工作階段選擇的許多欄位。 事件欄位有兩種用法︰
 
@@ -675,7 +675,7 @@ SELECT  --C.5
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 下列 SELECT 會傳回目標的每個參數。 每個參數都會標記，以指出它是否為強制。 您指派給參數的值會影響目標的行為。
 
-- 注意 WHERE 子句項目︰ *object_type = 'customizable'* 。
+- 請注意 WHERE 子句項目︰_object_type = 'customizable'*。
 - 您也必須編輯 *o.name =* 的 WHERE 子句值。
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 這個 DMV SELECT 從作用中事件工作階段的目標傳回資料列。 資料會轉換成 XML，使其傳回的資料格為可按式項目，輕鬆以 SSMS 顯示。
 
 - 如果停止事件工作階段，此 SELECT 就不會傳回資料列。
-- 您可能需要編輯 *s.name =* 的 WHERE 子句值。
+- 您可能需要編輯 _s.name =* 的 WHERE 子句值。
 
 
 ```sql
@@ -831,7 +831,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 函數的 SELECT 從磁碟機擷取 event_file 資料
 
 
-假設事件工作階段在收集了某些資料後停止。 如果您的工作階段已定義為使用 event_file 目標，您仍然可以呼叫 *sys.fn_xe_target_read_file*函數以擷取資料。
+假設事件工作階段在收集了某些資料後停止。 如果您的工作階段已定義為使用 event_file 目標，您仍然可以呼叫 *sys.fn_xe_target_read_file* 函數以擷取資料。
 
 - 您必須先在函數呼叫的參數中編輯路徑和檔案名稱，再執行此 SELECT。
     - 不用理會 SQL 系統在工作階段每次重新啟動時，嵌入到實際 .XEL 檔案名稱中的額外數字。 只要提供標準的根名稱和副檔名即可。

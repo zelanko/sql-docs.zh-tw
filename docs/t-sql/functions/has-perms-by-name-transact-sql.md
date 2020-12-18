@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115231"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900954"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  **sysname** 類型的選擇性純量運算式，表示用來測試權限之安全性實體的子實體名稱。 預設值是 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及更新版本中，子安全性實體不能使用格式為 **'[**_sub name_**]'** 的括弧。 請改為使用 **'** _sub name_ **'** 。  
+>  子安全性實體不能使用格式為 **'[** _sub name_ **]'** 的括弧。 請改為使用 **'** _sub name_ **'** 。  
   
  *sub-securable_class*  
  **nvarchar(60)** 類型的選擇性純量運算式，表示測試權限的安全性實體之子實體的類別。 預設值是 NULL。  

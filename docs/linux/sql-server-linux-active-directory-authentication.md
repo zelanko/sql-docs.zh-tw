@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323512"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：透過 Linux 上的 SQL Server 使用 Active Directory 驗證
 
@@ -64,7 +64,11 @@ ms.locfileid: "92115921"
    ```
 
    > [!NOTE]
-   > 安全性最佳做法是針對 SQL Server 使用專用的 AD 帳戶，讓 SQL Server 認證不會與使用相同帳戶的其他服務共用。 不過，如果您知道帳戶的密碼 (在下一個步驟中產生 Keytab 檔案所需的項目)，則可以選擇性地重複使用現有的 AD 帳戶。 此外，該帳戶須能夠支援使用者帳戶上的 128 位元與 256 位元 Kerberos AES 加密 (**msDS-SupportedEncryptionTypes** 屬性)。
+   > 安全性最佳做法是針對 SQL Server 使用專用的 AD 帳戶，讓 SQL Server 認證不會與使用相同帳戶的其他服務共用。 不過，如果您知道帳戶的密碼 (在下一個步驟中產生 Keytab 檔案所需的項目)，則可以選擇性地重複使用現有的 AD 帳戶。 此外，該帳戶須能夠支援使用者帳戶上的 128 位元與 256 位元 Kerberos AES 加密 (**msDS-SupportedEncryptionTypes** 屬性)。 若要驗證帳戶是否為已啟用 AES 加密的帳戶，請在 [Active Directory 使用者與電腦] 公用程式中找到帳戶，然後選取 [屬性]。 在 [屬性] 中找到 [帳戶] 索引標籤，並檢查已選取下列兩個核取方塊。 
+   >
+   > 1. **這個帳戶支援 Kerberos AES 128 位元加密**
+   >
+   > 2. **這個帳戶支援 Kerberos AES 256 位元加密**
 
 2. 使用 **setspn.exe** 工具來設定此帳戶的 ServicePrincipalName (SPN)。 SPN 必須與下列範例中所指定的格式完全相同。 您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機上執行 `hostname --all-fqdns`，以尋找 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 主機電腦的完整網域名稱。 除非您已將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 設定為使用不同的連接埠號碼，否則 TCP 通訊埠應為 1433。
 
@@ -201,7 +205,7 @@ sqlcmd -S mssql-host.contoso.com
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>已加入網域的 Windows 用戶端上 SSMS
 
-使用網域認證登入已加入網域的 Windows 用戶端。 請確定已安裝 SQL Server Management Studio，然後在 [連線到伺服器]  對話方塊中指定 [Windows 驗證]  ，以連線到您的 SQL Server 執行個體 (例如 `mssql-host.contoso.com`)。
+使用網域認證登入已加入網域的 Windows 用戶端。 請確定已安裝 SQL Server Management Studio，然後在 [連線到伺服器] 對話方塊中指定 [Windows 驗證]，以連線到您的 SQL Server 執行個體 (例如 `mssql-host.contoso.com`)。
 
 ### <a name="ad-authentication-using-other-client-drivers"></a>使用其他用戶端驅動程式的 AD 驗證
 
@@ -223,7 +227,7 @@ systemctl restart mssql-server
 ```
 
 > [!NOTE]
-> 有些公用程式 (例如**realmd**) 會設定 SSSD，而 PBIS、VAS 和 Centrify 之類的其他工具則不會設定 SSSD。 如果用來加入 AD 網域的公用程式未設定 SSSD，則建議您將 **disablesssd** 選項設定為 `true`。 雖然這不是必要項目，因為 SQL Server 會在回到 openldap 機制之前嘗試針對 AD 使用 SSSD，但設定此項會提高效能，因此 SQL Server 會直接進行 openldap 呼叫並略過 SSSD 機制。
+> 有些公用程式 (例如 **realmd**) 會設定 SSSD，而 PBIS、VAS 和 Centrify 之類的其他工具則不會設定 SSSD。 如果用來加入 AD 網域的公用程式未設定 SSSD，則建議您將 **disablesssd** 選項設定為 `true`。 雖然這不是必要項目，因為 SQL Server 會在回到 openldap 機制之前嘗試針對 AD 使用 SSSD，但設定此項會提高效能，因此 SQL Server 會直接進行 openldap 呼叫並略過 SSSD 機制。
 
 如果您的網域控制站支援 LDAPS，您可以強制所有從 SQL Server 到網域控制站的連線都是透過 LDAPS 來進行。 若要檢查您的用戶端是否可以透過 LDAPS 與網域控制站連線，請執行下列 Bash 命令 `ldapsearch -H ldaps://contoso.com:3269`。 若要將 SQL Server 設定為只使用 LDAPS，請執行下列命令：
 
@@ -274,4 +278,4 @@ CONTOSO.COM = {
 接下來，請探索 Linux 上 SQL Server 的其他安全性案例。
 
 > [!div class="nextstepaction"]
-> [加密 Linux 上 SQL Server 的連線](sql-server-linux-encrypted-connections.md)
+> [加密與 Linux 上 SQL Server 的連線](sql-server-linux-encrypted-connections.md)
