@@ -1,6 +1,6 @@
 ---
 description: sys.function_order_columns (Transact-SQL)
-title: sys. function_order_columns (Transact-sql) |Microsoft Docs
+title: sys.function_order_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c7ac555630f4472e5cf58ad9017cdb03643ae2b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad217286e8d9f0e3fc6b6a7cc8441cee6787f76c
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546789"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684194"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  每個資料行各傳回一個資料列，該資料行是 common 語言執行時間的 **ORDER** 運算式的一部分， (CLR) 資料表值函數。  
+  每個資料行各傳回一個資料列，該資料行屬於 common language runtime (CLR) 資料表值函式的 **ORDER** 運算式的一部分。  
 
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|定義順序所在之物件的識別碼 (CLR 資料表值函式)。|  
-|**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id** 只有在 **object_id**內才是唯一的。<br /><br /> **order_column_id** 表示這個資料行在排序中的位置。|  
-|**column_id**|**int**|**Object_id**中的資料行識別碼。<br /><br /> **column_id** 只有在 **object_id**內才是唯一的。|  
+|**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id** 只有在 **object_id** 內才是唯一的。<br /><br /> **order_column_id** 表示這個資料行在排序中的位置。|  
+|**column_id**|**int**|**Object_id** 中的資料行識別碼。<br /><br /> **column_id** 只有在 **object_id** 內才是唯一的。|  
 |**is_descending**|**bit**|1 = 排序資料行是以遞減方式排序。<br /><br /> 0 = 排序資料行是以遞增方式排序。|  
   
 ## <a name="permissions"></a>權限  
